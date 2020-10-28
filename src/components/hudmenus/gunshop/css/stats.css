@@ -1,0 +1,107 @@
+.hmenu__gunshop__stats {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 25%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.hmenu__gunshop__stats__name {
+    font-family: 'RobotoBold';
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+}
+
+.hmenu__gunshop__stats__pname {
+    font-family: 'RobotoBold';
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+}
+
+.hmenu__gunshop__stats__params {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    margin-bottom: auto;
+}
+
+.hmenu__gunshop__stats__params__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.hmenu__gunshop__stats__params__name {
+    z-index: 10;
+    font-family: 'RobotoBold';
+    font-size: 1.2rem;
+    padding-left: 5%;
+}
+
+.hmenu__gunshop__stats__params__percent {
+    z-index: 10;
+    font-family: 'RobotoBold';
+    font-size: 1.2rem;
+}
+
+.hmenu__gunshop__stats__flatbtn {
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'RobotoMedium';
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2%;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.hmenu__gunshop__stats__flatbtn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.hmenu__gunshop__stats__price {
+    display: flex;
+    flex-direction: column;
+}
+
+.hmenu__gunshop__stats__price__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 5%;
+}
+
+.hmenu__gunshop__hide {
+    display: none !important;
+}
+
+.hmenu__gunshop__stats__price__gtext {
+    font-family: 'RobotoBold';
+    font-size: 1.2rem;
+}
+
+.hmenu__gunshop__stats__price__gprice {
+    font-family: 'RobotoBold';
+    font-size: 2rem;
+}
+
+.hmenu__gunshop__stats__about {
+    margin-top: 5%;
+    font-family: 'RobotoLight';
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+}

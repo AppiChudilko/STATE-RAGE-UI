@@ -1,0 +1,151 @@
+.accountmenu__content__cards__blitem {
+    display: flex;
+    height: 100%;
+    width: 66%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.4rem;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__settings__container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    margin-top: 5%;
+}
+
+.accountmenu__content__cards__settings__header__type {
+    font-family: 'RobotoBold';
+    color: #43b2ea;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-size: 1.3rem;
+    margin-bottom: 3%;
+}
+
+.accountmenu__content__cards__settings__header__name {
+    font-family: 'RobotoBold';
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+    margin-bottom: 3%;
+}
+
+.accountmenu__content__cards__settings__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__settings__list__item {
+    font-family: 'RobotoLight';
+    color: #d2d2d2;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.7rem;
+    font-size: 1.2rem;
+    padding-bottom: 0.7rem;
+    background-color: rgba(136, 136, 136, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.accountmenu__content__cards__settings__list__item_selected {
+    font-family: 'RobotoLight';
+    color: #d2d2d2;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.7rem;
+    font-size: 1.2rem;
+    padding-bottom: 0.7rem;
+    background-color: rgba(136, 136, 136, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.accountmenu__content__cards__settings__bcontainer__name {
+    font-family: 'RobotoBold';
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__settings__bcontainer__desc {
+    font-family: 'Roboto';
+    font-size: 1.0rem;
+    color: #c2c2c2;
+    letter-spacing: 0.12rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__setting__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.accountmenu__content__cards__setting__checkbox__btn {
+    background: rgba(255, 255, 255, 0.16);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.accountmenu__content__cards__setting__checkbox__btn_on {
+    background: #50bc90;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 8%;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.accountmenu__content__cards__setting__checkbox__btn_off {
+    background: #bc505d;
+    margin-left: 8%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.accountmenu__content__cards__setting__name {
+    font-family: 'Roboto';
+    font-size: 1.4rem;
+    letter-spacing: 0.12rem;
+}
+.accountmenu__content__cards__setting__desc {
+    font-family: 'Roboto';
+    font-size: 1.0rem;
+    letter-spacing: 0.12rem;
+}
+
+.accountmenu__content__cards__setting__listmenu__name {
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+}
+
+.accountmenu__content__cards__setting__listmenu {
+    display: flex;
+}

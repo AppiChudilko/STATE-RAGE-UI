@@ -1,0 +1,559 @@
+.auth-main {
+    background: #1c1c1c;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 1;
+}
+
+.background-auth {
+    width: inherit;
+    display: flex;
+}
+
+.background-auth .bg-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-left .liner-top {
+    background: url(../img/liner-bg.svg) no-repeat;
+    width: 361px;
+    height: 304px;
+    margin-left: 455px;
+}
+
+.bg-left .bg-bottom {
+    background: url(../img/auth-bg-bottom.png) no-repeat;
+    width: 504px;
+    height: 332px;
+    margin-top: auto;
+}
+
+.bg-position-auth {
+    height: 100%;
+    position: absolute;
+    display: flex;
+}
+
+.bg-position-auth .bg-change-auth {
+    background: url(../img/auth-scelet.png) no-repeat;
+    width: 943px;
+    height: 892px;
+    margin-top: auto;
+}
+
+.bg-position-auth .bg-change-reg {
+    background: url(../img/reg-women.png) no-repeat;
+    width: 964px;
+    height: 813px;
+    margin-top: auto;
+}
+
+.bg-top-main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+.bg-top-main .bg-logo-auth {
+    background: url(../img/auth-logo.png) no-repeat;
+    width: 128px;
+    height: 143px;
+}
+
+.bg-top-main .bg-logo-reg {
+    background: url(../img/reg-logo.png) no-repeat;
+    width: 133px;
+    height: 71px;
+}
+
+.bg-top-main .circle-box {
+    display: flex;
+    margin-bottom: 33px;
+}
+
+.bg-top-main .circle-box .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #3b3b3b;
+}
+
+.bg-top-main .circle-box .circle:first-child {
+    margin-right: 18px;
+}
+
+.bg-top-main .circle-box .active {
+    background: #3eb5f1;
+}
+
+.bg-right {
+    display: flex;
+    margin-left: auto;
+}
+
+.bg-right .bg-right-auth {
+    background: url(../img/auth-bg-right.png) no-repeat;
+    width: 472px;
+    height: 100%;
+    zoom: 101%;
+    background-size: cover;
+}
+
+.auth-main .content-main {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    position: absolute;
+}
+
+.content-main .content-auth {
+    width: 960px;
+    background: rgba(255, 255, 255, 0.012);
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-auth .button-main {
+    display: flex;
+    margin-top: 135px;
+}
+
+.button-main input[type="radio"] + label.button-auth {
+    width: 480px;
+    height: 74px;
+    background: rgba(255, 255, 255, 0.012);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "HACKED";
+    font-size: 46px;
+    text-transform: uppercase;
+}
+
+.button-main input[type="radio"]:checked + label.button-auth {
+    background: rgba(255, 255, 255);
+    color: black;
+}
+
+.content-auth .auth-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 62%; */
+    margin-top: 209px;
+}
+
+.auth-input input.auth-input-style {
+    width: 480px;
+    border-bottom: 1px solid #fff;
+    font-family: "Roboto";
+    font-size: 28px;
+    color: rgb(62, 181, 241);
+    text-align: center;
+    padding-bottom: 16px;
+    margin-bottom: 80px;
+}
+
+.auth-input input:focus.auth-input-style {
+    border-bottom: 1px solid rgb(62, 181, 241);
+}
+
+.auth-input input.auth-input-style:first-child {
+    /* margin-bottom: 122px; */
+    margin-bottom: 167px;
+}
+
+.auth-input input::placeholder {
+    font-size: 22px;
+    font-family: "RobotoThin";
+    color: rgb(146, 145, 145);
+    text-transform: uppercase;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.content-auth a {
+    margin-top: auto;
+}
+
+.content-auth .button-auth-click {
+    width: 480px;
+    height: 74px;
+    background: #3eb5f1;
+    box-shadow: 0px 0px 14.24px 1.76px rgba(0, 0, 0, 0.2);
+    margin-bottom: 140px;
+    /* margin-top: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "HACKED";
+    font-size: 46px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.content-auth .button-auth-click:active {
+    background: black;
+}
+
+.auth-input .reg-bloc {
+
+}
+
+.auth-input .reg-bloc:first-child {
+    margin-bottom: 164px;
+}
+
+input.reg-input-style {
+    width: 446px;
+    border-bottom: 1px solid #fff;
+    font-family: "Roboto";
+    font-size: 28px;
+    color: rgb(62, 181, 241);
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+input:focus.reg-input-style {
+    border-bottom: 1px solid rgb(62, 181, 241);
+}
+
+input.reg-input-style:first-child {
+    margin-right: 36px;
+}
+
+.reg-checkbox {
+    margin-top: 35px;
+}
+
+.chk_reg {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    line-height: 4;
+    color: rgb(146, 145, 145);
+    cursor: pointer;
+}
+
+.chk-circle {
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    width: 25px;
+    height: 24px;
+    margin-right: 17px;
+}
+
+#chk1:checked + label .chk-circle {
+    background-color: #3eb5f1 !important;
+}
+
+/*Выбор персонажа*/
+.reg-main {
+    background: #1c1c1c;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.create-bg-bottom {
+    background: url(../img/create-bg-left.png) no-repeat;
+    width: 460px;
+    height: 100%;
+}
+
+.create-bg-right {
+    background: url(../img/create-bg-right.png) no-repeat;
+    width: 355px;
+    height: 100%;
+}
+
+.position-bg-bottom {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.title-dednet {
+    font-family: 'HACKED';
+    font-size: 110px;
+    line-height: 0.655;
+    margin-left: 95px;
+    margin-top: 38px;
+}
+
+.create-logo {
+    background: url(../img/create-logo.png) no-repeat;
+    width: 82px;
+    height: 92px;
+    position: absolute;
+    top: 23px;
+    right: 96px;
+}
+
+.bg-right-create {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+}
+
+.bg-left-create {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+}
+
+.create-content {
+    width: inherit;
+    height: -webkit-fill-available;
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.change-create-player {
+    width: 519px;
+    height: 808px;
+}
+
+.change-create-player:not(:nth-child(3n)) {
+    margin-right: 86px
+}
+
+.border-top {
+    width: 301px;
+    height: 12px;
+    background-color: rgb(72, 185, 242);
+    margin-left: auto;
+
+}
+
+.border-bottom {
+    width: 301px;
+    height: 12px;
+    background-color: rgb(72, 185, 242);
+    margin-top: 18px;
+
+}
+
+.block-create {
+    width: inherit;
+    height: 750px;
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+}
+
+.create-btn {
+    background: rgb(72, 185, 242);
+    width: inherit;
+    height: 69px;
+    margin-top: auto;
+    font-family: "HACKED";
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.create-btn:hover {
+    background: black;
+}
+
+.summ-create {
+    width: inherit;
+    height: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-svg-create-grey {
+    fill: rgb(28, 28, 28);
+}
+
+/* .summ-create:hover + svg path.color-svg-create-grey{
+    background: chocolate;
+    fill: #48b9f2 !important;
+} */
+.block-innerhit {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-player {
+    width: inherit;
+    height: 768px;
+    background-color: rgb(255, 255, 255, 0.051);
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.player_young {
+    background: url(../img/player_young.png) no-repeat;
+    width: inherit;
+    height: 309px;
+    margin-top: -30px;
+}
+
+.player_old {
+    background: url(../img/player_old.png) no-repeat;
+    width: inherit;
+    height: 305px;
+    margin-top: -26px;
+}
+
+.player_women {
+    background: url(../img/player_women.png) no-repeat;
+    width: inherit;
+    height: 306px;
+    margin-top: -27px;
+}
+
+.main-box-change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-player-info {
+    width: inherit;
+    height: 69px;
+    background: rgb(72, 185, 242);
+    font-size: 36px;
+    font-family: "Roboto";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 42px;
+}
+
+.text-box {
+    width: inherit;
+    height: 46px;
+    background: rgb(31, 31, 31);
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: "Roboto";
+}
+
+.text-box:not(:nth-child(3n)) {
+    margin-bottom: 12px;
+
+}
+
+.title-info-text {
+    margin-left: 24px;
+}
+
+.text-box-blue {
+    color: rgb(72, 185, 242);
+    margin-left: auto;
+    margin-right: 29px
+}
+
+.slider-home-player {
+    background: rgb(31, 31, 31);
+    width: inherit;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 30px;
+    margin-top: 49px;
+}
+
+.button-slider-home {
+    background: url(../img/arrow-mini.png) no-repeat;
+    width: 15px;
+    height: 29px;
+    cursor: pointer;
+}
+
+.trans-arr {
+    rotate: 180deg;
+    margin-right: auto;
+    margin-left: 23px;
+}
+
+.arro-right {
+    margin-left: auto;
+    margin-right: 23px;
+}
+.iframe_rules{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iframe_rules #rules {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+.iframe_rules #rules iframe {
+    border: 0px none; 
+    height: 100%; 
+    width: 100%;
+}
+.close-rules {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.close-img-rules {
+    background: url(../img/close.svg) no-repeat;
+    width: 29px;
+    height: 30px;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.close-img-rules:hover {
+    transform: rotate(90deg);
+    transition: ease-out 0.3s;
+}
+#button_rules:hover{
+    color:#3eb5f1;
+}

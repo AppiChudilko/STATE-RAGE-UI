@@ -1,0 +1,45 @@
+:root {
+    --text-buttons-color: #2A56C6;
+    --icons-color: #1C3AA9;
+}
+
+.calls__actions__item:hover {
+    background: #0000000f;
+}
+
+
+.calls__actions__item {
+    width: 100%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 33%;
+}
+
+.calls__actions__item__icon {
+    margin-right: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calls__actions {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 23%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calls__actions__item__text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+}

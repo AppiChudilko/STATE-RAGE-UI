@@ -1,0 +1,96 @@
+.carrent__content__list__img {
+    width: 70%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: auto;
+}
+
+.carrent__content__list__img__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+}
+
+.carrent__content__list__img__item {
+    width: 100%;
+    height: auto;
+}
+
+.carrent__content__list__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.carrent__content__list__item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.carrent__content__list__item__info__price {
+    font-family: 'RobotoBold';
+    font-size: 2.7rem;
+}
+
+.carrent__content__list__item__info__rentbtn {
+    font-family: 'RobotoBold';
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 3%;
+    width: 100%;
+    text-align: center;
+}
+
+.carrent__content__list__item__info__rentbtn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.carrent__content__list__item__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1rem;
+}
+
+.carrent__content__list__item__name {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-family: 'RobotoBold';
+    letter-spacing: 0.05rem;
+}
+
+.carrent__content__list__img__container__data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -50px;
+}
+
+.carrent__content__list__item__info__rent {
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+    display: block;
+    height: 50px;
+    margin-top: 28px;
+}
+
+.carrent__content__list__item__sale {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    font-family: 'RobotoBold';
+    background-color: #ef3038;
+}

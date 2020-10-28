@@ -1,0 +1,91 @@
+.accountmenu__topdata {
+    display: flex;
+    flex-direction: row;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.accountmenu__topdata__number {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    border-radius: 0.4rem;
+}
+
+.accountmenu__topdata__number__text {
+    font-family: 'RobotoLight';
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.accountmenu__topdata__nick {
+    font-family: 'HACKED';
+    font-size: 2.7rem;
+    color: #fff;
+}
+
+.accountmenu__topdata__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+.accountmenu__topdata__donate {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.accountmenu__topdata__donate__text {
+    font-family: 'RobotoLight';
+    font-size: 0.9rem;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    margin-left: auto;
+    letter-spacing: 0.1rem;
+}
+
+.accountmenu__topdata__donate__balance::before {
+    content: '$';
+    font-family: 'RobotoBlack';
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #43b2ea;
+}
+
+.accountmenu__topdata__donate__balance {
+    font-size: 2.2rem;
+    font-family: 'RobotoBlack';
+    color: #fff;
+    margin-left: auto;
+    margin-bottom: 4%;
+}
+
+.accountmenu__topdata__donate__btn {
+    background: linear-gradient(to bottom right, #70cfff, #43b2ea);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.2rem;
+    padding-top: 0.1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.4rem;
+    font-family: 'RobotoBlack';
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    text-shadow: 0 0 16px rgba(85, 190, 243, 0.35);
+}

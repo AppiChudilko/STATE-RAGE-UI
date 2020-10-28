@@ -1,0 +1,186 @@
+#box {
+    /*background: url('https://i.imgur.com/4w8TaCB.png') no-repeat;
+    background-size: 100%;*/
+}
+
+.circle-menu {
+    width: 32.917%;
+    height: 65.519%;
+    left: 33.5%;
+    top: 20.7%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+}
+.circle-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.center-content {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.47);
+    height: 80%;
+    border-radius: 50%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: HACKED;
+    font-weight: 400;
+}
+
+.center-content-top {
+    height: 20%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 1px solid #3E3E3E;
+}
+
+.center-content-middle {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.center-content-bottom {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.ammo-info {
+    font-family: HACKED;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.circle-menu-type {
+    padding: 12px;
+    max-width: 80%;
+    margin-bottom: 40px;
+    background: rgba(0, 0, 0, 0.67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.circle-menu-type-button {
+    font-family: HACKED;
+    font-weight: 400;
+    color: #000000;
+    background: #ffffff;
+    padding: 2px 6px 2px 6px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.circle-menu-container-tumbler {
+    font-family: HACKED;
+    font-weight: 400;
+    color: #000000;
+    background: #ffffff;
+    padding: 2px 6px 2px 6px;
+    font-size: 12px;
+    width: 6px;
+    height: 12px;
+    cursor: pointer;
+    z-index: 111;
+}
+
+
+.circle-menu-type-selector {
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-type-selected {
+    font-family: HACKED;
+    font-weight: 400;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menu-type-default {
+    font-family: HACKED;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.35);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.circle-weapon-img {
+    height: auto;
+    width: auto;
+    max-width: 60%;
+}
+
+.circle-content li {
+    border: 6px solid transparent;
+    z-index: 1;
+}
+
+.circle-menu-main {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+.circle-ammo-img {
+    width: 14px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+
+
+.circle-container-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ammo-info-item {
+    font-family: HACKED;
+    font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
+    position: absolute;
+    margin-top: 28px;
+}
+
+.circle-slice:hover {
+    color: white !important;
+    box-shadow: rgb(226, 248, 255) 0px 0px 10px inset;
+    /*border: 6px solid #ABBABB !important;*/
+    background: radial-gradient(transparent 120px, #424242 120px) !important;
+}
+
+.circle-item-img {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(7500%) hue-rotate(230deg) brightness(107%) contrast(100%);
+}
+
+.circle-container-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

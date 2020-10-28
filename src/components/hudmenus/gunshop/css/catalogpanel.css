@@ -1,0 +1,110 @@
+.hmenu__gunshop__catalog {
+    display: grid;
+    grid-template-rows: 45% 45%;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    height: 100%;
+    padding: 2%;
+    width: 100%;
+}
+
+.hmenu__gunshop__catalog__container {
+    width: 55%;
+    overflow-y: auto;
+    padding-right: 2%;
+    display: flex;
+}
+
+.hmenu__gunshop__catalog__item {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 1.5rem;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hmenu__gunshop__catalog__item_active {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    padding: 1.5rem;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hmenu__gunshop__catalog__item__img {
+    width: 75%;
+    height: 160px;
+    object-fit: contain;
+}
+
+.hmenu__gunshop__catalog__item__img__container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hmenu__gunshop__catalog__item__name {
+    font-family: 'RobotoBold';
+    font-size: 2rem;
+}
+
+.hmenu__gunshop__catalog__container::-webkit-scrollbar {
+   width: 0.8rem;
+ }
+   
+ .hmenu__gunshop__catalog__container::-webkit-scrollbar-track {
+   background: #303030;
+ }
+   
+ .hmenu__gunshop__catalog__container::-webkit-scrollbar-thumb {
+   background: #fff;
+}
+
+.hmenu__gunshop__catalog__item__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+    justify-content: space-between;
+}
+
+.hmenu__gunshop__catalog__item__calibr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hmenu__gunshop__catalog__item__price {
+    font-family: 'RobotoBold';
+    font-size: 2.2rem;
+}
+
+.hmenu__gunshop__catalog__item__calibr__text {
+    font-family: 'RobotoMedium';
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+}
+
+.hmenu__gunshop__catalog__item__calibr__name {
+    font-family: 'RobotoMedium';
+    font-size: 1.3rem;
+}
+
+.hmenu__gunshop__catalog__item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hmenu__gunshop__catalog__item__sale {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    border-radius: 0.4rem;
+    font-family: 'RobotoBold';
+    background-color: #ef3038;
+}

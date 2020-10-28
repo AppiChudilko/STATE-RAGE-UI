@@ -1,0 +1,635 @@
+.editor-box {
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+/* <!-- Слайдер камеры --> */
+.сamera-editor-main {
+    width: 230px;
+    height: 185px;
+    background: rgb(28, 28, 28);
+    display: none; /*Flex*/
+    flex-direction: column;
+    margin-left: 11px;
+    margin-bottom: 13px;
+    margin-top: auto;
+    font-family: "Roboto";
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.range-editor-block {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+.range-editor-block:first-child {
+    margin-top: 21px;
+}
+
+.range-editor-block .range-text {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.range-editor-block .range-slider-editor {
+    width: 197px;
+    height: 2px;
+    position: relative;
+}
+
+.range-slider-editor .range {
+    height: 2px;
+    background: rgb(72, 185, 242);
+    position: relative;
+}
+
+.range-slider-editor .range-toddler {
+    width: 3px;
+    height: 13px;
+    background: rgb(72, 185, 242);
+    position: absolute;
+    top: -5.5px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.range-slider-editor .range-label {
+    display: none;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* <!-- Меню 1 -->*/
+.menu-editor-default {
+    background: rgb(28, 28, 28);
+    width: 455px;
+    height: 733px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: 159px;
+}
+
+.menu-editor-default .title-block {
+    width: inherit;
+    height: 59px;
+    background: rgb(72, 185, 242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "HACKED";
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.menu-editor-default .title-in-block {
+    width: inherit;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    color: rgb(72, 185, 242);
+    font-size: 18px;
+}
+
+.menu-editor-default .change-sex-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.change-sex-block .change-sex-style {
+    background: rgb(19, 19, 19);
+    width: 210px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    color: rgb(60, 60, 60);
+    cursor: pointer;
+}
+
+.change-sex-block input:checked + label.change-sex-style {
+    background: rgb(72, 185, 242);
+    color: #fff;
+}
+
+.change-button-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.change-button-box .box-change {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.box-change {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* .плашка1 {
+    background-color: rgb(19, 19, 19);
+    position: absolute;
+    left: 1512px;
+    top: 194px;
+    width: 363px;
+    height: 31px;
+    z-index: 314;
+  } */
+
+.change-button-box .box-change:first-child, .change-button-box .box-change:nth-child(3) {
+    margin-right: 17px;
+}
+
+.change-button-box .box-change:first-child {
+    margin-bottom: 15px;
+}
+
+.box-change .box-title {
+    margin-bottom: 12px;
+    font-family: "Roboto";
+    font-size: 18px;
+    color: rgb(72, 185, 242);
+}
+
+.box-change .box-editor-title {
+    margin-bottom: 10px;
+    font-family: "RobotoLight";
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+}
+
+.box-in-change {
+    width: 210px;
+    height: 32px;
+    background: rgb(19, 19, 19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    color: rgb(60, 60, 60);
+}
+
+.color-white {
+    color: #fff !important;
+}
+
+.margin-for-editor {
+    margin-bottom: 24px;
+}
+
+.otstup-box:not(:last-child) {
+    margin-bottom: 13px;
+}
+
+.editor-box-style {
+    width: 363px !important;
+    height: 31px !important;
+}
+
+.box-in-change .arrow-change {
+    background: url(../img/arrow-left-change.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.box-in-change .left-arrow {
+    margin-right: auto;
+    margin-left: 4px;
+}
+
+.box-in-change .right-arrow {
+    transform: rotate(180deg);
+    margin-left: auto;
+    margin-right: 4px;
+}
+
+.characteristic-editor {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 27px;
+}
+
+.characteristic-editor .box-character {
+    display: flex;
+    align-items: center;
+    font-family: "RobotoLight";
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.box-character span.title-character {
+    text-align: left;
+    width: 129px;
+}
+
+.characteristic-editor .box-character:not(:first-child) {
+    margin-top: 21px;
+}
+
+.box-character .range-character {
+    width: 161px;
+    height: 4px;
+    background: rgb(60, 60, 60);
+}
+
+.range-character .background-character-range {
+    height: inherit;
+    background: #48b9f2;
+}
+
+.menu-editor-default .last-button-menu {
+    display: flex;
+}
+
+.last-button-menu .box-last-btn {
+    background: rgb(19, 19, 19);
+    width: 225px;
+    height: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "HACKED";
+    font-size: 28px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.last-button-menu .box-last-btn:first-child {
+    margin-right: 5px;
+}
+
+.next-button-menu .box-next-btn {
+    background: rgb(72, 185, 242);
+    width: inherit;
+    height: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "HACKED";
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.menu-editor-default .editor-circl-change {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    margin-top: 25px;
+}
+
+.editor-circl-change .circle-change {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: rgb(59, 59, 59);
+}
+
+.editor-circl-change .circle-change:not(:last-child) {
+    margin-right: 4px;
+}
+
+.editor-circl-change .circle-blue {
+    background-color: rgb(72, 185, 242);
+}
+
+/* <!-- Редактор --> */
+.editor-main {
+    width: 455px;
+    height: 1080px;
+    margin-left: auto;
+    background: rgb(28, 28, 28);
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-main .slider-editor-main {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.editor-main .title-block {
+    width: inherit;
+    height: 59px;
+    background: rgb(72, 185, 242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "HACKED";
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.slider-editor-main .slider-change-radio {
+    width: 132px;
+    height: 8px;
+    background: rgb(59, 59, 59);
+    cursor: pointer;
+}
+
+.margin-right-perf {
+    margin-right: 4px;
+}
+
+input.range-slider-ch:checked + label .slider-change-radio {
+    background: rgb(72, 185, 242);
+}
+
+.editor-main .header-title-editor {
+    background: rgb(19, 19, 19);
+    width: inherit;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    color: rgb(72, 185, 242);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.block-editor-range .range-editor-block-big {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    align-items: center;
+    margin-bottom: 39px;
+    font-family: "Roboto";
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.range-editor-block-big .range-text {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.range-editor-block-big .range-slider-editor-big {
+    width: 363px;
+    height: 2px;
+    /* background: rgb(60, 60, 60); */
+    position: relative;
+    margin-bottom: 37px;
+}
+
+.range-editor-block-big .range-slider-editor-big:last-child {
+    margin-bottom: 0px;
+}
+
+.range-slider-editor-big .range-toddler {
+    width: 3px;
+    height: 13px;
+    background: rgb(72, 185, 242);
+    position: absolute;
+    top: -5.5px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.range-slider-editor-big .range {
+    height: 2px;
+    background: rgb(72, 185, 242);
+    position: relative;
+}
+
+.range-slider-editor-big .range-label {
+    display: none;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.range-editor-block-big:first-child {
+    margin-top: 24px;
+}
+
+.range-editor-block-big .range-text {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.range-editor-block-big:first-child {
+    margin-top: 24px;
+}
+
+.editor-main .editor-circl-change {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    margin-top: auto;
+    /* margin-top: 25px; */
+}
+
+.editor-main .last-button-menu {
+    display: flex;
+}
+
+/*range-slider-left-menu*/
+.range-slider-editor .input-range__slider, .range-slider-editor-big .input-range__slider {
+    appearance: none;
+    width: 18px;
+    height: 8px;
+    transform: rotate(90deg);
+    background: rgb(72, 185, 242);
+    cursor: pointer;
+    display: block;
+    margin-left: -0.6rem;
+    margin-top: -5px;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    /* transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; */
+}
+
+.range-slider-editor .input-range__slider:active, .range-slider-editor-big .input-range__slider:active {
+    /* transform: scale(1.3);  */
+}
+
+.range-slider-editor .input-range__slider:focus, .range-slider-editor-big .input-range__slider:focus {
+    /* box-shadow: 0 0 0 5px rgba(63, 81, 181, 0.2);  */
+}
+
+.range-slider-editor .input-range--disabled .input-range__slider, .range-slider-editor-big .input-range--disabled .input-range__slider {
+    width: 197px;
+    height: 2px;
+    background: rgb(60, 60, 60);
+    box-shadow: none;
+    transform: none;
+}
+
+.range-slider-editor .input-range__slider-container, .range-slider-editor-big .input-range__slider-container {
+    /* transition: left 0.3s ease-out;  */
+}
+
+.range-slider-editor .input-range__label, .range-slider-editor-big .input-range__label {
+    /* color: #aaaaaa;
+    font-family: "Helvetica Neue", san-serif;
+    font-size: 0.8rem;
+    transform: translateZ(0);
+    white-space: nowrap;  */ /*text*/
+}
+
+.range-slider-editor .input-range__label--min,
+.range-slider-editor .input-range__label--max, .range-slider-editor-big .input-range__label--min,
+.range-slider-editor-big .input-range__label--max {
+    bottom: -1.4rem;
+    position: absolute;
+}
+
+.range-slider-editor .input-range__label--min, .range-slider-editor-big .input-range__label--min {
+    left: 0;
+    display: none;
+}
+
+.range-slider-editor .input-range__label--max, .range-slider-editor-big .input-range__label--max {
+    right: 0;
+    display: none;
+}
+
+.range-slider-editor .input-range__label--value, .range-slider-editor-big .input-range__label--value {
+    position: absolute;
+    top: -1.8rem;
+}
+
+.range-slider-editor .input-range__label-container, .range-slider-editor-big .input-range__label-container {
+    left: -50%;
+    position: relative;
+    display: none;
+}
+
+.range-slider-editor .input-range__label--max .input-range__label-container, .range-slider-editor-big .input-range__label--max .input-range__label-container {
+    left: 50%;
+}
+
+.range-slider-editor .input-range__track, .range-slider-editor-big .input-range__track {
+    height: 4px;
+    background: rgb(60, 60, 60);
+    cursor: pointer;
+    display: block;
+    position: relative;
+    /* transition: left 0.3s ease-out, width 0.3s ease-out;  */
+}
+
+.range-slider-editor .input-range--disabled .input-range__track, .range-slider-editor-big .input-range--disabled .input-range__track {
+    background: rgb(60, 60, 60);
+}
+
+.range-slider-editor .input-range__track--background, .range-slider-editor-big .input-range__track--background {
+    left: 0;
+    margin-top: -0.15rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.range-slider-editor .input-range__track--active, .range-slider-editor-big .input-range__track--active {
+    background: rgb(72, 185, 242);
+}
+
+.range-slider-editor .input-range, .range-slider-editor-big .input-range {
+    position: relative;
+    width: 100%;
+}
+
+/* Инпуты для ввода инфо*/
+.menu-editor-default .create-info-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-editor-default .create-info-input input.auth-input-style {
+    width: 360px;
+    border-bottom: 1px solid #a9a9a9;
+    font-family: "Roboto";
+    font-size: 14px;
+    color: rgb(62, 181, 241);
+    text-align: center;
+    padding-bottom: 11px;
+    margin-bottom: 30px;
+}
+
+.menu-editor-default .create-info-input input:focus.auth-input-style {
+    border-bottom: 1px solid rgb(62, 181, 241);
+}
+
+.menu-editor-default .create-info-input input.auth-input-style:first-child {
+    margin-bottom: 30px;
+}
+
+.menu-editor-default .create-info-input input::placeholder {
+    font-size: 14px;
+    font-family: "RobotoThin";
+    color: rgb(146, 145, 145);
+    /* text-transform: uppercase; */
+}
+
+.def-style {
+    display: flex;
+    flex-direction: column;
+}
+
+.def-margin-auto {
+    margin-top: auto !important;
+}
+
+input.auth-input-style:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.info-role {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Roboto';
+    padding-top: 11px;
+    display: flex;
+    flex-direction: column;
+}
+
+.role-custom {
+    align-items: center;
+}
+
+.info-role .title-info-role {
+    margin-bottom: 10px;
+}
+
+.player_role {
+    background: url(../img/role.png) no-repeat;
+    width: inherit;
+    height: 271px;
+    margin-top: 22px;
+}
+.text-role-recomed {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-size: 48px;
+}

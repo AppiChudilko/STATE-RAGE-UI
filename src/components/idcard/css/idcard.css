@@ -1,0 +1,191 @@
+.idcard-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.idcard_box {
+    width: 452px;
+    height: 309px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/bg-id.png") no-repeat;
+    outline: 2px dashed rgb(152, 152, 152, 0.2);
+    border-width: 1.5px;
+    outline-offset: -10px;
+}
+
+.idcard_box .plash_left {
+    width: 144px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idcard_box .plash_right {
+    width: 265px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo_player {
+    width: 90px;
+    height: 118px;
+    z-index: 1;
+    position: relative;
+}
+
+.liner-shadow-card {
+    background-image: -webkit-linear-gradient(0deg, rgba(47, 47, 47, 0) 0%, rgb(25, 25, 25) 100%);
+    width: 38px;
+    height: inherit;
+    opacity: 0.6;
+}
+
+.box-for-liner {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-size-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    border-bottom: 15px solid rgb(72, 185, 242);
+}
+
+.liner-right-card {
+    background: url(../img/linear.png) no-repeat;
+    width: 271px;
+    height: 13px;
+    margin-top: -11px;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    font-family: "RobotoBlack";
+    font-size: 24.72px;
+    color: rgb(45, 45, 45);
+}
+
+.liner-right-card .txt-lin {
+    margin-right: 10px;
+}
+
+.player_name-card {
+    font-family: "RobotoLight";
+    color: rgb(72, 185, 242);
+    font-size: 24px;
+}
+
+.pl_inf {
+    width: 265px;
+    border-top: 1px solid rgb(232, 232, 232);
+    display: flex;
+    flex-direction: column;
+    font-family: 'RobotoLight', sans-serif;;
+}
+
+.pl_inf .pl-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.pl_inf .pl-clm {
+    display: flex;
+    flex-direction: column;
+}
+
+.pl-grow {
+    font-size: 12px;
+    color: rgb(173, 173, 173);
+    text-transform: uppercase;
+}
+
+.pl-black {
+    font-size: 12px;
+    color: rgb(30, 30, 30);
+}
+
+.row-tsp {
+    margin-right: 19px;
+}
+
+.pl-sex {
+    margin-right: 33px;
+}
+
+.pl-clm-inf {
+    margin-top: 14px;
+}
+
+.pl-clm-f {
+    width: 117px;
+    display: inline-flex;
+}
+
+.osn-idcard {
+    width: 409px;
+    height: 258px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.clm-1-idcard {
+    width: inherit;
+    height: 36px;
+    background: #48b9f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "RobotoBold";
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 3.8px rgba(0, 0, 0, 0.35);
+}
+
+.clm-2-idcard {
+    height: 222px;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    background: url(../img/bg-flag.png) no-repeat;
+    background-position: 53px -138px;
+}
+
+.name-styl-id {
+    font-family: 'RobotoLight', sans-serif;
+}
+
+.name-pff {
+    font-family: 'RobotoLight', sans-serif;
+}
+
+.tsp-topname {
+    margin-right: 13px;
+}
+
+.pl-clm-inf-n {
+    margin-top: 10px;
+}
+
+.btm-last {
+    margin-bottom: 10px;
+}

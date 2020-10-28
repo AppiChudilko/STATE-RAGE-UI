@@ -1,0 +1,42 @@
+.calls__keyboard {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 5%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calls__keyboard__row__number:hover {
+    background: #0000000f;
+}
+
+.calls__keyboard__row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.calls__keyboard__row__number {
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.calls__keyboard__row__number__text {
+    color: #2A56C6;
+    font-size: 26px;
+    font-family: 'RobotoLight';
+}
+
+.calls__keyboard__row__number__subtext {
+    font-size: 14px;
+    font-family: 'RobotoMedium';
+    color: rgba(0, 0, 0, 0.54);
+    text-transform: uppercase;
+}

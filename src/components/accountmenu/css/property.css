@@ -1,0 +1,429 @@
+.accountmenu__content__cards__item__container {
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/house.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100%;
+    padding-top: 45%;
+    padding-bottom: 5%;
+}
+
+@media (min-height: 700px) {
+    .accountmenu__content__cards__item__container {
+        padding-top: 50%;
+    }
+}
+
+.accountmenu__content__cards__house {
+    display: flex;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__house__type {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    text-transform: uppercase;
+    font-family: 'RobotoLight';
+    color: #d2d2d2;
+    font-size: 1.4rem;
+    letter-spacing: 0.15rem;
+}
+
+.accountmenu__content__cards__house__name {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    text-transform: uppercase;
+    font-family: 'RobotoBold';
+    color: #fff;
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.accountmenu__content__cards__house__address {
+    display: flex;
+    flex-direction: row;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+.accountmenu__content__cards__house__address__text {
+    margin-right: auto;
+    padding-right: 1rem;
+    font-family: 'RobotoLight';
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #9c9c9c;
+}
+
+.accountmenu__content__cards__house__address__name {
+    font-family: 'Roboto';
+    letter-spacing: 0.1rem;
+    color: #9c9c9c;
+}
+
+.accountmenu__cards__btngps_filled {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 0.2rem;
+    padding: 2%;
+    background: linear-gradient(to left, #70cfff, #43b2ea);
+    cursor: pointer;
+    min-height: 2vh;
+}
+
+.accountmenu__cards__btngps_nonfilled {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 0.2rem;
+    border: 1px solid #fff;
+    padding: 3%;
+    cursor: pointer;
+}
+
+.accountmenu__cards__btngps__icon {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(178deg) brightness(106%) contrast(102%);
+    width: 1.5rem;
+    height: auto;
+}
+
+.accountmenu__cards__btngps__text {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: 'RobotoMedium';
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.accountmenu__content__cards__house__hprice {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__text {
+    color: #9c9c9c;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-family: 'RobotoLight';
+}
+
+.accountmenu__content__cards__house__hprice__sell__icon {
+    width: 1.8rem;
+    height: auto;
+    filter: invert(63%) sepia(12%) saturate(6092%) hue-rotate(174deg) brightness(104%) contrast(84%);
+}
+
+.accountmenu__content__cards__house__hprice__sell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.accountmenu__content__cards__house__hprice__sell__linebtn {
+    margin-right: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.accountmenu__content__cards__button {
+    background: linear-gradient(to bottom right, #70cfff, #43b2ea);
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 16px rgba(85, 190, 243, 0.34);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2vh;
+}
+
+.accountmenu__content__cards__button:hover {
+    background: linear-gradient(to bottom right, #2eb5f8, #0889c9);
+}
+
+.accountmenu__content__cards__button_over {
+    background: #bc505d;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.accountmenu__content__cards__button_done {
+    background: #3fbc18;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.accountmenu__content__cards__button__text {
+    font-family: 'RobotoMedium';
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.accountmenu__content__cards__house__hprice__sell__text {
+    font-family: 'RobotoBold';
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.accountmenu__content__cards__business:first-child {
+    margin-top: 0;
+}
+
+.accountmenu__content__cards__business:last-child {
+    border-bottom: none;
+}
+
+.accountmenu__content__cards__business {
+    display: flex;
+    border-bottom: 4px solid rgba(72, 72, 72, 0.1);
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.accountmenu__list__business {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+.accountmenu__content__cards__business__info__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.accountmenu__content__cards__business__img__container {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 20vh;
+    border-radius: 0.4rem;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    filter: saturate(165%);
+    margin-bottom: 2%;
+    background-position: center;
+}
+
+.accountmenu__content__cards__business__name {
+    font-family: 'RobotoBold';
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__business__type {
+    font-family: 'RobotoLight';
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #70cfff;
+}
+
+.accountmenu__content__cards__business__gprice {
+    font-family: 'RobotoLight';
+    color: #9c9c9c;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__business__gprice__text {
+    font-family: 'RobotoBold';
+    font-size: 1.4rem;
+}
+
+.accountmenu__list__business::-webkit-scrollbar {
+  width: 0.8rem;
+}
+  
+.accountmenu__list__business::-webkit-scrollbar-track {
+  background: #303030;
+}
+  
+.accountmenu__list__business::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+.accountmenu__content__cards__business__img__bg {
+    background: linear-gradient(to top left, #70cfff, #43b2ea);
+    width: 10%;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.accountmenu__content__cards__business__img__bg_btype {
+    background: linear-gradient(to right, #47ffa6, #40bf8e);
+    width: 10%;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.accountmenu__content__cards__business__img {
+    width: 100%;
+    height: auto;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(178deg) brightness(106%) contrast(102%);
+}
+
+.accountmenu__content__cards__business__address {
+    font-family: 'RobotoLight';
+    color: #9c9c9c;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__business__address__text {
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+}
+
+.accountmenu__content__cards__business__doors__text {
+    font-family: 'RobotoBold';
+    font-size: 1.1rem;
+}
+
+.accountmenu__content__cards__business__doors {
+    font-family: 'RobotoLight';
+    color: #9c9c9c;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__title__count {
+    color: #70cfff;
+    font-family: 'RobotoLight';
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__headerts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accountmenu__content__cards__cars__list {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__cars__list::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+    
+  .accountmenu__content__cards__cars__list::-webkit-scrollbar-track {
+    background: #303030;
+  }
+    
+  .accountmenu__content__cards__cars__list::-webkit-scrollbar-thumb {
+    background: #fff;
+ }
+
+.accountmenu__content__cards__car__img {
+    display: flex;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    border-radius: 0.4rem;
+    background-repeat: no-repeat;
+}
+
+.accountmenu__content__cards__car__gpscont {
+    /*display: flex;*/
+    display: none;
+    margin-top: -7vh;
+}
+
+.accountmenu__content__cards__car__type {
+    color: #70cfff;
+    letter-spacing: 0.15rem;
+    font-family: 'RobotoLight';
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__car {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid rgba(72, 72, 72, 0.1);
+    margin-bottom: 8%;
+    height: 40vh;
+}
+
+.accountmenu__content__cards__car:last-child {
+    border-bottom: none;
+}
+
+.accountmenu__content__cards__car__props__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: auto;
+}
+
+.accountmenu__content__cards__car__name {
+    font-family: 'RobotoBold';
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__car__props {
+    margin-top: 4%;
+    margin-bottom: 8%;
+    display: flex;
+    flex-direction: row;
+}
+
+.accountmenu__content__cards__car__props__tdata {
+    font-family: 'RobotoLight';
+    color: #9c9c9c;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__cards__car__props__bdata {
+    font-family: 'RobotoBold';
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-top: 6px;
+}
+
+.accountmenu__content__cars__header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5%;
+}

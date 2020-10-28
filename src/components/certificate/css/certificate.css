@@ -1,0 +1,188 @@
+.fibcertificate-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.fib-box {
+    width: 417px;
+    height: 579px;
+    background: url(../img/bg.png) no-repeat;
+    border-width: 1.5px;
+    outline-offset: -10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fib-sticker {
+    width: 242px;
+    height: 79px;
+    font-family: 'RobotoBlack';
+    font-size: 75px;
+    color: #ababab;
+    background: #2d2d2d;
+    margin-top: -38px;
+    margin-left: -34px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    box-shadow: -3px 1px 9px rgba(0, 0, 0, 0.5);
+}
+
+.back-fib {
+    width: 504px;
+    height: 333px;
+    background: #2d2d2d;
+}
+
+.fib-cert {
+    width: 349.5px;
+    height: 232px;
+    margin-top: 24px;
+    position: relative;
+}
+
+.fib-btn {
+    width: 349.5px;
+    height: 222px;
+    margin-top: auto;
+    margin-bottom: 24px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gov-lic {
+    width: inherit;
+    height: inherit;
+    background: url(../img/gov.png) no-repeat top right,
+    #fff url(../img/logo-2.png) no-repeat -11% bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lic-gov-log {
+    background: url(../img/logo-gov.png) no-repeat;
+    width: 178px;
+    height: 178px;
+}
+
+.fib-txt-stic {
+    margin-left: 33px;
+}
+
+.fib-img {
+    width: 73px;
+    height: 95px;
+    z-index: 1;
+    margin-left: 22px;
+}
+
+.style-img-fib {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    border-bottom: 15px solid rgb(72, 185, 242);
+}
+
+.fib-pl-inf {
+    width: 349.5px;
+    height: 195px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -11px;
+}
+
+.fib-second-inf {
+    margin-left: 25px;
+}
+
+.fib-name {
+    font-family: 'RobotoBlack';
+    font-size: 18px;
+    color: #2d2d2d
+}
+
+.fib-grow {
+    font-family: 'RobotoLight';
+    font-size: 10px;
+    color: #adadad;
+    text-transform: uppercase;
+}
+
+.fib-black {
+    font-family: 'RobotoLight';
+    font-size: 12px;
+    color: #1e1e1e
+}
+
+.box-fib-inf-tt {
+    margin-top: 14px;
+}
+
+.ff-rr-kk {
+    width: 70px;
+    display: inline-flex;
+}
+
+.pp-aaa {
+    width: 34px;
+    display: inline-flex;
+}
+
+.kk-ll-pp {
+    font-family: 'RobotoLight', sans-serif;
+    margin-left: 50px;
+}
+
+.fib-title-lic {
+    width: inherit;
+    height: 37px;
+    background: #48b9f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'HelveticaNeueCyr';
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 3.8px rgba(0, 0, 0, 0.35);
+
+}
+
+.fib-btn .fib {
+    background: url(../img/logo-fib.png) no-repeat;
+    width: 149px;
+    height: 208px;
+}
+
+.fib-btn .lspd {
+    background: url(../img/logo-lspd.png) no-repeat;
+    width: 147px;
+    height: 202px;
+}
+
+.fib-btn .sheriff {
+    background: url(../img/logo-shef.png) no-repeat;
+    width: 203px;
+    height: 231px;
+}
+
+.fib-btn .ems {
+    background: url(../img/logo-ems.png) no-repeat;
+    width: 147px;
+    height: 224px;
+}

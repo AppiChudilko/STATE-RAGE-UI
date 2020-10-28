@@ -1,0 +1,262 @@
+.carshop-position {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    position: absolute;
+    align-items: center;    
+}
+.car-leftmenu {
+    margin-right:auto;
+    width: 405px;
+    height: 100%;
+    background: rgb(28, 28, 28, 0.3);
+    overflow: hidden;
+}
+.left-title-car {
+    width: 100%;
+    height: 65px;
+    background: #fff;
+    font-family: "HACKED";
+    color: #000; 
+    font-size: 42px;
+    display: flex;
+    align-items: center; 
+}
+.title-car-tt {
+    margin-left: 18px;
+}
+.left-list-menu-car {
+    width: 100%;
+    height: calc(100% - 65px);
+    overflow: scroll;    
+}
+.left-list-menu-car::-webkit-scrollbar { width: 7px; height: 0px;}
+.left-list-menu-car::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+.left-list-menu-car::-webkit-scrollbar-thumb {
+    background: #00b7f4;; 
+}
+.left-list-menu-car::-webkit-scrollbar-thumb:window-inactive {
+    background: #00b7f4;
+}
+
+.left-li-car {
+    width: 100%;
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 11px;
+}
+.l-c-info-car {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    font-family: "RobotoLight";
+    font-size: 19px;
+    color: #fff;    
+}
+.l-c-img-car {
+    margin-left: auto;
+    width: 143px;
+    height: 80px;
+}
+.car-img-settings {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover; 
+    filter: grayscale(100%); 
+}
+.car1-img { 
+     background: url(../img/car/testcar.png) no-repeat;
+}
+.label-carradio {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+.t-c-txt{
+    margin-top: -7px;
+    margin-bottom: 10px;
+}
+input[type="radio"]:checked + .label-carradio {
+    background-color: rgb(28, 28, 28, 0.7);
+}
+input[type="radio"]:checked + label .l-c-img-car  {
+    border-left: 5px solid #00b7f4;
+}  
+input[type="radio"]:checked + label .car-img-settings  {
+    filter: none;
+} 
+.info-menu-right-position {
+    width: 285px;
+    height: auto;
+    margin-left: auto;
+    margin-right: 61px;
+    margin-bottom: auto;
+    margin-top: 120px;
+}
+.m-linear-r {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.m-linear-r .ml-one{
+    width: 70px;
+    height: 10px;
+    background: #fff;
+    margin-right: 5px;
+}
+.m-linear-r .ml-two{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+}
+.inf-t-menu-r {
+    width: 100%;
+    font-family: 'HACKED';
+    font-size: 48px;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.ml-li-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #fff;
+    margin-top: 25px;
+}
+.ml-box-l {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.ml-box-l-info {
+    margin-left: auto;
+}
+.color-menu-center-position {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 78px;
+}
+.clr-m-btn-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ccslider-box {
+    background: rgb(28, 28, 28, 0.3);
+    width: 201px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'RobotoLight';
+    font-size: 16px;
+    color: #fff;
+}
+input[type="radio"]:checked + .ccslider-box {
+    background: #fff;
+    color: #000;
+}
+.color-box-slider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 45px;
+    align-items: center;
+}
+.clr-box-arrow-left {
+    width: 11px;
+    height: 21px;
+    background: url(../img/arrowleft.png) no-repeat;
+}
+.clr-box-arrow-right {
+    width: 11px;
+    height: 21px;
+    background: url(../img/arrowleft.png) no-repeat;
+    transform: rotate(180deg);
+    margin-left: auto;
+}
+.clr-slider-list {
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.clr-slider-list .slick-list {
+    width: 85% !important;
+    margin-left: auto;
+    /* margin-right: auto; */
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.clr-slider-list .slick-track {
+    /* width: auto !important; */
+    display: flex;
+    flex-direction: row;   
+    max-width: 358px;
+    align-items: center;
+    
+}
+.clr-list-box {
+    width: 51px !important;
+    height: 9px;
+}
+.slick-current .clr-list-box {
+    height: 15px;
+}
+.b-l-btn-title {
+    font-family: 'HACKED';
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.b-l-btn-box {
+    width: 164px;
+    height: 45px;
+    background: #48b9f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-size: 22px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.b-l-btn-box:hover {
+    background: #000;
+}
+.buy-list-c-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 120px;
+}
+.rent-list-c-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+.slick-slide div {
+    display: flex;
+    outline: none;
+}

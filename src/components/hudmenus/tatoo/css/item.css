@@ -1,0 +1,46 @@
+.tatoo__content__list__item__name {
+    font-family: 'RobotoLight';
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tatoo__content__list__item__desc {
+    font-family: 'RobotoLight';
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    color: rgba(255, 255, 255, 0.67);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tatoo__content__list__item__sale {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    font-family: 'RobotoBold';
+    background-color: #ef3038;
+}
+
+.tatoo__content__list__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    min-height: 3vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    cursor: pointer;
+    align-items: center;
+}
+
+.tatoo__content__list__item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}

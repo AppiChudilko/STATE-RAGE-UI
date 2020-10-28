@@ -1,0 +1,78 @@
+.accountmenu__content {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 80%;
+    border-radius: 0.4rem;
+    margin-top: 1%;
+    padding: 0.4rem;
+}
+
+.accountmenu__content__nav {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.4rem;
+    display: flex;
+    height: 7.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: center;
+    outline: none;
+}
+
+.nav__button__name {
+    font-family: 'RobotoLight';
+    font-size: 1.6rem;
+    color: #484848;
+    border: 1px solid #484848;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.nav__button {
+    padding-bottom: 1rem;
+}
+
+.accountmenu__content__nav__items {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.accountmenu__content__nav__item_active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountmenu__content__nav__item_unactive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.accountmenu__content__nav__item__text_active {
+    font-family: 'RobotoBold';
+    font-size: 1.8rem;
+    color: #43b2ea;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #43b2ea;
+    margin-bottom: -1px;
+    text-transform: uppercase;
+}
+
+.accountmenu__content__nav__item__text_unactive {
+    font-family: 'RobotoBold';
+    font-size: 1.8rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+}
+
+.content__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #484848;
+}

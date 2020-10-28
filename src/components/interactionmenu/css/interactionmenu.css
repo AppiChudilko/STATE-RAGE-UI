@@ -1,0 +1,21 @@
+.inter-menu {
+    background: #fff;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+}
+
+.inter-box {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "RobotoBold";
+    font-size: 16px;
+    color: #000;
+}
+
+.inter-box:hover {
+    background: rgb(72, 185, 242);
+    color: #fff !important;
+}
