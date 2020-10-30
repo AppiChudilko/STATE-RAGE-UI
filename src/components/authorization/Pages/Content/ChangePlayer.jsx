@@ -102,20 +102,7 @@ class ChangePlayer extends React.Component {
         return (
             <React.Fragment>
                 <div className="main-box-change">
-                    {this.state.first_character_create ?
-                        <InfoPlayer
-                            index={0}
-                            name={this.state.info_player[0].player.name}
-                            old={this.state.info_player[0].player.old}
-                            money={this.state.info_player[0].player.money}
-                            date={this.state.info_player[0].player.date}
-                            spawn={this.state.info_player[0].player.spawn}
-                            index_spawn={this.state.info_player[0].player.index_spawn}
-                            info_player={this.state.info_player}
-                            clickLeftArrow={this.clickLeftArrow.bind(this)}
-                            clickRightArrow={this.clickRightArrow.bind(this)}
-                        />
-                        : <BoxCreate/>}
+                    
                     {this.state.second_character_create ?
                         <InfoPlayer
                             index={1}
@@ -125,6 +112,20 @@ class ChangePlayer extends React.Component {
                             date={this.state.info_player[1].player.date}
                             spawn={this.state.info_player[1].player.spawn}
                             index_spawn={this.state.info_player[1].player.index_spawn}
+                            info_player={this.state.info_player}
+                            clickLeftArrow={this.clickLeftArrow.bind(this)}
+                            clickRightArrow={this.clickRightArrow.bind(this)}
+                        />
+                        : <BoxCreate/>}
+                    {this.state.first_character_create ?
+                        <InfoPlayer
+                            index={0}
+                            name={this.state.info_player[0].player.name}
+                            old={this.state.info_player[0].player.old}
+                            money={this.state.info_player[0].player.money}
+                            date={this.state.info_player[0].player.date}
+                            spawn={this.state.info_player[0].player.spawn}
+                            index_spawn={this.state.info_player[0].player.index_spawn}
                             info_player={this.state.info_player}
                             clickLeftArrow={this.clickLeftArrow.bind(this)}
                             clickRightArrow={this.clickRightArrow.bind(this)}

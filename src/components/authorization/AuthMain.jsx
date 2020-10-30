@@ -4,6 +4,7 @@ import Authorization from './Pages/Authorization';
 import {BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import CreatePlayer from './Pages/CreatePlayer';
 import EventManager from "../../EventManager";
+import serverLogo from './img/logo.svg'
 
 class AuthMain extends React.Component {
     constructor(props) {
@@ -43,6 +44,7 @@ class AuthMain extends React.Component {
         return (
             <React.Fragment>
                 <Router>
+                    <img src={serverLogo} style={{zIndex: 2, position: 'absolute', marginTop: '2rem', marginLeft: '2rem'}} />
                     <Route exact path="/" component={Authorization}/>
                     <Route exact path="/create" component={CreatePlayer}/>
                     <Redirect to={this.state.path} push/>

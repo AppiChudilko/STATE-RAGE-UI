@@ -32,37 +32,43 @@ class InfoPlayer extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="change-create-player">
-                    <div className="border-top"></div>
+                <div className={`change-create-player ${this.props.index === 0 ? 'change-create-player-center' : ''}`}>
                     <div className="info-player">
-                        <div className={this.changeImg()}></div>
-                        <div className="name-player-info">{this.props.name}</div>
-                        <div className="info-text-player">
-                            <div className="text-box">
-                                <span className="title-info-text">Вы играли</span> <span
-                                className="text-box-blue">{this.props.old}ч.</span>
+                        <div className="accinfo__container">
+                            <div className="text-box__container">
+                                <div className="text-box">
+                                    <span className="title-info-text">{`Наиграно часов: ${this.props.old}`}</span>
+                                </div>
+                                <div className="text-box">
+                                    <span className="title-info-text">{`Общий баланс: ${this.props.money}$`}</span>
+                                </div>
                             </div>
-                            <div className="text-box">
-                                <span className="title-info-text">Деньги</span> <span
-                                className="text-box-blue">{this.props.money}</span>
-                            </div>
-                            <div className="text-box">
-                                <span className="title-info-text">Последний вход</span> <span
-                                className="text-box-blue">{this.props.date}</span>
+                            <div className="text-box__container">
+                                <div className="text-box">
+                                    <span className="title-info-text">{`Последний вход: ${this.props.date}`}</span>
+                                </div>
+                                <div className="text-box">
+                                    <span className="chevron-left"
+                                        onClick={() => this.props.clickLeftArrow(this.props.index)}></span>
+                                    <span>{`Место респавна: ${this.props.spawn[this.props.index_spawn]}`}</span>
+                                    <span className="chevron-right"
+                                        onClick={() => this.props.clickRightArrow(this.props.index)}></span>
+                                </div>
                             </div>
                         </div>
-                        <div className="slider-home-player">
-                            <div className="button-slider-home trans-arr"
-                                 onClick={() => this.props.clickLeftArrow(this.props.index)}></div>
-                            <span>{this.props.spawn[this.props.index_spawn]}</span>
-                            <div className="button-slider-home arro-right"
-                                 onClick={() => this.props.clickRightArrow(this.props.index)}></div>
-                        </div>
-                        <div className="create-btn"
-                             onClick={() => this.selectChar(this.props.name, this.props.spawn[this.props.index_spawn])}>Войти
+                        <div className="create-btn__container">
+                            <span
+                                className="create-btn"
+                                onClick={() => this.selectChar(this.props.name, this.props.spawn[this.props.index_spawn])}
+                            >
+                                {this.props.name}
+                            </span>
+                            <span className="chevron-top" style={{marginTop: '1rem', marginBottom: '1rem', color: 'rgba(255, 255, 255, 0.5)'}} />
+                            <span className="create-btn__hint">
+                                Нажмите, чтобы войти
+                            </span>
                         </div>
                     </div>
-                    <div className="border-bottom"></div>
                 </div>
             </React.Fragment>
         )

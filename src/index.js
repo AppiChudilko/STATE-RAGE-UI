@@ -16,17 +16,45 @@ EventManager.addHandler('notify', value => {
 
 Noty.setMaxVisible(3);
 
-function notify(type, layout, message, time) {
+
+/*
+*
+* theme: error, warning, info, success
+*
+*/
+
+function notify(type, layout, message, time, theme) {
     let types = ['information', 'error', 'success'];
     let layouts = ['top', 'topLeft', 'topCenter', 'topRight', 'center', 'centerLeft', 'centerRight', 'bottom', 'bottomLeft', 'bottomCenter', 'bottomRight'];
-    message = `<div class="message">${message}</div>`;
+    let notifyText
+    switch (theme) {
+        case 'error':
+            notifyText = 'Ошибка!'
+            break;
+        case 'warning':
+            notifyText = 'Предупреждение!'
+            break;
+        case 'info':
+            notifyText = 'Информация!'
+            break;
+        case 'success':
+            notifyText = 'Успешно!'
+            break;
+        default:
+            break;
+    }
+    message = `
+    <div class="message__notify__container">
+        <span class="message__notify__type">${notifyText}</span>
+        <span class="message__notify">${message}</span>
+    </div>`;
     let ntf = new Noty({
         type: types[type],
         layout: layouts[layout],
-        theme: 'dednet',
+        theme: theme || 'dednet',
         text: message,
         timeout: time,
-        progressBar: true,
+        progressBar: false,
         animation: {
             open: 'animated fadeInLeft',
             close: 'animated fadeOutLeft'

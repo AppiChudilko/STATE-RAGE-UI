@@ -1,6 +1,7 @@
 import React from 'react';
+import Title from '../uikit/Title';
 import ChangePlayer from './Content/ChangePlayer';
-
+import Particles from 'react-particles-js';
 
 class CreatePlayer extends React.Component {
     constructor(props) {
@@ -15,18 +16,34 @@ class CreatePlayer extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <Particles
+                    params={{
+                        "particles": {
+                            "number": {
+                                "value": 111
+                            },
+                            "size": {
+                                "value": 5
+                            }
+                        },
+                        "interactivity": {
+                            "events": {
+                                "onhover": {
+                                    "enable": true,
+                                    "mode": "repulse"
+                                }
+                            }
+                        }
+                    }}
+                    width="100%"
+                    height="100%"
+                />
                 <div className="reg-main">
-                    <div className="bg-left-create">
-                        <span className="title-dednet">DEDNET</span>
-                        <div className="position-bg-bottom">
-                            <div className="create-bg-bottom" id="adaptive-bg-right"></div>
-                        </div>
-                    </div>
-                    <div className="bg-right-create">
-                        <div className="create-logo"></div>
-                        <div className="create-bg-right" id="adaptive-bg-right"></div>
-                    </div>
                     <div className="create-content">
+                        <div className="auth-input__text__container" style={{marginRight: '10%', marginTop: 0}}>
+                            <Title text="Выберите персонажа чтобы продолжить" size="xxl" />
+                            <Title text="Так же вы можете создать дополнительного персонажа" size="xl" />
+                        </div>
                         <ChangePlayer/>
                     </div>
                 </div>

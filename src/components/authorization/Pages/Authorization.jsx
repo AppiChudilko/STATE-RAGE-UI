@@ -1,5 +1,8 @@
 import React from 'react';
 import EventManager from "../../../EventManager";
+import Button from '../uikit/Button';
+import Title from '../uikit/Title'
+import Particles from 'react-particles-js';
 
 class Authorization extends React.Component {
     constructor(props) {
@@ -123,38 +126,31 @@ class Authorization extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="auth-main">
-                    <div className="background-auth">
-                        <div className="bg-left">
-                            <div className="liner-top"></div>
-                            {this.state.showAuto ?
-                                <div className="bg-position-auth">
-                                    <div className="bg-top-main">
-                                        <div className="circle-box">
-                                            <div className="circle active"></div>
-                                            <div className="circle"></div>
-                                        </div>
-                                        <div className="bg-logo-auth"></div>
-                                    </div>
-                                    <div className="bg-change-auth"></div>
-                                </div>
-                                :
-                                <div className="bg-position-auth">
-                                    <div className="bg-top-main">
-                                        <div className="circle-box">
-                                            <div className="circle"></div>
-                                            <div className="circle active"></div>
-                                        </div>
-                                        <div className="bg-logo-reg"></div>
-                                    </div>
-                                    <div className="bg-change-reg"></div>
-                                </div>
+                <Particles
+                    params={{
+                        "particles": {
+                            "number": {
+                                "value": 111
+                            },
+                            "size": {
+                                "value": 5
                             }
-                            <div className="bg-bottom"></div>
-                        </div>
-                        <div className="bg-right" id="adaptive-bg-right">
-                            <div className="bg-right-auth"></div>
-                        </div>
+                        },
+                        "interactivity": {
+                            "events": {
+                                "onhover": {
+                                    "enable": true,
+                                    "mode": "repulse"
+                                }
+                            }
+                        }
+                    }}
+                    width="100%"
+                    height="100%"
+                />
+                <div className="auth-main">
+                    <div className="auth__background">
+                        
                     </div>
                     <div className="content-main">
                         <div className="content-auth">
@@ -169,20 +165,28 @@ class Authorization extends React.Component {
                             {this.state.showAuto ?
                                 <React.Fragment>
                                     <div className="auth-input">
-                                        <input type="text" pattern="[a-zA-Z0-9]*" placeholder="введите логин"
+                                        <div className="auth-input__text__container">
+                                            <Title text="Добро пожаловать на State 99" size="xxl" />
+                                            <Title text="Авторизуйтесь, чтобы продолжить" size="xl" />
+                                        </div>
+                                        <input type="text" pattern="[a-zA-Z0-9]*" placeholder="Введите логин"
                                             name="login-auth" className="auth-input-style" defaultValue={this.state.defaultLogin}
                                             onChange={this.valueLogin.bind(this)}
                                         />
-                                        <input type="password" pattern="[a-zA-Z0-9]*" placeholder="введите пароль"
+                                        <input type="password" pattern="[a-zA-Z0-9]*" placeholder="Введите пароль"
                                             name="password-auth" className="auth-input-style"
                                             value={this.state.password} onChange={this.valuePassword.bind(this)}
                                         />
                                     </div>
-                                    <div className="button-auth-click" onClick={this.clickLogin.bind(this)}>Войти</div>
+                                    <Button text="Войти" onClick={this.clickLogin.bind(this)} />
                                 </React.Fragment>
                                 :
                                 <React.Fragment>
                                     <div className="auth-input">
+                                        <div className="auth-input__text__container">
+                                            <Title text="Добро пожаловать на State 99" size="xxl" />
+                                            <Title text="Пройдите регистрацию для начала игры" size="xl" />
+                                        </div>
                                         <div className="reg-bloc">
                                             <input type="text" pattern="[a-zA-Z0-9]*" placeholder="Придумайте логин"
                                                 name="create-login" className="reg-input-style"
@@ -212,11 +216,11 @@ class Authorization extends React.Component {
                                             />
                                             <label className="chk_reg" htmlFor="chk1">
                                                 <div className="chk-circle"></div>
-                                                <u id="button_rules" onClick={this.clickCheckRules.bind(this)}>Согласен с правилами проекта и принимаю условия</u>
+                                                <p id="button_rules" onClick={this.clickCheckRules.bind(this)}>Согласен с правилами проекта и принимаю условия</p>
                                             </label>
                                         </div>
                                     </div>
-                                    <div className="button-auth-click" onClick={this.clickReg.bind(this)}>Готово</div>
+                                    <Button text="Готово" onClick={this.clickReg.bind(this)} />
                                 </React.Fragment>
                             }
                         </div>
