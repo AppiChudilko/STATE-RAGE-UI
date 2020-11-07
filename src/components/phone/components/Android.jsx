@@ -5,6 +5,7 @@ import TopBar from './Android/TopBar';
 import BottomBar from './Android/BottomBar';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import EventManager from "../../../EventManager";
+import iphoneBox from '../img/iphone_frame.png'
 import PhoneBook from './Android/PhoneBook/PhoneBook';
 import ProfileContact from './Android/PhoneBook/pages/ProfileContact';
 import Scrollbar from './apps/Scrollbar';
@@ -794,6 +795,7 @@ class Android extends React.Component {
         return (
             <React.Fragment>
                 <div className={this.state.rotate ? "android-phone rotate-androind" : "android-phone"}>
+                    <img className="phone__box" src={iphoneBox} />
                     <div className="phone-bg" style={bg}>
                         <div className={this.state.rotate ? "rotate-components" : 'main-phone-box-flex'}>
                             <TopBar data={this.state.top_bar} />

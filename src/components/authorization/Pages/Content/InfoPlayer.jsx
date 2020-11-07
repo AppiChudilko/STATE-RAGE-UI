@@ -35,17 +35,15 @@ class InfoPlayer extends React.Component {
                 <div className={`change-create-player ${this.props.index === 0 ? 'change-create-player-center' : ''}`}>
                     <div className="info-player">
                         <div className="accinfo__container">
+                            <span className="accinfo__nickname">
+                                {this.props.name}
+                            </span>
                             <div className="text-box__container">
                                 <div className="text-box">
                                     <span className="title-info-text">{`Наиграно часов: ${this.props.old}`}</span>
                                 </div>
                                 <div className="text-box">
                                     <span className="title-info-text">{`Общий баланс: ${this.props.money}$`}</span>
-                                </div>
-                            </div>
-                            <div className="text-box__container">
-                                <div className="text-box">
-                                    <span className="title-info-text">{`Последний вход: ${this.props.date}`}</span>
                                 </div>
                                 <div className="text-box">
                                     <span className="chevron-left"
@@ -61,12 +59,9 @@ class InfoPlayer extends React.Component {
                                 className="create-btn"
                                 onClick={() => this.selectChar(this.props.name, this.props.spawn[this.props.index_spawn])}
                             >
-                                {this.props.name}
+                                Войти
                             </span>
-                            <span className="chevron-top" style={{marginTop: '1rem', marginBottom: '1rem', color: 'rgba(255, 255, 255, 0.5)'}} />
-                            <span className="create-btn__hint">
-                                Нажмите, чтобы войти
-                            </span>
+                            
                         </div>
                     </div>
                 </div>

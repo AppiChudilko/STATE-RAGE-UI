@@ -399,7 +399,7 @@ input:focus.reg-input-style {
 }
 
 .change-create-player-center {
-    width: 60%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -408,8 +408,9 @@ input:focus.reg-input-style {
 
 .accinfo__container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     height: 100%;
 }
 
@@ -417,7 +418,8 @@ input:focus.reg-input-style {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 35%;
+    width: 50%;
+    margin-bottom: 5%;
 }
 
 .chevron-right::before {
@@ -445,7 +447,6 @@ input:focus.reg-input-style {
     width:100%;
     height:100%;
     z-index: 1;
-    background: transparent; /* bg */
 }
 
 .chevron-left::before {
@@ -495,15 +496,37 @@ input:focus.reg-input-style {
 }
 
 .create-btn {
-    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     font-family: "Century Gothic";
     font-size: 1rem;
     cursor: pointer;
     border-radius: 10px;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+    color: #fff;
+}
+
+.accinfo__nickname {
+    margin-bottom: auto;
+    font-family: "Century Gothic";
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.create-hero-btn {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: -100px;
+    font-family: "Century Gothic";
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     padding-left: 5.2rem;
     padding-right: 5.2rem;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .create-btn__container {
@@ -591,7 +614,7 @@ input:focus.reg-input-style {
 
 .createhero__box {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -615,21 +638,25 @@ input:focus.reg-input-style {
     align-items: center;
     font-size: 1rem;
     font-family: "Century Gothic";
+    display: flex;
+    justify-content: center;
 }
 
 .text-box:first-child {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+}
+
+.text-box:not(:last-child) {
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
 }
 
-.text-box:not(:first-child) {
+.text-box:last-child {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
 .title-info-text {
-    margin-left: 24px;
     font-family: "Century Gothic";
 }
 

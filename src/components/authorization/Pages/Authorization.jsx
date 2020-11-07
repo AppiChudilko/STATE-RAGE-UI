@@ -3,6 +3,8 @@ import EventManager from "../../../EventManager";
 import Button from '../uikit/Button';
 import Title from '../uikit/Title'
 import Particles from 'react-particles-js';
+import authImageBg from '../img/auth.png'
+import regImageBg from '../img/reg.png'
 
 class Authorization extends React.Component {
     constructor(props) {
@@ -148,7 +150,12 @@ class Authorization extends React.Component {
                     width="100%"
                     height="100%"
                 />
-                <div className="auth-main">
+                <div className="auth-main" style={{
+                    backgroundImage: `url(${this.state.showAuto ? authImageBg : regImageBg})`,
+                    backgroundPositionX: 'left',
+                    backgroundPositionY: 'bottom',
+                    backgroundSize: '50%'
+                }}>
                     <div className="auth__background">
                         
                     </div>

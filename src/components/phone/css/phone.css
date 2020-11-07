@@ -12,8 +12,8 @@
     z-index: 1;*/
 
     position: absolute;
-    bottom: -40px;
-    right: 75px;
+    bottom: 200px;
+    right: 150px;
     z-index: 1;
 }
 /* .android-phone::-webkit-scrollbar {
@@ -21,9 +21,8 @@
 } */
 
 .android-phone {
-    background: url(../img/android/android.png) no-repeat;
-    width: 317px;
-    height: 587px;
+    background-size: contain;
+    width: 340px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,12 +44,17 @@
 }
 
 .phone-bg {
-    width: 276px;
-    height: 463px;
+    width: 280px;
+    height: 620px;
+    background-image: url('https://i.imgur.com/v4aju8F.jpg');
+    border-radius: 20px;
     overflow: hidden;
-    margin-top: 3px;
-    margin-right: 1px;
     background-size: cover !important;
+}
+
+.phone__box {
+    position: absolute;
+    width: 320px;
 }
 
 .bg-0 {
@@ -432,6 +436,7 @@
     /* background: #2d72c1; */
     margin-top: -2px;
     width: 100%;
+    margin-top: 15px;
 }
 
 .bg-blue-andr {
@@ -442,6 +447,11 @@
     margin-left: auto;
     display: flex;
     align-items: center;
+    margin-right: 21px;
+}
+
+.right-topbar {
+    margin-left: 21px;
 }
 
 .left-topbar .elements-bar {
@@ -462,7 +472,7 @@
 .left-topbar .battery-info {
     font-size: 12px;
     margin-right: 3px;
-    font-family: "Roboto";
+    font-family: 'SF Compact Display Thin';
     color: #fff;
     margin-left: 4px;
 }

@@ -111,7 +111,9 @@ class TopBar extends React.Component {
         return (
             <React.Fragment>
                 <div className="topbar-andr" style={style}>
-                    <div className="right-topbar"></div>
+                    <div className="right-topbar">
+                        <span className="battery-info">{this.props.data.time}</span>
+                    </div>
                     <div className="left-topbar">
                         {this.props.data.wifi ?
                             <div className="elements-bar">
@@ -165,7 +167,6 @@ class TopBar extends React.Component {
                             </svg>
 
                         </div>
-                        <span className="battery-info">{this.props.data.time}</span>
                     </div>
                 </div>
             </React.Fragment>
