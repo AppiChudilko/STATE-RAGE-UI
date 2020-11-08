@@ -320,7 +320,6 @@ input:focus.reg-input-style {
 
 /*Выбор персонажа*/
 .reg-main {
-    background: #1c1c1c;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     display: flex;

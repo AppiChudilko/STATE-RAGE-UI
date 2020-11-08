@@ -16,28 +16,6 @@ class CreatePlayer extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Particles
-                    params={{
-                        "particles": {
-                            "number": {
-                                "value": 111
-                            },
-                            "size": {
-                                "value": 5
-                            }
-                        },
-                        "interactivity": {
-                            "events": {
-                                "onhover": {
-                                    "enable": true,
-                                    "mode": "repulse"
-                                }
-                            }
-                        }
-                    }}
-                    width="100%"
-                    height="100%"
-                />
                 <div className="reg-main">
                     <div className="create-content">
                         <div className="auth-input__text__container" style={{marginRight: '10%', marginTop: 0}}>
