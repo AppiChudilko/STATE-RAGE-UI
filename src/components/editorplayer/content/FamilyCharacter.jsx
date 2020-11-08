@@ -16,7 +16,7 @@ class FamilyCharacter extends React.Component {
         return (
             <React.Fragment>
                 <div className="menu-editor-default">
-                    <div className="title-block">Родители</div>
+                    <div className="title-block">Шаг 2</div>
                     <span className="title-in-block">Выберите пол</span>
                     <div className="change-sex-block">
                         <input type="radio" name="change-sex" id="change-male" defaultChecked
@@ -27,38 +27,42 @@ class FamilyCharacter extends React.Component {
                         <label htmlFor="change-female" className="change-sex-style">Женский</label>
                     </div>
                     <div className="change-button-box">
-                        <SliderArrow
-                            index={0}
-                            index_help={this.props.slider_one}
-                            title={this.props.title_one}
-                            name_array={this.props.name_array_one}
-                            clickLeftArrow={this.props.clickLeftArrow.bind(this)}
-                            clickRightArrow={this.props.clickRightArrow.bind(this)}
-                        />
-                        <SliderArrow
-                            index={1}
-                            index_help={this.props.slider_two}
-                            title={this.props.title_two}
-                            name_array={this.props.name_array_two}
-                            clickLeftArrow={this.props.clickLeftArrow.bind(this)}
-                            clickRightArrow={this.props.clickRightArrow.bind(this)}
-                        />
-                        <SliderArrow
-                            index={2}
-                            index_help={this.props.slider_three}
-                            title={this.props.title_three}
-                            name_array={this.props.name_array_three * 5}
-                            clickLeftArrow={this.props.clickLeftArrow.bind(this)}
-                            clickRightArrow={this.props.clickRightArrow.bind(this)}
-                        />
-                        <SliderArrow
-                            index={3}
-                            index_help={this.props.slider_four}
-                            title={this.props.title_four}
-                            name_array={this.props.name_array_four * 5}
-                            clickLeftArrow={this.props.clickLeftArrow.bind(this)}
-                            clickRightArrow={this.props.clickRightArrow.bind(this)}
-                        />
+                        <div className="change-button-box__row">
+                            <SliderArrow
+                                index={0}
+                                index_help={this.props.slider_one}
+                                title={this.props.title_one}
+                                name_array={this.props.name_array_one}
+                                clickLeftArrow={this.props.clickLeftArrow.bind(this)}
+                                clickRightArrow={this.props.clickRightArrow.bind(this)}
+                            />
+                            <SliderArrow
+                                index={1}
+                                index_help={this.props.slider_two}
+                                title={this.props.title_two}
+                                name_array={this.props.name_array_two}
+                                clickLeftArrow={this.props.clickLeftArrow.bind(this)}
+                                clickRightArrow={this.props.clickRightArrow.bind(this)}
+                            />
+                        </div>
+                        <div className="change-button-box__row">
+                            <SliderArrow
+                                index={2}
+                                index_help={this.props.slider_three}
+                                title={this.props.title_three}
+                                name_array={this.props.name_array_three * 5}
+                                clickLeftArrow={this.props.clickLeftArrow.bind(this)}
+                                clickRightArrow={this.props.clickRightArrow.bind(this)}
+                            />
+                            <SliderArrow
+                                index={3}
+                                index_help={this.props.slider_four}
+                                title={this.props.title_four}
+                                name_array={this.props.name_array_four * 5}
+                                clickLeftArrow={this.props.clickLeftArrow.bind(this)}
+                                clickRightArrow={this.props.clickRightArrow.bind(this)}
+                            />
+                        </div>
                     </div>
                     <div className="characteristic-editor">
                         <div className="box-character">
@@ -111,20 +115,13 @@ class FamilyCharacter extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="editor-circl-change">
-                        <div className="circle-change"></div>
-                        <div className="circle-change circle-blue"></div>
-                        <div className="circle-change"></div>
-                    </div>
                     <div className="last-button-menu">
                         <div className="box-last-btn" onClick={this.props.randomize.bind(this)}>Рандом</div>
                         <div className="box-last-btn" onClick={this.props.reset.bind(this)}>Сброс</div>
+                        <Link to="/editor/editor-character/face-first">
+                            <div className="box-last-btn">Далее</div>
+                        </Link>
                     </div>
-                    <Link to="/editor/editor-character/face-first">
-                        <div className="next-button-menu">
-                            <div className="box-next-btn">Далее</div>
-                        </div>
-                    </Link>
                 </div>
             </React.Fragment>
         )

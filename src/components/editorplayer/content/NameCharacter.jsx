@@ -35,7 +35,7 @@ class NameCharacter extends React.Component {
         return (
             <React.Fragment>
                 <div className="menu-editor-default def-style">
-                    <div className="title-block">Данные</div>
+                    <div className="title-block">Шаг 1</div>
                     <span className="title-in-block">Введите свои данные</span>
                     <div className="create-info-input">
                         <input type="text" placeholder="Имя" name="firstname-create" pattern="[a-zA-Z]*"
@@ -56,28 +56,25 @@ class NameCharacter extends React.Component {
                                className="auth-input-style" value={this.props.referer}
                                onChange={this.props.valueReferer.bind(this)}/>
                     </div>
-                    <SliderEditor
-                        index={0}
-                        title={this.props.title}
-                        index_help={this.props.index_help}
-                        name_array={this.props.nationality}
-                        clickLeftArrow={this.props.clickLeftArrow.bind(this)}
-                        clickRightArrow={this.props.clickRightArrow.bind(this)}
-                    />
-                    <div className="editor-circl-change def-margin-auto">
-                        <div className="circle-change circle-blue"></div>
-                        <div className="circle-change"></div>
-                        <div className="circle-change"></div>
+                    <div
+                        className="box-change box-change__row otstup-box"
+                        style={{flexDirection: 'column'}}
+                    >
+                        <span className="box-editor-title__namechar">{this.props.title}</span>
+                        <div className="box-in-change editor-box-style">
+                            <span className="chevron-left"
+                                onClick={() => this.props.clickLeftArrow(0)}></span>
+                            <div
+                                className="label-change color-white">{this.props.nationality[this.props.index_help] !== undefined ? this.props.nationality[this.props.index_help] : this.props.nationality}</div>
+                            <span className="chevron-right"
+                                onClick={() => this.props.clickRightArrow(0)}></span>
+                        </div>
                     </div>
                     <div className="last-button-menu">
                         <div className="box-last-btn">...</div>
                         <div className="box-last-btn" onClick={this.props.reset.bind(this)}>Сброс</div>
-                    </div>                    
-                    {/* <Link to="/editor/family-character"> */}
-                    <div className="next-button-menu">
-                        <div className="box-next-btn" onClick={this.registerPlayer.bind(this)}>Далее</div>
+                        <div className="box-last-btn" onClick={this.registerPlayer.bind(this)}>Далее</div>
                     </div>
-                    {/* </Link> */}
                 </div>
             </React.Fragment>
         )

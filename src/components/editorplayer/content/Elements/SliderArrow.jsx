@@ -16,12 +16,12 @@ class SliderArrow extends React.Component {
                 <div className="box-change">
                     <span className="box-title">{this.props.title}</span>
                     <div className="box-in-change">
-                        <div className="arrow-change left-arrow"
-                             onClick={() => this.props.clickLeftArrow(this.props.index)}></div>
+                        <span className="chevron-left"
+                             onClick={() => this.props.clickLeftArrow(this.props.index)}></span>
                         <div
                             className="label-change color-white">{this.props.name_array[this.props.index_help] !== undefined ? this.props.name_array[this.props.index_help] : this.props.name_array + "%"}</div>
-                        <div className="arrow-change right-arrow"
-                             onClick={() => this.props.clickRightArrow(this.props.index)}></div>
+                        <span className="chevron-right"
+                             onClick={() => this.props.clickRightArrow(this.props.index)}></span>
                     </div>
                 </div>
             </React.Fragment>

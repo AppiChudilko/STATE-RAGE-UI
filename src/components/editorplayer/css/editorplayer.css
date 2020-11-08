@@ -1,7 +1,10 @@
 .editor-box {
     width:100%;
     height: 100%;
+    justify-content: flex-end;
+    align-items: center;
     display: flex;
+    background-image: url('https://sun9-54.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1920x1080&quality=96&proxy=1&sign=4e1b3751d18bab5b4cfe43ec03e24164');
 }
 
 /* <!-- Слайдер камеры --> */
@@ -29,6 +32,10 @@
 
 .range-editor-block:first-child {
     margin-top: 21px;
+}
+
+.range-text {
+    font-family: 'Century Gothic';
 }
 
 .range-editor-block .range-text {
@@ -66,35 +73,59 @@
 
 /* <!-- Меню 1 -->*/
 .menu-editor-default {
-    background: rgb(28, 28, 28);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
     width: 455px;
-    height: 733px;
-    margin-top: auto;
+    margin-right: 8%;
+    padding: 2.8rem;
+}
+
+.editor__hint {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 400px;
     margin-left: auto;
-    margin-bottom: 159px;
+    margin-right: 8%;
+    margin-top: 3rem;
+}
+
+.editor__hint__title {
+    font-family: 'Century Gothic';
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: end;
+}
+
+.editor__hint__subtitle {
+    font-family: 'Century Gothic';
+    font-size: 1rem;
+    text-align: end;
 }
 
 .menu-editor-default .title-block {
     width: inherit;
-    height: 59px;
-    background: rgb(72, 185, 242);
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "HACKED";
-    font-size: 38px;
-    text-transform: uppercase;
+    font-family: "Century Gothic";
+    font-size: 1rem;
 }
 
 .menu-editor-default .title-in-block {
     width: inherit;
-    height: 63px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Roboto";
-    color: rgb(72, 185, 242);
-    font-size: 18px;
+    font-family: "Century Gothic";
+    font-weight: bold;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
 }
 
 .menu-editor-default .change-sex-block {
@@ -104,20 +135,36 @@
 }
 
 .change-sex-block .change-sex-style {
-    background: rgb(19, 19, 19);
-    width: 210px;
-    height: 32px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Roboto";
-    font-size: 16px;
-    color: rgb(60, 60, 60);
-    cursor: pointer;
+    font-family: "Century Gothic";
+    font-size: 1rem;
+    color: #fff;
+    background: rgba(196, 196, 196, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 7px;
+}
+
+.change-button-box__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.change-sex-style:first-of-type {
+    margin-right: 2rem;
 }
 
 .change-sex-block input:checked + label.change-sex-style {
-    background: rgb(72, 185, 242);
+    background: rgba(196, 196, 196, 0.2);
     color: #fff;
 }
 
@@ -132,14 +179,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 45%;
 }
 
 .box-change {
     display: flex;
-    flex-direction: column;
     align-items: center;
+}
 
+.box-change__row {
+    justify-content: space-between;
+}
+
+.box-change__row .box-in-change {
+    width: 50% !important;
 }
 
 /* .плашка1 {
@@ -152,38 +205,46 @@
     z-index: 314;
   } */
 
-.change-button-box .box-change:first-child, .change-button-box .box-change:nth-child(3) {
-    margin-right: 17px;
-}
-
 .change-button-box .box-change:first-child {
     margin-bottom: 15px;
 }
 
 .box-change .box-title {
     margin-bottom: 12px;
-    font-family: "Roboto";
-    font-size: 18px;
-    color: rgb(72, 185, 242);
+    font-family: "Century Gothic";
+    font-size: 1.1rem;
+    color: #fff;
 }
 
 .box-change .box-editor-title {
-    margin-bottom: 10px;
-    font-family: "RobotoLight";
-    color: rgb(255, 255, 255);
-    font-size: 13px;
+    text-align: center;
+    width: 40%;
+    font-family: "Century Gothic";
+    color: #fff;
+    font-size: 1rem;
+}
+
+.box-editor-title__namechar {
+    text-align: center;
+    font-family: "Century Gothic";
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2.2rem;
 }
 
 .box-in-change {
-    width: 210px;
     height: 32px;
-    background: rgb(19, 19, 19);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Roboto";
-    font-size: 16px;
-    color: rgb(60, 60, 60);
+    font-family: "Century Gothic";
+    font-size: 1rem;
+    color: #fff;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 7px;
 }
 
 .color-white {
@@ -231,9 +292,11 @@
 .characteristic-editor .box-character {
     display: flex;
     align-items: center;
-    font-family: "RobotoLight";
-    font-size: 12px;
-    color: rgb(255, 255, 255);
+    font-family: "Century Gothic";
+    font-size: 1rem;
+    color: #fff;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .box-character span.title-character {
@@ -247,47 +310,44 @@
 
 .box-character .range-character {
     width: 161px;
-    height: 4px;
-    background: rgb(60, 60, 60);
+    height: 2px;
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .range-character .background-character-range {
     height: inherit;
-    background: #48b9f2;
+    background: #fff;
 }
 
 .menu-editor-default .last-button-menu {
     display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
 }
 
 .last-button-menu .box-last-btn {
-    background: rgb(19, 19, 19);
-    width: 225px;
-    height: 59px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "HACKED";
-    font-size: 28px;
-    text-transform: uppercase;
-    cursor: pointer;
+    font-family: "Century Gothic";
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+.last-button-menu .box-last-btn:hover {
+    background: #fff;
+    color: #000;
 }
 
 .last-button-menu .box-last-btn:first-child {
     margin-right: 5px;
 }
 
-.next-button-menu .box-next-btn {
-    background: rgb(72, 185, 242);
-    width: inherit;
-    height: 59px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "HACKED";
-    font-size: 38px;
-    text-transform: uppercase;
-}
 
 .menu-editor-default .editor-circl-change {
     display: flex;
@@ -313,10 +373,16 @@
 
 /* <!-- Редактор --> */
 .editor-main {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
     width: 455px;
-    height: 1080px;
+    margin-top: auto;
     margin-left: auto;
-    background: rgb(28, 28, 28);
+    margin-bottom: 159px;
+    margin-right: 8%;
+    padding: 2.8rem;
+    width: 455px;
     display: flex;
     flex-direction: column;
 }
@@ -357,17 +423,24 @@ input.range-slider-ch:checked + label .slider-change-radio {
     background: rgb(72, 185, 242);
 }
 
-.editor-main .header-title-editor {
-    background: rgb(19, 19, 19);
+.header-title-editor {
     width: inherit;
-    height: 47px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Roboto";
-    color: rgb(72, 185, 242);
-    font-weight: bold;
-    font-size: 24px;
+    font-family: "Century Gothic";
+    color: #fff;
+    margin-top: -1.5rem;
+    font-size: 1rem;
+}
+
+.block-editor-range__element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 3rem;
 }
 
 .block-editor-range .range-editor-block-big {
@@ -383,11 +456,13 @@ input.range-slider-ch:checked + label .slider-change-radio {
 
 .range-editor-block-big .range-text {
     margin-bottom: 10px;
-    font-size: 13px;
+    font-size: 1rem;
+    text-align: center;
+    width: 40%;
 }
 
 .range-editor-block-big .range-slider-editor-big {
-    width: 363px;
+    width: 50%;
     height: 2px;
     /* background: rgb(60, 60, 60); */
     position: relative;
@@ -424,11 +499,6 @@ input.range-slider-ch:checked + label .slider-change-radio {
     margin-top: 24px;
 }
 
-.range-editor-block-big .range-text {
-    margin-bottom: 10px;
-    font-size: 13px;
-}
-
 .range-editor-block-big:first-child {
     margin-top: 24px;
 }
@@ -448,10 +518,10 @@ input.range-slider-ch:checked + label .slider-change-radio {
 /*range-slider-left-menu*/
 .range-slider-editor .input-range__slider, .range-slider-editor-big .input-range__slider {
     appearance: none;
-    width: 18px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     transform: rotate(90deg);
-    background: rgb(72, 185, 242);
+    background: #fff;
     cursor: pointer;
     display: block;
     margin-left: -0.6rem;
@@ -459,6 +529,7 @@ input.range-slider-ch:checked + label .slider-change-radio {
     outline: none;
     position: absolute;
     top: 50%;
+    border-radius: 50%;
     /* transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; */
 }
 
@@ -523,8 +594,8 @@ input.range-slider-ch:checked + label .slider-change-radio {
 }
 
 .range-slider-editor .input-range__track, .range-slider-editor-big .input-range__track {
-    height: 4px;
-    background: rgb(60, 60, 60);
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
     cursor: pointer;
     display: block;
     position: relative;
@@ -544,7 +615,7 @@ input.range-slider-ch:checked + label .slider-change-radio {
 }
 
 .range-slider-editor .input-range__track--active, .range-slider-editor-big .input-range__track--active {
-    background: rgb(72, 185, 242);
+    background: #fff;
 }
 
 .range-slider-editor .input-range, .range-slider-editor-big .input-range {
@@ -561,28 +632,33 @@ input.range-slider-ch:checked + label .slider-change-radio {
 }
 
 .menu-editor-default .create-info-input input.auth-input-style {
-    width: 360px;
-    border-bottom: 1px solid #a9a9a9;
-    font-family: "Roboto";
-    font-size: 14px;
-    color: rgb(62, 181, 241);
-    text-align: center;
-    padding-bottom: 11px;
-    margin-bottom: 30px;
+    width: 100%;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 7px;
+    font-family: "Century Gothic";
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    padding: 1rem;
+    color: #fff;
 }
 
+.menu-editor-default .create-info-input input:hover.auth-input-style {
+    background: rgba(196, 196, 196, 0.08);
+}
+
+
 .menu-editor-default .create-info-input input:focus.auth-input-style {
-    border-bottom: 1px solid rgb(62, 181, 241);
+    background: rgba(196, 196, 196, 0.2);
 }
 
 .menu-editor-default .create-info-input input.auth-input-style:first-child {
-    margin-bottom: 30px;
+    margin-bottom: 1.2rem;
 }
 
 .menu-editor-default .create-info-input input::placeholder {
-    font-size: 14px;
-    font-family: "RobotoThin";
-    color: rgb(146, 145, 145);
+    font-size: 1rem;
+    font-family: "Century Gothic";
+    color: #fff;
     /* text-transform: uppercase; */
 }
 

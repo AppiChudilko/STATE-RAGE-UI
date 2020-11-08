@@ -15,28 +15,12 @@ class FaceLast extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="slider-editor-main">
-                    <input type="radio" name="change-radio-slider" id="change-radio-slider1"
-                           className="range-slider-ch"/>
-                    <label htmlFor="change-radio-slider1">
-                        <div className="slider-change-radio margin-right-perf"></div>
-                    </label>
-                    <input type="radio" name="change-radio-slider" id="change-radio-slider2"
-                           className="range-slider-ch"/>
-                    <label htmlFor="change-radio-slider2">
-                        <div className="slider-change-radio margin-right-perf"></div>
-                    </label>
-                    <input type="radio" name="change-radio-slider" id="change-radio-slider3" className="range-slider-ch"
-                           defaultChecked/>
-                    <label htmlFor="change-radio-slider3">
-                        <div className="slider-change-radio"></div>
-                    </label>
-                </div>
+                <div className="title-block">Шаг 5</div>
+                <span className="title-in-block">Редактор</span>
                 <div className="header-title-editor margin-for-editor">Внешность</div>
                 {this.props.input_editor_face_last.map((e, index) => {
                     let i = "input_editor_face_last" + index;
                     return (
-                        <React.Fragment key={i}>
                             <SliderEditor
                                 index={index}
                                 index_help={e.index_help}
@@ -44,26 +28,20 @@ class FaceLast extends React.Component {
                                 name_array={e.index_help}
                                 clickLeftArrow={this.props.clickLeftArrow.bind(this)}
                                 clickRightArrow={this.props.clickRightArrow.bind(this)}
+                                key={`input_editor_face_last${index}`}
                             />
-                        </React.Fragment>
                     )
                 })}
-                <div className="editor-circl-change">
-                    <div className="circle-change"></div>
-                    <div className="circle-change"></div>
-                    <div className="circle-change circle-blue"></div>
-                </div>
                 <div className="last-button-menu">
                     <Link to="/editor/editor-character/face-second">
                         <div className="box-last-btn">Назад</div>
                     </Link>
                     <div className="box-last-btn" onClick={() => this.props.reset(3)}>Сброс</div>
+                    <Link to="/choicerole" onClick={() => this.props.saveCustomization()}>
+                        <div className="box-last-btn">Сохранить</div>
+                    </Link>
                 </div>
-                <Link to="/choicerole" onClick={() => this.props.saveCustomization()}>
-                    <div className="next-button-menu">
-                        <div className="box-next-btn">Сохранить</div>
-                    </div>
-                </Link>
+                
             </React.Fragment>
         )
     }

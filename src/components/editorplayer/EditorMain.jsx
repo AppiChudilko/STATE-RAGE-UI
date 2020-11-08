@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import EditorPlayer from './EditorPlayer';
 import ChoiceRole from './content/ChoiceRole';
 import EventManager from "../../EventManager";
+import serverLogo from '../authorization/img/logo.svg'
 
 class EditorMain extends React.Component {
     constructor(props) {
@@ -45,7 +46,12 @@ class EditorMain extends React.Component {
         }
         return (
             <React.Fragment>
+                <img src={serverLogo} style={{zIndex: 2, position: 'absolute', marginTop: '2rem', marginLeft: '2rem'}} />
                 <div id="disableZoom" className="adaptive_editor">
+                <div className="editor__hint">
+                    <span className="editor__hint__title">Кастомизация персонажа</span>
+                    <span className="editor__hint__subtitle">Настройте своего персанажа пол себя</span>
+                </div>
                     <Router>
                         <Route path="/editor">
                             <EditorPlayer/>

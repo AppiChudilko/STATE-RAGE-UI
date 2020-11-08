@@ -8,7 +8,6 @@
 @media (max-width: 1000px) and (min-width: 600px) {
     .adaptive_editor .сamera-editor-main, .adaptive_editor .menu-editor-default, .adaptive_editor .editor-main {
         transform: scale(0.41);
-        margin-top: auto;
     }
 
     .editor-main {
@@ -23,7 +22,6 @@
 @media (max-width: 1100px) and (min-width: 1001px) {
     .adaptive_editor .сamera-editor-main, .adaptive_editor .menu-editor-default, .adaptive_editor .editor-main {
         transform: scale(0.53);
-        margin-top: auto;
     }
 
     .editor-main {
@@ -38,7 +36,6 @@
 @media (max-width: 1280px) and (min-width: 1101px) {
     .adaptive_editor .сamera-editor-main, .adaptive_editor .menu-editor-default, .adaptive_editor .editor-main {
         transform: scale(0.66);
-        margin-top: auto;
     }
 
     .editor-main {
@@ -53,7 +50,6 @@
 @media (max-width: 1400px) and (min-width: 1281px) {
     .adaptive_editor .сamera-editor-main, .adaptive_editor .menu-editor-default, .adaptive_editor .editor-main {
         transform: scale(0.71);
-        margin-top: auto;
     }
 
     .adaptive_editor .adaptive-reg {
@@ -64,7 +60,6 @@
 @media (max-width: 1800px) and (min-width: 1401px) {
     .adaptive_editor .сamera-editor-main, .adaptive_editor .menu-editor-default, .adaptive_editor .editor-main {
         transform: scale(0.83);
-        margin-top: auto;
     }
 
     .adaptive_editor .adaptive-reg {

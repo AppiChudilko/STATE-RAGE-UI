@@ -15,30 +15,15 @@ class Face extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="slider-editor-main">
-                    <input type="radio" name="change-radio-slider" id="change-radio-slider1" className="range-slider-ch"
-                           defaultChecked/>
-                    <label htmlFor="change-radio-slider1">
-                        <div className="slider-change-radio margin-right-perf"></div>
-                    </label>
-                    <input type="radio" name="change-radio-slider" id="change-radio-slider2"
-                           className="range-slider-ch"/>
-                    <label htmlFor="change-radio-slider2">
-                        <div className="slider-change-radio margin-right-perf"></div>
-                    </label>
-                    <input type="radio" name="change-radio-slider" id="change-radio-slider3"
-                           className="range-slider-ch"/>
-                    <label htmlFor="change-radio-slider3">
-                        <div className="slider-change-radio"></div>
-                    </label>
-                </div>
+                <div className="title-block">Шаг 3</div>
+                <span className="title-in-block">Редактор</span>
                 <div className="header-title-editor">Лицо</div>
                 <div className="block-editor-range">
                     <div className="range-editor-block-big">
                         {this.props.input_editor_face.map((e, index) => {
                             let i = "input_editor_face" + index;
                             return (
-                                <React.Fragment key={i}>
+                                <div className="block-editor-range__element" key={i}>
                                     <span className="range-text">{e.name}</span>
                                     <div className="range-slider-editor-big">
                                         <InputRange
@@ -53,27 +38,20 @@ class Face extends React.Component {
                                         />
                                         <div className="range-label">{e.value}</div>
                                     </div>
-                                </React.Fragment>
+                                </div>
                             )
                         })}
                     </div>
-                </div>
-                <div className="editor-circl-change">
-                    <div className="circle-change"></div>
-                    <div className="circle-change"></div>
-                    <div className="circle-change circle-blue"></div>
                 </div>
                 <div className="last-button-menu">
                     <Link to="/editor/family-character">
                         <div className="box-last-btn">Назад</div>
                     </Link>
                     <div className="box-last-btn" onClick={() => this.props.reset(1)}>Сброс</div>
+                    <Link to="/editor/editor-character/face-second">
+                        <div className="box-last-btn">Далее</div>
+                    </Link>
                 </div>
-                <Link to="/editor/editor-character/face-second">
-                    <div className="next-button-menu">
-                        <div className="box-next-btn">Далее</div>
-                    </div>
-                </Link>
             </React.Fragment>
         )
     }

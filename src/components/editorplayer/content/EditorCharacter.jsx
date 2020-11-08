@@ -17,8 +17,7 @@ class EditorCharacter extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="editor-main">
-                    <div className="title-block">Редактор</div>
+                <div className="menu-editor-default">
                     <Route path="/editor/editor-character/face-first">
                         <Face
                             input_editor_face={this.props.input_editor_face}
