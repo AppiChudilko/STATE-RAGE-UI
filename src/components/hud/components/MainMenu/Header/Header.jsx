@@ -15,27 +15,28 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         padding: '10px 20px',
-        background: '#000',
-        fontFamily: 'RobotoLight',
-        color: '#64B5F6',
+        fontFamily: 'Century Gothic',
+        color: '#fff',
         fontWeight: 400,
         alignItems: 'center',
-        fontSize: '1.1rem'
+        justifyContent: 'center',
+        fontSize: '1rem',
+        marginTop: '1.5rem',
+        marginBottom: '1.5rem'
     },
     headerDesc: {
-        marginRight: 'auto',
-        width: '80%',
-        fontSize: '1.1rem'
+        fontSize: '1rem'
     },
     headerDescCount: {
+        marginLeft: '1.5rem'
     },
     banner: {
         width: '100%',
         height: '120px',
-        position: 'absolute',
         objectFit: 'cover',
         objectPosition: 'center',
-        zIndex: '1'
+        zIndex: '1',
+        borderRadius: '10px'
     }
 }
 
@@ -47,25 +48,16 @@ export default function Header(props) {
         styles.header.backgroundPosition = 'center';
     }*/
 
-    try {
-        styles.banner.borderRadius = props.headerBorder + 'px ' + props.headerBorder + 'px 0 0';
-        styles.headerDataContainer.backgroundColor = props.headerColor;
-        styles.headerDataContainer.fontFamily = props.headerFont;
-    }
-    catch (e) {
-        
-    }
 
     return (
-        <div style={{backgroundColor: props.headerColor, borderRadius: props.headerBorder + 'px ' + props.headerBorder + 'px 0 0'}}>
+        <div>
             <div style={{minHeight: props.banner ? '120px' : ''}}>
                 {props.banner && (
                     <img src={`https://dednet.ru/client/images/banners/${props.banner}.png`} style={styles.banner} />
                 )}
-                <h1 className="header" style={styles.header}>{props.headerText}</h1>
             </div>
             <div style={styles.headerDataContainer}>
-                <div style={styles.headerDesc} dangerouslySetInnerHTML={{__html: parseText(props.headerDesc)}}></div>
+                <div style={styles.headerDesc}>{props.headerDesc}</div>
                 <div style={styles.headerDescCount}>{props.headerData}</div>
             </div>
         </div>

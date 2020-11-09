@@ -14,9 +14,24 @@ ion-icon {
     opacity: 0.88;
     outline: none;
     position: absolute;
-    width: 400px;
+    width: 473px;
     right: 40px;
     top: 130px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 2rem;
+    min-height: 568px;
+    
+}
+
+.logo-info__text-bold {
+    font-family: 'Century Gothic';
+    font-weight: bold;
+}
+
+.logo-info__text-normal {
+    font-family: 'Century Gothic';
 }
 
 .menu-box div, label {
@@ -43,7 +58,8 @@ ion-icon {
     left: 0;
     height: 16px;
     width: 16px;
-    border: 1px solid #f5f5f5;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 4px;
 }
 
 .checkmark:hover {
@@ -51,7 +67,7 @@ ion-icon {
 }
 
 .checkbox-container input:checked ~ .checkmark {
-    background-color: #F5F5F5;
+    background-color: #fff;
 }
 
 .checkmark:after {
@@ -65,9 +81,11 @@ ion-icon {
 
 .checkbox-container .checkmark:after {
     width: 4px;
-    height: 9px;
-    border: solid #282c34;
-    border-width: 0 3px 3px 0;
+    height: 8px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    margin-bottom: 2px;
+    margin-left: 1px;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -83,7 +101,9 @@ ion-icon {
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    font-weight: 300;
+    border-radius: 7px;
+    margin-bottom: 1.2rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
 }
 
 .list-arrow-icon {
@@ -95,17 +115,17 @@ ion-icon {
 }
 
 .menu-item-inverted {
-    background-color: #0c0c0c;
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-    font-weight: 300;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+    margin-bottom: 1.2rem;
+    border: 0.5px solid transparent;
 }
 
 .menu-item-inverted span {
-    color: #fff !important;
 }
 
+
 .menu-item:hover {
-    background-color: rgba(150, 150, 150, 0.7);
+    background: rgba(255, 255, 255, 0.05);
     transition: 0.4s ease-in-out;
 }

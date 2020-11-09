@@ -59,9 +59,9 @@ export default class Draggable extends React.Component {
     setPos = ({x, y}) => { // this.setPos({ x: 10, y: 15 })
         let element = this.draggable.current
 
-        element.style.position = 'absolute'
-        element.style.left = `${x}px`
-        element.style.top = `${y}px`
+        //element.style.position = 'absolute'
+        //element.style.left = `${x}px`
+        //element.style.top = `${y}px`
 
         this.setState({ x, y })
     }
@@ -127,12 +127,12 @@ export default class Draggable extends React.Component {
             x += document.getElementById('car-elements').offsetWidth+2
         }
 
-        element.style.margin = '0'
-        element.getElementsByTagName("DIV")[0].style.margin = '0'
+        //element.style.margin = '0'
+        //element.getElementsByTagName("DIV")[0].style.margin = '0'
 
-        if (element.getElementsByTagName('DIV')[0].classList.contains('hide')) {
-            y-=52
-        }
+        //if (element.getElementsByTagName('DIV')[0].classList.contains('hide')) {
+        //    y-=52
+        //}
 
         try {
             if (byClick)

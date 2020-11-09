@@ -55,9 +55,9 @@ class Logo extends React.Component {
             <React.Fragment>
                 <div className="logo-main">
                     <div className="logo-info">
-                        <div className="span-bold">{this.state.date} | {this.state.time}</div>
-                        <div>ИГРОКОВ: {this.state.online}/{this.state.max_player} | <span
-                            className="span-bold">ID: {this.state.id}</span></div>
+                        <div className="logo-info__text-bold">{this.state.date} | {this.state.time}</div>
+                        <span className="logo-info__text-normal">Игроков {this.state.online}/{this.state.max_player} | <span
+                            className="logo-info__text-bold">ID: {this.state.id}</span></span>
                     </div>
                     <div className="logo-img"></div>
                     <div style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}

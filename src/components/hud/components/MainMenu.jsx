@@ -19,27 +19,27 @@ class MainMenu extends React.Component {
                 fontOffset: 2,
                 borderRadius: 4,
                 bgColor: 'rgb(0,0,0,1)',
-                width: '400px',
+                width: '473px',
                 height: '350px',
             },
             headerText: 'Test',
-            headerDesc: '~r~HELL~g~O WO~b~RLD',
+            headerDesc: 'Hello World!',
             banner: 'bs_hair',
             menuName: '',
             menuList: [
                 {
                     type: 2,
-                    title: 'TEST',
+                    title: 'Test',
                     subtitle: '~g~TEST2~y~Dfsdfdsf~br~qwerty~b~sdfsdfsdf~g~djasdnajksnd',
                     icon: 'test__icon__inverted',
-                    rl: '~b~RIGHT LABEL',
+                    rl: 'Right Label',
                     params: {},
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: '~r~Бизнес',
+                    title: 'Бизнес',
                     subtitle: 'default text',
                     iconr: 'test__icon__inverted',
                     items: [],
@@ -47,14 +47,14 @@ class MainMenu extends React.Component {
                 },
                 {
                     type: 2,
-                    title: '~g~TEST2',
+                    title: 'Test3',
                     icon: 'test__icon__inverted',
                     items: [],
                     divider: false
                 },
                 {
                     type: 1,
-                    title: 'YOUR FRACTION',
+                    title: 'Your fraction',
                     icon: 'test__icon__inverted',
                     items: [
                         '~r~DATA 1',
@@ -66,14 +66,14 @@ class MainMenu extends React.Component {
                 },
                 {
                     type: 0,
-                    title: 'TEST2',
+                    title: 'Test4',
                     items: [],
                     divider: false,
                     checked: false
                 },
                 {
                     type: 0,
-                    title: 'TEST2',
+                    title: 'Test6',
                     icon: 'test__icon__inverted',
                     items: [],
                     divider: false,
@@ -81,160 +81,160 @@ class MainMenu extends React.Component {
                 },
                 {
                     type: 0,
-                    title: 'TEST2',
+                    title: 'Test6',
                     items: [],
                     divider: false,
                     checked: false
                 },
                 {
                     type: 0,
-                    title: 'TEST2',
+                    title: 'Test6',
                     items: [],
                     divider: false,
                     checked: true
                 },
                 {
                     type: 0,
-                    title: 'TEST2',
+                    title: 'Test6',
                     items: [],
                     divider: false,
                     checked: false
                 },
                 {
                     type: 2,
-                    title: 'TEST1',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST2',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST1',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST2',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 },
                 {
                     type: 2,
-                    title: 'TEST3',
+                    title: 'Test6',
                     items: [],
                     divider: false
                 }
@@ -527,12 +527,9 @@ class MainMenu extends React.Component {
         const styles = {
             container: {
                 opacity: this.state.opacity,
-                borderRadius: this.state.mStyle.borderRadius + 'px',
-                border: '0px solid #000',
                 width: this.state.mStyle.width
             },
             menuContainer: {
-                backgroundColor: this.state.mStyle.bgColor,
                 position: 'relative',
                 overflow: 'hidden',
                 overflowY: 'scroll',
@@ -573,7 +570,7 @@ class MainMenu extends React.Component {
                             )
                         })}
                     </div>
-                    {this.state.menuList[this.state.selected].subtitle ? <Desc font={this.state.mStyle.font} border={this.state.mStyle.borderRadius} color={this.state.mStyle.bgColor} desc={this.state.menuList[this.state.selected].subtitle} /> : <></>}
+                    
                 </div>
             </Draggable>
         )

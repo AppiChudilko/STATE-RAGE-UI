@@ -5,7 +5,10 @@ import parseText from '../functions/parseText'
 const styles = {
     container: {
         display: 'flex',
-        padding: '5px 20px',
+        paddingTop: '0.9rem',
+        paddingBottom: '0.9rem',
+        paddingLeft: '0.8rem',
+        paddingRight: '0.8rem',
         alignItems: 'center',
         position: 'relative',
         overflow: 'auto'

@@ -8,7 +8,7 @@ class Gps extends React.Component {
         super(props)
         this.state = {
             show: true,
-            district: 'Загрузка...',
+            district: 'Del Pero...',
             street: 'Загрузка...',
             showGang: false,
             showMafia: false,
@@ -75,8 +75,8 @@ class Gps extends React.Component {
         return (
             <React.Fragment>
 
-                <Draggable id="gps" className="gps-main" style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
-                    <div className="gps-title" style={this.state}>{this.state.district}</div>
+                <Draggable id="gps" className="gps-main">
+                    <div className="gps-title">{this.state.district}</div>
                     <div className="gps-txt">{this.state.street}</div>
                 </Draggable>
 

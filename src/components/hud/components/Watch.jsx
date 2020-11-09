@@ -12,7 +12,7 @@ class Watch extends React.Component {
             showYellow: false,
             time: '00:00',
             date: '01.01.1990',
-            temp: '',
+            temp: '12°С',
             color: '#48B9F2',
             background: 0.5,
         }
@@ -54,14 +54,12 @@ class Watch extends React.Component {
                         <div className={this.state.showGreen ? 'time-img-greenzone' : 'hide'}></div>
                         <div className={this.state.showYellow ? 'time-img-yellowzone' : 'hide'}></div>
                     </Draggable>
-                    <Draggable id="watch" className="watch-main" style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
+                    <Draggable id="watch" className="watch-main">
                         <div className="time-box">
-                            <div className="time">{this.state.time}
-                                <div className="time-img-watch"></div>
-                            </div>
+                            <div className="degrees">{this.state.temp}</div>
+                            <div className="time">{this.state.time}</div>
                             <div className="date">{this.state.date}</div>
                         </div>
-                        <div className="degrees">{this.state.temp}</div>
                     </Draggable>
             </React.Fragment>
         )

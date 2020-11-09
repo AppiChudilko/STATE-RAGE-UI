@@ -6,6 +6,9 @@
     height: 100%;
     display: flex;
     position: absolute;
+    /*background-image: url('https://sun9-54.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70986b74dd06036643841aff64b');
+    background-repeat: no-repeat;
+    background-size: cover;*/
     /* z-index: -1; */
 }
 .hud-position-leftop {
@@ -29,13 +32,13 @@
 }
 
 .phud-mic {
-    width: 48px;
-    height: 48px;
-    background: rgb(0, 0, 0, 0.502);
-    margin-right: 2px;
+    width: 51px;
+    height: 51px;
+    background: rgb(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 }
 
 .phud-mic .mic-img {
@@ -45,18 +48,34 @@
 }
 
 .phud-needs {
-    width: 144px;
-    height: 47.99px;
-    background: rgb(0, 0, 0, 0.502);
+    height: 63px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.player-hud__box {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.player-hud__box__row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
 }
 
 .needs-box {
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .needs-box:last-child {
@@ -79,41 +98,61 @@
 }
 
 .liner-needs {
-    width: 84px;
-    height: 7px;
-    background: rgb(71, 71, 71);
+    width: 60%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+.liner-needs-drink {
+    width: 60%;
+    height: 3px;
+    background: rgba(255, 79, 79, 0.2);
+    border-radius: 2px;
 }
 
 .color-liner {
-    background: #48b9f2;
+    background: #fff;
+    height: inherit;
+    transition-duration: 0.2s;
+}
+
+.color-liner-drink {
+    background: #FF4F4F;
     height: inherit;
     transition-duration: 0.2s;
 }
 
 .needs-text {
-    font-family: "RobotoLight";
-    font-size: 9px;
+    font-family: "Century Gothic";
+    font-size: 1rem;
     color: #fff;
-    margin-left: 4px;
-    width: 22px;
-    text-align: left;
+}
+
+.needs-text-drink {
+    font-family: "Century Gothic";
+    font-size: 1rem;
+    color: #FF4F4F;
 }
 
 .phud-money {
-    width: 188px;
-    height: 48px;
-    background: rgb(0, 0, 0, 0.502);
-    margin-left: 2px;
-    margin-right: 41px;
+    width: 187px;
+    height: 51px;
+    background: rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+    margin-right: 9px;
 }
 
 .money-box {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .money-box:last-child {
@@ -137,23 +176,25 @@
 }
 
 .wallet-text {
-    font-size: 15px;
-    font-family: "RobotoLight";
-    color: #48b9f2;
+    font-size: 0.9rem;
+    font-family: "Century Gothic";
+    color: #fff;
+    font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: calc(100% - 55px);
+    margin-right: 0.6rem;
 }
 
 .credit-text {
-    font-size: 15px;
-    font-family: "RobotoLight";
+    font-size: 0.9rem;
+    font-family: "Century Gothic";
+    font-weight: bold;
     color: #fff;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: calc(100% - 55px);
+    margin-right: 0.6rem;
 }
 
 .use-mic {
@@ -358,35 +399,64 @@
     /*width: 386px;*/
     min-width: 115px;
     height: 64px;
-    background: rgb(0, 0, 0, 0.502);
     margin-left: 323px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-left: 19px;
-    padding-right: 19px;
 }
 
 .gps-title {
-    font-family: "Roboto";
-    color: rgb(72, 185, 242);
-    font-size: 16px;
+    font-family: "Century Gothic";
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
     text-align: left;
     margin-bottom: 5px;
 }
 
 .gps-txt {
-    font-family: "RobotoLight";
+    font-family: "Century Gothic";
     color: rgb(255, 255, 255);
-    font-size: 14px;
+    font-size: 1.8rem;
     text-align: left;
+}
+
+.hud__hints {
+    margin-bottom: 50%;
+    margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hud__hints__element {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.hud__hints__element__key {
+    width: 3rem;
+    height: 3rem;
+    font-family: 'Century Gothic';
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    justify-content: center;
+}
+
+.hud__hints__element__text {
+    font-family: 'Century Gothic';
+    font-size: 1rem;
 }
 
 .watch-main {
     width: 153px;
     height: 48px;
-    background: rgb(0, 0, 0, 0.502);
     margin-left: 323px;
     margin-bottom: 2px;
     display: flex;
@@ -394,33 +464,30 @@
 }
 
 .watch-main .degrees {
-    width: 82px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 20px;
-    font-family: "RobotoMedium";
+    font-size: 1rem;
+    margin-top: -96px;
+    font-family: "Century Gothic";
     color: rgb(255, 255, 255);
-    text-align: center;
+    font-weight: bold;
+    margin-bottom: auto;
 }
 
 .watch-main .time-box {
-    width: 62px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 19px;
 }
 
 .time-box .time {
     width: inherit;
     height: 14px;
-    border-bottom: 1px solid #fff;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    padding-bottom: 4px;
-    font-size: 18px;
-    font-family: "RobotoLight";
+    padding-bottom: 2px;
+    font-size: 1rem;
+    font-family: "Century Gothic";
     color: rgb(255, 255, 255);
 }
 
@@ -455,9 +522,10 @@
 }
 
 .time-box .date {
-    margin-top: 5px;
-    font-size: 12.7px;
-    font-family: "RobotoLight";
+    margin-top: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Century Gothic";
     color: rgb(255, 255, 255);
 }
 
@@ -468,14 +536,14 @@
 }
 
 .logo-main {
-    margin-top: 18px;
-    margin-right: 37px;
+    margin-top: 32px;
+    margin-right: 50px;
     display: flex;
     margin-left: auto;
 }
 
 .logo-main .logo-img {
-    background: url('../img/dnlogo.gif') no-repeat;
+    background: url('../../authorization/img/logo.svg') no-repeat;
     background-size: cover;
     margin-top: -28px;
     margin-right: -30px;

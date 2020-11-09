@@ -6,11 +6,14 @@ import parseText from '../functions/parseText'
 const styles = {
     container: {
         display: 'flex',
-        padding: '5px 20px',
+        paddingTop: '0.9rem',
+        paddingBottom: '0.9rem',
+        paddingLeft: '0.8rem',
+        paddingRight: '0.8rem',
         alignItems: 'center'
     },
     listitem: {
-        fontFamily: 'RobotoLight',
+        fontFamily: 'Century Gothic',
         color: '#fff',
         fontSize: '1.3rem',
         marginRight: 'auto',
@@ -43,9 +46,8 @@ export default class Caption extends React.Component {
             <div onClick={this.handleOnClick.bind(this)} style={styles.container}>
                 {this.props.data.data.icon ? <Icon name={this.props.data.data.icon} /> : <></>}
                 <input style={{opacity: 0, height: "0px", width: "0px", position: 'absolute'}} autoFocus={true} />
-                <label style={styles.listitem}
-                       dangerouslySetInnerHTML={{__html: parseText(this.props.data.data.title)}}
-                >
+                <label style={styles.listitem}>
+                    {this.props.data.data.title}
                 </label>
                 {this.props.data.data.rl ? <RightLabel font={this.props.font} text={this.props.data.data.rl} /> : <></>}
                 {this.props.data.data.divider ? <Icon style={styles.icon} name="arrow_right" /> : <></>}
