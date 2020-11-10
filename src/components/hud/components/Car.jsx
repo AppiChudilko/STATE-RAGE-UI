@@ -35,7 +35,7 @@ class Car extends React.Component {
             max_fuel: 100,// Максимальная вместимость топливного бака
             speed: 40,
             speedLabel: 'MP/H',
-
+            carname: 'Insurgent',
             deg: -45,
             color: '#48B9F2',
             background: 0.5,
@@ -279,6 +279,9 @@ class Car extends React.Component {
                             <img src={this.state.fuelType === '%' ? IconPower : IconFuel} className="hud__speedometr__info__fuel" width="14" />
                             <span className="hud__speedometr__info__fuel__text">{`${this.state.fuel}/${this.state.max_fuel}`}</span>
                         </div>
+                        <span className="hud__speedometr__info__carname">
+                            {this.state.carname}
+                        </span>
                     </div>
                 </div>
                 
