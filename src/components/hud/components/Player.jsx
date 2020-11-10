@@ -1,6 +1,7 @@
 import React from 'react';
 import EventManager from "../../../EventManager";
 import micOffIcon from '../img/mic-off.svg'
+import micOnIcon from '../img/mic_on.svg'
 import moneyCard from '../img/card_money.svg'
 import moneyPaper from '../img/paper_money.svg'
 import drinkIcon from '../img/drink.svg'
@@ -72,7 +73,7 @@ class Player extends React.Component {
                                 </div>
                             </Draggable>
                             <Draggable id="player-mic" className="phud-mic" style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
-                                <img src={this.state.microphone ? micOffIcon : micOffIcon} width="24" />
+                                <img src={this.state.microphone ? micOnIcon : micOffIcon} width="24" />
                             </Draggable>
                         </div>
                         <Draggable id="player-needs" className="phud-needs" style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>

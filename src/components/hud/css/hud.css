@@ -19,6 +19,7 @@
 .hud-position-rightbottom {
     margin-left: auto;
     margin-top: auto;
+    display: flex;
 }
 
 .hud-position-leftbottom {
@@ -28,8 +29,11 @@
 
 .player-hud {
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 50px;
+    align-items: flex-end;
 }
+
+
 
 .phud-mic {
     width: 51px;
@@ -179,7 +183,7 @@
     font-size: 0.9rem;
     font-family: "Century Gothic";
     color: #fff;
-    font-weight: bold;
+    font-weight: medium;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -189,7 +193,7 @@
 .credit-text {
     font-size: 0.9rem;
     font-family: "Century Gothic";
-    font-weight: bold;
+    font-weight: medium;
     color: #fff;
     overflow: hidden;
     white-space: nowrap;
@@ -290,6 +294,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+
 }
 
 .speedbox-main-small {
@@ -324,7 +329,6 @@
     display: flex;
     position: relative;
     width: 390px;
-    overflow: hidden;
     height: 195px;
 }
 
@@ -357,6 +361,22 @@
     cursor: pointer;
     z-index: 1;
     transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hud__speedometr {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 76%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 25px;
 }
 
 .backg-speed {
@@ -370,6 +390,129 @@
     justify-content: center;
     zoom: 0.8;
 }
+
+.hud__speedometr__line-bg {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    border: 5px rgba(255, 255, 255, 0.2) solid;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    position: absolute;
+    z-index: 0;
+    -webkit-animation: rota 1s infinite;
+}
+
+.hud__speedometr__line-progress {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    border: 5px #fff solid;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    position: absolute;
+    z-index: 4;
+    -webkit-animation: rota 1s infinite;
+}
+
+.hud__speedometr__speed {
+    position: absolute;
+    font-family: 'Century Gothic';
+    font-size: 2rem;
+    margin-bottom: 8px;
+    font-weight: medium;
+}
+
+.hud__speedometr__light-on {
+    position: absolute;
+    margin-bottom: 78px;
+    margin-right: 34px;
+}
+
+.hud__speedometr__light-off {
+    position: absolute;
+    margin-bottom: 78px;
+    margin-left: 34px;
+}
+
+.hud__speedometr__door-off {
+    position: absolute;
+    margin-left: 87px;
+    margin-bottom: 8px;
+}
+
+.hud__speedometr__door-on {
+    position: absolute;
+    margin-right: 87px;
+    margin-bottom: 8px;
+}
+
+.hud__speedometr__arrow-left {
+    position: absolute;
+    margin-right: 75px;
+    margin-top: 60px;
+}
+
+.hud__speedometr__info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+}
+
+.hud__speedometr__info__row {
+    display: flex;
+    align-items: center;
+}
+
+.hud__speedometr__info__fuel__text {
+    font-family: 'Century Gothic';
+    font-weight: medium;
+    margin-left: 0.6rem;
+    font-size: 0.86rem;
+}
+
+
+.hud__speedometr__arrow-right {
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 60px;
+}
+
+.hud__speedometr__speed__subtitle {
+    position: absolute;
+    font-family: 'Century Gothic';
+    font-size: 0.7rem;
+    font-weight: lighter;
+    margin-top: 40px;
+    text-transform: lowercase;
+}
+
+.svg-speedometer {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    transform: scale(2.35) rotate(40deg);
+    margin-left: 6px;
+    margin-bottom: 5px;
+  }
+  
+.path-speedometer {
+    stroke-linecap: round;
+    stroke-width: 2;
+    fill: none;
+  }
+  
+  path.speedometer__fullbar {
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-dasharray: calc(40 * 3.142 * 1.85);
+  }
+  
+  path.speedometer__progress {
+    stroke: #fff;
+    stroke-dasharray: calc(40 * 3.142 * 1.85);
+    /* adjust last number for variance */
+  }
 
 .backg-speed .speed-txt {
     font-family: "RobotoBold";
@@ -416,7 +559,7 @@
 }
 
 .gps-txt {
-    font-family: "Century Gothic";
+    font-family: "GTA Font";
     color: rgb(255, 255, 255);
     font-size: 1.8rem;
     text-align: left;
@@ -470,7 +613,7 @@
     margin-top: -96px;
     font-family: "Century Gothic";
     color: rgb(255, 255, 255);
-    font-weight: bold;
+    font-weight: medium;
     margin-bottom: auto;
 }
 
@@ -482,7 +625,7 @@
 .time-box .time {
     width: inherit;
     height: 14px;
-    font-weight: bold;
+    font-weight: medium;
     display: flex;
     align-items: center;
     padding-bottom: 2px;
@@ -524,7 +667,7 @@
 .time-box .date {
     margin-top: 3px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: medium;
     font-family: "Century Gothic";
     color: rgb(255, 255, 255);
 }

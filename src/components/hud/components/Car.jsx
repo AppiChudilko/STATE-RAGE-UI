@@ -1,7 +1,24 @@
 import React from 'react';
 import EventManager from "../../../EventManager";
-
+import speedometerBg from '../img/speedometer-bg.svg'
 import Draggable from '../Draggable'
+import IconLightOn from '../img/light_on.svg'
+import IconLightOff from '../img/light_off.svg'
+import IconLightOnDefault from '../img/light_default_on.svg'
+import IconLightOffDefault from '../img/light_default_off.svg'
+
+import IconLockOn from '../img/car_lock_on.svg'
+import IconLockOff from '../img/car_lock_off.svg'
+import IconLockOnDefault from '../img/car_lock_on_default.svg'
+import IconLockOffDefault from '../img/car_lock_off_default.svg'
+
+import IconArrowLeftOn from '../img/arrow_left_on.svg'
+import IconArrowRightOn from '../img/arrow_right_on.svg'
+import IconArrowLeftOff from '../img/arrow_left_off.svg'
+import IconArrowRightOff from '../img/arrow_right_off.svg'
+
+import IconFuel from '../img/fuel.svg'
+import IconPower from '../img/power.svg'
 
 class Car extends React.Component {
     constructor(props) {
@@ -12,10 +29,11 @@ class Car extends React.Component {
             light: false,
             door: false,
             engine: false,
-            fuel: 100,
-            fuelType: 'L',
+            turnLeft: true,
+            fuel: 80,
+            fuelType: '%',
             max_fuel: 100,// Максимальная вместимость топливного бака
-            speed: 0,
+            speed: 40,
             speedLabel: 'MP/H',
 
             deg: -45,
@@ -86,6 +104,47 @@ class Car extends React.Component {
         let deg = 180 * (speedProcent / 100);
         this.setState({deg: deg - 45});
     }
+
+    /*<div className="car-hud">
+                    <Draggable id="car-elements">
+                        <div className="elements-auto"
+                             style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
+                            <div className={this.state.light ? 'light-auto use-mic' : 'light-auto'}></div>
+                            <div className={this.state.door ? 'on-door-auto' : 'off-door-auto'}></div>
+                            <div className={this.state.engine ? 'key-auto use-mic' : 'key-auto'}></div>
+                        </div>
+                    </Draggable>
+                    <Draggable id="car-fuel">
+                        <div className="bak-oil" style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
+                            <div className="oil-text">
+                                <div className="oil-tt">Топливо</div>
+                                <div className="oil-num">{this.state.fuel} {this.state.fuelType}</div>
+                            </div>
+                            <div className="oil-liner">
+                                <div className="full-liner"
+                                     style={{width: fuel_liner + '%', background: this.state.color}}></div>
+                            </div>
+                        </div>
+                    </Draggable>
+                </div>
+                <Draggable id="car-speedbox" isShowSmall={this.state.isShowSmall}>
+                    <div className={this.state.isShowSmall ? 'hide' : 'speedbox-main-small'}>
+                        <div className="speedbox">
+                            <div className="speedbox-score" style={speed_score}></div>
+                            <div className="speedbox-groove"></div>
+                        </div>
+                        <div className="backg-speed">
+                            <div className="speed-txt">{this.state.speed}</div>
+                        </div>
+                    </div>
+                </Draggable>
+                <Draggable id="car-speedbox-small" isShowSmall={this.state.isShowSmall}>
+                    <div className={this.state.isShowSmall ? 'speedbox-small' : 'hide'}>
+                        <div className="speed-txt">{this.state.speed}</div>
+                        {this.state.speedLabel}
+                    </div>
+                </Draggable>
+                */
 
     render() {
         let fuel_liner = (this.state.fuel * 100) / this.state.max_fuel;
@@ -170,45 +229,59 @@ class Car extends React.Component {
                         <span className="label">Patrol Speed</span>
                     </div>
                 </Draggable>
-                <Draggable id="car-speedbox" isShowSmall={this.state.isShowSmall}>
-                    <div className={this.state.isShowSmall ? 'hide' : 'speedbox-main-small'}>
-                        <div className="speedbox">
-                            <div className="speedbox-score" style={speed_score}></div>
-                            <div className="speedbox-groove"></div>
-                        </div>
-                        <div className="backg-speed">
-                            <div className="speed-txt">{this.state.speed}</div>
+                
+                <div className="hud__speedometr"
+                    style={{
+                        backgroundImage: this.state.isShowSmall ? 'none' : `url('${speedometerBg}')`,
+                        backgroundColor: this.state.isShowSmall ? 'none' : 'rgba(0, 0, 0, 0.5)'
+                    }}>
+                    {!this.state.isShowSmall && (
+                    <svg className="svg-speedometer" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+                        <path
+                            className="path-speedometer speedometer__fullbar"
+                            d="M40,90 A40,40 0 1,1 60,90"
+                            strokeDashoffset={60}
+                        />
+                        <path
+                            className="path-speedometer speedometer__progress"
+                            d="M40,90A40,40 0 1,1 60,90"
+                            strokeDashoffset={233 - this.state.speed * 0.6216}
+                        />
+                    </svg>)}
+                    <span className="hud__speedometr__speed">{this.state.speed}</span>
+                    <span className="hud__speedometr__speed__subtitle">{this.state.speedLabel}</span>
+                    <img
+                        src={this.state.light ? IconLightOn : IconLightOnDefault}
+                        className="hud__speedometr__light-on"
+                    />
+                    <img
+                        src={this.state.light ? IconLightOffDefault : IconLightOff}
+                        className="hud__speedometr__light-off"
+                    />
+                    <img
+                        src={this.state.door ? IconLockOffDefault : IconLockOff}
+                        className="hud__speedometr__door-on"
+                    />
+                    <img
+                        src={this.state.door ? IconLockOn : IconLockOnDefault}
+                        className="hud__speedometr__door-off"
+                    />
+                    <img
+                        src={this.state.turnLeft ? IconArrowLeftOn : IconArrowLeftOff}
+                        className="hud__speedometr__arrow-left"
+                    />
+                    <img
+                        src={this.state.turnLeft ? IconArrowRightOff : IconArrowRightOn}
+                        className="hud__speedometr__arrow-right"
+                    />
+                    <div className="hud__speedometr__info">
+                        <div className="hud__speedometr__info__row">
+                            <img src={this.state.fuelType === '%' ? IconPower : IconFuel} className="hud__speedometr__info__fuel" width="14" />
+                            <span className="hud__speedometr__info__fuel__text">{`${this.state.fuel}/${this.state.max_fuel}`}</span>
                         </div>
                     </div>
-                </Draggable>
-                <Draggable id="car-speedbox-small" isShowSmall={this.state.isShowSmall}>
-                    <div className={this.state.isShowSmall ? 'speedbox-small' : 'hide'}>
-                        <div className="speed-txt">{this.state.speed}</div>
-                        {this.state.speedLabel}
-                    </div>
-                </Draggable>
-                <div className="car-hud">
-                    <Draggable id="car-elements">
-                        <div className="elements-auto"
-                             style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
-                            <div className={this.state.light ? 'light-auto use-mic' : 'light-auto'}></div>
-                            <div className={this.state.door ? 'on-door-auto' : 'off-door-auto'}></div>
-                            <div className={this.state.engine ? 'key-auto use-mic' : 'key-auto'}></div>
-                        </div>
-                    </Draggable>
-                    <Draggable id="car-fuel">
-                        <div className="bak-oil" style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
-                            <div className="oil-text">
-                                <div className="oil-tt">Топливо</div>
-                                <div className="oil-num">{this.state.fuel} {this.state.fuelType}</div>
-                            </div>
-                            <div className="oil-liner">
-                                <div className="full-liner"
-                                     style={{width: fuel_liner + '%', background: this.state.color}}></div>
-                            </div>
-                        </div>
-                    </Draggable>
                 </div>
+                
 
             </React.Fragment>
         )

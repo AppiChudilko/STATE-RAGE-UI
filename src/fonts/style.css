@@ -146,6 +146,11 @@
 }
 
 @font-face {
+    font-family: 'GTA Font';
+    src: url('664_Copyright_House.ttf')
+}
+
+@font-face {
     font-family: 'SF Compact Display Thin';
     font-style: normal;
     font-weight: normal;

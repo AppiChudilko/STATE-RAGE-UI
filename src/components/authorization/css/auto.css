@@ -511,7 +511,7 @@ input:focus.reg-input-style {
     margin-bottom: auto;
     font-family: "Century Gothic";
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: medium;
 }
 
 .create-hero-btn {
