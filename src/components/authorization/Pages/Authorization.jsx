@@ -84,6 +84,7 @@ class Authorization extends React.Component {
 
 
     clickLogin() {
+        console.log('123')
         try {
             if (!this.state.login)
             {
@@ -179,6 +180,7 @@ class Authorization extends React.Component {
                                         <input type="text" pattern="[a-zA-Z0-9]*" placeholder="Введите логин"
                                             name="login-auth" className="auth-input-style" defaultValue={this.state.defaultLogin}
                                             onChange={this.valueLogin.bind(this)}
+                                            value={this.state.login}
                                         />
                                         <input type="password" pattern="[a-zA-Z0-9]*" placeholder="Введите пароль"
                                             name="password-auth" className="auth-input-style"
