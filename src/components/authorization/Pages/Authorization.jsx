@@ -151,10 +151,10 @@ class Authorization extends React.Component {
                     height="100%"
                 />
                 <div className="auth-main" style={{
-                    backgroundImage: `url(${this.state.showAuto ? authImageBg : regImageBg})`,
+                    /*backgroundImage: `url(${this.state.showAuto ? authImageBg : regImageBg})`,
                     backgroundPositionX: 'left',
                     backgroundPositionY: 'bottom',
-                    backgroundSize: '50%'
+                    backgroundSize: '50%'*/
                 }}>
                     <div className="auth__background">
                         

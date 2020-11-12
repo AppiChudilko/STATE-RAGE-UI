@@ -167,7 +167,7 @@
     padding-right: 6rem;
     padding-top: 1.8rem;
     padding-bottom: 1.8rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.35);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,7 +197,7 @@
 
 .auth-input input.auth-input-style {
     width: 15rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.35);
     font-family: "Century Gothic";
     font-size: 1rem;
     color:#fff;
@@ -245,7 +245,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 .dednet__button {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.35);
     border-radius: 10px;
     padding-left: 2.3rem;
     padding-right: 2.3rem;
@@ -270,7 +270,7 @@ input:focus::-webkit-input-placeholder {
 
 input.reg-input-style {
     width: 15rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.35);
     font-family: "Century Gothic";
     font-size: 1rem;
     color:#fff;
@@ -307,7 +307,7 @@ input:focus.reg-input-style {
 
 .chk-circle {
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.35);
     width: 25px;
     height: 24px;
     margin-right: 17px;
@@ -632,7 +632,7 @@ input:focus.reg-input-style {
 .text-box {
     height: 46px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.35);
     display: flex;
     align-items: center;
     font-size: 1rem;
@@ -647,7 +647,7 @@ input:focus.reg-input-style {
 }
 
 .text-box:not(:last-child) {
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.35);
 }
 
 .text-box:last-child {
