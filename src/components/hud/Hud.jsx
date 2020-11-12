@@ -20,7 +20,7 @@ class Hud extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: false,
+            show: true,
             allowDraggable: false
         }
     }
@@ -36,6 +36,7 @@ class Hud extends React.Component {
     }
 
     componentDidMount() {
+        this.setState({show: false})
         EventManager.addHandler('hud', value => {
             if (value.type === 'show') {
                 this.setState({show: true})

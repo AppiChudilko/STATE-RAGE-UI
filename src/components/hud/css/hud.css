@@ -6,9 +6,6 @@
     height: 100%;
     display: flex;
     position: absolute;
-    background-image: url('https://sun9-54.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70986b74dd06036643841aff64b');
-    background-repeat: no-repeat;
-    background-size: cover;
     /* z-index: -1; */
 }
 .hud-position-leftop {
