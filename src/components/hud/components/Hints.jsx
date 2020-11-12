@@ -8,7 +8,7 @@ class Hints extends React.Component {
             hints: [
                 {key: 'O', text: 'Открыть телефон'},
                 {key: 'i', text: 'Открыть инвентарь'},
-                {key: '-', text: 'Предметы рядом'},
+                {key: '~', text: 'Предметы рядом'},
                 {key: 'M', text: 'Главное меню'}
             ]
         }

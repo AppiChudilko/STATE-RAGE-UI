@@ -36,7 +36,6 @@ class Hud extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({show: false})
         EventManager.addHandler('hud', value => {
             if (value.type === 'show') {
                 this.setState({show: true})
