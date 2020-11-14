@@ -2,23 +2,8 @@ import React from 'react';
 import EventManager from "../../../EventManager";
 import speedometerBg from '../img/speedometer-bg.svg'
 import Draggable from '../Draggable'
-import IconLightOn from '../img/light_on.svg'
-import IconLightOff from '../img/light_off.svg'
-import IconLightOnDefault from '../img/light_default_on.svg'
-import IconLightOffDefault from '../img/light_default_off.svg'
 
-import IconLockOn from '../img/car_lock_on.svg'
-import IconLockOff from '../img/car_lock_off.svg'
-import IconLockOnDefault from '../img/car_lock_on_default.svg'
-import IconLockOffDefault from '../img/car_lock_off_default.svg'
 
-import IconArrowLeftOn from '../img/arrow_left_on.svg'
-import IconArrowRightOn from '../img/arrow_right_on.svg'
-import IconArrowLeftOff from '../img/arrow_left_off.svg'
-import IconArrowRightOff from '../img/arrow_right_off.svg'
-
-import IconFuel from '../img/fuel.svg'
-import IconPower from '../img/power.svg'
 
 class Car extends React.Component {
     constructor(props) {
@@ -251,32 +236,32 @@ class Car extends React.Component {
                     <span className="hud__speedometr__speed">{this.state.speed}</span>
                     <span className="hud__speedometr__speed__subtitle">{this.state.speedLabel}</span>
                     <img
-                        src={this.state.light ? IconLightOn : IconLightOnDefault}
+                        src={this.state.light ? `https://state-99.com/client/images/icons/hud/light_on.svg` : `https://state-99.com/client/images/icons/hud/light_default_on.svg`}
                         className="hud__speedometr__light-on"
                     />
                     <img
-                        src={this.state.light ? IconLightOffDefault : IconLightOff}
+                        src={this.state.light ? `https://state-99.com/client/images/icons/hud/light_default_off.svg` : `https://state-99.com/client/images/icons/hud/light_off.svg`}
                         className="hud__speedometr__light-off"
                     />
                     <img
-                        src={this.state.door ? IconLockOffDefault : IconLockOff}
+                        src={this.state.door ? `https://state-99.com/client/images/icons/hud/car_lock_off_default.svg` : `https://state-99.com/client/images/icons/hud/car_lock_off.svg`}
                         className="hud__speedometr__door-on"
                     />
                     <img
-                        src={this.state.door ? IconLockOn : IconLockOnDefault}
+                        src={this.state.door ? `https://state-99.com/client/images/icons/hud/car_lock_on.svg` : `https://state-99.com/client/images/icons/hud/car_lock_on_default.svg`}
                         className="hud__speedometr__door-off"
                     />
                     <img
-                        src={this.state.turnLeft ? IconArrowLeftOn : IconArrowLeftOff}
+                        src={this.state.turnLeft ? `https://state-99.com/client/images/icons/hud/arrow_left_on.svg` : `https://state-99.com/client/images/icons/hud/arrow_left_off.svg`}
                         className="hud__speedometr__arrow-left"
                     />
                     <img
-                        src={this.state.turnLeft ? IconArrowRightOff : IconArrowRightOn}
+                        src={this.state.turnLeft ? `https://state-99.com/client/images/icons/hud/arrow_right_off.svg` : `https://state-99.com/client/images/icons/hud/arrow_right_on.svg`}
                         className="hud__speedometr__arrow-right"
                     />
                     <div className="hud__speedometr__info">
                         <div className="hud__speedometr__info__row">
-                            <img src={this.state.fuelType === '%' ? IconPower : IconFuel} className="hud__speedometr__info__fuel" width="14" />
+                            <img src={this.state.fuelType === '%' ? `https://state-99.com/client/images/icons/hud/power.svg` : `https://state-99.com/client/images/icons/hud/fuel.svg`} className="hud__speedometr__info__fuel" width="14" />
                             <span className="hud__speedometr__info__fuel__text">{`${this.state.fuel}/${this.state.max_fuel}`}</span>
                         </div>
                         <span className="hud__speedometr__info__carname">

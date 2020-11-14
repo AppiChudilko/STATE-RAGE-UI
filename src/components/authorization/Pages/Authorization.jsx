@@ -12,8 +12,6 @@ class Authorization extends React.Component {
         this.state = {
             showAuto: true,
             acceptRules: false,
-
-            defaultLogin: '',
             login: '',
             password: '',
             mailReg: '',
@@ -84,12 +82,11 @@ class Authorization extends React.Component {
 
 
     clickLogin() {
-        console.log('123')
         try {
             if (!this.state.login)
             {
                 mp.trigger('client:user:auth:login', // eslint-disable-line
-                    this.state.defaultLogin, this.state.password);
+                    this.state.login, this.state.password);
             }
             else {
                 mp.trigger('client:user:auth:login', // eslint-disable-line
@@ -178,7 +175,7 @@ class Authorization extends React.Component {
                                             <Title text="Авторизуйтесь, чтобы продолжить" size="xl" />
                                         </div>
                                         <input type="text" pattern="[a-zA-Z0-9]*" placeholder="Введите логин"
-                                            name="login-auth" className="auth-input-style" defaultValue={this.state.defaultLogin}
+                                            name="login-auth" className="auth-input-style"
                                             onChange={this.valueLogin.bind(this)}
                                             value={this.state.login}
                                         />

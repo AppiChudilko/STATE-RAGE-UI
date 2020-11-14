@@ -23,13 +23,13 @@ class MainMenu extends React.Component {
                 height: '350px',
             },
             headerText: 'Test',
-            headerDesc: 'Hello World!',
+            headerDesc: '~r~HELL~g~O WO~b~RLD',
             banner: 'bs_hair',
             menuName: '',
             menuList: [
                 {
                     type: 2,
-                    title: 'Test',
+                    title: '~r~Test',
                     subtitle: '~g~TEST2~y~Dfsdfdsf~br~qwerty~b~sdfsdfsdf~g~djasdnajksnd',
                     icon: 'test__icon__inverted',
                     rl: 'Right Label',
@@ -570,7 +570,13 @@ class MainMenu extends React.Component {
                             )
                         })}
                     </div>
-                    
+                    {this.state.menuList[this.state.selected].subtitle ? 
+                        <Desc
+                            font={this.state.mStyle.font}
+                            border={this.state.mStyle.borderRadius}
+                            color={this.state.mStyle.bgColor}
+                            desc={this.state.menuList[this.state.selected].subtitle}
+                        /> : <></>}
                 </div>
             </Draggable>
         )

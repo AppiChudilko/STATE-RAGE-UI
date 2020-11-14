@@ -1,11 +1,5 @@
 import React from 'react';
 import EventManager from "../../../EventManager";
-import micOffIcon from '../img/mic-off.svg'
-import micOnIcon from '../img/mic_on.svg'
-import moneyCard from '../img/card_money.svg'
-import moneyPaper from '../img/paper_money.svg'
-import drinkIcon from '../img/drink.svg'
-import eatIcon from '../img/eat.svg'
 
 import Draggable from '../Draggable'
 
@@ -65,15 +59,15 @@ class Player extends React.Component {
                             <Draggable id="player-money" className="phud-money">
                                 <div className="money-box">
                                     <div className="wallet-text">{this.state.wallet}</div>
-                                    <img src={moneyPaper} width="13" />
+                                    <img src={`https://state-99.com/client/images/icons/hud/paper_money.svg`} width="13" />
                                 </div>
                                 <div className="money-box">
                                     <div className="credit-text">{this.state.card}</div>
-                                    <img src={moneyCard} width="13" />
+                                    <img src={`https://state-99.com/client/images/icons/hud/card_money.svg`} width="13" />
                                 </div>
                             </Draggable>
                             <Draggable id="player-mic" className="phud-mic" style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
-                                <img src={this.state.microphone ? micOnIcon : micOffIcon} width="24" />
+                                <img src={this.state.microphone ? `https://state-99.com/client/images/icons/hud/mic_on.svg` : `https://state-99.com/client/images/icons/hud/mic-off.svg`} width="24" />
                             </Draggable>
                         </div>
                         <Draggable id="player-needs" className="phud-needs" style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
@@ -83,7 +77,7 @@ class Player extends React.Component {
                                         <div className="color-liner-drink"
                                             style={{width: this.state.drink + '%'}}></div>
                                     </div>
-                                    <img src={drinkIcon} width="10" />
+                                    <img src={`https://state-99.com/client/images/icons/hud/drink.svg`} width="10" />
                                 </div>
                                 <div className="needs-box">
                                     <div className="needs-text">{this.state.eat}%</div>
@@ -91,7 +85,7 @@ class Player extends React.Component {
                                         <div className="color-liner"
                                             style={{width: this.state.eat + '%'}}></div>
                                     </div>
-                                    <img src={eatIcon} width="12" />
+                                    <img src={`https://state-99.com/client/images/icons/hud/eat.svg`} width="12" />
                                 </div>
                         </Draggable>
                     </div>

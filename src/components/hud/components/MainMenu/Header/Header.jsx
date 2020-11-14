@@ -57,7 +57,7 @@ export default function Header(props) {
                 )}
             </div>
             <div style={styles.headerDataContainer}>
-                <div style={styles.headerDesc}>{props.headerDesc}</div>
+                <div style={styles.headerDesc} dangerouslySetInnerHTML={{__html: parseText(props.headerDesc)}} />
                 <div style={styles.headerDescCount}>{props.headerData}</div>
             </div>
         </div>
