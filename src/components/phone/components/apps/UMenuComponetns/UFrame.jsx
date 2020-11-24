@@ -44,7 +44,7 @@ class UFrame extends React.Component {
         let uid = Math.random().toString(36).substr(2, 9);
         return (
             <React.Fragment>
-                <input className="tgl tgl-light" type="checkbox" defaultChecked={isChecked} id={uid}
+                <input className="tgl tgl-ios tgl-light" type="checkbox" defaultChecked={isChecked} id={uid}
                        onChange={e => this.checkboxChange(e, params)}/>
                 <label className="tgl-btn" htmlFor={uid}></label>
             </React.Fragment>
@@ -108,13 +108,6 @@ class UFrame extends React.Component {
                         <React.Fragment>
                             <div className="umenu-mini-box">
                                 <div className="l-title">
-                                    {this.props.item.img === '' ? null :
-                                        <React.Fragment>
-                                            <div className="umenu-icon">
-                                                <div className={`s-${this.props.item.img}`}></div>
-                                            </div>
-                                        </React.Fragment>
-                                    }
                                     <div className="umenu-rov">
                                         <div className="txt-title">{this.props.item.title}</div>
                                         <div className="txt-lasttitle">{this.props.item.text}</div>
@@ -173,11 +166,6 @@ class UFrame extends React.Component {
                                 this.props.openScrollbar(this.props.item.scrollbarTitle, this.props.item.scrollbar)
                             }}>
                                 <div className="l-title">
-                                    {this.props.item.img === '' || this.props.item.img === undefined ? null :
-                                        <React.Fragment>
-                                            <MaterialIcon icon={this.props.item.img} size={19}/>
-                                        </React.Fragment>
-                                    }
                                     <div className="umenu-rov">
                                         <div className="txt-title">{this.props.item.title} </div>
                                         <div className="txt-lasttitle">{this.props.item.text}</div>

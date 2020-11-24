@@ -2,6 +2,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Loader from '../Android/Loader';
+import IconBackIOS from '../../img/back.svg'
 
 class AddChat extends React.Component {
     constructor(props) {
@@ -100,8 +101,13 @@ class AddChat extends React.Component {
         return (
             <React.Fragment>
                 <div className="dedbit-menu">
-                    <div className="u-title" style={{ background: "#212D3B" }}>
-                        <span className="u-texttittle">Onion Messenger</span>
+                    <div className="u-title">
+                        <div className="dedbit-u-texttittle">
+                            <div className="u__back__container">
+                                <img src={IconBackIOS} className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
+                            </div>
+                            <span className="u-texttittle">Onion Messenger</span>
+                        </div>
                     </div>
                     <div className="messenger-addchat">
                         {!this.state.loading ? 
@@ -126,7 +132,7 @@ class AddChat extends React.Component {
                             />
                         </div>
                         <div className="position-btn-addchat">
-                        <Button variant="contained" color="primary" onClick={() => this.sendMessage()}>Отправить</Button>                        
+                            <span className="ios__button" onClick={() => this.sendMessage()}>Отправить</span>                      
                         </div>
                         </React.Fragment>
                         :

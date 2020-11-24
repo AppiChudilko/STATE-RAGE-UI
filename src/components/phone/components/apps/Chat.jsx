@@ -1,6 +1,6 @@
 import React from 'react';
 import MaterialIcon from 'material-icons-react';
-
+import IconBackIOS from '../../img/back.svg'
 
 import Avatar from '@material-ui/core/Avatar';
 
@@ -133,17 +133,15 @@ class Chat extends React.Component {
         return (
             <React.Fragment>
                 <div className="dedbit-menu">
-                    <div className="u-title" style={{ background: "#212D3B", height: 50 + 'px' }}>
+                    <div className="u-title" style={{ height: 50 + 'px' }}>
                         <div className="dedbit-u-texttittle">
-                            <MaterialIcon icon="arrow_back" size={18} color="#fff"
-                                onClick={() => this.props.setLink("/phone/android/messenger")} />
+                            <img src={IconBackIOS} className="u__back-nabs" height="16" onClick={() => this.props.setLink("/phone/android/messenger")} />
                             {this.state.contact === null ?
-                                <Avatar alt="" src={'https://a.rsg.sc//n/socialclub'}
-                                    className="m-img-sms-title"></Avatar>
+                                null
                                 :
-                                <Avatar alt=""
-                                    src={this.state.contact.img === '' || this.state.contact.img === undefined ? "" : this.state.contact.img}
-                                    className="m-img-sms-title">{this.state.contact.name.substring(0, 1)}</Avatar>
+                                <span className="dedbit__messenger__chatname">
+                                    {this.state.contact.name.substring(0, 1)}
+                                </span>
                             }
                             <div className="u-title-row spiceal-ts-chat">
                                 <div

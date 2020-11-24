@@ -151,6 +151,27 @@
 }
 
 @font-face {
+    font-family: 'SF Pro Bold';
+    src: url('SFProDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'SF Pro Semibold';
+    src: url('SF-Pro-Display-Semibold.otf');
+}
+
+@font-face {
+    font-family: 'SF Pro Regular';
+    src: url('SF-Pro-Display-Regular.otf');
+}
+
+
+@font-face {
+    font-family: 'SF Pro Light';
+    src: url('SF-Pro-Display-Light.otf');
+}
+
+@font-face {
     font-family: 'SF Compact Display Thin';
     font-style: normal;
     font-weight: normal;

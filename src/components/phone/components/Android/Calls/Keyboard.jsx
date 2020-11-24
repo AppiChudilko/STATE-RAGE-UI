@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Keyboard = ({ onClickKeyboardButton }) => {
     
     const buttons = [
-        [{button: '1', subtext: '—'},
+        [{button: '1', subtext: ' '},
         {button: '2', subtext: 'ABC'},
         {button: '3', subtext: 'DEF'}],
         [{button: '4', subtext: 'GHI'},
@@ -16,9 +16,9 @@ const Keyboard = ({ onClickKeyboardButton }) => {
         [{button: '7', subtext: 'PQRS'},
         {button: '8', subtext: 'TUV'},
         {button: '9', subtext: 'WXYZ'}],
-        [{button: '', subtext: '*'},
-        {button: '0', subtext: '+'},
-        {button: '', subtext: '#'}]
+        [{button: '*', subtext: ''},
+        {button: '0', subtext: ' '},
+        {button: '#', subtext: ''}]
     ]
 
     return (

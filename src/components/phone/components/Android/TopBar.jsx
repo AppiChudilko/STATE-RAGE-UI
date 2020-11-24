@@ -1,4 +1,7 @@
 import React from 'react';
+import IconConnection from '../../img/connection.svg'
+import IconBattery from '../../img/battery.svg'
+import IconWifi from '../../img/Wi-Fi.svg'
 
 class TopBar extends React.Component {
     constructor(props) {
@@ -110,61 +113,21 @@ class TopBar extends React.Component {
         }
         return (
             <React.Fragment>
-                <div className="topbar-andr" style={style}>
+                <div className="topbar-andr">
                     <div className="right-topbar">
                         <span className="battery-info">{this.props.data.time}</span>
                     </div>
                     <div className="left-topbar">
                         {this.props.data.wifi ?
                             <div className="elements-bar">
-                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M6.99975 0C4.40371 0 1.99432 0.729527 0 1.97896L7.00516 11L14 1.97896C12.0057 0.729963 9.5958 0 6.99975 0Z"
-                                              fill="white"/>
-                                        <path opacity="0.302" fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M6.99365 0.00561523C4.39813 0.00561523 1.98828 0.707729 -0.00634766 1.90924L6.9977 11.0025L13.994 1.90924C11.9994 0.707729 9.58955 0.00561523 6.99365 0.00561523Z"
-                                              fill="white"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0">
-                                            <rect width="14" height="11" fill="white"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                                <img src={IconWifi} width="12" className="elements-bar__icon" />
                             </div>
                             : null}
                         <div className="elements-bar">
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clipPath="url(#clip0)">
-                                    <path opacity="0.302" fillRule="evenodd" clipRule="evenodd"
-                                          d="M11 0L0 11.0003L11 11V0Z" fill="white"/>
-                                    <g clipPath="url(#clip1)">
-                                        <path fillRule="evenodd" clipRule="evenodd" d={this.state.path_network}
-                                              fill="white"/>
-                                    </g>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect width="11" height="11" fill="white"/>
-                                    </clipPath>
-                                    <clipPath id="clip1">
-                                        <rect width="11" height="11" fill="white"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-
+                            <img src={IconConnection} width="12" className="elements-bar__icon" />
                         </div>
                         <div className="elements-bar">
-                            <svg width="7" height="11" viewBox="0 0 7 11" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.302" fillRule="evenodd" clipRule="evenodd"
-                                      d="M6.08696 11H0.913043C0.408739 11 0 10.6007 0 10.1081V1.78378C0 1.29116 0.408739 0.891892 0.913043 0.891892H1.82609V0H5.17391V0.891892H6.08696C6.59126 0.891892 7 1.29116 7 1.78378V10.1081C7 10.6007 6.59126 11 6.08696 11Z"
-                                      fill="white"/>
-                                <path fillRule="evenodd" clipRule="evenodd" d={this.state.path_battery} fill="white"/>
-                            </svg>
+                            <img src={IconBattery} width="17.5" className="elements-bar__icon" />
 
                         </div>
                     </div>

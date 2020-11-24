@@ -19,20 +19,19 @@ class DefaultPage extends React.Component {
                 <div className="icon-network"></div>
                 <span> 12:00</span>
               </div> */}
-                    <div className="info-time-box">
+                    {/*<div className="info-time-box">
                         <div className="time-date">
                             <div className="txt-time">{this.props.top_bar.time}</div>
                             <div className="txt-date">{this.props.top_bar.date}</div>
                         </div>
                         <div className="weather"><span>{this.props.top_bar.temperature}</span></div>
-                    </div>
+            </div>*/}
                     <div className="main-app-box">
                         {this.props.data.map((e, i) => {
                             const index = `appBox${i}`
                             return (
-                                <Link to={e.link} className="app-box" onClick={() => this.props.clickApps(e, i)}
+                                <Link to={e.link} className={`app-box icons-${e.img}`} onClick={() => this.props.clickApps(e, i)}
                                     key={index}>
-                                    <div className={`app-icon icons-${e.img}`}></div>
                                     <div className="textfor-app">{e.name}</div>
                                 </Link>
                             )

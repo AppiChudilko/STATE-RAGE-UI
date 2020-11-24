@@ -65,6 +65,9 @@
 
 .calls {
     margin-top: 0 !important;
+    background: #000;
+    padding-top: 20%;
+    height: 100% !important;
 }
 
 .calls__screen {

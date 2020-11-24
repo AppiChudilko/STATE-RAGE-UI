@@ -92,10 +92,8 @@ class Console extends React.Component {
         return (
             <React.Fragment>
                 <div className="dedbit-menu">
-                    <div className="u-title" style={{ background: "#212D3B" }}>
-                        <span className="u-texttittle">{this.state.title}</span>
-                    </div>
                     <div className="console-main">
+                    <span className="iphone__app__name">Консоль</span>
                         <ul className="console-chat-ul">
                             {this.props.console_message.map((e, i) => {
                                 let index = `consolelist${i}`
@@ -108,7 +106,7 @@ class Console extends React.Component {
                         <div className="console-input">
                             {/* <textarea ref={c => (this.textarea = c)} 
                                 className="c-i-style " /> */}
-                            <span>$:></span>
+                            <span>{`$:>`}</span>
                             <input type="text" className="c-i-style"
                                 value={this.state.text} onBlur={(e) => this.inputBlur(e)} onFocus={(e) => this.inputFocus(e)} onChange={(e) => this.inputChange(e)}
                             />

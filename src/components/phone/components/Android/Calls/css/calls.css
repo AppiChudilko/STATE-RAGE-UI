@@ -35,6 +35,40 @@
     flex-direction: column;
 }
 
+.calls__navbar__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.calls__navbar__item__text-active {
+    color: #0A84FF;
+    font-family: 'SF Pro Regular';
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.calls__navbar__item__icon-active {
+    filter: invert(37%) sepia(98%) saturate(4277%) hue-rotate(196deg) brightness(107%) contrast(109%);
+}
+
+.calls__navbar__item__text {
+    font-family: 'SF Pro Regular';
+    font-size: 12px;
+    color: #757575;
+    margin-top: 5px;
+}
+
+.calls__navbar {
+    margin-top: auto;
+    background: rgba(22, 22, 22, 0.75);
+    box-shadow: 0px -0.5px 0px rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(81.5485px);
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    padding-bottom: 10%;
+}
+
 .calls__actions__item__text {
     font-family: 'Roboto';
     font-style: normal;

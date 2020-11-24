@@ -10,7 +10,7 @@ const DoCallButton = ({ action }) => {
     return (
         <div className="calls__docallbtn__container">
             <div onClick={action} className="calls__docallbtn__container__btn">
-                <MaterialIcon icon="call" size={19} color="#fff" />
+                <MaterialIcon icon="call" size={32} color="#fff" />
             </div>
         </div>
     )

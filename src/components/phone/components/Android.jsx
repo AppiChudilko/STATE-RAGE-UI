@@ -64,19 +64,96 @@ class Android extends React.Component {
             ],
             menu: {
                 UUID: '11223',
-                title: 'Загрузка...',
+                title: 'App',
                 items: [
                     {
                         title: 'Загрузка...',
                         hidden: false,
                         umenu: [
-
                             {
-                                title: "Загрузка",
+                                title: "Итем по умолчанию",
                                 text: "",
                                 type: 1,
                                 clickable: false,
                                 params: { name: "null", skip: true }
+                            },
+                            {
+                                title: "Checkbox",
+                                text: "",
+                                value: true,
+                                type: 2,
+                                clickable: false,
+                                params: { name: "null", skip: true }
+                            },
+                            /*{
+                                title: "Button",
+                                text: "",
+
+                                type: 3,
+                                clickable: false,
+                                params: { name: "null", skip: true }
+                            },*/
+                            {
+                                title: "User Name",
+                                text: "",
+                                img: "https://i.imgur.com/v4aju8F.jpg",
+                                online: true,
+                                type: 4,
+                                clickable: false,
+                                params: { name: "null", skip: true }
+                            },
+                            {
+                                title: "Radio Input",
+                                text: "",
+                                scrollbarTitle: 'Выберите должность',
+                                scrollbar: [{title: 'Name1', params: { name: 'memberNewRank'}}, {title: 'Name2', params: { name: 'memberNewRank'}}, {title: 'Name3', params: { name: 'memberNewRank'}}],
+                                type: 5,
+                                clickable: false,
+                                params: { name: "null", skip: true }
+                            },
+                            {
+                                title: "Картинка",
+                                value: "https://i.imgur.com/v4aju8F.jpg",
+                                type: 6,
+                                clickable: false,
+                                params: { name: "null", skip: true }
+                            },
+                            {
+                                title: "Модальное окно",
+                                modalTitle: 'Вы долбаеб?',
+                                modalButton: ['Отмена', 'Создать'],
+                                type: 7,
+                                clickable: true,
+                                params: { name: "null", skip: true }
+                            },
+                            {
+                                title: 'Окно ввода текста',
+                                modalTitle: 'Введите название раздела',
+                                modalButton: ['Отмена', 'Создать'],
+                                type: 8,
+                                params: { name: "createFractionDepF" },
+                                clickable: true,
+                            },
+                            {
+                                title: 'Таблица',
+                                columns: [
+                                    { title: '№', field: 'id' },
+                                    { title: 'Имя', field: 'name' },
+                                    { title: 'Описание', field: 'text' },
+                                ],
+                                data: [
+                                    {id: '#1', name: 'Name', text: 'text'},
+                                    {id: '#1', name: 'Name', text: 'text'},
+                                    {id: '#1', name: 'Name', text: 'text'},
+                                    {id: '#1', name: 'Name', text: 'text'},
+                                    {id: '#1', name: 'Name', text: 'text'},
+                                    {id: '#1', name: 'Name', text: 'text'},
+                                    {id: '#1', name: 'Name', text: 'text'},
+                                ],
+                                readonly: true,
+                                type: 10,
+                                params: { },
+                                clickable: true,
                             },
                         ],
                     },
@@ -91,11 +168,11 @@ class Android extends React.Component {
                     img: 'https://a.rsg.sc//n/socialclub',*/
                 },
                 history: [
-/*
+
                     {
                         number: '222-2346837',
                         img: 'https://a.rsg.sc//n/socialclub',
-                        type: 'call_missed', // call_made - исходящий звонок \ call_received - принятый звонок
+                        type: 'call_made', // call_made - исходящий звонок \ call_received - принятый звонок
                         data: '20190212-1553'
                     },
                     {
@@ -115,7 +192,7 @@ class Android extends React.Component {
                         img: 'https://a.rsg.sc//n/socialclub',
                         type: 'call_made',
                         data: '20190212-1453'
-                    },*/
+                    },
                 ],
                 contact: [
                     {
@@ -232,8 +309,8 @@ class Android extends React.Component {
                 params: { name: "null" },
             },
             phonecall: {
-                number: '',
-                name: '',
+                number: '333345',
+                name: 'name',
                 avatar: '',
                 going: true
             }
@@ -796,7 +873,7 @@ class Android extends React.Component {
             <React.Fragment>
                 <div className={this.state.rotate ? "android-phone rotate-androind" : "android-phone"}>
                     <img className="phone__box" src={iphoneBox} />
-                    <div className="phone-bg" style={bg}>
+                    <div className="phone-bg">
                         <div className={this.state.rotate ? "rotate-components" : 'main-phone-box-flex'}>
                             <TopBar data={this.state.top_bar} />
                             <Router>
@@ -821,13 +898,21 @@ class Android extends React.Component {
                                     <Console console_message={this.state.console_message} consoleCommand={this.consoleCommand.bind(this)} />
                                 </Route>
                                 <Route exact path="/phone/android/calls">
-                                    <Calls
+                                    <PhoneBook
                                         onCall={this.setCallNumber.bind(this)}
+                                        historyPush={this.historyPush.bind(this)} data={this.state.phonebook}
+                                        clickContact={this.clickContact.bind(this)}
+                                        getContactByNumber={this.getContactByNumber.bind(this)}
                                         setLink={this.setLink.bind(this)}
+                                        defaultValue={'calls'}
+                                        going={this.state.phonecall.going}
+                                        onAccept={this.acceptCall.bind(this)}
+                                        onDecline={() => console.log(`Ты отменил вызов от ${this.state.phonecall.number}`)}
                                     />
                                 </Route>
                                 <Route exact path="/phone/android/callScreen">
                                     <CallingScreen
+                                        onCall={this.setCallNumber.bind(this)}
                                         number={this.state.phonecall.number}
                                         name={this.state.phonecall.name}
                                         avatar={this.state.phonecall.avatar}
@@ -844,12 +929,14 @@ class Android extends React.Component {
                                     <PhoneBook historyPush={this.historyPush.bind(this)} data={this.state.phonebook}
                                         clickContact={this.clickContact.bind(this)}
                                         getContactByNumber={this.getContactByNumber.bind(this)}
+                                        historyGoBack={this.historyGoBack.bind(this)}
                                         setLink={this.setLink.bind(this)} />
                                 </Route>
                                 <Route exact path="/phone/android/phonebook/profilecontact">
                                     <ProfileContact historyPush={this.historyPush.bind(this)}
                                         data={this.state.phonebook}
                                         deleteContact={this.deleteContact.bind(this)}
+                                        historyGoBack={this.historyGoBack.bind(this)}
                                         favoriteContact={this.favoriteContact.bind(this)}
                                         selectChat={this.selectChat.bind(this)}
                                         editContact={this.editContact.bind(this)}
@@ -890,8 +977,14 @@ class Android extends React.Component {
                                 <Redirect to={this.state.path} push />
                             </Router>
                             <Router>
-                                <BottomBar clickBack={this.clickBack.bind(this)} clickHome={this.clickHome.bind(this)}
-                                    rotateAndroid={this.rotateAndroid.bind(this)} />
+                                <BottomBar
+                                    clickBack={this.clickBack.bind(this)}
+                                    clickHome={this.clickHome.bind(this)}
+                                    rotateAndroid={this.rotateAndroid.bind(this)}
+                                    data={this.state.apps}
+                                    clickApps={this.clickApps.bind(this)}
+                                    isMainScreen={this.state.path === '/phone/android/defaultpage'}
+                                />
                             </Router>
                         </div>
                     </div>

@@ -30,10 +30,6 @@ class Contact extends React.Component {
                                 </div>
                             )
                         })}
-                    <Fab color="primary" aria-label="add"
-                         onClick={() => this.props.setLink('/phone/android/phonebook/profilecontact/editcontact')}>
-                        <AddIcon/>
-                    </Fab>
                 </div>
             </React.Fragment>
         )

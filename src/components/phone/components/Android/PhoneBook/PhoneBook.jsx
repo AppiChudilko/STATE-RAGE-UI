@@ -4,14 +4,29 @@ import MaterialIcon from 'material-icons-react';
 import HistoryCall from './pages/HistoryCall';
 import Favorit from './pages/Favorit';
 import Contact from './pages/Contact';
+import Calls from '../../apps/Calls'
+import NavigationBar from '../Calls/NavigationBar';
+import IconIOSKeyboard from '../../../img/keyboard.svg'
+import IconIOSShape from '../../../img/shape.svg'
+
 
 class PhoneBook extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            page: 'favorit',
-            search: ''
+            page: this.props.defaultValue || 'favorit',
+            search: '',
+            pagesList: [
+                {icon: IconIOSKeyboard, name: 'Клавиши', page: 'favorit'},
+                {icon: IconIOSKeyboard, name: 'Клавиши', page: 'history'},
+                {icon: IconIOSKeyboard, name: 'Клавиши', page: 'contact'},
+                {icon: IconIOSKeyboard, name: 'Клавиши', page: 'calls'}
+            ]
         }
+    }
+
+    setActivePage = (value) => {
+        this.setState({ page: value })
     }
 
     componentDidCatch(error, errorInfo) {
@@ -31,44 +46,68 @@ class PhoneBook extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="phonebook-content">
-                    <div className="b-bar">
-                        <div className="b-search">
-                            <div className="b-imgsearch"><MaterialIcon icon="search" size={19}/></div>
-                            <input type="text" className="b-inputtext" placeholder="Введите текст для поиска"
-                                   onChange={this.handleSearchChange}/>
+                {this.state.page === 'calls' ? 
+                <React.Fragment>
+                    <Calls />
+                        <div className="calls__navbar">
+                            {this.state.pagesList.map((item, index) => (
+                                <div onClick={() => this.setActivePage(item.page)} className="calls__navbar__item" key={`calls__navbar__item-${index}`}>
+                                    <img src={IconIOSKeyboard} className={this.state.page === item.page ? `calls__navbar__item__icon-active` : `calls__navbar__item__icon`} />
+                                    <span className={this.state.page === item.page ? `calls__navbar__item__text-active` : `calls__navbar__item__text`}>Клавиши</span>
+                                </div>
+                            ))}
                         </div>
-                        <div className="b-tabsbar">
-                            <input type="radio" id="b-radio-tabs1" name="b-radio-tabs" defaultChecked="true"
-                                   onChange={() => this.handleChange('favorit')}/>
-                            <label htmlFor="b-radio-tabs1" className="b-tabs-radio"><MaterialIcon icon="star"
-                                                                                                  size={19}/></label>
-                            <input type="radio" id="b-radio-tabs2" name="b-radio-tabs"
-                                   onChange={() => this.handleChange('history')}/>
-                            <label htmlFor="b-radio-tabs2" className="b-tabs-radio"><MaterialIcon icon="access_time"
-                                                                                                  size={19}/></label>
-                            <input type="radio" id="b-radio-tabs3" name="b-radio-tabs"
-                                   onChange={() => this.handleChange('contact')}/>
-                            <label htmlFor="b-radio-tabs3" className="b-tabs-radio"><MaterialIcon icon="group"
-                                                                                                  size={19}/></label>
+                </React.Fragment>
+                : 
+                    <div className="phonebook-content">
+                        <div className="fix-phonebook">
+                            <div className="b-callhistory">
+                                {this.state.page === "favorit" ?
+                                    <Favorit
+                                            contact={this.props.data.contact}
+                                            filter={this.state.search}
+                                            clickContact={this.props.clickContact.bind(this)}/> : null}
+                                {this.state.page === "history" ?
+                                    <HistoryCall
+                                            history={this.props.data.history}
+                                            filter={this.state.search}
+                                            clickContact={this.props.clickContact.bind(this)}
+                                            getContactByNumber={this.props.getContactByNumber.bind(this)}/> : null}
+                                {this.state.page === "contact" ?
+                                    <React.Fragment>
+                                        <div className="phonebook__search">
+                                            <input
+                                                type="text"
+                                                className="phonebook__search__input"
+                                                placeholder="Поиск"
+                                                onChange={this.handleSearchChange}/>
+                                            <span
+                                                className="phonebook__search__add"
+                                                onClick={() => this.props.setLink('/phone/android/phonebook/profilecontact/editcontact')}
+                                            >
+                                                +
+                                            </span>
+                                        </div>
+                                        <Contact
+                                                contact={this.props.data.contact}
+                                                filter={this.state.search}
+                                                clickContact={this.props.clickContact.bind(this)}
+                                                setLink={this.props.setLink.bind(this)} /> 
+                                    </React.Fragment>
+                                    :
+                                    null}
+                                <div className="calls__navbar">
+                                    {this.state.pagesList.map((item, index) => (
+                                        <div className="calls__navbar__item" onClick={() => this.setActivePage(item.page)} key={`calls__navbar__item-${index}`}>
+                                            <img src={IconIOSKeyboard} className={this.state.page === item.page ? `calls__navbar__item__icon-active` : `calls__navbar__item__icon`} />
+                                            <span className={this.state.page === item.page ? `calls__navbar__item__text-active` : `calls__navbar__item__text`}>Клавиши</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="fix-phonebook">
-                        <div className="b-callhistory">
-                            {this.state.page === "favorit" ?
-                                <Favorit contact={this.props.data.contact} filter={this.state.search}
-                                         clickContact={this.props.clickContact.bind(this)}/> : null}
-                            {this.state.page === "history" ?
-                                <HistoryCall history={this.props.data.history} filter={this.state.search}
-                                             clickContact={this.props.clickContact.bind(this)}
-                                             getContactByNumber={this.props.getContactByNumber.bind(this)}/> : null}
-                            {this.state.page === "contact" ?
-                                <Contact contact={this.props.data.contact} filter={this.state.search}
-                                         clickContact={this.props.clickContact.bind(this)}
-                                         setLink={this.props.setLink.bind(this)}/> : null}
-                        </div>
-                    </div>
-                </div>
+                }
             </React.Fragment>
         )
     }

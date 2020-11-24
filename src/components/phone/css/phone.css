@@ -55,6 +55,7 @@
 .phone__box {
     position: absolute;
     width: 320px;
+    z-index: 100;
 }
 
 .bg-0 {
@@ -103,10 +104,10 @@
 }
 
 .android-content {
-    width: 276px;
+    width: 100%;
     height: 409px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     transition: .5s;
@@ -166,12 +167,12 @@
 }
 
 .main-app-box {
-    margin-top: auto;
     margin-left: auto;
     margin-right: auto;
     width: 244px;
     display: flex;
     flex-flow: wrap-reverse;
+    margin-top: 30px;
     /* flex-flow: row wrap;
     align-content: stretch; */
 }
@@ -179,7 +180,6 @@
 .app-box {
     width: 46px;
     height: 49px;
-    background-color: rgb(0, 0, 0, 0.35);
     border-radius: 5px;
     margin-right: 19px;
     display: flex;
@@ -217,6 +217,7 @@
 } */
 .android-content .app-box {
     margin-bottom: 25px;
+    border-radius: 0.8rem;
 }
 
 .rotate-components .app-box {
@@ -245,130 +246,130 @@
 }
 .icons-hack2{
     background: url(../img/android/icons/console2.svg) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
 }
 .icons-hack{
     background: url(../img/android/icons/hack.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
 }
 .icons-console{
     background: url(../img/android/icons/console.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
 }
 .icons-settings {
     background: url(../img/android/icons/settings.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
 }
 
 .icons-phone {
     background: url(../img/android/icons/telephone.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
 }
 
 .icons-sms {
     background: url(../img/android/icons/sms.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
 }
 
 .icons-gps {
     background: url(../img/android/icons/gps.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-cont {
     background: url(../img/android/icons/cont.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-apps {
     background: url(../img/android/icons/apps.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-fleeca {
     background: url(../img/android/icons/fleeca.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-maze {
     background: url(../img/android/icons/maze.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-blaine {
     background: url(../img/android/icons/blaine.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-pacific {
     background: url(../img/android/icons/pacific.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     filter: invert(100%);
 }
 
 .icons-invader {
     background: url(../img/android/icons/invader.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-news {
     background: url(../img/android/icons/news.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-uveh {
     background: url(../img/android/icons/car.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-ems {
     background: url(../img/android/icons/ems.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-lspd {
     background: url(../img/android/icons/lspd.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-lspd2 {
     background: url(../img/android/icons/lspd2.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-usmc {
     background: url(../img/android/icons/usmc.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-community {
     background: url(../img/android/icons/community.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-gov {
     background: url(../img/android/icons/gov.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
 .icons-bcsd {
     background: url(../img/android/icons/bcsd.png) no-repeat center;
-    background-size: 32px;
+    background-size: cover;
     /*filter: invert(100%);*/
 }
 
@@ -433,9 +434,9 @@
     height: 17px;
     display: flex;
     z-index: 1;
+    position: absolute;
     /* background: #2d72c1; */
     margin-top: -2px;
-    width: 100%;
     margin-top: 15px;
 }
 
@@ -447,7 +448,7 @@
     margin-left: auto;
     display: flex;
     align-items: center;
-    margin-right: 21px;
+    margin-right: 10px;
 }
 
 .right-topbar {
@@ -455,26 +456,26 @@
 }
 
 .left-topbar .elements-bar {
-    width: 20px;
-    height: 20px;
     /* background: url(../img/android/icons/wifi.svg) no-repeat;
     filter: brightness(0) saturate(100%) invert(100%); */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: -4px
+}
+
+.elements-bar__icon {
+    margin-left: 5px;
 }
 
 .rotate-components .left-topbar .battery-info {
     margin-top: 1px;
 }
 
-.left-topbar .battery-info {
+.battery-info {
     font-size: 12px;
-    margin-right: 3px;
-    font-family: 'SF Compact Display Thin';
+    margin-right: 5px;
+    font-family: 'SF Pro Semibold';
     color: #fff;
-    margin-left: 4px;
 }
 
 .hoverable {
@@ -484,7 +485,7 @@
 /*UMenu*/
 .uni-menu {
     width: inherit;
-    height: 409px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin-top: -1px;
@@ -499,11 +500,13 @@
 
 .u-title {
     height: 41px;
+    min-height: 41px;
     display: flex;
     align-items: center;
-    background: #212121;
+    justify-content: center;
+    background: #262626;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
-    z-index: 1;
+    padding-top: 34px;
 }
 
 .menu-list {
@@ -514,16 +517,34 @@
 }
 
 .u-texttittle {
-    font-family: "RobotoMedium";
+    font-family: "SF Pro Semibold";
     color: #fff;
-    font-size: 14px;
-    margin-left: 15px;
+    font-size: 12px;
+    width: 70%;
+}
+
+.u-texttittle-center {
+    font-family: "SF Pro Semibold";
+    color: #fff;
+    font-size: 12px;
+}
+
+.u__back {
+    pointer-events: all !important;
+}
+
+.u__back-nabs {
+    position: relative;
+}
+
+.u__back-nabs {
+    pointer-events: all !important;
 }
 
 .u-li-menu {
     width: inherit;
-    height: 370px;
-    background: #F2F2F2;
+    height: 100%;
+    background: #2e2e2e;
     overflow: scroll;
 }
 
@@ -531,7 +552,7 @@
     width: inherit;
     margin-bottom: 8px;
     overflow: scroll;
-    background: #fff;
+    background: #2e2e2e;
 }
 .umenu-family-box::-webkit-scrollbar {
     display: none;
@@ -544,7 +565,7 @@
     width: auto;
     display: flex;
     align-items: center;
-    background: #fff;
+    background: #2e2e2e;
     transition: 0.3s;
 }
 
@@ -553,7 +574,6 @@
 }
 
 .l-title {
-    padding-left: 10px;
     min-height: 27px;
     width: 100%;
     display: flex;
@@ -562,9 +582,9 @@
 }
 
 .txt-title {
-    font-family: "Roboto";
+    font-family: "SF Pro Regular";
     margin-bottom: 2px;
-    color: #3a3a3a;
+    color: #fff;
     font-size: 14px;
 }
 
@@ -635,11 +655,11 @@ h4 {
 .tgl + .tgl-btn {
     display: flex;
     margin-left: auto;
-    margin-right: 10px;
+    margin-right: 20px;
     outline: 0;
     display: block;
-    width: 33px;
-    height: 12px;
+    width: 40px;
+    height: 20px;
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -678,21 +698,20 @@ h4 {
     transition: all 0.2s ease;
     width: 18px;
     height: 18px;
-    top: -3px;
+    top: -1px;
     box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.25);
 
 }
 
 .tgl-light:checked + .tgl-btn {
-    background: #4db6ac;
+    background: #485251;
 }
 
 .tgl-ios + .tgl-btn {
-    background: #fbfbfb;
+    background: #4d4d4d;
     border-radius: 2em;
     padding: 2px;
     transition: all 0.4s ease;
-    border: 1px solid #e8eae9;
 }
 
 .tgl-ios + .tgl-btn:after {
@@ -960,13 +979,58 @@ h4 {
 }
 
 .m_keys_bar {
-    width: 276px;
+    width: 100%;
     height: 37px;
     background: #0a0a0a;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: auto;
+}
+
+.iphone__apps__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    border-radius: 1.4rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    margin-bottom: 10%;
+}
+
+.iphone__apps__bar__container {
+    padding-left: 6%;
+    padding-right: 6%;
+    margin-top: auto;
+}
+
+.iphone__apps__bar__item {
+    display: flex;
+    width: 20%;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.iphone__bar__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.iphone__bar {
+    margin-top: 10px;
+    height: 4px;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 2rem;
+    padding-left: 40%;
+    position: absolute;
+    margin-bottom: 50px;
 }
 
 .m-sqr-bar {
@@ -1113,11 +1177,11 @@ h4 {
 .umenu-title-family {
     margin-top: 11px;
     margin-left: 16px;
-    font-family: "RobotoMedium";
+    font-family: "SF Pro Semibold";
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
-    color: #4DB6AC;
+    color: #fff;
     margin-bottom: 7px;
     display: flex;
 }
@@ -1136,9 +1200,9 @@ h4 {
     align-items: center;
     padding: 0px 0px 5px 0px;
     transition: 0.3s;
-    font-family: 'Roboto';
+    font-family: 'SF Pro Regular';
     font-size: 14px;
-    color: #3a3a3a;
+    color: #fff;
     margin-left: 16px;
 }
 .u-menu-l:last-child .umenu-title-box {
@@ -1147,11 +1211,12 @@ h4 {
 
 .umenu-mini-box {
     width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 0.5px solid rgb(107 106 106 / 20%);
     display: flex;
     align-items: center;
     padding: 10px 0px;
     transition: 0.3s;
+    background: #2e2e2e;
 }
 .u-menu-l:last-child .umenu-mini-box {
     border-bottom: none;
@@ -1181,7 +1246,7 @@ h4 {
 
 .phonebook-content {
     width: inherit;
-    height: 409px;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -1197,7 +1262,7 @@ h4 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    z-index: 1;
+    padding-top: 34px;
 }
 
 .rotate-components .b-bar .b-search {
@@ -1270,19 +1335,20 @@ h4 {
 
 .b-callhistory {
     width: inherit;
-    height: 322px;
-    background: #fff;
+    height: 100%;
+    background: #000;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
 }
 
 .title-b-hist {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.54);
+    color: #fff;
     margin-top: 8px;
-    margin-left: 12px;
+    font-family: 'SF Pro Bold';
+    font-size: 34px;
+    padding-left: 10px;
+    padding-top: 34px;
 }
 
 .b-box-history {
@@ -1290,6 +1356,16 @@ h4 {
     margin-left: 6px;
     display: flex;
     flex-direction: column;
+}
+
+.b-box-history .c-player-contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-left: 10px;
 }
 
 .b-box-player {
@@ -1312,24 +1388,40 @@ h4 {
 
 .b-info-playercall {
     display: flex;
-    flex-direction: column;
-    margin-left: 15px;
+    align-items: flex-start;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 5%;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .b-inf-name {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: normal;
+    font-family: "SF Pro Semibold";
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.87);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.b-inf-name-missed {
+    font-family: "SF Pro Semibold";
+    font-size: 14px;
+    color: #FF3B30;
+}
+
+.b-info-playercall-from {
+    color: #757575;
+    font-family: 'SF Pro Regular';
 }
 
 .b-inf-data {
-    font-family: "Roboto";
+    font-family: "SF Pro Regular";
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.539261);
+    color: #757575;
     display: flex;
     align-items: center;
 }
@@ -1343,7 +1435,6 @@ h4 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 24px;
     height: 92%;
 }
 
@@ -1359,8 +1450,9 @@ h4 {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 19%;
     min-height: 50px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-left: 15%;
 }
 
 .c-contact-box .c-player-contact:hover {
@@ -1368,19 +1460,63 @@ h4 {
 }
 
 .c-player-contact .c-imgplayer {
-    width: 40px;
-    height: 40px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     margin-right: 8px;
-    margin-left: 18px;
 }
 
+.phonebook__search {
+    display: flex;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 54px;
+    background: rgba(22, 22, 22, 0.75);
+    box-shadow: 0px -0.5px 0px rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(81.5485px);
+    padding-bottom: 12px;
+}
+
+.phonebook__search__add {
+    background: #2C2C2E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'SF Pro Light';
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: 0.8rem;
+    width: 14%;
+}
+
+.phonebook__search__input {
+    background: #2C2C2E !important;
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'SF Pro Regular';
+    background-image: url('../img/shape.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position-x: 10px !important;
+    background-position-y: 50% !important;
+}
+
+.phonebook__search__input:focus {
+    background-image: none !important;
+}
+
+.phonebook__search__input::-webkit-input-placeholder {
+    padding-left: 26px !important;
+}
+
+
 .c-player-contact .c-nameplayer {
-    font-family: "Roboto";
+    font-family: "SF Pro Semibold";
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.87);
+    font-size: 16px;
+    color: #fff;
 }
 
 .his {
@@ -1417,23 +1553,21 @@ figure img {
     z-index: 1;
     margin-left: auto;
     width: 100%;
-    height: 60px;
-    justify-content: flex-end;
+    justify-content: center;
     display: flex;
     align-items: center;
+    margin-top: 2rem;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 109.43%);
 }
 
 .posit-icon-topbar {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .ff-style-tsp-p {
-    margin-right: 10px;
-}
-
-.p-topbar i.material-icons.md-dark {
     margin-right: 10px;
 }
 
@@ -1441,18 +1575,33 @@ figure img {
     margin-right: 20px;
 }
 
-.p-topbar i.material-icons.md-dark:last-child {
-    margin-right: 15px;
-}
-
 .p-nameplayer-p {
-    margin-top: -64px;
-    margin-left: 12px;
-    font-family: "Roboto";
+    margin-top: 1rem;
+    font-family: "SF Pro Semibold";
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     color: #FFFFFF;
+}
+
+.posit-icon-topbar__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.posit-icon-topbar__element__text {
+    margin-top: 0.6rem;
+    font-family: 'SF Pro Regular';
+    color: #0A84FF;
+    font-size: 0.7rem;
+}
+
+.posit-icon-topbar .posit-icon-topbar__element i {
+    padding: 0.5rem;
+    background: #0A84FF;
+    border-radius: 50%;
 }
 
 .rotate-components .p-info-player {
@@ -1465,12 +1614,10 @@ figure img {
     width: inherit;
     height: 100%;
     overflow: scroll;
-    background: #FFFFFF;
-    margin-top: 62%;
+    background: #000;
     display: flex;
     align-items: center;
     flex-direction: column;
-    z-index: 1;
 }
 
 .rotate-components .p-box-mob_email {
@@ -1482,15 +1629,11 @@ figure img {
 }
 
 .p-box-mob_email {
-    width: 84%;
-    background: #FFFFFF;
+    width: 100%;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
     border-radius: 2px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-left: 14px;
-    padding-right: 14px;
     margin-top: 22px;
 }
 
@@ -1498,13 +1641,12 @@ figure img {
     display: flex;
     flex-direction: column;
     margin-right: auto;
-    margin-left: 18px;
 }
 
 .p-num-num-p {
-    font-family: "Roboto";
+    font-family: "SF Pro Regular";
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.87);
+    color: #0A84FF;
 }
 
 .p-num-num-p-info {
@@ -1515,11 +1657,13 @@ figure img {
 
 .p-box-mob_email .number {
     width: 100%;
-    height: 50px;
+    min-height: 20px;
     border-bottom: 0.77px solid rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 6%;
+    padding-right: 6%;
 }
 
 .fraction-icon {
@@ -1550,6 +1694,7 @@ figure img {
     position: relative;
     width: 40px;
     height: 40px;
+    padding-left: 5%;
 }
 
 .rotate-components .u-scrollable {
@@ -1560,7 +1705,7 @@ figure img {
 
 .u-scrollable {
     width: 88%;
-    height: 72.5%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.38);
     position: absolute;
     z-index: 2;
@@ -1572,25 +1717,24 @@ figure img {
 .u-scrool-box {
     width: 215px;
     max-height: 264px;
-    background: #FFFFFF;
+    background: rgb(86, 86, 86);
+    border-radius: 14px;
     box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.3), 0px 0px 24px rgba(0, 0, 0, 0.22);
-    border-radius: 2px;
 }
 
 .u-input-b-box {
     width: 215px;
     max-height: 264px;
-    background: #FFFFFF;
+    background: rgb(86, 86, 86);
+    border-radius: 14px;
     box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.3), 0px 0px 24px rgba(0, 0, 0, 0.22);
-    border-radius: 2px;
 }
 
 .u-scroll-title {
-    font-family: "RobotoMedium";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.87);
+    font-family: "SF Pro Semibold";
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
     margin-top: 16px;
     padding: 0 18px;
 }
@@ -1602,22 +1746,27 @@ figure img {
 }
 
 .u-scroll-text {
-    font-family: "RobotoMedium";
+    font-family: "SF Pro Regular";
     font-style: normal;
     font-size: 14px;
-    color: rgb(99, 99, 99);
-    margin: 16px 0;
+    color: #fff;
     padding: 0 18px;
+    margin: 6px 0px 20px 0px;
+    text-align: center;
 }
 
 .u-input-text {
-    font-family: "RobotoMedium";
+    font-family: "SF Pro Regular";
     font-style: normal;
     font-size: 14px;
-    color: #000;
+    color: #fff;
     margin: 16px 0;
     width: 174px;
-    border-bottom: 2px solid #673AB7 !important;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: #000 !important; 
+    border: 0.5px solid rgba(60, 60, 67, 0.3) !important;
+    border-radius: 5px;
 }
 
 .u-selet-rang {
@@ -1633,15 +1782,14 @@ figure img {
     height: 36px;
     display: flex;
     align-items: center;
-    font-family: "Roboto";
+    font-family: "SF Pro Regular";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.87);
+    color: #fff;
 }
 
 .u-select-input {
-    font-family: "RobotoMedium";
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -1650,16 +1798,24 @@ figure img {
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
+    border-top: 0.5px solid rgba(60, 60, 67, 0.29);
+}
+
+.u-btn-w:first-child {
+    font-family: "SF Pro Regular";
+    border-right: 0.5px solid rgba(60, 60, 67, 0.29);
 }
 
 .u-btn-w {
+    font-family: 'SF Pro Semibold';
+    color: #007AFF;
     transition: 0.3s;
-    margin-right: 15px;
-}
-
-.u-btn-w:hover {
-    color: #4DB6AC;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*checkbox*/
@@ -1966,7 +2122,8 @@ BankCard
 
 .u-profilecontact {
     width: inherit;
-    height: 409px;
+    height: 100%;
+    background: #000;
     display: flex;
     flex-direction: column;
 }
@@ -1984,7 +2141,7 @@ BankCard
     height: 100%;
     display: flex;
     transition: 0.3s;
-    background: #1D2733;
+    background: #2e2e2e;
     overflow: scroll;
     padding-top: 8px;
     flex-direction: column;
@@ -1992,9 +2149,9 @@ BankCard
 }
 .messenger-main .MuiFab-primary {
     position: fixed;
-    bottom: 18%;
-    right: 9%;
-    background: rgb(33, 45, 59);
+    bottom: 8%;
+    right: 12%;
+    background: #262626;
 }
 .rotate-components .messenger-main .MuiFab-primary {
     position: fixed;
@@ -2020,13 +2177,13 @@ BankCard
 
 .m-box-messeng {
     width: 77%;
-    font-family: "SF Compact Display Medium";
+    font-family: "SF Pro Regular";
     font-style: normal;
     font-size: 14px;
     display: flex;
     flex-direction: row;
     padding-bottom: 10px;
-    border-bottom: 0.5px solid #0D1117;
+    border-bottom: 0.5px solid rgb(107 106 106 / 20%);
     margin-top: 10px;
 }
 
@@ -2128,12 +2285,10 @@ BankCard
 
 .dedbit-menu {
     width: inherit;
-    height: 412px;
+    height: 620px;
     display: flex;
     flex-direction: column;
-    margin-top: -1px;
-    width: 101%;
-    margin-left: -1px;
+    width: 100%;
 }
 
 .dedbit-title-name {
@@ -2144,7 +2299,7 @@ BankCard
 }
 
 .dedbit-title-text {
-    font-family: "SF Compact Display Thin";
+    font-family: "SF Pro Semibold";
     color: #7D8B97;
     font-size: 11px;
     text-align: left;
@@ -2154,7 +2309,8 @@ BankCard
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 10px;
+    justify-content: center;
+    padding-left: 5%;
     width: 100%;
 }
 
@@ -2164,7 +2320,7 @@ BankCard
     width: 100%;
     box-sizing: border-box;
     /* min-height: 20px; */
-    font-family: "Roboto"; /* либо "SF Compact Display Medium"*/
+    font-family: "SF Pro Regular"; /* либо "SF Compact Display Medium"*/
     font-size: 14px;
     margin-bottom: 4px;
     position: relative;
@@ -2200,14 +2356,14 @@ BankCard
 .ded-vxod {
     background: #212D3B;
     margin-left: 6px;
-    border-radius: 3px 6px 6px 3px;
+    border-radius: 12px 12px 3px 12px;
 }
 
 .ded-isxod {
     background: #3B628D;
     margin-left: auto;
     margin-right: 6px;
-    border-radius: 6px 3px 3px 6px;
+    border-radius: 12px 12px 3px 12px;
 }
 
 .ded-isxod .block-sms-info-time {
@@ -2225,7 +2381,7 @@ BankCard
     margin-left: auto;
     /* margin-bottom: 3px;
     margin-right: 5px; */
-    font-family: 'SF Compact Display Thin';
+    font-family: 'SF Pro Semibold';
     position: absolute;
     bottom: 3px;
 }
@@ -2252,7 +2408,7 @@ BankCard
     margin-left: auto;
     /* margin-bottom: 3px;
     margin-right: 5px; */
-    font-family: 'SF Compact Display Thin';
+    font-family: 'SF Pro Semibold';
     bottom: 3px;
 }
 
@@ -2264,7 +2420,7 @@ BankCard
 }
 
 .dedmeta-text {
-    font-family: "SF Compact Display Medium";
+    font-family: "SF Pro Semibold";
     background: #00000033;
     padding: 0 6px;
     font-size: 12px;
@@ -2278,11 +2434,12 @@ BankCard
 
 .ded-input-text {
     width: 100%;
-    height: 34px;
-    background: #212D3B;
+    height: 50px;
+    background: #262626;
     display: flex;
     align-items: center;
     padding-left: 6px;
+    padding-bottom: 25px;
 }
 
 .rotate-components .ded-text-ipn {
@@ -2309,12 +2466,11 @@ BankCard
 
 .editcontact-box {
     width: inherit;
-    height: 412px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: -1px;
-    width: 101%;
-    margin-left: -1px;
+    overflow: scroll;
+    width: 100%;
 }
 
 .rotate-components .editcontact-main {
@@ -2327,7 +2483,7 @@ BankCard
     height: 100%;
     display: flex;
     transition: 0.3s;
-    background: #F5F5F5;
+    background: #000;
     /* overflow: scroll; */
     flex-direction: column;
 }
@@ -2340,12 +2496,22 @@ BankCard
     width: inherit;
     height: 41%;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4%;
+    flex-direction: column;
+}
+
+.u__back__container {
+    display: flex;
+    width: 30%;
 }
 
 .img-profileeditconatact {
-    width: 100%;
-    height: 100%;
+    width: 50%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .rotate-components .editcontact-box-e {
@@ -2360,13 +2526,21 @@ BankCard
     width: 100%;
     height: 100%;
     margin-top: 10px;
+    background: #000;
 }
 
 .e-boxeditor {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 12px;
+}
+
+.ios__button__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 14%;
 }
 
 .e-clmn-ed {
@@ -2412,9 +2586,14 @@ BankCard
 .add-posit-btn {
     margin-left: 4px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 3px;
+}
+
+.add-posit-btn-text {
+    color: #0A84FF;
+    font-family: 'SF Pro Regular';
 }
 
 .edit-btn-save-position {
@@ -2443,12 +2622,10 @@ BankCard
     color: #FFFFFF;
 }
 
-.position-btn-icon {
-    margin-right: 10px;
-}
 
 .fix-phonebook {
     position: relative;
+    height: 100%;
 }
 
 .rotate-components .c-contact-box .MuiFab-primary {
@@ -2469,7 +2646,6 @@ BankCard
 
 .material-icons.favorite-img-style {
     font-size: 19px;
-    margin-right: 10px;
 }
 .rotate-components .console-main {
     height: 85.4%;
@@ -2480,11 +2656,19 @@ BankCard
     height: 100%;
     display: flex;
     transition: 0.3s;
+    padding-bottom: 12%;
     background: #1D2733;
     overflow: scroll;
-    padding-top: 8px;
     flex-direction: column;
+    padding-top: 40px;
 }
+
+.iphone__app__name {
+    font-family: 'SF Pro Bold';
+    font-size: 34px;
+    padding-left: 10px;
+}
+
 .console-input {
     width: 100%;
     margin-top: auto;
@@ -2502,7 +2686,7 @@ BankCard
     display: none;
 }
 .console-chat-ul {
-    height: 93%;
+    height: 100%;
     overflow: scroll;
     padding-left: 10px;
     padding-right: 10px;
@@ -2542,12 +2726,10 @@ BankCard
 
 .achiev-menu {
     width: inherit;
-    height: 412px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: -1px;
-    width: 101%;
-    margin-left: -1px;
+    width: 100%;
 }
 .rotate-components .u-title-achiev {
     height: 48px;
@@ -2560,10 +2742,10 @@ BankCard
     align-items: center;
     background: #212121;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
-    z-index: 1;
+    padding-top: 34px;
 }
 .u-texttittle-achiev {
-    font-family: "RobotoMedium";
+    font-family: "SF Pro Semibold";
     color: #fff;
     font-size: 14px;
 }
@@ -2653,20 +2835,20 @@ BankCard
     padding-bottom: 7px;
 }
 .i-achiev-title {
-    font-family: 'Roboto';
+    font-family: 'SF Pro Regular';
     font-size: 14px;
     color: #fff;
     margin-bottom: 5px;
 }
 .i-achiev-title-two {
-    font-family: 'RobotoLight';
+    font-family: 'SF Pro Light';
     font-size: 12px;
     color: #fff;
 }
 .i-achiev-title-three {
     width: 92%;
     min-height: 20px;
-    font-family: 'RobotoLight';
+    font-family: 'SF Pro Light';
     font-size: 12px;
     color: #fff;
     margin-bottom: 5px;
@@ -2712,7 +2894,7 @@ BankCard
 .textfor-app {
     position: absolute;
     bottom: -16px;
-    font-family: 'Roboto';
+    font-family: 'SF Pro Regular';
     font-size: 12px;
 }
 .rotate-components .messenger-addchat {
@@ -2724,7 +2906,7 @@ BankCard
     height: 100%;
     display: flex;
     transition: 0.3s;
-    background: #1D2733;
+    background: #2e2e2e;
     overflow: scroll;
     padding-top: 8px;
     flex-direction: column;
@@ -2747,21 +2929,47 @@ BankCard
     border-bottom: 2px solid rgb(89, 97, 105);
 }
 .m-mes-txtfield .MuiInput-underline:before {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+    border-bottom: 0.5px solid rgb(107 106 106 / 20%);
 }
 .text-place-m-mes {
-    font-family: 'Roboto';
+    font-family: 'SF Pro Semibold';
     font-size: 14px;
     color:#fff;
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 6%;
 }
-.position-btn-addchat{
-    position: absolute;
-    bottom: 3%;
-    right: 5%;
+
+.MuiInputBase-inputMultiline {
+    font-family: 'SF Pro Regular' !important;
 }
+
+.MuiInput-input {
+    font-family: 'SF Pro Regular' !important;
+}
+
+.position-btn-addchat{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 18%;
+}
+
+.ios__button {
+    font-family: 'SF Pro Semibold';
+    font-size: 1rem;
+    background: rgba(118, 118, 128, 0.24);
+    border-radius: 14px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
 .position-btn-addchat .MuiButton-containedPrimary {
     background-color: #212d3b;
 }
@@ -2772,8 +2980,13 @@ BankCard
     display: none;
 }
 .spiceal-ts-chat {
-    margin-right: auto;
+
 }
+
+.dedbit__messenger__chatname {
+    margin-left: 30%;
+}
+
 .rotate-components .posit-icon-del-chat {
     margin-right: 2%;
 }

@@ -24,12 +24,10 @@ class Favorit extends React.Component {
                         .map((e, i) => {
                             let index = `favorit${i}`
                             return (
-                                <div className="b-box-player" key={index} onClick={() => this.props.clickContact(e)}>
-                                    <img src={e.img} alt="" className="b-img-player"/>
-                                    <div className="b-info-playercall">
-                                        <div className="b-inf-name">{e.name}</div>
-                                    </div>
-                                    <div className="b-call"><MaterialIcon icon="call" size={19}/></div>
+                                <div className="c-player-contact" key={index}
+                                    onClick={() => this.props.clickContact(e)}>
+                                    <img src={e.img} alt="" className="c-imgplayer"/>
+                                    <span className="c-nameplayer">{e.name}</span>
                                 </div>
                             )
                         })}

@@ -6,6 +6,7 @@ import InputNumber from '../Android/Calls/InputNumber'
 import ActionList from '../Android/Calls/ActionList'
 import Keyboard from '../Android/Calls/Keyboard';
 import DoCallButton from '../Android/Calls/DoCallButton'
+import NavigationBar from '../Android/Calls/NavigationBar';
 
 class Calls extends React.Component {
     constructor(props) {
@@ -35,9 +36,6 @@ class Calls extends React.Component {
     render() {
         return (
             <div className="dedbit-menu calls">
-                <ActionList
-                    number={this.state.number}
-                />
                 <InputNumber
                     number={this.state.number}
                     setNumber={this.setNumber}

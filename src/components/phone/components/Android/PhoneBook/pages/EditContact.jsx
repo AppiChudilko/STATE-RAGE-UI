@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import SaveIcon from '@material-ui/icons/Save'
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import IconBackIOS from '../../../../img/back.svg'
 
 class EditContact extends React.Component {
     constructor(props) {
@@ -86,15 +87,17 @@ class EditContact extends React.Component {
         return (
             <React.Fragment>
                 <div className="editcontact-box">
-                    <div className="u-title" style={{background: "#2A56C6"}}>
+                    <div className="u-title">
                         <div className="dedbit-u-texttittle">
-                            <MaterialIcon icon="arrow_back" size={18} color="#fff" onClick={() => this.backBtn()}/>
-                            <span className="u-texttittle">Редактирование контакта</span>
-                            <div className="edit-btn-save-position">
+                            <div className="u__back__container">
+                                <img src={IconBackIOS} className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
+                            </div>
+                            <span className="u-texttittle">Редактирование</span>
+                            {/*<div className="edit-btn-save-position">
                                 <IconButton aria-label="save" onClick={() => this.saveBtn()}>
                                     <SaveIcon/>
                                 </IconButton>
-                            </div>
+                            </div>*/}
                         </div>
                     </div>
                     <div className="editcontact-main">
@@ -103,32 +106,31 @@ class EditContact extends React.Component {
                         </div>
                         <div className="editcontact-box-e">
                             <div className="e-boxeditor">
-                                <div className="box-im-st">
-                                    <MaterialIcon icon="person" size={20} color="#7F7F7F"/>
-                                </div>
-                                <div className="e-clmn-ed">
+                                <div className="text-place-m-mes">Имя</div>
+                                <div className="m-mes-txtfield">
                                     <TextField id="standard-basic1" label="" value={this.state.contact.name}
-                                               placeholder="Имя Фамилия" className="text-filed"
-                                               onChange={(e) => this.changeName(e, 'firstname')}/>
+                                        placeholder="Введите имя" className="text-filed"
+                                        onChange={(e) => this.changeName(e, 'firstname')}
+                                    />
                                 </div>
                             </div>
                             <div className="e-boxeditor">
-                                <div className="box-im-st">
-                                    <MaterialIcon icon="phone" size={20} color="#7F7F7F"/>
-                                </div>
+                                <div className="text-place-m-mes">Телефон</div>
                                 <div className="e-clmn-ed">
                                     {this.state.contact.numbers.map((e, i) => {
                                         let index = `phoneedit${i}`;
                                         return (
-                                            <div className="row-clm-e" key={index}>
-                                                <TextField id={index} label="" value={e} placeholder="Номер телефона"
-                                                           maxLength="11" className="text-filed"
-                                                           onChange={(e) => this.changeName(e, 'number', i)}/>
+                                            <div className="m-mes-txtfield">
+                                                <TextField id={index} label="" value={e}
+                                                    placeholder="Введите номер телефона" className="text-filed"
+                                                    onChange={(e) => this.changeName(e, 'number', i)}
+                                                    maxLength="11"
+                                                />
                                                 {i === this.state.contact.numbers.length - 1 && this.state.contact.numbers[i].length > 0 ?
                                                     <div className="add-posit-btn">
-                                                        <IconButton aria-label="add" onClick={() => this.addNumber()}>
-                                                            <AddCircleIcon/>
-                                                        </IconButton>
+                                                        <span className="add-posit-btn-text" onClick={() => this.addNumber()}>
+                                                            + Добавить ещё номер
+                                                        </span>
                                                     </div>
                                                     : null}
                                             </div>
@@ -138,14 +140,17 @@ class EditContact extends React.Component {
                                 </div>
                             </div>
                             <div className="e-boxeditor">
-                                <div className="box-im-st">
-                                    <MaterialIcon icon="mail" size={20} color="#7F7F7F"/>
+                                <div className="text-place-m-mes">E-Mail</div>
+                                <div className="m-mes-txtfield">
+                                    <TextField id={`standard-basic3`} label="" value={this.state.contact.mail}
+                                        placeholder="Введите E-Mail" className="text-filed"
+                                        onChange={(e) => this.changeName(e, 'email')}
+                                        maxLength="11"
+                                    />
                                 </div>
-                                <div className="e-clmn-ed">
-                                    <TextField id="standard-basic3" label="" value={this.state.contact.mail}
-                                               placeholder="E-Mail" className="text-filed"
-                                               onChange={(e) => this.changeName(e, 'email')}/>
-                                </div>
+                            </div>
+                            <div className="ios__button__container">
+                                <span className="ios__button" onClick={() => this.saveBtn()}>Сохранить</span>
                             </div>
                         </div>
                     </div>

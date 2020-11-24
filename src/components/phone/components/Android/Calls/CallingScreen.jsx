@@ -6,9 +6,9 @@ import DoCallButton from './DoCallButton'
 
 const CallingScreen = ({ number = 'Не определён', avatar = 'https://a.rsg.sc//n/socialclub', name = 'Неизвестно', going, onAccept, onDecline, setLink }) => {
     
-    number = number ? number : 'Не определён'
-    avatar = avatar ? avatar : 'https://a.rsg.sc//n/socialclub'
-    name = name ? name : 'Неизвестно'
+    number = number || 'Не определён'
+    avatar = avatar || 'https://a.rsg.sc//n/socialclub'
+    name = name || 'Неизвестно'
 
     const onCallDecline = () => {
         onDecline()
