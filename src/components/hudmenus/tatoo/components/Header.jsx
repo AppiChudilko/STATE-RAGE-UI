@@ -2,8 +2,10 @@ import React from 'react'
 import '../css/header.css'
 
 const Header = ({ banner, title, subtitle }) => (
-    <div>
-        <img src={`https://dednet.ru/client/images/banners/${banner}.png`} className="tatoo__content__header__img" />
+    <React.Fragment>
+        <div className="tatoo__content__img__container">
+            <img src={`https://dednet.ru/client/images/banners/${banner}.png`} className="tatoo__content__header__img" />
+        </div>
         <div className="tatoo__content__header">
                 <span className="tatoo__content__header__title">
                     {title}
@@ -12,7 +14,7 @@ const Header = ({ banner, title, subtitle }) => (
                     {subtitle}
                 </span>
         </div>
-    </div>
+    </React.Fragment>
 )
 
 export default Header

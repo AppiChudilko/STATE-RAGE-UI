@@ -16,41 +16,49 @@ class CarRent extends React.Component {
                 {
                     price: 200,
                     name: 'Elegy',
-                    sale: 0
+                    sale: 0,
+                    type: 'Автомобиль'
                 },
                 {
                     price: 444,
                     name: 'Elegy2',
-                    sale: 13
+                    sale: 13,
+                    type: 'Автомобиль'
                 },
                 {
                     price: 200,
                     name: 'Toros',
-                    sale: 60
+                    sale: 60,
+                    type: 'Автомобиль'
                 },
                 {
                     price: 444,
                     name: 'Thrax',
-                    sale: 0
+                    sale: 0,
+                    type: 'Автомобиль'
                 },
                 {
                     price: 200,
                     name: 'Nexus',
-                    sale: 0
+                    sale: 0,
+                    type: 'Автомобиль'
                 },
                 {
                     price: 444,
                     name: 'Faggio',
-                    sale: 0
+                    sale: 0,
+                    type: 'Автомобиль'
                 },
                 {
                     price: 200,
                     name: 'Faggio2',
-                    sale: 13
+                    sale: 13,
+                    type: 'Автомобиль'
                 },
                 {
                     price: 444,
-                    name: 'Faggio3'
+                    name: 'Faggio3',
+                    type: 'Автомобиль'
                 }
             ]
         }
@@ -113,6 +121,7 @@ class CarRent extends React.Component {
                                 price={item.price}
                                 name={item.name}
                                 params={item.params}
+                                type={item.type}
                                 key={`carrent__content__list__item-${index}`}
                                 btnbg="#000"
                                 sale={item.sale}

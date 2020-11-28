@@ -1,22 +1,25 @@
 .hmenu__gunshop__stats {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 25%;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    width: 22%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
 }
 
 .hmenu__gunshop__stats__name {
-    font-family: 'RobotoBold';
-    font-size: 2rem;
+    font-family: 'Gotham Pro Medium';
+    font-size: 1.4rem;
+    text-align: center;
     letter-spacing: 0.05rem;
 }
 
 .hmenu__gunshop__stats__pname {
-    font-family: 'RobotoBold';
+    font-family: 'Gotham Pro Regular';
     font-size: 1.5rem;
     letter-spacing: 0.05rem;
 }
@@ -57,19 +60,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    font-family: 'RobotoMedium';
-    font-size: 1.4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: 'Gotham Pro Regular';
+    font-size: 1rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
     letter-spacing: 0.05rem;
     margin-bottom: 2%;
-    border: 1px solid red;
     cursor: pointer;
-}
-
-.hmenu__gunshop__stats__flatbtn:hover {
-    background-color: #fff;
-    color: #000;
 }
 
 .hmenu__gunshop__stats__price {
@@ -90,18 +89,18 @@
 }
 
 .hmenu__gunshop__stats__price__gtext {
-    font-family: 'RobotoBold';
+    font-family: 'Gotham Pro Medium';
     font-size: 1.2rem;
 }
 
 .hmenu__gunshop__stats__price__gprice {
-    font-family: 'RobotoBold';
+    font-family: 'Gotham Pro Medium';
     font-size: 2rem;
 }
 
 .hmenu__gunshop__stats__about {
     margin-top: 5%;
-    font-family: 'RobotoLight';
+    font-family: 'Gotham Pro Regular';
     font-size: 1.2rem;
     letter-spacing: 0.05rem;
 }

@@ -167,6 +167,18 @@
 
 
 @font-face {
+    font-family: 'Gotham Pro Regular';
+    src: url('GothamPro.ttf');
+}
+
+
+@font-face {
+    font-family: 'Gotham Pro Medium';
+    src: url('GothamPro-Medium.ttf');
+}
+
+
+@font-face {
     font-family: 'SF Pro Light';
     src: url('SF-Pro-Display-Light.otf');
 }

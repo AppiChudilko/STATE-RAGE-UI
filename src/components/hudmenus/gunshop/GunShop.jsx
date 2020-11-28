@@ -48,6 +48,36 @@ export default class GunShop extends React.Component {
                             params: {id: 23, price: 12.5, shop: 106},
                             sale: 24
                         },
+                        { //Если кликаем сюда, то открывается меню справа (Там где покупка)
+                            title: 'Пастила P`s & Q`s',
+                            desc: 'Полное описание~br~Полное описание',
+                            desc2t: 'Калибр',
+                            desc2: '9x19mm',
+                            img: 'Item_54.png',
+                            price: '$500',
+                            params: {id: 23, price: 12.5, shop: 106},
+                            sale: 24
+                        },
+                        { //Если кликаем сюда, то открывается меню справа (Там где покупка)
+                            title: 'Пастила P`s & Q`s',
+                            desc: 'Полное описание~br~Полное описание',
+                            desc2t: 'Калибр',
+                            desc2: '9x19mm',
+                            img: 'Item_54.png',
+                            price: '$500',
+                            params: {id: 23, price: 12.5, shop: 106},
+                            sale: 24
+                        },
+                        { //Если кликаем сюда, то открывается меню справа (Там где покупка)
+                            title: 'Пастила P`s & Q`s',
+                            desc: 'Полное описание~br~Полное описание',
+                            desc2t: 'Калибр',
+                            desc2: '9x19mm',
+                            img: 'Item_54.png',
+                            price: '$500',
+                            params: {id: 23, price: 12.5, shop: 106},
+                            sale: 24
+                        },
                     ]
                 },
                 {

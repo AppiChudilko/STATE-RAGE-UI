@@ -2324,9 +2324,10 @@
 }
 
 .icon-item {
-    width: 41px;
-    height: 41px;
-    background-size: 36px;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
     background-position: center;
-    filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(7500%) hue-rotate(230deg) brightness(107%) contrast(100%);
+    background-size: contain;
+    filter: invert(0%) sepia(100%) saturate(325%) hue-rotate(185deg) brightness(300%) contrast(100%);
 }

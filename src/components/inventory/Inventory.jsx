@@ -5,6 +5,8 @@ import './css/img-items.css';
 import { Animated } from 'react-animated-css';
 import InteractionMenu from '../interactionmenu/InteractionMenu';
 import EventManager from "../../EventManager";
+import closeIcon from './img/close.svg'
+
 
 // Drag & Drop components
 import {Draggable, Droppable} from './Dnd'
@@ -17,7 +19,7 @@ class Inventory extends React.Component {
             player_name: "Nika Kondr",
             player_id: 456,
             craft: true,
-            secondary_inv_open: false, // Багажник открыт/закрыт
+            secondary_inv_open: true, // Багажник открыт/закрыт
             crafting_succes: false,
             x: '',
             y: '',
@@ -80,7 +82,7 @@ class Inventory extends React.Component {
             ],
 
             items: [ // Инвентарь
-                /*{ id: 1, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
+                { id: 1, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
                 { id: 2, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
                 { id: 3, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
                 { id: 4, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
@@ -143,14 +145,15 @@ class Inventory extends React.Component {
                 { id: 38, item_id: 264, name: "Сумка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
                 { id: 39, item_id: 265, name: "Футболка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
                 { id: 40, item_id: 269, name: "Кепка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 41, item_id: 48, name: "Деньги", volume: 15, desc: "SM-0001244", counti: 0, params: {} }*/
+                { id: 41, item_id: 48, name: "Деньги", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
+                { id: 41, item_id: 275, name: "Перчатки", volume: 15, desc: "SM-0001244", counti: 0, params: {} }
 
             ],
             itemsCounted: [ // Сюда переписываются все предметы которые стакаются при обновлении инвентаря для правильного отображения
             ],
 
             secondary_items: [ // Багажник
-                //{ id: 15, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // secondary_items.id Уникальный id предмета из базы (не должны повторяться)
+                { id: 15, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // secondary_items.id Уникальный id предмета из базы (не должны повторяться)
             ],
             secondary_itemsCounted: [ // Сюда переписываются все предметы которые стакаются при обновлении инвентаря для правильного отображения
             ],
@@ -161,7 +164,7 @@ class Inventory extends React.Component {
 
             // Надетые на персонажа предметы
             equipment_outfit: [ // equipment_outfit.id Уникальный id предмета из базы (не должны повторяться)
-                //{ id: 15, item_id: 264, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }
+                { id: 15, item_id: 254, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }
             ],
 
             itemsById: { // В массивах должны быть айди всех предметов разного типа
@@ -199,6 +202,7 @@ class Inventory extends React.Component {
                 bracelet: [273], // Браслеты
                 boot: [267], // Обувь
                 bag: [264, 263], // Сумка
+                gloves: [275], // Перчатки
                 armour: [252], // Броня
                 phone: [27, 28, 29, 30], // Телефоны
                 money: [48], // Деньги?
@@ -208,30 +212,32 @@ class Inventory extends React.Component {
             // !!! Элементы массива outfit нельзя менять местами !!!
             outfit: [
                 [
-                    { slot: "outf-cap", equipped: false, type: 'cap' },
-                    { slot: "outf-glasses", equipped: false, type: 'glasses' },
-                    { slot: "outf-mask", equipped: false, type: 'mask' },
-                    { slot: "outf-shirt", equipped: false, type: 'shirt' },
-                    { slot: "outf-jewerly", equipped: false, type: 'jewerly' },
-                    { slot: "outf-earrings", equipped: false, type: 'earrings' },
-                    { slot: "outf-jeans", equipped: false, type: 'jeans' },
-                    { slot: "outf-watch", equipped: false, type: 'watch' },
-                    { slot: "outf-bracelet", equipped: false, type: 'bracelet' },
-                    { slot: "outf-boot", equipped: false, type: 'boot' },
-                    { slot: "outf-bag", equipped: false, type: 'bag' },
+                    { slot: "outf-cap", equipped: false, type: 'cap', icon: 'outfit-hat' },
+                    { slot: "outf-glasses", equipped: false, type: 'glasses', icon: 'outfit-glasses' },
+                    { slot: "outf-mask", equipped: false, type: 'mask', icon: 'outfit-mask' },
+                    { slot: "outf-shirt", equipped: false, type: 'shirt', icon: 'outfit-tshirt' },
+                    { slot: "outf-jewerly", equipped: false, type: 'jewerly', icon: 'outfit-jewerly' },
+                    { slot: "outf-earrings", equipped: false, type: 'earrings', icon: 'outfit-earrings' },
+                    { slot: "outf-jeans", equipped: false, type: 'jeans', icon: 'outfit-pants' },
+                    { slot: "outf-watch", equipped: false, type: 'watch', icon: 'outfit-watch' },
+                    { slot: "outf-bracelet", equipped: false, type: 'bracelet', icon: 'outfit-bracelet' },
+                    { slot: "outf-boot", equipped: false, type: 'boot', icon: 'outfit-shoes' },
+                    { slot: "outf-bag", equipped: false, type: 'bag', icon: 'outfit-case' },
+                    { slot: "outf-gloves", equipped: false, type: 'gloves', icon: 'outfit-gloves'},
                 ],
                 [
-                    { slot: "outf-armour", equipped: false, type: 'armour' },
-                    { slot: "outf-phone", equipped: false, type: 'phone' },
-                    { slot: "outf-money", equipped: false, type: 'money' },
-                    { slot: "outf-card", equipped: false, type: 'card' },
+                    { slot: "outf-armour", equipped: false, type: 'armour', icon: 'outfit-armour' },
+                    { slot: "outf-phone", equipped: false, type: 'phone', icon: 'outfit-phone' },
+                    { slot: "outf-money", equipped: false, type: 'money', icon: 'outfit-notes' },
+                    { slot: "outf-card", equipped: false, type: 'card', icon: 'outfit-card' },
                 ],
             ],
 
             equipment_weapon: [ // Экипированное оружие
-                //{ id: 33, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: true, slot2: true, slot3: true, slot4: true } },
+                { id: 33, item_id: 119, name: "Похоже на AWP", volume: 15, desc: "AR-0001244", counti: 0, params: { serial: '456', slot1: false, slot2: false, slot3: false, slot4: false } }
             ],
             selected_weapon_id: 33,
+            selected_weapon_name: 'Похоже на AWP',
             selected_weapon_item_id: 0,
             updateItemIcons_primary_timeout: false,
             updateItemIcons_secondary_timeout: false,
@@ -240,10 +246,10 @@ class Inventory extends React.Component {
             craft_process: -1,
             selected_recipe: {},
             learned_recipes: [
-                /*{
-                    id: 80, name: "Большая аптечка", desc: `Данная аптечка восстанавливает до 100% здоровья.~br~Ресурсы для создания: бинт стерильный, спирт, ледокоин~br~Ресурсы для создания: бинт стерильный, спирт, ледокоин`,
-                    craft: ['199', '3', '3'], craft_time: 2000
-                },*/
+                {
+                    id: 80, name: "Большая аптечка", desc: `Данная аптечка восстанавливает до 100% здоровья.`, requirements: `бинт стерильный~br~спирт~br~ледокоин`,
+                    craft: ['199', '3', '3'], craft_time: 200000
+                },
             ],
             itemCooldown: [
                 // { item_id: 14, cooldown: 5 }
@@ -671,10 +677,10 @@ class Inventory extends React.Component {
                 for (let k = 0; k < this.state.equipment_outfit.length; k++) {
                     if (Object.values(this.state.outfitById)[i][j] === this.state.equipment_outfit[k].item_id) {
                         foundOutfit.push(i);
-                        if (i < 11) {
+                        if (i < 12) {
                             this.setState(prevState => ({ ...prevState.outfit[0][i].equipped = true }))
                         } else {
-                            this.setState(prevState => ({ ...prevState.outfit[1][i - 11].equipped = true }))
+                            this.setState(prevState => ({ ...prevState.outfit[1][i - 12].equipped = true }))
                         }
                     }
                 }
@@ -682,10 +688,10 @@ class Inventory extends React.Component {
         }
         for (let i = 0; i < 15; i++) {
             if (!foundOutfit.includes(i)) {
-                if (i < 11) {
+                if (i < 12) {
                     this.setState(prevState => ({ ...prevState.outfit[0][i].equipped = false }))
                 } else {
-                    this.setState(prevState => ({ ...prevState.outfit[1][i - 11].equipped = false }))
+                    this.setState(prevState => ({ ...prevState.outfit[1][i - 12].equipped = false }))
                 }
             }
         }
@@ -1858,7 +1864,7 @@ class Inventory extends React.Component {
     selectWeapon(item) {
         if (this.checkItem(item, 'weapon') !== null) {
             item = this.checkItem(item, 'weapon')
-            this.setState({ selected_weapon_id: item.id })
+            this.setState({ selected_weapon_id: item.id, selected_weapon_name: item.name })
             // // // // mp.call ... выбрать оружие для модификации и взять в руки
 
             mp.trigger('client:inventory:selectWeapon', item.id, item.item_id, item.params.serial); // eslint-disable-line
@@ -2125,10 +2131,11 @@ class Inventory extends React.Component {
                         <div className="inventory-main">
                             <div className="inv-row-main">
                                 <div className="player-inv">
-                                    <div className="liner-inv"></div>
-                                    <div className="title-inv"><span>Инвентарь</span>
-                                        <span
-                                            className="weight-title-inv">({this.numberToK(this.state.weight_now)}/{this.numberToK(this.state.weight_max)})</span>
+                                    <div className="title-inv">
+                                        <span className="weight-title-inv">
+                                            ({this.numberToK(this.state.weight_now)}/{this.numberToK(this.state.weight_max)})
+                                        </span>
+                                        <span className="title-inv__name">Инвентарь</span>
                                     </div>
 
                                     <Droppable className="object-inv-box droppable" id="take_off" that={this}>
@@ -2148,10 +2155,8 @@ class Inventory extends React.Component {
                                                                 : null}
                                                             <div className={`img-inv-box ${item.icon}`}></div>
                                                             <div className="obj-inf-box">
-                                                                <div className="obj-inf-title"><span>{item.name}</span>
-                                                                </div>
-                                                                <div className="obj-inf-weight"><span>{item.desc}</span>
-                                                                </div>
+                                                                <span className="obj-inf-title">{item.name}</span>
+                                                                <span className="obj-inf-weight">{item.desc}</span>
                                                             </div>
                                                             {item.count > 1 ?
                                                                 <div className="obj-inf-count">{item.count}</div> : null}
@@ -2166,8 +2171,11 @@ class Inventory extends React.Component {
 
                                 </div>
                                 <div className="player-info">
-                                    <div className="title-inv"><span>Информация</span></div>
-                                    <div className="liner-inv-info"></div>
+                                    <div className="title-inv">
+                                        <span className="title-inv__name">
+                                            Информация
+                                        </span>
+                                    </div>
                                     <div className="player-title-info">
                                         <div className="player-inv-name"><span>Имя: {this.state.player_name}</span>
                                         </div>
@@ -2177,14 +2185,14 @@ class Inventory extends React.Component {
                                     <Droppable className="outfit-player-box droppable" id="put_on" that={this}>
                                             {this.state.outfit[0].map((item, i) => {
                                                 const index = `item-outf${i}`
-
+                                                console.log(item)
                                                 if (item.equipped) {
                                                     return (
                                                         <Draggable that={this} id={index} type="take_off drop" item={item} key={index}>
                                                             <Droppable className="droppable" id="put_on" that={this}>
-                                                                <div key={index}
-                                                                    className={`${item.slot}` + `${item.equipped ? ' use-outfit' : ''}`}
-                                                                    onContextMenu={(e) => this.handlePos(e, item, 'outfit')}></div>
+                                                                <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
+                                                                    <img src={require(`./img/outfit/${item.icon}.svg`)} />
+                                                                </div>
                                                             </Droppable>
                                                         </Draggable>
                                                     )
@@ -2192,9 +2200,9 @@ class Inventory extends React.Component {
 
                                                 return (
                                                     <Droppable className="droppable" key={index} id="put_on" that={this}>
-                                                        <div key={index}
-                                                            className={`${item.slot}` + `${item.equipped ? ' use-outfit' : ''}`}
-                                                            onContextMenu={(e) => this.handlePos(e, item, 'outfit')}></div>
+                                                        <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
+                                                            <img src={require(`./img/outfit/${item.icon}.svg`)} style={{opacity: 0.5}} />
+                                                        </div>
                                                     </Droppable>
                                                 )
                                             })}
@@ -2205,9 +2213,9 @@ class Inventory extends React.Component {
                                                         return (
                                                             <Draggable that={this} id={index} type="take_off drop" item={item} key={index}>
                                                                 <Droppable className="droppable" id="put_on" that={this}>
-                                                                    <div key={index}
-                                                                        className={`${item.slot}` + `${item.equipped ? ' use-outfit' : ''}`}
-                                                                        onContextMenu={(e) => this.handlePos(e, item, 'outfit')}></div>
+                                                                    <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
+                                                                        <img src={require(`./img/outfit/${item.icon}.svg`)} />
+                                                                    </div>
                                                                 </Droppable>
                                                             </Draggable>
                                                         )
@@ -2215,9 +2223,9 @@ class Inventory extends React.Component {
     
                                                     return (
                                                         <Droppable className="droppable" key={index} id="put_on" that={this}>
-                                                            <div key={index}
-                                                                className={`${item.slot}` + `${item.equipped ? ' use-outfit' : ''}`}
-                                                                onContextMenu={(e) => this.handlePos(e, item, 'outfit')}></div>
+                                                            <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
+                                                                <img src={require(`./img/outfit/${item.icon}.svg`)} style={{opacity: 0.5}} />
+                                                            </div>
                                                         </Droppable>
                                                     )
                                                 })}
@@ -2225,9 +2233,16 @@ class Inventory extends React.Component {
                                     </Droppable>
                                 </div>
                                 <div className="player-craft">
-                                    <div className="close-window-craft" onClick={() => this.closeInventory()}></div>
-                                    <div className="liner-inv"></div>
-                                    <div className="title-inv"><span>{this.state.craft ? 'Крафт' : 'Оружие'}</span>
+                                    <div className="title-inv">
+                                        <div
+                                            className="close-window-craft"
+                                            onClick={() => this.closeInventory()}
+                                        >
+                                            <img src={closeIcon} width="40%" className="close-window-craft__img" />
+                                        </div>
+                                        <span className="title-inv__name">
+                                            {this.state.craft ? 'Крафт' : 'Оружие'}
+                                        </span>
                                     </div>
                                     <div className="menu-craft-change">
                                         {this.state.selected_weapon_id !== 0 ?
@@ -2235,15 +2250,14 @@ class Inventory extends React.Component {
                                                 <input type="radio" name="btn-craft-class" id="btn-craft-class1"
                                                     checked={!this.state.craft}
                                                     onChange={this.changeBtnCraft.bind(this)}></input>
-                                                <label htmlFor="btn-craft-class1" className="btn-craft"
-                                                    style={{ marginRight: 4 + 'px' }}>
-                                                    <div className="bg-color-craft-block img-btn-weapon"></div>
+                                                <label htmlFor="btn-craft-class1" className="btn-craft">
+                                                    <span className="btn-craft__text">Настройки оружия</span>
                                                 </label>
                                                 <input type="radio" name="btn-craft-class" id="btn-craft-class2"
                                                     checked={this.state.craft}
                                                     onChange={this.changeBtnCraft.bind(this)}></input>
                                                 <label htmlFor="btn-craft-class2" className="btn-craft">
-                                                    <div className="bg-color-craft-block img-btn-cutter"></div>
+                                                    <span className="btn-craft__text">Крафт</span>
                                                 </label>
                                             </React.Fragment>
                                             :
@@ -2260,15 +2274,20 @@ class Inventory extends React.Component {
                                         <React.Fragment>
                                             {this.state.recipes_craft && Object.entries(this.state.selected_recipe).length !== 0 && this.state.selected_recipe.constructor === Object ?
                                                 <React.Fragment>
-                                                    <div className="close-window-craft color-blue-btn style-for-craft-btn" onClick={() => this.closeRecipesCraft()}></div>
                                                     <div className="craft-one-sp">
                                                         <div className='style-recipes-txt-craft'>
-                                                            <span>{this.state.selected_recipe.name}</span>
+                                                            <span className="style-recipes-txt-craft__name">{this.state.selected_recipe.name}</span>
                                                             <span className="style-serial-recipes">{this.replaceAll(this.state.selected_recipe.desc, '~br~', '\n')}</span>
+                                                            <span className="style-recipes-txt-craft__name">{`Ресурсы для изготовления`}</span>
+                                                            <span className="style-serial-recipes">{this.replaceAll(this.state.selected_recipe.requirements, '~br~', '\n')}</span>
                                                         </div>
                                                     </div>
                                                     <div className="crafting-object-main">
-                                                        <div className="liner-crafting-obj" style={{ width: this.state.craft_process + "%", transition: this.state.selected_recipe.craft_time/2+'ms'}}></div>
+                                                        <div className="liner-crafting-obj-bg">
+                                                            <div className="liner-crafting-obj" style={{ width: this.state.craft_process + "%", transition: this.state.selected_recipe.craft_time/2+'ms'}}>
+                                                            
+                                                            </div>
+                                                        </div>
                                                         <div className="main-box-craft-weapon">
                                                             <div className="square-box-craft-weapon sqr-wp-top">
                                                                 {this.state.selected_recipe.craft.length > 0 ? <div className={`${this.isItemsInInventory(this.state.selected_recipe.craft, 0) ? 'select-craft' : null} icon-item img-${this.state.selected_recipe.craft[0]}`}></div> : null}
@@ -2298,6 +2317,9 @@ class Inventory extends React.Component {
                                                         </div>
                                                     </div>
                                                     <div className="craft-btn-main">
+                                                        <div className="craft-btn-obj" onClick={() => this.closeRecipesCraft()}>
+                                                            <span>Закрыть</span>
+                                                        </div>
                                                         <div className="craft-btn-obj" onClick={() => this.craftItem()}>
                                                             <span>Создать</span>
                                                         </div>
@@ -2316,7 +2338,7 @@ class Inventory extends React.Component {
                                                                         <div key={index}
                                                                             className={`style-weapon-txt-craft`}
                                                                             onClick={() => this.selectCraft(item)}>
-                                                                            <span>{item.name}</span>
+                                                                            <span className="style-weapon-txt-craft__name">{item.name}</span>
                                                                             <div className="style-serial-rec-o">{this.replaceAll(item.desc, '~br~', ' ')}</div>
                                                                         </div>
                                                                     )
@@ -2357,13 +2379,20 @@ class Inventory extends React.Component {
                                                     return (
                                                         <Draggable that={this} id={index} type="unequip drop" item={item} key={index}>
                                                             <Droppable className="droppable" id="equip" that={this}>
-                                                                <div key={index}
-                                                                    className={`style-weapon-txt-craft ${item.id === this.state.selected_weapon_id ? 'style-weapon-txt-craft-selected' : ''}`}
-                                                                    onClick={() => this.selectWeapon(item)}
-                                                                    onContextMenu={(e) => this.handlePos(e, item, 'weapon')}
-                                                                    style={{ borderColor: this.getWeaponBorderColor(item.item_id) }}>
-                                                                    <span>{item.name}</span>
-                                                                    <span className="style-serial-weapon">{item.desc}</span>
+                                                                <div className="weapon-player-equip__container">
+                                                                    <div
+                                                                        className={`${item.id === this.state.selected_weapon_id ? "weapon-player-equip__select_selected" : 'weapon-player-equip__select'}`}
+                                                                        onClick={() => this.selectWeapon(item)}
+                                                                    />
+                                                                    <div
+                                                                        key={index}
+                                                                        className={`style-weapon-txt-craft img-${item.item_id} ${item.id === this.state.selected_weapon_id ? 'style-weapon-txt-craft-selected' : ''}`}
+                                                                        onClick={() => this.selectWeapon(item)}
+                                                                        onContextMenu={(e) => this.handlePos(e, item, 'weapon')}
+                                                                    >
+                                                                        <span className="style-weapon-txt-craft__wname">{item.name}</span>
+                                                                        <span className="style-serial-weapon">{item.desc}</span>
+                                                                    </div>
                                                                 </div>
                                                             </Droppable>
                                                         </Draggable>
@@ -2371,11 +2400,9 @@ class Inventory extends React.Component {
                                                 })}
                                             </Droppable>
                                             <div className="weapon-craft-box">
-                                                <div className="liner-weapon-crafting"
-                                                    style={{ background: this.getWeaponBorderColor(this.state.selected_weapon_item_id) }}></div>
                                                 <div className="box-img-equip-weapon">
-                                                    <div
-                                                        className={this.state.selected_weapon_item_id !== 0 ? "selected-weapon img-" + this.state.selected_weapon_item_id : ''}></div>
+                                                    <span className="box-img-equip-weapon__name">{this.state.selected_weapon_name}</span>
+                                                    <span className="box-img-equip-weapon__hint">Дополнительные обвесы</span>
                                                 </div>
                                                 <div className="main-box-craft-weapon">
                                                     <div className="square-box-craft-weapon sqr-wp-top">
@@ -2409,14 +2436,20 @@ class Inventory extends React.Component {
                         <div className="invetory-trunk">
                             {this.state.secondary_inv_open ?
                                 <div>
-                                    <div className="liner-secondary-inv"></div>
-                                    <div className="title-secondary-inv">
-                                        <span>({this.numberToK(this.state.secondary_weight_now)}/{this.numberToK(this.state.secondary_weight_max)})</span>
-                                        {this.state.secondary_inv_open && this.state.secondary_items.length > 0 ? <div className="moveall_right" onClick={() => this.moveAllToInventory(true)}></div> : null}
-                                    </div>
                                     <Droppable className="trunk-info-menu droppable" id="move" that={this}>
-                                        <div className="close-window-craft color-blue-btn"
-                                            onClick={() => this.closeSecondaryInventory()}></div>
+                                        <div className="title-secondary-inv">
+                                            <span className="weight-title-inv">
+                                                ({this.numberToK(this.state.secondary_weight_now)}/{this.numberToK(this.state.secondary_weight_max)})
+                                            </span>
+                                            {this.state.secondary_inv_open && this.state.secondary_items.length > 0 ? <div className="moveall_right" onClick={() => this.moveAllToInventory(true)}></div> : null}
+                                            <div
+                                                className="close-window-craft"
+                                                onClick={() => this.closeSecondaryInventory()}
+                                            >
+                                                <img src={closeIcon} width="40%" className="close-window-craft__img" />
+                                            </div>
+                                        </div>
+                                        <div className="inventory__trunk__list">
                                         {this.state.secondary_itemsCounted.map((item, i) => {
                                             const index = `item${i}`
 
@@ -2432,10 +2465,8 @@ class Inventory extends React.Component {
                                                                 : null}
                                                             <div className={`img-inv-box ${item.icon}`}></div>
                                                             <div className="obj-inf-box">
-                                                                <div className="obj-inf-title"><span>{item.name}</span>
-                                                                </div>
-                                                                <div className="obj-inf-weight"><span>{item.desc}</span>
-                                                                </div>
+                                                                <span className="obj-inf-title">{item.name}</span>
+                                                                <span className="obj-inf-weight">{item.desc}</span>
                                                             </div>
                                                             {item.count > 1 ?
                                                                 <div className="obj-inf-count">{item.count}</div> : null}
@@ -2444,6 +2475,7 @@ class Inventory extends React.Component {
                                                 </Draggable>
                                             )
                                         })}
+                                        </div>
                                     </Droppable>
                                 </div>
                                 : ''

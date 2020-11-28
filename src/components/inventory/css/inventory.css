@@ -1,5 +1,6 @@
 body {
     /*background: #352929;*/
+    
 }
 
 .bgForDrop {
@@ -30,7 +31,6 @@ body {
 .inventory-main {
     width: 1129px;
     height: 694px;
-    background-color: rgb(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
 }
@@ -42,50 +42,50 @@ body {
 .player-inv {
     width: 395px;
     height: 694px;
-    background-color: rgb(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.35);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
     margin-right: 10px;
 }
 
 .player-info {
     width: 364px;
     height: 694px;
-    background-color: rgb(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.35);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
     margin-right: 10px;
 }
 
 .player-craft {
     width: 350px;
     height: 694px;
-    background-color: rgb(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.35);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
 }
 
 .title-inv {
-    width: inherit;
-    height: 46px;
-    background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    font-family: "HACKED";
-    font-size: 30px;
-    color: #000000;
-    text-transform: uppercase;
+    flex-direction: column;
+    height: 8%;
     position: relative;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+
 .title-secondary-inv {
-    width: inherit;
-    height: 24px;
-    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-left: 5px;
-    font-family: "HACKED";
-    font-size: 18px;
-    color: #000000;
+    height: 4%;
     text-transform: uppercase;
     position: relative;
+    padding: 0.8rem 1rem 3rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .liner-secondary-inv {
@@ -120,17 +120,18 @@ body {
 }
 
 .object-inv-box {
-    margin-top: 18px;
+    padding: 1.5rem 0.8rem 1rem 0.8rem;
     overflow: auto;
-    height: 91%;
+    height: 82%;
 }
 
 .object-box {
-    width: 394px;
-    height: 68px;
     display: flex;
     align-items: center;
-    position: relative;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 7px;
+    margin-bottom: 0.8rem;
 }
 .linearbar-inv{
     position: absolute;
@@ -141,48 +142,40 @@ body {
     z-index: -1;
 }
 .object-box:hover {
-    width: 387px;
     background-color: rgb(255, 255, 255, 0.102);
-    border-right: 8px solid rgb(72, 185, 242);
-}
-
-.img-inv-box {
-    margin-left: 14px;
 }
 
 .obj-inf-box {
     margin-left: 16px;
     height: 41px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
 }
 
 .obj-inf-title {
-    font-family: "Roboto";
+    font-family: "Gotham Pro Regular";
     color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 7px;
+    font-size: 1rem;
 }
 
 .obj-inf-weight {
-    font-family: "RobotoLight";
-    color: rgb(202, 202, 202);
-    font-size: 16px;
+    font-family: "Gotham Pro Regular";
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    margin-left: 0.6rem;
 }
 
 .player-title-info {
-    width: 341px;
     height: 60px;
-    padding-left: 15px;
-    background-color: rgb(255, 255, 255);
-    border-left: 8px solid rgb(72, 185, 242);
-    font-family: "RobotoBold";
-    font-size: 20px;
-    color: #000;
+    font-family: "Gotham Pro Regular";
+    font-size: 1rem;
+    color: #fff;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -324,15 +317,100 @@ body {
 
 .outfit-player-box {
     display: flex;
-    height: 569px;
+    height: 540px;
+    background: url(../img/person.png) no-repeat;
+    background-position: center;
+    flex-direction: column;
+    margin-left: -5px;
+}
+
+.item__background {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 64px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outfit-pos-outfit-hat {
+    position: absolute;
+    margin-left: 152px;
+}
+
+.outfit-pos-outfit-glasses {
+    position: absolute;
+    margin-left: 276px;
+}
+
+.outfit-pos-outfit-earrings {
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 104px;
+}
+
+.outfit-pos-outfit-pants {
+    position: absolute;
+    margin-left: 152px;
+    margin-top: 280px;
+}
+
+.outfit-pos-outfit-case {
+    position: absolute;
+    margin-left: 276px;
+    margin-top: 312px;
+}
+
+.outfit-pos-outfit-gloves {
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 312px;
+}
+
+
+.outfit-pos-outfit-watch {
+    position: absolute;
+    margin-left: 276px;
+    margin-top: 208px;
+}
+
+.outfit-pos-outfit-bracelet {
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 208px;
+}
+
+.outfit-pos-outfit-shoes {
+    position: absolute;
+    margin-left: 152px;
+    margin-top: 380px;
+}
+
+.outfit-pos-outfit-jewerly {
+    position: absolute;
+    margin-left: 276px;
+    margin-top: 104px;
+}
+
+.outfit-pos-outfit-mask {
+    position: absolute;
+    margin-left: 28px;
+}
+
+.outfit-pos-outfit-tshirt {
+    position: absolute;
+    margin-left: 152px;
+    margin-top: 180px;
 }
 
 .bottom-otf-box {
     margin-top: auto;
-    width: 364px;
     height: 80px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 25px 0 28px;
 }
 
 .use-outfit {
@@ -363,22 +441,29 @@ body {
 
 .menu-craft-change {
     display: flex;
-    margin-top: 10px;
-    background-color: rgb(38, 36, 36);
+    margin-top: 1.5rem;
+    justify-content: space-between;
+    padding: 0rem 20px 0rem 20px;
 }
 
 .btn-craft {
-    width: 174px;
-    height: 68px;
+    width: 45%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(38, 36, 36);
     cursor: pointer;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.btn-craft__text {
+    font-family: 'Gotham Pro Regular';
+    font-size: 0.8rem;
 }
 
 input[type="radio"]:checked + label.btn-craft {
-    background-color: #fff;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 input[type="radio"]:checked + label .bg-color-craft-block {
@@ -398,40 +483,93 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 }
 
 .weapon-player-equip {
-    height: 300px;
+    height: 350px;
     width: inherit;
     margin-top: 27px;
-    font-family: "RobotoBold";
     font-size: 20px;
     color: #fff;
     overflow: auto;
 }
 
 .style-serial-weapon {
-    font-family: "RobotoLight";
-    color: rgb(202, 202, 202);
-    font-size: 12px;
-    margin-top: 6px;
+    font-family: "Gotham Pro Regular";
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    margin-top: 5px;
 }
 
-.style-weapon-txt-craft {
+.craft-player-sp .style-weapon-txt-craft {
     margin-bottom: 33px;
-    padding-left: 9px;
     height: 52px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-bottom: 9px;
+    width: inherit;
+    margin-left: auto;
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 7px;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+}
+
+.style-weapon-txt-craft__wname {
+    font-family: 'Gotham Pro Medium';
+    font-size: 0.9rem;
+}
+
+.style-weapon-txt-craft {
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 7px;
+    background-position: 94% !important;
+    background-size: 45% !important;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+}
+
+.style-weapon-txt-craft__name {
+    font-family: 'Gotham Pro Medium';
+    font-size: 1.05rem;
+    margin-bottom: 8px;
 }
 
 .style-weapon-txt-craft:hover {
     background-color: rgb(255, 255, 255, 0.102);
-    border-right: 8px solid rgb(72, 185, 242);
 }
 
 .style-weapon-txt-craft-selected {
-    background-color: rgb(255, 255, 255, 0.102);
-    border-right: 8px solid rgb(72, 185, 242);
+}
+
+.weapon-player-equip__container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px 0 20px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.weapon-player-equip__select {
+    display: block;
+    width: 11px;
+    height: 11px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.weapon-player-equip__select_selected {
+    display: block;
+    width: 11px;
+    height: 11px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: #FFFFFF;
 }
 
 .liner-weapon-crafting {
@@ -441,12 +579,23 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 }
 
 .box-img-equip-weapon {
-    width: inherit;
-    height: 137px;
-    background-color: rgb(255, 255, 255, 0.102);
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.box-img-equip-weapon__name {
+    font-family: 'Gotham Pro Medium';
+    font-size: 13px;
+}
+
+.box-img-equip-weapon__hint {
+    font-family: 'Gotham Pro Regular';
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .weapon-m41 {
@@ -470,12 +619,15 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 .main-box-craft-weapon {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .square-box-craft-weapon {
-    width: 62px;
-    height: 62px;
-    background: rgb(255, 255, 255, 0.051);
+    width: 58px;
+    height: 58px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
     margin-right: 20px;
     display: flex;
     justify-content: center;
@@ -572,9 +724,19 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 .liner-crafting-obj {
     width: 0%;
     margin-right: auto;
-    height: 8px;
-    background: #48b9f2;
+    height: 4px;
+    background: #fff;
     transition: 2s;
+    z-index: 5;
+    border-radius: 16%;
+}
+
+.liner-crafting-obj-bg {
+    height: 4px;
+    margin-left: 21px;
+    margin-right: 27px;
+    border-radius: 16%;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .sqr-wp-bottom {
@@ -582,27 +744,32 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 }
 
 .craft-btn-obj {
-    width: 100%;
-    height: 47px;
-    background: rgb(255, 255, 255);
-    margin-top: 30px;
+    padding: 0.9rem 1.6rem 0.9rem 1.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "HACKED";
-    font-size: 30px;
-    text-transform: uppercase;
-    color: #000;
+    font-size: 1rem;
+    color: #fff;
     transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    font-family: 'Gotham Pro Regular';
 }
 
-.craft-btn-obj:hover, .craft-help-menu:hover {
-    background: #000;
-    color: #fff;
+.craft-btn-obj:hover {
+    background-color: rgba(255, 255, 255, 0.102);
 }
 
 .craft-btn-main {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.craft-btn-obj:first-child {
+    margin-right: 10px;
 }
 
 .craft-help-menu {
@@ -621,20 +788,22 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 }
 
 .close-window-craft {
-    background: url("../img/close.png") no-repeat;
-    width: 29px;
-    height: 30px;
+    min-height: 24px;
+    width: 24px;
+    height: 24px;
     margin-left: auto;
-    position: relative;
-    top: 21px;
-    margin-top: -29px;
     transition: 0.1s ease-out;
-    cursor: pointer;
     z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(126, 126, 126, 0.28);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
 }
 
 .close-window-craft:hover {
-    filter: brightness(0) saturate(100%) invert(59%) sepia(82%) saturate(454%) hue-rotate(169deg) brightness(97%) contrast(96%);
+    background: rgba(0, 0, 0, 0.28);
 }
 
 .trunk-boxes-main {
@@ -661,9 +830,8 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 }
 
 .invetory-trunk {
-    margin-bottom: auto;
-    margin-right: 9px;
-    margin-top: 46px;
+    height: 694px;
+    margin-right: 15px;
 }
 
 .content-inventory {
@@ -671,25 +839,35 @@ input[type="radio"]:checked + label .bg-color-craft-block {
     flex-direction: row-reverse;
 }
 
+.invetory-trunk {
+    background: rgba(0, 0, 0, 0.35);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
 .trunk-info-menu {
     width: 330px;
-    height: 648px;
-    background: rgb(0, 0, 0, 0.702);
+    height: 694px;
     /* display: flex;
     flex-direction: column; */
     overflow: auto;
 }
 
+.inventory__trunk__list {
+    padding: 1.5rem 0.8rem 1rem 0.8rem;
+}
+
 .object-box-trunk {
-    width: 330px;
-    height: 68px;
     display: flex;
     align-items: center;
-    position: relative;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 7px;
+    margin-bottom: 0.8rem;
 }
 
 .object-box-trunk:hover {
-    background-color: rgb(255, 255, 255, 0.102);
+    background: rgba(126, 126, 126, 0.28);
 }
 
 .color-blue-btn {
@@ -720,24 +898,26 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 
 .obj-inf-count {
     margin-left: auto;
-    margin-right: 40px;
-    font-family: "Roboto";
+    font-family: "Gotham Pro Regular";
     color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.object-box:hover .obj-inf-count {
-    margin-right: 33px;
+    font-size: 1rem;
 }
 
 .weight-title-inv {
-    right: 0px;
     display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    font-size: 22px;
+    justify-content: flex-start;
+    font-size: 1rem;
+    font-family: 'Gotham Pro Regular';
+    width: 100%;
 }
+
+.title-inv__name {
+    font-family: "Gotham Pro Medium";
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+
 .moveall_left {
     background: url(../img/moveall.svg) no-repeat;
     width: 20px;
@@ -760,10 +940,8 @@ input[type="radio"]:checked + label .bg-color-craft-block {
     filter: brightness(0) saturate(100%) invert(59%) sepia(82%) saturate(454%) hue-rotate(169deg) brightness(97%) contrast(96%);
 }
 .craft-player-sp {
-    height: 543px;
-    width: inherit;
-    margin-top: 27px;
-    font-family: "RobotoBold";
+    padding: 1.8rem 20px 1rem 20px;
+    font-family: "Gotham Pro Regular";
     font-size: 20px;
     color: #fff;
     overflow: auto;
@@ -781,14 +959,19 @@ input[type="radio"]:checked + label .bg-color-craft-block {
     margin-top: 0px;
 }
 .style-recipes-txt-craft {
-    margin-bottom: 33px;
-    padding-left: 9px;
+    padding: 0 20px 0 20px;
     height: 200px;
     display: flex;
     overflow-x: auto;
     flex-direction: column;
-    margin-bottom: 9px;
 }
+
+.style-recipes-txt-craft__name {
+    font-family: 'Gotham Pro Medium';
+    font-size: 1rem;
+    margin-top: 1.8rem;
+}
+
 .text-dd-ss-kk {
     font-family: "RobotoBold";
     font-size: 20px;
@@ -799,17 +982,16 @@ input[type="radio"]:checked + label .bg-color-craft-block {
     justify-content: center;
 }
 .style-serial-recipes {
-    font-family: "RobotoLight";
-    color: rgb(202, 202, 202);
+    font-family: "Gotham Pro Regular";
+    color: #fff;
     font-size: 12px;
     margin-top: 6px;    
     white-space: pre-line;
 }
 .style-serial-rec-o{
-    font-family: "RobotoLight";
-    color: rgb(202, 202, 202);
-    font-size: 12px;
-    margin-top: 6px;
+    font-family: "Gotham Pro Regular";
+    color:#fff;
+    font-size: 0.9rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

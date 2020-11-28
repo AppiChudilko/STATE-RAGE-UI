@@ -230,7 +230,7 @@ class Tatoo extends React.Component {
         }
         return (
             <div className="tatoo__container" onWheel={(e) => this.handleWheel(e)} tabIndex="1" onKeyDown={(e) => this.handleKeyDown(e)}>
-                <div className="tatoo__content" style={{backgroundColor: this.state.bgcolor}}>
+                <div className="tatoo__content">
                     <Header
                         banner={this.state.banner}
                         title={this.state.title}

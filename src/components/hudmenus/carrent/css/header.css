@@ -1,9 +1,10 @@
 .carrent__content__header {
     display: flex;
-    width: 100%;
+    width: 98%;
     height: 14%;
     overflow: hidden;
     align-items: center;
+    padding-left: 2%;
 }
 
 .carrent__content__header__banner {
@@ -12,18 +13,22 @@
 }
 
 .carrent__content__header__title {
-    margin-left: 2%;
-    font-family: 'RobotoBold';
-    font-size: 2rem;
+    font-family: 'Gotham Pro Medium';
+    font-size: 1.6rem;
     letter-spacing: 0.05rem;
     margin-right: auto;
 }
 
 .carrent__content__header__exitbtn {
-    font-family: 'RobotoBold';
-    font-size: 1.6rem;
+    font-family: 'Gotham Pro Regular';
+    font-size: 1.2rem;
     letter-spacing: 0.05rem;
-    margin-right: 5%;
     margin-left: 5%;
-    cursor: pointer;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 7px;
 }

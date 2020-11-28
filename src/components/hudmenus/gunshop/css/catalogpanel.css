@@ -1,31 +1,41 @@
 .hmenu__gunshop__catalog {
     display: grid;
-    grid-template-rows: 45% 45%;
     grid-template-columns: 50% 50%;
+    grid-template-rows: min-content;
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     height: 100%;
-    padding: 2%;
     width: 100%;
+    padding-right: 6%;
+    overflow-y: auto;
 }
 
 .hmenu__gunshop__catalog__container {
-    width: 55%;
     overflow-y: auto;
-    padding-right: 2%;
+    padding-right: 1%;
     display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin-right: 2%;
+    padding: 1.5%;
+    width: 62%;
 }
 
 .hmenu__gunshop__catalog__item {
-    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     display: flex;
     padding: 1.5rem;
     flex-direction: column;
     cursor: pointer;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
 }
 
 .hmenu__gunshop__catalog__item_active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.5);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
     display: flex;
     padding: 1.5rem;
     flex-direction: column;
@@ -33,8 +43,7 @@
 }
 
 .hmenu__gunshop__catalog__item__img {
-    width: 75%;
-    height: 160px;
+    width: 55%;
     object-fit: contain;
 }
 
@@ -47,27 +56,28 @@
 }
 
 .hmenu__gunshop__catalog__item__name {
-    font-family: 'RobotoBold';
+    font-family: 'Gotham Pro Medium';
     font-size: 2rem;
 }
 
-.hmenu__gunshop__catalog__container::-webkit-scrollbar {
-   width: 0.8rem;
+.hmenu__gunshop__catalog::-webkit-scrollbar {
+   width: 0.4rem;
  }
    
- .hmenu__gunshop__catalog__container::-webkit-scrollbar-track {
-   background: #303030;
+ .hmenu__gunshop__catalog::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
  }
    
- .hmenu__gunshop__catalog__container::-webkit-scrollbar-thumb {
-   background: #fff;
+ .hmenu__gunshop__catalog::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+    border-radius: 15px;
 }
 
 .hmenu__gunshop__catalog__item__info {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: auto;
     justify-content: space-between;
 }
 
@@ -78,18 +88,18 @@
 }
 
 .hmenu__gunshop__catalog__item__price {
-    font-family: 'RobotoBold';
+    font-family: 'Gotham Pro Medium';
     font-size: 2.2rem;
 }
 
 .hmenu__gunshop__catalog__item__calibr__text {
-    font-family: 'RobotoMedium';
+    font-family: 'Gotham Pro Regular';
     font-size: 1.1rem;
     letter-spacing: 0.05rem;
 }
 
 .hmenu__gunshop__catalog__item__calibr__name {
-    font-family: 'RobotoMedium';
+    font-family: 'Gotham Pro Medium';
     font-size: 1.3rem;
 }
 
@@ -105,6 +115,8 @@
     padding-left: 1.3rem;
     padding-right: 1.3rem;
     border-radius: 0.4rem;
-    font-family: 'RobotoBold';
-    background-color: #ef3038;
+    font-family: 'Gotham Pro Regular';
+    background: linear-gradient(105.63deg, rgba(255, 64, 57, 0) -80.94%, rgba(255, 64, 57, 0.45) 275.52%);
+    border: 0.5px solid #FF4039;
+    border-radius: 5px;
 }
