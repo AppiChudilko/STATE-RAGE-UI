@@ -15,9 +15,6 @@ const Car = ({ name, price, btnbg, sale, params, type }) => {
             </div>
             <div className="carrent__content__list__item__info">
                 <div className="carrent__content__list__item__info__column">
-                    <span className="carrent__content__list__item__info__type">
-                        {`${type}`}
-                    </span>
                     <span className="carrent__content__list__item__info__name">
                         {`${name}`}
                     </span>
