@@ -84,6 +84,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -94,15 +95,14 @@
 }
 
 .editor__hint__title {
-    font-family: 'Century Gothic';
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-family: 'Gotham Pro Medium';
+    font-size: 1.2rem;
     text-align: end;
 }
 
 .editor__hint__subtitle {
-    font-family: 'Century Gothic';
-    font-size: 1rem;
+    font-family: 'Gotham Pro Regular';
+    font-size: 0.9rem;
     text-align: end;
 }
 
@@ -675,29 +675,48 @@ input.auth-input-style:focus::-webkit-input-placeholder {
 }
 
 .info-role {
-    width: 450px;
+    padding: 0 15% 0 15%;
     display: flex;
     align-items: center;
-    font-size: 22px;
-    font-family: 'Roboto';
-    padding-top: 11px;
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
 
+.choice-role-btn {
+    margin-top: auto;
+}
+
+.create-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
 .role-custom {
     align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 0 0 8% 0;
 }
 
 .info-role .title-info-role {
     margin-bottom: 10px;
+    font-family: 'Gotham Pro Regular';
+    font-size: 1rem;
+    line-height: 20px;
+}
+
+.title-info-hint {
+    font-family: 'Gotham Pro Regular';
+    font-size: 1rem;
 }
 
 .player_role {
-    background: url(../img/role.png) no-repeat;
     width: inherit;
     height: 271px;
     margin-top: 22px;
+    padding-top: 14%;
 }
 .text-role-recomed {
     width: 100%;
@@ -705,6 +724,7 @@ input.auth-input-style:focus::-webkit-input-placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto';
-    font-size: 48px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }

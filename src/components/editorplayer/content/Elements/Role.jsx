@@ -20,17 +20,17 @@ class Role extends React.Component {
         return (
             <React.Fragment>
                 <div className="change-create-player">
-                    <div className="border-top"></div>
                     <div className="info-player role-custom">
-                        <div className={this.state.img}><div className="text-role-recomed">{this.props.text}</div></div>
+                        <div className={this.state.img}>
+                            <div className="text-role-recomed" style={{backgroundImage: `url('${require(`../../../authorization/img/bg_chars_${this.props.index + 1}.png`)}')`}} />
+                        </div>
+                        <span className="title-info-hint">{this.props.text}</span>
                         <div className="name-player-info">{this.props.name}</div>
                         <div className="info-role">
-                            <span className="title-info-role">Информация</span>
-                            <span>{this.props.text_info}</span>
+                            <span className="title-info-role">{this.props.text_info}</span>
                         </div>
-                        <div className="create-btn" onClick={() => this.selectChar(this.props.index)}>Выбрать</div>
+                        <div className="create-btn choice-role-btn" onClick={() => this.selectChar(this.props.index)}>Выбрать</div>
                     </div>
-                    <div className="border-bottom"></div>
                 </div>
             </React.Fragment>
         )

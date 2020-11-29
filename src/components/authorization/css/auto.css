@@ -390,10 +390,11 @@ input:focus.reg-input-style {
     z-index: 1;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 .change-create-player {
-    width: 519px;
+    width: 25%;
     height: 100%;
 }
 
@@ -466,10 +467,6 @@ input:focus.reg-input-style {
     margin-left: 23px;
 }
 
-.change-create-player:not(:nth-child(3n)) {
-    margin-right: 86px
-}
-
 .border-top {
     width: 301px;
     height: 12px;
@@ -496,9 +493,8 @@ input:focus.reg-input-style {
 
 .create-btn {
     border: 1px solid rgba(255, 255, 255, 0.5);
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     font-size: 1rem;
-    cursor: pointer;
     border-radius: 10px;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -537,7 +533,7 @@ input:focus.reg-input-style {
 }
 
 .create-btn__hint {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
 }
@@ -577,7 +573,7 @@ input:focus.reg-input-style {
 }
 
 .info-player {
-    height: 768px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -607,7 +603,8 @@ input:focus.reg-input-style {
 .main-box-change {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 5% 1% 0% 1%;
 
 }
 
@@ -620,13 +617,11 @@ input:focus.reg-input-style {
 .name-player-info {
     width: inherit;
     height: 69px;
-    background: rgb(72, 185, 242);
-    font-size: 36px;
-    font-family: "Roboto";
+    font-size: 2rem;
+    font-family: "Gotham Pro Medium";
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 42px;
 }
 
 .text-box {
