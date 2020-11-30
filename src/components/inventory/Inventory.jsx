@@ -2266,7 +2266,7 @@ class Inventory extends React.Component {
                                                     checked={this.state.craft}
                                                     onChange={this.changeBtnCraft.bind(this)}></input>
                                                 <label htmlFor="btn-craft-class2" className="btn-craft">
-                                                    <div className="bg-color-craft-block img-btn-cutter"></div>
+                                                    <span className="btn-craft__text">Крафт</span>
                                                 </label>
                                             </React.Fragment>}
                                     </div>
