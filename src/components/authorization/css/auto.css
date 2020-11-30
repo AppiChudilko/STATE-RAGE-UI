@@ -7,7 +7,7 @@
     flex-direction: row;
     position: absolute;
     z-index: 1;
-    
+
 }
 
 .background-auth {
@@ -187,7 +187,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1rem;
     border-radius: 10px;
 }
@@ -217,7 +217,7 @@
 .auth-input input.auth-input-style {
     width: 15rem;
     background: rgba(0, 0, 0, 0.35);
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1rem;
     color:#fff;
     padding-top: 1.8rem;
@@ -235,7 +235,7 @@
 
 .auth-input input::placeholder {
     font-size: 1rem;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     color: #fff;
 }
 
@@ -269,7 +269,7 @@ input:focus::-webkit-input-placeholder {
     padding-left: 2.3rem;
     padding-right: 2.3rem;
     padding-top: 1.5rem;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     padding-bottom: 1.5rem;
     font-size: 1rem;
 }
@@ -290,7 +290,7 @@ input:focus::-webkit-input-placeholder {
 input.reg-input-style {
     width: 15rem;
     background: rgba(0, 0, 0, 0.35);
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1rem;
     color:#fff;
     padding-top: 1.8rem;
@@ -318,7 +318,7 @@ input:focus.reg-input-style {
     align-items: center;
     flex-direction: row;
     font-size: 1rem;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     line-height: 4;
     color: #fff;
     cursor: pointer;
@@ -541,7 +541,7 @@ input:focus.reg-input-style {
 }
 
 .accinfo__nickname {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     margin-bottom: 1.5rem;
     font-size: 2rem;
     font-weight: medium;
@@ -680,7 +680,7 @@ input:focus.reg-input-style {
     display: flex;
     align-items: center;
     font-size: 1rem;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     display: flex;
     justify-content: center;
 }
@@ -700,12 +700,12 @@ input:focus.reg-input-style {
 }
 
 .title-info-text {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
 }
 
 .text-box-blue {
     color: #fff;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     margin-right: 29px
 }
 
