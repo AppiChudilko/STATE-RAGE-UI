@@ -192,7 +192,7 @@ class Authorization extends React.Component {
                                     <div className="auth-input">
                                         <div className="auth-input__text__container">
                                             <Title text="Добро пожаловать на State 99" size="xxl" />
-                                            <Title text="Авторизуйтесь, чтобы продолжить" size="xl" />
+                                            <Title text="Авторизуйтесь, чтобы продолжить" size="xl-regular" />
                                         </div>
                                         <input type="text" pattern="[a-zA-Z0-9]*" placeholder="Введите логин"
                                             name="login-auth" className="auth-input-style"
@@ -211,7 +211,7 @@ class Authorization extends React.Component {
                                     <div className="auth-input">
                                         <div className="auth-input__text__container">
                                             <Title text="Добро пожаловать на State 99" size="xxl" />
-                                            <Title text="Пройдите регистрацию для начала игры" size="xl" />
+                                            <Title text="Пройдите регистрацию для начала игры" size="xl-regular" />
                                         </div>
                                         <div className="reg-bloc">
                                             <input type="text" pattern="[a-zA-Z0-9]*" placeholder="Придумайте логин"

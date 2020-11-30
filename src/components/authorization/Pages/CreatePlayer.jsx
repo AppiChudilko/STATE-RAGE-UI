@@ -20,7 +20,7 @@ class CreatePlayer extends React.Component {
                     <div className="create-content">
                         <div className="auth-input__text__container" style={{marginRight: '10%', marginTop: 0}}>
                             <Title text="Выберите персонажа чтобы продолжить" size="xxl" />
-                            <Title text="Так же вы можете создать дополнительного персонажа" size="xl" />
+                            <Title text="Так же вы можете создать дополнительного персонажа" size="xl-regular" />
                         </div>
                         <ChangePlayer/>
                     </div>

@@ -14,6 +14,15 @@
     display: flex;
 }
 
+.content-auth .auth-input .auth-input__text__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5rem;
+    position: inherit;
+    margin-bottom: 5rem;
+}
+
 .background-auth .bg-left {
     display: flex;
     flex-direction: column;
@@ -132,31 +141,37 @@
 }
 
 .dednet__title-s {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     color: #fff;
     font-size: 0.8rem;
 }
 
 .dednet__title-m {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     color: #fff;
     font-size: 1rem;
 }
 
 .dednet__title-l {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     color: #fff;
     font-size: 1.2rem;
 }
 
 .dednet__title-xl {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.dednet__title-xl-regular {
+    font-family: "Gotham Pro Regular";
     color: #fff;
     font-size: 1.4rem;
 }
 
 .dednet__title-xxl {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     color: #fff;
     font-size: 2rem;
 }
@@ -397,9 +412,7 @@ input:focus.reg-input-style {
     z-index: 1;
     justify-content: center;
     flex-direction: column;
-    /*background-image: url('https://sun9-54.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70986b74dd06036643841aff64b');
-    background-repeat: no-repeat;
-    background-size: cover;*/
+    
     
 }
 
@@ -537,13 +550,17 @@ input:focus.reg-input-style {
     margin-bottom: -100px;
     font-family: "Gotham Pro Medium";
     font-size: 0.8rem;
-    cursor: pointer;
     border-radius: 10px;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     padding-left: 5.2rem;
     padding-right: 5.2rem;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.create-hero-btn:hover {
+    background: #fff;
+    color: #000;
 }
 
 .create-btn__container {
@@ -635,7 +652,7 @@ input:focus.reg-input-style {
     align-items: flex-end;
     justify-content: center;
     height: 100%;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
 }
 
 .createhero__box {
