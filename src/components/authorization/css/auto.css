@@ -390,12 +390,24 @@ input:focus.reg-input-style {
     z-index: 1;
     justify-content: center;
     flex-direction: column;
+    /*background-image: url('https://sun9-54.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70986b74dd06036643841aff64b');
+    background-repeat: no-repeat;
+    background-size: cover;*/
     
 }
 
 .change-create-player {
     width: 25%;
     height: 100%;
+}
+
+.change-create-player-create {
+    width: 519px;
+    height: 100%;
+}
+
+.change-create-player-create:not(:nth-child(3n)) {
+    margin-right: 86px
 }
 
 .change-create-player-center {
@@ -513,7 +525,7 @@ input:focus.reg-input-style {
 .create-hero-btn {
     border: 1px solid rgba(255, 255, 255, 0.5);
     margin-bottom: -100px;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     font-size: 0.8rem;
     cursor: pointer;
     border-radius: 10px;
@@ -606,6 +618,12 @@ input:focus.reg-input-style {
     justify-content: space-around;
     padding: 5% 1% 0% 1%;
 
+}
+
+.main-box-change-create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .createhero__box {

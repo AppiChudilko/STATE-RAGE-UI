@@ -101,7 +101,7 @@ class ChangePlayer extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="main-box-change">
+                <div className="main-box-change-create">
                     
                     {this.state.second_character_create ?
                         <InfoPlayer

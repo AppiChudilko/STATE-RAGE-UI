@@ -19,7 +19,7 @@ class BoxCreate extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="change-create-player">
+                <div className="change-create-player-create">
                     <div className="block-create">
                         <div className="block-innerhit">
                             <div className="summ-create">

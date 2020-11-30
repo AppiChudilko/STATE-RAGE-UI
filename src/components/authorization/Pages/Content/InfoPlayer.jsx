@@ -32,7 +32,7 @@ class InfoPlayer extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className={`change-create-player ${this.props.index === 0 ? 'change-create-player-center' : ''}`}>
+                <div className={`change-create-player-create ${this.props.index === 0 ? 'change-create-player-center' : ''}`}>
                     <div className="info-player">
                         <div className="accinfo__container">
                             <span className="accinfo__nickname">
