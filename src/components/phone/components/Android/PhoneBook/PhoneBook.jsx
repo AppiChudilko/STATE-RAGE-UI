@@ -7,6 +7,9 @@ import Contact from './pages/Contact';
 import Calls from '../../apps/Calls'
 import NavigationBar from '../Calls/NavigationBar';
 import IconIOSKeyboard from '../../../img/keyboard.svg'
+import IconIOSContacts from '../../../img/Contacts.svg'
+import IconIOSFavourites from '../../../img/Favorites.svg'
+import IconIOSRecents from '../../../img/Recents.svg'
 import IconIOSShape from '../../../img/shape.svg'
 
 
@@ -17,9 +20,9 @@ class PhoneBook extends React.Component {
             page: this.props.defaultValue || 'favorit',
             search: '',
             pagesList: [
-                {icon: IconIOSKeyboard, name: 'Клавиши', page: 'favorit'},
-                {icon: IconIOSKeyboard, name: 'Клавиши', page: 'history'},
-                {icon: IconIOSKeyboard, name: 'Клавиши', page: 'contact'},
+                {icon: IconIOSFavourites, name: 'Избранное', page: 'favorit'},
+                {icon: IconIOSRecents, name: 'Журнал', page: 'history'},
+                {icon: IconIOSContacts, name: 'Контакты', page: 'contact'},
                 {icon: IconIOSKeyboard, name: 'Клавиши', page: 'calls'}
             ]
         }
@@ -46,19 +49,6 @@ class PhoneBook extends React.Component {
     render() {
         return (
             <React.Fragment>
-                {this.state.page === 'calls' ? 
-                <React.Fragment>
-                    <Calls />
-                        <div className="calls__navbar">
-                            {this.state.pagesList.map((item, index) => (
-                                <div onClick={() => this.setActivePage(item.page)} className="calls__navbar__item" key={`calls__navbar__item-${index}`}>
-                                    <img src={IconIOSKeyboard} className={this.state.page === item.page ? `calls__navbar__item__icon-active` : `calls__navbar__item__icon`} />
-                                    <span className={this.state.page === item.page ? `calls__navbar__item__text-active` : `calls__navbar__item__text`}>Клавиши</span>
-                                </div>
-                            ))}
-                        </div>
-                </React.Fragment>
-                : 
                     <div className="phonebook-content">
                         <div className="fix-phonebook">
                             <div className="b-callhistory">
@@ -96,18 +86,21 @@ class PhoneBook extends React.Component {
                                     </React.Fragment>
                                     :
                                     null}
+                                {this.state.page === 'calls' && (
+                                     <Calls />
+                                )}
                                 <div className="calls__navbar">
                                     {this.state.pagesList.map((item, index) => (
-                                        <div className="calls__navbar__item" onClick={() => this.setActivePage(item.page)} key={`calls__navbar__item-${index}`}>
-                                            <img src={IconIOSKeyboard} className={this.state.page === item.page ? `calls__navbar__item__icon-active` : `calls__navbar__item__icon`} />
-                                            <span className={this.state.page === item.page ? `calls__navbar__item__text-active` : `calls__navbar__item__text`}>Клавиши</span>
+                                        <div onClick={() => this.setActivePage(item.page)} className="calls__navbar__item" key={`calls__navbar__item-${index}`}>
+                                            <img src={item.icon} className={this.state.page === item.page ? `calls__navbar__item__icon-active` : `calls__navbar__item__icon`} />
+                                            <span className={this.state.page === item.page ? `calls__navbar__item__text-active` : `calls__navbar__item__text`}>{item.name}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         </div>
                     </div>
-                }
+                
             </React.Fragment>
         )
     }
