@@ -945,6 +945,7 @@ input[type="radio"]:checked + label .bg-color-craft-block {
     font-size: 20px;
     color: #fff;
     overflow: auto;
+    height: 480px;
 }
 .craft-one-sp {
     height: 235px;
