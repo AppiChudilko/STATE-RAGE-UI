@@ -46,12 +46,12 @@ class EditorMain extends React.Component {
         }
         return (
             <React.Fragment>
-                <img src={serverLogo} style={{zIndex: 2, position: 'absolute', marginTop: '2rem', marginLeft: '3.4rem', width: '6rem'}} />
                 <div id="disableZoom" className="adaptive_editor">
-                <div className="editor__hint">
-                    <span className="editor__hint__title">{this.state.path === '/choicerole' ? 'Выбери свою роль' : 'Кастомизация персонажа'}</span>
-                    <span className="editor__hint__subtitle">{this.state.path === '/choicerole' ? 'Пора решить кем ты хочешь стать в этом штате' : 'Настройте своего персанажа под себя'}</span>
-                </div>
+                    <img src={serverLogo} style={{zIndex: 2, position: 'absolute', marginTop: '2rem', marginLeft: '3.4rem', width: '6rem'}} />
+                    <div className="editor__hint">
+                        <span className="editor__hint__title">{this.state.path === '/choicerole' ? 'Выбери свою роль' : 'Кастомизация персонажа'}</span>
+                        <span className="editor__hint__subtitle">{this.state.path === '/choicerole' ? 'Пора решить кем ты хочешь стать в этом штате' : 'Настройте своего персанажа под себя'}</span>
+                    </div>
                     <Router>
                         <Route path="/editor">
                             <EditorPlayer/>
@@ -61,7 +61,7 @@ class EditorMain extends React.Component {
                         </Route>
                         <Redirect to={this.state.path} push/>
                     </Router>
-                    </div>
+                </div>
             </React.Fragment>
         )
     }

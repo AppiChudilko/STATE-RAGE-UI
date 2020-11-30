@@ -4,6 +4,7 @@
     justify-content: flex-end;
     align-items: center;
     display: flex;
+    background-color: #efefef;
 }
 
 /* <!-- Слайдер камеры --> */
@@ -72,9 +73,9 @@
 
 /* <!-- Меню 1 -->*/
 .menu-editor-default {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
-    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
     width: 455px;
     margin-right: 8%;
     padding: 2.8rem;
@@ -372,9 +373,9 @@
 
 /* <!-- Редактор --> */
 .editor-main {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
-    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
     width: 455px;
     margin-top: auto;
     margin-left: auto;
@@ -517,14 +518,14 @@ input.range-slider-ch:checked + label .slider-change-radio {
 /*range-slider-left-menu*/
 .range-slider-editor .input-range__slider, .range-slider-editor-big .input-range__slider {
     appearance: none;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     transform: rotate(90deg);
     background: #fff;
     cursor: pointer;
     display: block;
     margin-left: -0.6rem;
-    margin-top: -5px;
+    margin-top: -8px;
     outline: none;
     position: absolute;
     top: 50%;
@@ -694,8 +695,8 @@ input.auth-input-style:focus::-webkit-input-placeholder {
 
 .role-custom {
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     padding: 0 0 8% 0;
 }
