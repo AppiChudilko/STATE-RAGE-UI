@@ -715,12 +715,13 @@
 .logo-main .logo-ammo {
     position: absolute;
     display: flex;
-    top: 74px;
-    right: 24px;
+    top: 100px;
+    right: 50px;
     font-size: 16px;
+    border-radius: 10px;
     font-family: 'Roboto';
     padding: 8px;
-    background: rgb(0, 0, 0, 0.502);
+    background: rgb(0, 0, 0, 0.5);
 }
 
 .logo-main .logo-ammo-img {
