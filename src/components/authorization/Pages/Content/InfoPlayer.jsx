@@ -48,7 +48,7 @@ class InfoPlayer extends React.Component {
                                 <div className="text-box">
                                     <span className="chevron-left"
                                         onClick={() => this.props.clickLeftArrow(this.props.index)}></span>
-                                    <span>{`Место спавна: ${this.props.spawn[this.props.index_spawn]}`}</span>
+                                    <span>{`Спавн: ${this.props.spawn[this.props.index_spawn]}`}</span>
                                     <span className="chevron-right"
                                         onClick={() => this.props.clickRightArrow(this.props.index)}></span>
                                 </div>
