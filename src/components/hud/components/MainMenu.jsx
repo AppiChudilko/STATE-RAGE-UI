@@ -10,7 +10,7 @@ class MainMenu extends React.Component {
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.itemRefs = {}
         this.state = {
-            show: true,
+            show: false,
             selected: 0,
             header: true,
             opacity: 0.8,
@@ -540,7 +540,14 @@ class MainMenu extends React.Component {
         }
         return (
             <Draggable id='menu'>
-                <div className="menu-box" style={styles.container} onWheel={(e) => this.handleWheel(e)} tabIndex="1" onKeyDown={(e) => this.handleKeyDown(e)}>
+            <div className="menu-box">
+                <div
+                    className="menu-box-content"
+                    style={styles.container}
+                    onWheel={(e) => this.handleWheel(e)}
+                    tabIndex="1"
+                    onKeyDown={(e) => this.handleKeyDown(e)}
+                >
                     {this.state.header ? 
                         <Header
                             headerData={`${this.state.selected + 1} / ${this.state.menuList.length}`}
@@ -572,6 +579,7 @@ class MainMenu extends React.Component {
                             )
                         })}
                     </div>
+                    </div>
                     {this.state.menuList[this.state.selected].subtitle ? 
                         <Desc
                             font={this.state.mStyle.font}
@@ -579,7 +587,7 @@ class MainMenu extends React.Component {
                             color={this.state.mStyle.bgColor}
                             desc={this.state.menuList[this.state.selected].subtitle}
                         /> : <></>}
-                </div>
+            </div>
             </Draggable>
         )
     }

@@ -7,11 +7,6 @@ const styles = {
         color: '#fff',
         fontSize: '1.1rem',
     },
-    container: {
-        padding: '20px',
-        borderRadius: '0px',
-        marginTop: '10px',
-    }
 };
 
 export default function Desc(props) {
@@ -24,7 +19,7 @@ export default function Desc(props) {
         
     }*/
     return (
-        <div style={styles.container}>
+        <div className="menu-box-footer" style={styles.container}>
             <p className="header" style={styles.header} dangerouslySetInnerHTML={{__html: parseText(props.desc)}}></p>
         </div>
     )

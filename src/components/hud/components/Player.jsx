@@ -72,20 +72,20 @@ class Player extends React.Component {
                         </div>
                         <Draggable id="player-needs" className="phud-needs" style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}>
                                 <div className="needs-box">
-                                    <div className="needs-text-drink">{this.state.drink}%</div>
-                                    <div className="liner-needs-drink">
-                                        <div className="color-liner-drink"
+                                    <div className={this.state.drink <= 20 ? "needs-text-drink-low" : "needs-text-drink"}>{this.state.drink}%</div>
+                                    <div className={this.state.drink <= 20 ? "liner-needs-drink-low" : "liner-needs-drink"}>
+                                        <div className={this.state.drink <= 20 ? "color-liner-drink-low" : "color-liner-drink"}
                                             style={{width: this.state.drink + '%'}}></div>
                                     </div>
-                                    <img src={`https://state-99.com/client/images/icons/hud/drink.svg`} width="10" />
+                                    <img src={`https://state-99.com/client/images/icons/hud/drink.svg`} width="10" style={{filter: this.state.drink <= 20 ? 'invert(57%) sepia(78%) saturate(6251%) hue-rotate(337deg) brightness(133%) contrast(113%)' : 'none'}} />
                                 </div>
                                 <div className="needs-box">
-                                    <div className="needs-text">{this.state.eat}%</div>
-                                    <div className="liner-needs">
-                                        <div className="color-liner"
+                                    <div className={this.state.eat <= 20 ? "needs-text-drink-low" : "needs-text-drink"}>{this.state.eat}%</div>
+                                    <div className={this.state.eat <= 20 ? "liner-needs-drink-low" : "liner-needs-drink"}>
+                                        <div className={this.state.eat <= 20 ? "color-liner-drink-low" : "color-liner-drink"}
                                             style={{width: this.state.eat + '%'}}></div>
                                     </div>
-                                    <img src={`https://state-99.com/client/images/icons/hud/eat.svg`} width="12" />
+                                    <img src={`https://state-99.com/client/images/icons/hud/eat.svg`} style={{filter: this.state.eat <= 20 ? 'invert(57%) sepia(78%) saturate(6251%) hue-rotate(337deg) brightness(133%) contrast(113%)' : 'none'}} width="12" />
                                 </div>
                         </Draggable>
                     </div>

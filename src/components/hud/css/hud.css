@@ -114,6 +114,13 @@
 .liner-needs-drink {
     width: 60%;
     height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+.liner-needs-drink-low {
+    width: 60%;
+    height: 3px;
     background: rgba(255, 79, 79, 0.2);
     border-radius: 2px;
 }
@@ -125,6 +132,12 @@
 }
 
 .color-liner-drink {
+    background: #fff;
+    height: inherit;
+    transition-duration: 0.2s;
+}
+
+.color-liner-drink-low {
     background: #FF4F4F;
     height: inherit;
     transition-duration: 0.2s;
@@ -137,6 +150,12 @@
 }
 
 .needs-text-drink {
+    font-family: "Gotham Pro Medium";
+    font-size: 1rem;
+    color: #fff;
+}
+
+.needs-text-drink-low {
     font-family: "Gotham Pro Medium";
     font-size: 1rem;
     color: #FF4F4F;

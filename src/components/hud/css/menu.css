@@ -6,23 +6,27 @@ ion-icon {
     cursor: pointer;
 }
 
-.menu-box {
+.menu-box-content {
     display: flex;
     flex: 1 1 0%;
     /*background-color: rgb(12, 12, 12);*/
     flex-direction: column;
     opacity: 0.88;
     outline: none;
-    position: absolute;
     width: 473px;
-    right: 40px;
-    top: 130px;
     background: rgba(0, 0, 0, 0.5);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     padding: 2rem;
-    min-height: 568px;
     
+}
+
+.menu-box-footer {
+    background: rgba(0, 0, 0, 0.5);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 1rem;
 }
 
 .logo-info__text-bold {
@@ -34,8 +38,17 @@ ion-icon {
     font-family: 'Century Gothic';
 }
 
-.menu-box div, label {
+.menu-box-content div, label {
     outline: none;
+}
+
+.menu-box {
+    display: flex;
+    position: absolute;
+    min-height: 568px;
+    right: 40px;
+    top: 70px;
+    flex-direction: column;
 }
 
 .checkbox-container {
