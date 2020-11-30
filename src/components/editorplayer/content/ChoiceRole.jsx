@@ -40,16 +40,6 @@ class ChoiceRole extends React.Component {
         return (
             <React.Fragment>
                 <div className="reg-main adaptive-reg">
-                    <div className="bg-left-create">
-                        <span className="title-dednet">Выбери свою роль</span>
-                        <div className="position-bg-bottom">
-                            <div className="create-bg-bottom" id="adaptive-bg-right"></div>
-                        </div>
-                    </div>
-                    <div className="bg-right-create">
-                        <div className="create-logo"></div>
-                        <div className="create-bg-right" id="adaptive-bg-right"></div>
-                    </div>
                     <div className="create-content">
                         <div className="main-box-change">
                             <Role
