@@ -26,7 +26,7 @@ const NavigationPanel = ({ bgcolor, catalog, selected, setHide, setActive, banne
                 ))}
             </div>
             <div className="tatoo__content__exitbtn__container">
-                    <span className="tatoo__content__exitbtn" onClick={setHide}>
+                    <span className="tatoo__content__exitbtn" onClick={setHide} style={{marginBottom: '-22%'}}>
                         Закрыть
                     </span>
             </div>

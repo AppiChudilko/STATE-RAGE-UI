@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/stats.css'
 import FlatButton from '../uikit/FlatButton.jsx'
 
-const StatsPanel = ({ catalog, selected, selectedCatalog, btncolor }) => {
+const StatsPanel = ({ catalog, selected, selectedCatalog, btncolor, img }) => {
 
     return (
         <div className="hmenu__gunshop__stats">
@@ -15,6 +15,9 @@ const StatsPanel = ({ catalog, selected, selectedCatalog, btncolor }) => {
                     </span>
                 </div>
                 <div className="hmenu__gunshop__stats__price">
+                    <div className="hmenu__gunshop__catalog__item__img__container">
+                        <img src={`https://dednet.ru/client/images/items-cl/${catalog[selected].items[selectedCatalog].img}`} className="hmenu__gunshop__catalog__item__img" />
+                    </div>
                     <div className={(catalog[selected].items[selectedCatalog].price !== '' ? 'hmenu__gunshop__stats__price__text' : 'hmenu__gunshop__hide')}>
                         <span className="hmenu__gunshop__stats__price__gtext">
                             Цена

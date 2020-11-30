@@ -9,7 +9,7 @@ export default class GunShop extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: false,
+            show: true,
             selected: 0,
             selectedCatalog: -1,
             banner: 'bs_hair',
