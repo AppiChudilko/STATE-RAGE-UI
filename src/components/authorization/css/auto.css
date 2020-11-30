@@ -473,6 +473,7 @@ input:focus.reg-input-style {
 .chevron-right {
     margin-left: auto;
     margin-right: 23px;
+    padding: 0 2rem 0 2rem;
 }
 
 #tsparticles {
@@ -500,6 +501,7 @@ input:focus.reg-input-style {
 .chevron-left {
     margin-right: auto;
     margin-left: 23px;
+    padding: 0 2rem 0 2rem;
 }
 
 .border-top {
