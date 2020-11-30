@@ -15,7 +15,7 @@ class Inventory extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: false, // Инвентарь открыт/закрыт
+            show: true, // Инвентарь открыт/закрыт
             player_name: "Nika Kondr",
             player_id: 456,
             craft: true,
@@ -2433,55 +2433,53 @@ class Inventory extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="invetory-trunk">
-                            {this.state.secondary_inv_open ?
-                                <div>
-                                    <Droppable className="trunk-info-menu droppable" id="move" that={this}>
-                                        <div className="title-secondary-inv">
-                                            <span className="weight-title-inv">
-                                                ({this.numberToK(this.state.secondary_weight_now)}/{this.numberToK(this.state.secondary_weight_max)})
-                                            </span>
-                                            {this.state.secondary_inv_open && this.state.secondary_items.length > 0 ? <div className="moveall_right" onClick={() => this.moveAllToInventory(true)}></div> : null}
-                                            <div
-                                                className="close-window-craft"
-                                                onClick={() => this.closeSecondaryInventory()}
-                                            >
-                                                <img src={closeIcon} width="40%" className="close-window-craft__img" />
+                        {this.state.secondary_inv_open &&
+                            <div className="invetory-trunk">
+                                    <div>
+                                        <Droppable className="trunk-info-menu droppable" id="move" that={this}>
+                                            <div className="title-secondary-inv">
+                                                <span className="weight-title-inv">
+                                                    ({this.numberToK(this.state.secondary_weight_now)}/{this.numberToK(this.state.secondary_weight_max)})
+                                                </span>
+                                                {this.state.secondary_inv_open && this.state.secondary_items.length > 0 ? <div className="moveall_right" onClick={() => this.moveAllToInventory(true)}></div> : null}
+                                                <div
+                                                    className="close-window-craft"
+                                                    onClick={() => this.closeSecondaryInventory()}
+                                                >
+                                                    <img src={closeIcon} width="40%" className="close-window-craft__img" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="inventory__trunk__list">
-                                        {this.state.secondary_itemsCounted.map((item, i) => {
-                                            const index = `item${i}`
+                                            <div className="inventory__trunk__list">
+                                            {this.state.secondary_itemsCounted.map((item, i) => {
+                                                const index = `item${i}`
 
-                                            const actions = this.getActions(item, 'secondary_inv') ? this.getActions(item, 'secondary_inv').join(' ') : ''
+                                                const actions = this.getActions(item, 'secondary_inv') ? this.getActions(item, 'secondary_inv').join(' ') : ''
 
-                                            return (
-                                                <Draggable that={this} id={index} type={actions} item={item} key={index}>
-                                                    <Droppable className="droppable" id="move" that={this}>
-                                                        <div className="object-box-trunk" key={index} style={this.isCooldownActive(item.item_id) ? {opacity: 0.2} : {opacity:1}}
-                                                            onContextMenu={(e) => this.handlePos(e, item, 'secondary_inv')}>
-                                                                {this.isCooldownActive(item.item_id) ?
-                                                                <div className="linearbar-inv" style={{width: `${this.getItemCooldown(item.item_id) * (100/5)}%`}}></div>
-                                                                : null}
-                                                            <div className={`img-inv-box ${item.icon}`}></div>
-                                                            <div className="obj-inf-box">
-                                                                <span className="obj-inf-title">{item.name}</span>
-                                                                <span className="obj-inf-weight">{item.desc}</span>
+                                                return (
+                                                    <Draggable that={this} id={index} type={actions} item={item} key={index}>
+                                                        <Droppable className="droppable" id="move" that={this}>
+                                                            <div className="object-box-trunk" key={index} style={this.isCooldownActive(item.item_id) ? {opacity: 0.2} : {opacity:1}}
+                                                                onContextMenu={(e) => this.handlePos(e, item, 'secondary_inv')}>
+                                                                    {this.isCooldownActive(item.item_id) ?
+                                                                    <div className="linearbar-inv" style={{width: `${this.getItemCooldown(item.item_id) * (100/5)}%`}}></div>
+                                                                    : null}
+                                                                <div className={`img-inv-box ${item.icon}`}></div>
+                                                                <div className="obj-inf-box">
+                                                                    <span className="obj-inf-title">{item.name}</span>
+                                                                    <span className="obj-inf-weight">{item.desc}</span>
+                                                                </div>
+                                                                {item.count > 1 ?
+                                                                    <div className="obj-inf-count">{item.count}</div> : null}
                                                             </div>
-                                                            {item.count > 1 ?
-                                                                <div className="obj-inf-count">{item.count}</div> : null}
-                                                        </div>
-                                                    </Droppable>
-                                                </Draggable>
-                                            )
-                                        })}
-                                        </div>
-                                    </Droppable>
-                                </div>
-                                : ''
-                            }
-
-                        </div>
+                                                        </Droppable>
+                                                    </Draggable>
+                                                )
+                                            })}
+                                            </div>
+                                        </Droppable>
+                                    </div>
+                            </div>
+                        }
                     </div>
                 </div>
             </React.Fragment>
