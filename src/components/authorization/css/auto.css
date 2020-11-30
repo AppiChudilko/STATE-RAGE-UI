@@ -541,7 +541,7 @@ input:focus.reg-input-style {
 .accinfo__nickname {
     margin-bottom: auto;
     font-family: "Century Gothic";
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: medium;
 }
 

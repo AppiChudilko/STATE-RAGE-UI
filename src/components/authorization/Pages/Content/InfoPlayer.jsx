@@ -40,15 +40,15 @@ class InfoPlayer extends React.Component {
                             </span>
                             <div className="text-box__container">
                                 <div className="text-box">
-                                    <span className="title-info-text">{`Наиграно часов: ${this.props.old}`}</span>
+                                    <span className="title-info-text">{`Наиграно часов: ${this.props.old}ч.`}</span>
                                 </div>
                                 <div className="text-box">
-                                    <span className="title-info-text">{`Общий баланс: ${this.props.money}$`}</span>
+                                    <span className="title-info-text">{`Общий баланс: ${this.props.money}`}</span>
                                 </div>
                                 <div className="text-box">
                                     <span className="chevron-left"
                                         onClick={() => this.props.clickLeftArrow(this.props.index)}></span>
-                                    <span>{`Место респавна: ${this.props.spawn[this.props.index_spawn]}`}</span>
+                                    <span>{`Место спавна: ${this.props.spawn[this.props.index_spawn]}`}</span>
                                     <span className="chevron-right"
                                         onClick={() => this.props.clickRightArrow(this.props.index)}></span>
                                 </div>
