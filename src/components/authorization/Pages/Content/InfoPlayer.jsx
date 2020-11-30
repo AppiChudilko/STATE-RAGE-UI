@@ -40,10 +40,10 @@ class InfoPlayer extends React.Component {
                             </span>
                             <div className="text-box__container">
                                 <div className="text-box">
-                                    <span className="title-info-text">{`Наиграно часов: ${this.props.old}`}</span>
+                                    <span className="title-info-text">{`Наиграно часов: ${this.props.old}ч.`}</span>
                                 </div>
                                 <div className="text-box">
-                                    <span className="title-info-text">{`Общий баланс: ${this.props.money}$`}</span>
+                                    <span className="title-info-text">{`Общий баланс: ${this.props.money}`}</span>
                                 </div>
                                 <div className="text-box">
                                     <span className="chevron-left"
