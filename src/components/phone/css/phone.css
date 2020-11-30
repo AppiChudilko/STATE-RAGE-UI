@@ -12,7 +12,7 @@
     z-index: 1;*/
 
     position: absolute;
-    bottom: 200px;
+    bottom: 120px;
     right: 150px;
     z-index: 1;
 }
@@ -2309,7 +2309,7 @@ BankCard
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-left: 5%;
     width: 100%;
 }
