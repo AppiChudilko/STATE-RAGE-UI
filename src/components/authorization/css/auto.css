@@ -328,13 +328,11 @@ input:focus.reg-input-style {
 }
 
 .create-bg-bottom {
-    background: url(../img/create-bg-left.png) no-repeat;
     width: 460px;
     height: 100%;
 }
 
 .create-bg-right {
-    background: url(../img/create-bg-right.png) no-repeat;
     width: 355px;
     height: 100%;
 }
