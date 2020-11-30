@@ -1,5 +1,6 @@
 import React from 'react'
 import parseText from '../functions/parseText'
+import '../main.css'
 
 const styles = {
     header: {
@@ -51,10 +52,8 @@ export default function Header(props) {
 
     return (
         <div>
-            <div style={{minHeight: props.banner ? '120px' : ''}}>
-                {props.banner && (
-                    <img src={`https://state-99.com/client/images/banners/${props.banner}.png`} style={styles.banner} />
-                )}
+            <div className="mainmenu__header__container" style={{minHeight: props.banner ? '125px' : '', backgroundImage: props.banner ? `url('https://state-99.com/client/images/banners/${props.banner}.png')` : ''}}>
+                <span className="mainmenu__header__title">{props.headerTitle}</span>
             </div>
             <div style={styles.headerDataContainer}>
                 <div style={styles.headerDesc} dangerouslySetInnerHTML={{__html: parseText(props.headerDesc)}} />

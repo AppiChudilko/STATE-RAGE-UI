@@ -10,7 +10,7 @@ class MainMenu extends React.Component {
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.itemRefs = {}
         this.state = {
-            show: false,
+            show: true,
             selected: 0,
             header: true,
             opacity: 0.8,
@@ -24,6 +24,7 @@ class MainMenu extends React.Component {
             },
             headerText: 'Test',
             headerDesc: '~r~HELL~g~O WO~b~RLD',
+            headerTitle: 'Title',
             banner: 'bs_hair',
             menuName: '',
             menuList: [
@@ -545,6 +546,7 @@ class MainMenu extends React.Component {
                             headerData={`${this.state.selected + 1} / ${this.state.menuList.length}`}
                             headerText={this.state.headerText}
                             headerDesc={this.state.headerDesc}
+                            headerTitle={this.state.headerTitle}
                             headerColor={this.state.mStyle.bgColor}
                             headerBorder={this.state.mStyle.borderRadius}
                             headerFont={this.state.mStyle.font}
