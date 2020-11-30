@@ -191,8 +191,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 5rem;
     margin-bottom: 5rem;
+    position: absolute;
+    left: 65%;
+    margin-right: 0 !important;
+    top: 10%;
 }
 
 .auth-input input.auth-input-style {
@@ -408,6 +411,8 @@ input:focus.reg-input-style {
 .change-create-player-create {
     width: 519px;
     height: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 
 .change-create-player-create:not(:nth-child(3n)) {
@@ -428,6 +433,7 @@ input:focus.reg-input-style {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
+    padding-top: 45%;
 }
 
 .text-box__container {
@@ -626,8 +632,10 @@ input:focus.reg-input-style {
 
 .main-box-change-create {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    height: 100%;
+    padding-bottom: 5%;
 }
 
 .createhero__box {
