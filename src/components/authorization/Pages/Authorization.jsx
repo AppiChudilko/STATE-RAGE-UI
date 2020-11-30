@@ -5,6 +5,9 @@ import Title from '../uikit/Title'
 import Particles from 'react-particles-js';
 import authImageBg from '../img/auth.png'
 import regImageBg from '../img/reg.png'
+import IconVolumeOn from '../img/volume_on.svg'
+import IconVolumeOff from '../img/volume_off.svg'
+import music from '../img/music.mp3'
 
 class Authorization extends React.Component {
     constructor(props) {
@@ -12,6 +15,7 @@ class Authorization extends React.Component {
         this.state = {
             showAuto: true,
             acceptRules: false,
+            isMusicPlay: true,
             login: '',
             password: '',
             mailReg: '',
@@ -19,7 +23,7 @@ class Authorization extends React.Component {
             passwordReg: '',
             passwordRegCheck: '',
             pagePlayer: '',
-
+            audioUrl: '',
             modalrules: false,
         }
     };
@@ -44,7 +48,11 @@ class Authorization extends React.Component {
 
             } else return;
         })
+
+        this.audio = new Audio(music)
+        this.audio.load()
     }
+
 
     componentWillUnmount() {
         document.removeEventListener("keydown", this.handleKeyPress);
@@ -108,6 +116,17 @@ class Authorization extends React.Component {
         }
     };
 
+    musicChangeState = () => {
+        this.setState((value) => (
+            {isMusicPlay: !value.isMusicPlay}
+        ))
+        if (this.state.isMusicPlay) {
+            this.audio.play()
+        } else {
+            this.audio.pause()
+        }
+    }
+
     acceptRules = () => {
         this.setState({
             acceptRules: !this.state.acceptRules
@@ -154,10 +173,11 @@ class Authorization extends React.Component {
                     backgroundPositionY: 'bottom',
                     backgroundSize: '50%'*/
                 }}>
-                    <div className="auth__background">
-                        
-                    </div>
+                    <div className="auth__background" />
                     <div className="content-main">
+                        <div className="auth__music" onClick={() => this.musicChangeState()}>
+                            <img src={this.state.isMusicPlay ? IconVolumeOff : IconVolumeOn } width="64" />
+                        </div>
                         <div className="content-auth">
                             <div className="button-main">
                                 <input type="radio" id="btn-radio-auth1" name="btn-radio-auth" defaultChecked="true"

@@ -332,6 +332,12 @@ input:focus.reg-input-style {
     height: 100%;
 }
 
+.auth__music {
+    position: absolute;
+    top: 90%;
+    left: 4rem;
+}
+
 .create-bg-right {
     width: 355px;
     height: 100%;
