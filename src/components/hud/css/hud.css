@@ -10,6 +10,9 @@
     background-repeat: no-repeat;
     background-size: cover;*/
     /* z-index: -1; */
+    background-image: url(https://sun9-54.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70…);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .hud-position-leftop {
     margin-right: auto;
@@ -128,13 +131,13 @@
 }
 
 .needs-text {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     font-size: 1rem;
     color: #fff;
 }
 
 .needs-text-drink {
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     font-size: 1rem;
     color: #FF4F4F;
 }
@@ -181,9 +184,8 @@
 
 .wallet-text {
     font-size: 0.9rem;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     color: #fff;
-    font-weight: medium;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -192,7 +194,7 @@
 
 .credit-text {
     font-size: 0.9rem;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     font-weight: medium;
     color: #fff;
     overflow: hidden;
@@ -574,8 +576,9 @@
 }
 
 .hud__hints {
-    margin-bottom: 50%;
-    margin-left: 8%;
+    position: absolute;
+    left: 4%;
+    bottom: 34%;
     display: flex;
     flex-direction: column;
 }
@@ -601,7 +604,7 @@
 }
 
 .hud__hints__element__text {
-    font-family: 'Century Gothic';
+    font-family: 'Gotham Pro Regular';
     font-size: 1rem;
 }
 
@@ -619,7 +622,7 @@
     align-items: center;
     font-size: 1rem;
     margin-top: -96px;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     color: rgb(255, 255, 255);
     font-weight: medium;
     margin-bottom: auto;
@@ -638,7 +641,7 @@
     align-items: center;
     padding-bottom: 2px;
     font-size: 1rem;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     color: rgb(255, 255, 255);
 }
 
@@ -675,8 +678,7 @@
 .time-box .date {
     margin-top: 3px;
     font-size: 1rem;
-    font-weight: medium;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Medium";
     color: rgb(255, 255, 255);
 }
 
