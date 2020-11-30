@@ -53,7 +53,7 @@ export default function Header(props) {
         <div>
             <div style={{minHeight: props.banner ? '120px' : ''}}>
                 {props.banner && (
-                    <img src={`https://dednet.ru/client/images/banners/${props.banner}.png`} style={styles.banner} />
+                    <img src={`https://state-99.com/client/images/banners/${props.banner}.png`} style={styles.banner} />
                 )}
             </div>
             <div style={styles.headerDataContainer}>
