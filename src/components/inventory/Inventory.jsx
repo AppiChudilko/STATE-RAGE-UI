@@ -15,7 +15,7 @@ class Inventory extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: true, // Инвентарь открыт/закрыт
+            show: false, // Инвентарь открыт/закрыт
             player_name: "Nika Kondr",
             player_id: 456,
             craft: true,
