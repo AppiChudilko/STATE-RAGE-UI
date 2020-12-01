@@ -6,13 +6,6 @@
     height: 100%;
     display: flex;
     position: absolute;
-    /*background-image: url('https://sun9-54.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70986b74dd06036643841aff64b');
-    background-repeat: no-repeat;
-    background-size: cover;*/
-    /* z-index: -1; */
-    background-image: url(https://sun9-54.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70…);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .hud-position-leftop {
     margin-right: auto;
@@ -389,8 +382,9 @@
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    position: absolute;
+    right: 340px;
+    bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -398,6 +392,7 @@
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 25px;
+    z-index: 10;
 }
 
 .backg-speed {
