@@ -557,6 +557,8 @@
 .umenu-family-box::-webkit-scrollbar {
     display: none;
 }
+
+
 .rotate-components .u-menu-l {
     width: 97%;
     margin-left: 6px;
@@ -1033,7 +1035,7 @@ h4 {
     border-radius: 2rem;
     padding-left: 40%;
     position: absolute;
-    margin-bottom: 50px;
+    bottom: 0px;
 }
 
 .m-sqr-bar {
