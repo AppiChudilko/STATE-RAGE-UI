@@ -282,7 +282,7 @@
 }
 
 .characteristic-editor {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     margin-top: 27px;

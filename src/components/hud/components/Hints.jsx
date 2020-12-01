@@ -7,10 +7,11 @@ class Hints extends React.Component {
         this.state = {
             show: false,
             hints: [
-                {key: 'O', text: 'Открыть телефон'},
-                {key: 'i', text: 'Открыть инвентарь'},
+                {key: 'M', text: 'Главное меню'},
+                {key: 'F2', text: 'Курсор'},
+                {key: 'O', text: 'Телефон'},
+                {key: 'i', text: 'Инвентарь'},
                 {key: '~', text: 'Предметы рядом'},
-                {key: 'M', text: 'Главное меню'}
             ]
         }
     }
