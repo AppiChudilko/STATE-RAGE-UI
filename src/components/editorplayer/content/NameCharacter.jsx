@@ -52,9 +52,6 @@ class NameCharacter extends React.Component {
                         <input type="text" placeholder="Промокод" name="lastname-create" pattern="[a-zA-Z]*"
                                className="auth-input-style" value={this.props.promocode}
                                onChange={this.props.valuePromocode.bind(this)}/>
-                        <input type="text" placeholder="Ник пригласившего" name="lastname-create" pattern="[a-zA-Z]*"
-                               className="auth-input-style" value={this.props.referer}
-                               onChange={this.props.valueReferer.bind(this)}/>
                     </div>
                     <div
                         className="box-change box-change__row otstup-box"
