@@ -8,7 +8,7 @@ class Car extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: true,
+            show: false,
             isShowSmall: false,
             light: true,
             door: false,
@@ -46,7 +46,7 @@ class Car extends React.Component {
             } else if (value.type === 'hide') {
                 this.setState({show: false})
             } else if (value.type === 'updateValues') {
-                /*this.setState({show: value.isShow});
+                this.setState({show: value.isShow});
                 this.setState({isShowSmall: value.isShowSmall});
                 this.setState({light: value.light});
                 this.setState({door: value.door});
@@ -56,14 +56,14 @@ class Car extends React.Component {
                 this.setState({max_fuel: value.max_fuel});
                 this.setState({speed: value.speed});
                 this.setState({speedLabel: value.speedLabel});
-                this.setState({background: value.background});*/
+                this.setState({background: value.background});
             }  else if (value.type === 'updateRadarValues') {
-                /*this.setState({showRadar: value.showRadar});
+                this.setState({showRadar: value.showRadar});
                 this.setState({radarRearSpeed: value.radarRearSpeed});
                 this.setState({radarRearSpeedMax: value.radarRearSpeedMax});
                 this.setState({radarFrontSpeed: value.radarFrontSpeed});
                 this.setState({radarFrontSpeedMax: value.radarFrontSpeedMax});
-                this.setState({radarPatrolSpeed: value.radarPatrolSpeed});*/
+                this.setState({radarPatrolSpeed: value.radarPatrolSpeed});
             } else return;
         })
 
