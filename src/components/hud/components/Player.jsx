@@ -8,7 +8,7 @@ class Player extends React.Component {
         super(props)
         this.state = {
             show: true,
-            microphone: true,
+            microphone: false,
             drink: 20,
             eat: 60,
             wallet: "12.400.000$",
@@ -29,7 +29,15 @@ class Player extends React.Component {
             } else if (value.type === 'hide') {
                 this.setState({show: false})
             } else if (value.type === 'updateValues') {
-                //this.setState({microphone: value.microphone});
+                try {
+                    mp.trigger('client:ui:debug', `Старое значение микрофона: ${this.state.microphone.toString()}`); // eslint-disable-line
+                }
+                catch (e) {}
+                this.setState({microphone: value.microphone});
+                try {
+                    mp.trigger('client:ui:debug', `Новое значение микрофона: ${this.state.microphone.toString()}`); // eslint-disable-line
+                }
+                catch (e) {}
                 this.setState({drink: value.drink});
                 this.setState({eat: value.eat});
                 this.setState({wallet: value.wallet});
