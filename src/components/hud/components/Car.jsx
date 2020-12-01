@@ -10,15 +10,15 @@ class Car extends React.Component {
         this.state = {
             show: true,
             isShowSmall: false,
-            light: false,
+            light: true,
             door: false,
             engine: false,
             turnLeft: true,
             fuel: 80,
             fuelType: '%',
             max_fuel: 100,// Максимальная вместимость топливного бака
-            speed: 40,
-            speedLabel: 'MP/H',
+            speed: 0,
+            speedLabel: 'km/h',
             carname: 'Insurgent',
             deg: -45,
             color: '#48B9F2',
@@ -38,7 +38,7 @@ class Car extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({ show: false })
+        this.setState({ show: true })
 
         EventManager.addHandler('hudc', value => {
             if (value.type === 'show') {
@@ -46,7 +46,7 @@ class Car extends React.Component {
             } else if (value.type === 'hide') {
                 this.setState({show: false})
             } else if (value.type === 'updateValues') {
-                this.setState({show: value.isShow});
+                /*this.setState({show: value.isShow});
                 this.setState({isShowSmall: value.isShowSmall});
                 this.setState({light: value.light});
                 this.setState({door: value.door});
@@ -56,14 +56,14 @@ class Car extends React.Component {
                 this.setState({max_fuel: value.max_fuel});
                 this.setState({speed: value.speed});
                 this.setState({speedLabel: value.speedLabel});
-                this.setState({background: value.background});
+                this.setState({background: value.background});*/
             }  else if (value.type === 'updateRadarValues') {
-                this.setState({showRadar: value.showRadar});
+                /*this.setState({showRadar: value.showRadar});
                 this.setState({radarRearSpeed: value.radarRearSpeed});
                 this.setState({radarRearSpeedMax: value.radarRearSpeedMax});
                 this.setState({radarFrontSpeed: value.radarFrontSpeed});
                 this.setState({radarFrontSpeedMax: value.radarFrontSpeedMax});
-                this.setState({radarPatrolSpeed: value.radarPatrolSpeed});
+                this.setState({radarPatrolSpeed: value.radarPatrolSpeed});*/
             } else return;
         })
 

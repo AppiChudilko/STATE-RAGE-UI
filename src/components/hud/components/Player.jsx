@@ -29,7 +29,7 @@ class Player extends React.Component {
             } else if (value.type === 'hide') {
                 this.setState({show: false})
             } else if (value.type === 'updateValues') {
-                this.setState({microphone: value.microphone});
+                //this.setState({microphone: value.microphone});
                 this.setState({drink: value.drink});
                 this.setState({eat: value.eat});
                 this.setState({wallet: value.wallet});
