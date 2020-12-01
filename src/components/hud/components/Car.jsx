@@ -1,6 +1,5 @@
 import React from 'react';
 import EventManager from "../../../EventManager";
-import speedometerBg from '../img/speedometer-bg.svg'
 import Draggable from '../Draggable'
 
 
@@ -217,7 +216,7 @@ class Car extends React.Component {
                 
                 <div className="hud__speedometr"
                     style={{
-                        backgroundImage: this.state.isShowSmall ? 'none' : `url('${speedometerBg}')`,
+                        backgroundImage: this.state.isShowSmall ? 'none' : `url('https://state-99.com/client/images/icons/hud/speedometer-bg.svg')`,
                         backgroundColor: this.state.isShowSmall ? 'none' : 'rgba(0, 0, 0, 0.5)'
                     }}>
                     {!this.state.isShowSmall && (
