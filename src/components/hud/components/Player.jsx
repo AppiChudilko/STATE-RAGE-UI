@@ -8,7 +8,7 @@ class Player extends React.Component {
         super(props)
         this.state = {
             show: true,
-            microphone: false,
+            microphone: true,
             drink: 20,
             eat: 60,
             wallet: "12.400.000$",
