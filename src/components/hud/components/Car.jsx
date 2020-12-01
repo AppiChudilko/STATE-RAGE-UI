@@ -232,8 +232,8 @@ class Car extends React.Component {
                             strokeDashoffset={233 - this.state.speed * 0.6216}
                         />
                     </svg>)}
-                    <span className="hud__speedometr__speed">{this.state.speed}</span>
-                    <span className="hud__speedometr__speed__subtitle">{this.state.speedLabel}</span>
+                    {/*<span className="hud__speedometr__speed">{this.state.speed}</span>
+                    <span className="hud__speedometr__speed__subtitle">{this.state.speedLabel}</span>*/}
                     <img
                         src={this.state.light ? `https://state-99.com/client/images/icons/hud/light_on.svg` : `https://state-99.com/client/images/icons/hud/light_default_on.svg`}
                         className="hud__speedometr__light-on"
@@ -258,7 +258,7 @@ class Car extends React.Component {
                         src={this.state.turnLeft ? `https://state-99.com/client/images/icons/hud/arrow_right_off.svg` : `https://state-99.com/client/images/icons/hud/arrow_right_on.svg`}
                         className="hud__speedometr__arrow-right"
                     />
-                    <div className="hud__speedometr__info">
+                    {/*<div className="hud__speedometr__info">
                         <div className="hud__speedometr__info__row">
                             <img src={this.state.fuelType === '%' ? `https://state-99.com/client/images/icons/hud/power.svg` : `https://state-99.com/client/images/icons/hud/fuel.svg`} className="hud__speedometr__info__fuel" width="14" />
                             <span className="hud__speedometr__info__fuel__text">{`${this.state.fuel}/${this.state.max_fuel}`}</span>
@@ -266,7 +266,7 @@ class Car extends React.Component {
                         <span className="hud__speedometr__info__carname">
                             {this.state.carname}
                         </span>
-                    </div>
+                    </div>*/}
                 </div>
                 
 
