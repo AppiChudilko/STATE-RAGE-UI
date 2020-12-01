@@ -1,10 +1,11 @@
 import React from 'react';
+import EventManager from "../../../EventManager";
 
 class Hints extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: true,
+            show: false,
             hints: [
                 {key: 'O', text: 'Открыть телефон'},
                 {key: 'i', text: 'Открыть инвентарь'},
@@ -12,6 +13,22 @@ class Hints extends React.Component {
                 {key: 'M', text: 'Главное меню'}
             ]
         }
+    }
+
+    componentDidMount() {
+        EventManager.addHandler('hudk', value => {
+            if (value.type === 'show') {
+                this.setState({show: true})
+            } else if (value.type === 'hide') {
+                this.setState({show: false})
+            } else if (value.type === 'updateValues') {
+                this.setState({hints: value.hints});
+            } else return;
+        })
+    }
+
+    componentWillUnmount() {
+        EventManager.removeHandler('hudk');
     }
 
     render() {
