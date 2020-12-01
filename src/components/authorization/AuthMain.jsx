@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import CreatePlayer from './Pages/CreatePlayer';
 import EventManager from "../../EventManager";
 import serverLogo from './img/logo.svg'
+import Car from '../hud/components/Car'
 
 class AuthMain extends React.Component {
     constructor(props) {
@@ -48,6 +49,7 @@ class AuthMain extends React.Component {
                     <Route exact path="/" component={Authorization}/>
                     <Route exact path="/create" component={CreatePlayer}/>
                     <Redirect to={this.state.path} push/>
+                    <Car/>
                 </Router>
             </React.Fragment>
         )
