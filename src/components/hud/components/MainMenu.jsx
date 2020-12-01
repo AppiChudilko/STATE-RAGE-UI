@@ -19,7 +19,7 @@ class MainMenu extends React.Component {
                 fontOffset: 2,
                 borderRadius: 4,
                 bgColor: 'rgb(0,0,0,1)',
-                width: '473px',
+                width: '420px',
                 height: '350px',
             },
             headerText: 'Test',
