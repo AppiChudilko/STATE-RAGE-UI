@@ -967,6 +967,8 @@ h4 {
 
 .mobile-profile .m-email-player {
     font-size: 12px;
+    color: #757575;
+    font-family: 'SF Pro Regular';
     margin-top: 2px;
 }
 
@@ -975,7 +977,8 @@ h4 {
 }
 
 .mobile-profile .m-name-player {
-    font-family: 'RobotoBold';
+    font-family: 'SF Pro Semibold';
+    color: #fff;
 }
 
 .m_keys_bar {
@@ -3014,6 +3017,10 @@ BankCard
 
 .chevron {
     margin-right: 10%;
+}
+
+.umenu-title-family .chevron {
+    color: #757575;
 }
 
 .chevron[data-hidden=true]::before {
