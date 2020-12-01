@@ -29,15 +29,7 @@ class Player extends React.Component {
             } else if (value.type === 'hide') {
                 this.setState({show: false})
             } else if (value.type === 'updateValues') {
-                try {
-                    mp.trigger('client:ui:debug', `Старое значение микрофона: ${this.state.microphone.toString()}`); // eslint-disable-line
-                }
-                catch (e) {}
                 this.setState({microphone: value.microphone});
-                try {
-                    mp.trigger('client:ui:debug', `Новое значение микрофона: ${this.state.microphone.toString()}`); // eslint-disable-line
-                }
-                catch (e) {}
                 this.setState({drink: value.drink});
                 this.setState({eat: value.eat});
                 this.setState({wallet: value.wallet});
