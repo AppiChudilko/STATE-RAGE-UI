@@ -14,7 +14,7 @@ ion-icon {
     opacity: 0.88;
     outline: none;
     width: 473px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     padding: 2rem;
@@ -47,7 +47,7 @@ ion-icon {
     position: absolute;
     min-height: 568px;
     right: 40px;
-    top: 70px;
+    top: 90px;
     flex-direction: column;
 }
 
@@ -109,14 +109,20 @@ ion-icon {
 }
 
 .menu-item {
-
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
     border-radius: 7px;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.7rem;
     border: 0.5px solid rgba(255, 255, 255, 0.25);
+}
+
+.menu-item-inverted {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+    margin-bottom: 0.7rem;
+    border: 0.5px solid transparent;
 }
 
 .list-arrow-icon {
@@ -125,13 +131,6 @@ ion-icon {
     display: flex;
     alignItems: center;
     justify-content: center;
-}
-
-.menu-item-inverted {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 7px;
-    margin-bottom: 1.2rem;
-    border: 0.5px solid transparent;
 }
 
 .menu-item-inverted span {

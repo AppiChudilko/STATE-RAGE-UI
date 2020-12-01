@@ -19,12 +19,11 @@ class MainMenu extends React.Component {
                 fontOffset: 2,
                 borderRadius: 4,
                 bgColor: 'rgb(0,0,0,1)',
-                width: '473px',
+                width: '420px',
                 height: '350px',
             },
             headerText: 'Test',
             headerDesc: '~r~HELL~g~O WO~b~RLD',
-            headerTitle: 'Title',
             banner: 'bs_hair',
             menuName: '',
             menuList: [
@@ -553,7 +552,6 @@ class MainMenu extends React.Component {
                             headerData={`${this.state.selected + 1} / ${this.state.menuList.length}`}
                             headerText={this.state.headerText}
                             headerDesc={this.state.headerDesc}
-                            headerTitle={this.state.headerTitle}
                             headerColor={this.state.mStyle.bgColor}
                             headerBorder={this.state.mStyle.borderRadius}
                             headerFont={this.state.mStyle.font}

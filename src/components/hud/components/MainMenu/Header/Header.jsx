@@ -53,7 +53,7 @@ export default function Header(props) {
     return (
         <div>
             <div className="mainmenu__header__container" style={{minHeight: props.banner ? '125px' : '', backgroundImage: props.banner ? `url('https://state-99.com/client/images/banners/${props.banner}.png')` : ''}}>
-                <span className="mainmenu__header__title">{props.headerTitle}</span>
+                <span className="mainmenu__header__title">{props.headerText}</span>
             </div>
             <div style={styles.headerDataContainer}>
                 <div style={styles.headerDesc} dangerouslySetInnerHTML={{__html: parseText(props.headerDesc)}} />

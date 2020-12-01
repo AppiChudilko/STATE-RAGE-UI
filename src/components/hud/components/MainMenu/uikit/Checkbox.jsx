@@ -5,8 +5,8 @@ import parseText from '../functions/parseText'
 const styles = {
     container: {
         display: 'flex',
-        paddingTop: '0.9rem',
-        paddingBottom: '0.9rem',
+        paddingTop: '0.3rem',
+        paddingBottom: '0.3rem',
         paddingLeft: '0.8rem',
         paddingRight: '0.8rem',
         alignItems: 'center'
