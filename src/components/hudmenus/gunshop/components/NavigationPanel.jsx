@@ -8,7 +8,7 @@ const NavigationPanel = ({ bgcolor, catalog, selected, setHide, setActive, banne
     return (
         <div className="hmenu__gunshop__navpanel">
             <div className="tatoo__content__img__container">
-                <img src={`https://dednet.ru/client/images/banners/${banner}.png`} className="tatoo__content__header__img" />
+                <img src={`https://state-99.com/client/images/banners/${banner}.png`} className="tatoo__content__header__img" />
             </div>
             <div className="hmenu__gunshop__navpanel__list">
                 {catalog.map((item, index) => (

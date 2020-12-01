@@ -6,7 +6,7 @@ const Header = ({ banner, title, bgcolor, setHide }) => {
         <div
             className="carrent__content__header"
         >
-        <img src={`https://dednet.ru/client/images/banners/${banner}.png`} className="carrent__content__header__banner" alt="" />
+        <img src={`https://state-99.com/client/images/banners/${banner}.png`} className="carrent__content__header__banner" alt="" />
         <span className="carrent__content__header__title">
             {title}    
         </span>
