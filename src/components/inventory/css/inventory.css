@@ -149,8 +149,7 @@ body {
     margin-left: 16px;
     height: 41px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -159,13 +158,13 @@ body {
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 .obj-inf-weight {
     font-family: "Gotham Pro Regular";
     color: rgb(255, 255, 255, 0.5);
     font-size: 0.8rem;
-    margin-left: 0.6rem;
 }
 
 .player-title-info {
