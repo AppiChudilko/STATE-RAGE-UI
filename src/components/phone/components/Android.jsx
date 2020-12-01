@@ -71,11 +71,19 @@ class Android extends React.Component {
                         hidden: false,
                         umenu: [
                             {
+                                title: "С картинкой",
+                                text: "И описанием",
+                                type: 0,
+                                value: 'https://dednet.ru/client/images/cars/Elegy_1.png',
+                                clickable: false,
+                                params: { name: "null" }
+                            },
+                            {
                                 title: "Итем по умолчанию",
                                 text: "",
                                 type: 1,
                                 clickable: false,
-                                params: { name: "null", skip: true }
+                                params: { name: "null" }
                             },
                             {
                                 title: "Checkbox",
@@ -83,7 +91,7 @@ class Android extends React.Component {
                                 value: true,
                                 type: 2,
                                 clickable: false,
-                                params: { name: "null", skip: true }
+                                params: { name: "null"}
                             },
                             /*{
                                 title: "Button",
@@ -100,7 +108,7 @@ class Android extends React.Component {
                                 online: true,
                                 type: 4,
                                 clickable: false,
-                                params: { name: "null", skip: true }
+                                params: { name: "null" }
                             },
                             {
                                 title: "Radio Input",
@@ -109,14 +117,14 @@ class Android extends React.Component {
                                 scrollbar: [{title: 'Name1', params: { name: 'memberNewRank'}}, {title: 'Name2', params: { name: 'memberNewRank'}}, {title: 'Name3', params: { name: 'memberNewRank'}}],
                                 type: 5,
                                 clickable: false,
-                                params: { name: "null", skip: true }
+                                params: { name: "null" }
                             },
                             {
                                 title: "Картинка",
                                 value: "https://i.imgur.com/v4aju8F.jpg",
                                 type: 6,
                                 clickable: false,
-                                params: { name: "null", skip: true }
+                                params: { name: "null" }
                             },
                             {
                                 title: "Модальное окно",
@@ -124,7 +132,7 @@ class Android extends React.Component {
                                 modalButton: ['Отмена', 'Создать'],
                                 type: 7,
                                 clickable: true,
-                                params: { name: "null", skip: true }
+                                params: { name: "null"}
                             },
                             {
                                 title: 'Окно ввода текста',
