@@ -18,6 +18,27 @@
     display: flex;
 }
 
+.radialmenu__slice__title {
+    font-family: 'Gotham Pro Medium';
+    font-size: 1.2rem;
+}
+
+.radialmenu__center__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.radialmenu__container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .hud-position-leftbottom {
     margin-right: auto;
     margin-top: auto;

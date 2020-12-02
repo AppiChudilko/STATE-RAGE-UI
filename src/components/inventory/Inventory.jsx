@@ -82,7 +82,7 @@ class Inventory extends React.Component {
             ],
 
             items: [ // Инвентарь
-                { id: 1, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
+                { id: 1, item_id: 14, name: "Бургер", volume: 15, desc: "Редкость: мистическая", counti: 0, params: {} }, // айди предмета из базы
                 { id: 2, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
                 { id: 3, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
                 { id: 4, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
