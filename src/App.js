@@ -18,7 +18,6 @@ import ModalInput from './components/modalinput/ModalInput';
 import Notification from './components/notification/Notification';
 import CarShop from './components/carshop/CarShop';
 import Quickmenu from './components/quickmenu/Quickmenu';
-import CircleMenu from './components/circlemenu/CircleMenu';
 import Monopoly from './components/games/monopoly/Monopoly'
 import AccountMenu from './components/accountmenu/AccountMenu'
 import GunShop from './components/hudmenus/gunshop/GunShop';
@@ -26,17 +25,18 @@ import CarRent from './components/hudmenus/carrent/CarRent';
 import Dialog from './components/hudmenus/dialog/Dialog';
 import Tatoo from './components/hudmenus/tatoo/Tatoo';
 import GovMenu from './components/govmenu/GovMenu';
+import CircularMenu from './components/radialmenu/PrefenceSelector.component';
 
 function App() {
   return (
     <React.Fragment>
-      <EditorMain />      
-      <CircleMenu />
+      <EditorMain />
       <Walkietalkie />
       <div className="box" id="box">        
         <AuthMain />
         <Inventory />
         <Phone />
+        <CircularMenu />
         <AccountMenu />
         <GunShop />
         <CarRent />
