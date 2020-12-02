@@ -433,9 +433,8 @@
 
 .hud__speedometr__speed {
     position: absolute;
-    font-family: 'Century Gothic';
+    font-family: 'Gotham Pro Medium';
     font-size: 2rem;
-    margin-bottom: 8px;
     font-weight: medium;
 }
 
@@ -508,7 +507,7 @@
     font-family: 'Century Gothic';
     font-size: 0.7rem;
     font-weight: lighter;
-    margin-top: 40px;
+    top: 126px;
     text-transform: lowercase;
 }
 
