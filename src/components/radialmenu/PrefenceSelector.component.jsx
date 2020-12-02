@@ -368,11 +368,11 @@ export default class extends React.Component {
   }
 
   goBack = () => {
-    this.setState({ choice: 'init' })
+    this.setState({ choice: this.findParent(this.state.choice) || 'init' })
   }
 
   getItemsById = (array, value) => {
-    if (this.state.choice !== 'init') {
+    /*if (this.state.choice !== 'init') {
       let result = null
 
       if (array.items) {
@@ -385,17 +385,36 @@ export default class extends React.Component {
       return result
     } else {
       return this.state.choiceData.find(x => x.id === value)
-    }
+    }*/
   }
 
   radialSelectiItem = (value) => {
-    if (this.getItemsById(this.state.choiceData.find(x => x.id === this.state.choice), value)) {
-      this.setState({ choice: value })
+    if (value.items) {
+      this.setState({ choice: value.id })
       /*this.setState((state) => (
         {history: state.history.push(value)}
       ))*/
     }
-    console.log('you clicked: ' + value)
+    console.log('you clicked: ' + value.id)
+  }
+
+  
+
+  findParent = (value) => {
+    let parent = ''
+    let result
+
+    for (let i = 0; i < this.state.choiceData.length; i++) {
+      let el = this.state.choiceData[i]
+      parent = el.id
+      if (el.items) {
+        result = el.items.find(x => x.id === value)
+        if (result) {
+          //console.log(this.state.choiceData.find(x => x.id === parent).items.find(x => x.id === this.state.choice).items)
+          return parent
+        }
+      }
+    }
   }
 
   render() {
@@ -420,6 +439,7 @@ export default class extends React.Component {
       return null
     }
 
+
     return (
       <div className="radialmenu__container">
         <ThemeProvider theme={theme}>
@@ -427,7 +447,7 @@ export default class extends React.Component {
             {this.state.choice === 'init' ? (
               <React.Fragment>
                 {this.state.choiceData.map((item, index) => (
-                  <Slice onSelect={() => this.radialSelectiItem(item.id)}>
+                  <Slice onSelect={() => this.radialSelectiItem(item)}>
                     <div key={`radialmenu__slice-${index}`}>
                       {item.icon && <img src={IconClose} width="32px" />}
                       <p className="radialmenu__slice__title">
@@ -439,16 +459,30 @@ export default class extends React.Component {
               </React.Fragment>
             ) : (
               <React.Fragment>
-                {this.state.choiceData.find(x => x.id === this.state.choice).items.map((item, index) => (
-                  <Slice onSelect={() => this.radialSelectiItem(item.id)}>
-                    <div key={`radialmenu__slice-${index}`}>
-                      {item.icon && <img src={IconClose} width="32px" />}
-                      <p className="radialmenu__slice__title">
-                        {item.title}
-                      </p>
-                    </div>
-                  </Slice>
-                ))}
+                {this.state.choiceData.find(x => x.id === this.state.choice) ? (
+                  this.state.choiceData.find(x => x.id === this.state.choice).items.map((item, index) => (
+                    <Slice onSelect={() => this.radialSelectiItem(item)}>
+                      <div key={`radialmenu__slice-${item.id}`}>
+                        {item.icon && <img src={IconClose} width="32px" />}
+                        <p className="radialmenu__slice__title">
+                          {item.title}
+                        </p>
+                      </div>
+                    </Slice>
+                  ))
+                  ) : (
+                    this.state.choiceData.find(x => x.id === this.findParent(this.state.choice)).items.find(x => x.id === this.state.choice).items.map((item, index) => (
+                      <Slice onSelect={() => this.radialSelectiItem(item)}>
+                        <div key={`radialmenu__slice-${item.id}`}>
+                          {item.icon && <img src={IconClose} width="32px" />}
+                          <p className="radialmenu__slice__title">
+                            {item.title}
+                          </p>
+                        </div>
+                      </Slice>
+                    ))
+                  )
+                }
               </React.Fragment>
             )}
           </PieMenu>
