@@ -441,39 +441,46 @@
 
 .hud__speedometr__light-on {
     position: absolute;
-    margin-bottom: 78px;
-    margin-right: 34px;
+    top: 64px;
+    left: 80px;
 }
 
 .hud__speedometr__light-off {
     position: absolute;
-    margin-bottom: 78px;
-    margin-left: 34px;
+    top: 64px;
+    left: 120px;
 }
 
 .hud__speedometr__door-off {
     position: absolute;
-    margin-left: 87px;
-    margin-bottom: 8px;
+    top: 100px;
+    left: 144px;
 }
 
 .hud__speedometr__door-on {
     position: absolute;
-    margin-right: 87px;
-    margin-bottom: 8px;
+    top: 100px;
+    left: 64px;
+}
+
+
+.hud__speedometr__arrow-right {
+    position: absolute;
+    bottom: 74px;
+    left: 136px;
 }
 
 .hud__speedometr__arrow-left {
     position: absolute;
-    margin-right: 75px;
-    margin-top: 60px;
+    bottom: 74px;
+    left: 76px;
 }
 
 .hud__speedometr__info {
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin-top: 110px;
+    top: 160px;
     align-items: center;
 }
 
@@ -496,13 +503,6 @@
     font-size: 0.86rem;
 }
 
-
-.hud__speedometr__arrow-right {
-    position: absolute;
-    margin-left: 75px;
-    margin-top: 60px;
-}
-
 .hud__speedometr__speed__subtitle {
     position: absolute;
     font-family: 'Century Gothic';
@@ -513,7 +513,7 @@
 }
 
 .svg-speedometer {
-    display: flex;
+    display: block;
     width: 100px;
     height: 100px;
     transform: scale(2.35) rotate(40deg);

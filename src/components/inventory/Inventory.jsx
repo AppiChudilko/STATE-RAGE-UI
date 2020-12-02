@@ -19,7 +19,7 @@ class Inventory extends React.Component {
             player_name: "Nika Kondr",
             player_id: 456,
             craft: true,
-            secondary_inv_open: true, // Багажник открыт/закрыт
+            secondary_inv_open: false, // Багажник открыт/закрыт
             crafting_succes: false,
             x: '',
             y: '',
@@ -2401,7 +2401,6 @@ class Inventory extends React.Component {
                                             </Droppable>
                                             <div className="weapon-craft-box">
                                                 <div className="box-img-equip-weapon">
-                                                    <span className="box-img-equip-weapon__name">{this.state.selected_weapon_name}</span>
                                                     <span className="box-img-equip-weapon__hint">Дополнительные обвесы</span>
                                                 </div>
                                                 <div className="main-box-craft-weapon">

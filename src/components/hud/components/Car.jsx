@@ -15,11 +15,11 @@ class Car extends React.Component {
             engine: false,
             turnLeft: true,
             fuel: 80,
-            fuelType: '%',
+            fuelType: 'L',
             max_fuel: 100,// Максимальная вместимость топливного бака
             speed: 0,
             speedLabel: 'km/h',
-            carname: 'Insurgent',
+            carname: '',
             deg: -45,
             color: '#48B9F2',
             background: 0.5,
@@ -38,7 +38,7 @@ class Car extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({ show: true })
+        this.setState({ show: false })
 
         EventManager.addHandler('hudc', value => {
             if (value.type === 'show') {
@@ -57,6 +57,7 @@ class Car extends React.Component {
                 this.setState({speed: value.speed});
                 this.setState({speedLabel: value.speedLabel});
                 this.setState({background: value.background});
+                this.setState({carname: value.carname});
             }  else if (value.type === 'updateRadarValues') {
                 this.setState({showRadar: value.showRadar});
                 this.setState({radarRearSpeed: value.radarRearSpeed});
@@ -143,77 +144,6 @@ class Car extends React.Component {
         }
         return (
             <React.Fragment>
-                <Draggable id="car-radar" className={this.state.showRadar ? '' : 'hide'}>
-                    <div className="primary">
-                        <table className="front">
-                            <tr>
-                                <td>
-                                    <ul className="lamps">
-                                        <li id="front-same">Same</li>
-                                        <li id="front-opp">Opp</li>
-                                        <li id="front-xmit">XMit</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <span className="label">Front</span>
-                                    <div className="display orange">
-                                        <span id="front-speed">{this.state.radarFrontSpeed}</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span className="label dim">Fast</span>
-                                    <div className="display red">
-                                        <span id="front-fast">{this.state.radarFrontSpeedMax}</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div className="arrows">
-                                        <span className="arrow up" id="front-fwd">&#129053;</span>
-                                        <span className="arrow down" id="front-bwd">&#129055;</span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table className="rear">
-                            <tr>
-                                <td>
-                                    <ul className="lamps">
-                                        <li id="rear-same">Same</li>
-                                        <li id="rear-opp">Opp</li>
-                                        <li id="rear-xmit">XMit</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div className="display orange">
-                                        <span id="rear-speed">{this.state.radarRearSpeed}</span>
-                                    </div>
-                                    <span className="label">Rear</span>
-                                </td>
-                                <td>
-                                    <div className="display red">
-                                        <span id="rear-fast">{this.state.radarRearSpeedMax}</span>
-                                    </div>
-                                    <span className="label dim">Fast</span>
-                                </td>
-                                <td>
-                                    <div className="arrows">
-                                        <span className="arrow up" id="rear-fwd">&#129053;</span>
-                                        <span className="arrow down" id="rear-bwd">&#129055;</span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div className="patrol">
-                        <span className="label logo">RS 9000</span>
-                        <div className="display green">
-                            <span id="patrol-speed">{this.state.radarPatrolSpeed}</span>
-                        </div>
-                        <span className="label">Patrol Speed</span>
-                    </div>
-                </Draggable>
-                
                 <div className="hud__speedometr"
                     style={{
                         backgroundImage: this.state.isShowSmall ? 'none' : `url('https://state-99.com/client/images/icons/hud/speedometer-bg.svg')`,
@@ -232,8 +162,8 @@ class Car extends React.Component {
                             strokeDashoffset={233 - this.state.speed * 0.6216}
                         />
                     </svg>)}
-                    {/*<span className="hud__speedometr__speed">{this.state.speed}</span>
-                    <span className="hud__speedometr__speed__subtitle">{this.state.speedLabel}</span>*/}
+                    <span className="hud__speedometr__speed">{this.state.speed}</span>
+                    <span className="hud__speedometr__speed__subtitle">{this.state.speedLabel}</span>
                     <img
                         src={this.state.light ? `https://state-99.com/client/images/icons/hud/light_on.svg` : `https://state-99.com/client/images/icons/hud/light_default_on.svg`}
                         className="hud__speedometr__light-on"
@@ -258,7 +188,7 @@ class Car extends React.Component {
                         src={this.state.turnLeft ? `https://state-99.com/client/images/icons/hud/arrow_right_off.svg` : `https://state-99.com/client/images/icons/hud/arrow_right_on.svg`}
                         className="hud__speedometr__arrow-right"
                     />
-                    {/*<div className="hud__speedometr__info">
+                    <div className="hud__speedometr__info">
                         <div className="hud__speedometr__info__row">
                             <img src={this.state.fuelType === '%' ? `https://state-99.com/client/images/icons/hud/power.svg` : `https://state-99.com/client/images/icons/hud/fuel.svg`} className="hud__speedometr__info__fuel" width="14" />
                             <span className="hud__speedometr__info__fuel__text">{`${this.state.fuel}/${this.state.max_fuel}`}</span>
@@ -266,7 +196,7 @@ class Car extends React.Component {
                         <span className="hud__speedometr__info__carname">
                             {this.state.carname}
                         </span>
-                    </div>*/}
+                    </div>
                 </div>
                 
 

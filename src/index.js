@@ -26,19 +26,19 @@ Noty.setMaxVisible(3);
 function notify(type, layout, message, time, theme) {
     let types = ['information', 'error', 'success'];
     let layouts = ['top', 'topLeft', 'topCenter', 'topRight', 'center', 'centerLeft', 'centerRight', 'bottom', 'bottomLeft', 'bottomCenter', 'bottomRight'];
-    let notifyText
+    let notifyText = 'Информация!';
     switch (theme) {
         case 'error':
-            notifyText = 'Ошибка!'
+            notifyText = 'Ошибка!';
             break;
         case 'warning':
-            notifyText = 'Предупреждение!'
+            notifyText = 'Предупреждение!';
             break;
         case 'info':
-            notifyText = 'Информация!'
+            notifyText = 'Информация!';
             break;
         case 'success':
-            notifyText = 'Успешно!'
+            notifyText = 'Успешно!';
             break;
         default:
             break;
