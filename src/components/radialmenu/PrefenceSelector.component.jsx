@@ -34,7 +34,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false,
+      show: true,
       choice: 'init',
       currentData: {},
       history: ['init'],
@@ -82,7 +82,7 @@ export default class extends React.Component {
                         {
                             id   : 'takeGun',
                             icon: 'close',
-                            title: 'Изъять оружие'
+                            title: 'Изъять оружие',
                         },
                         {
                             id   : 'takeMask',
@@ -343,6 +343,12 @@ export default class extends React.Component {
     };
   }
 
+  componentWillMount() {
+    this.setState({
+      currentData: this.state.choiceData
+    })
+  }
+
   showPayments = () => {
     this.setState({ choice: PAYMENT });
   }
@@ -368,10 +374,16 @@ export default class extends React.Component {
   }
 
   goBack = () => {
+    console.log('1')
     this.setState({ choice: this.findParent(this.state.choice) || 'init' })
+    const current = this.getItemsById('anim')
+    console.log(current)
+    this.setState({
+      currentData: current
+    })
   }
 
-  getItemsById = (array, value) => {
+  getItemsById = (value) => {
     /*if (this.state.choice !== 'init') {
       let result = null
 
@@ -386,14 +398,45 @@ export default class extends React.Component {
     } else {
       return this.state.choiceData.find(x => x.id === value)
     }*/
+    let parent = ''
+    let result
+
+    for (let i = 0; i < this.state.choiceData.length; i++) {
+      let el = this.state.choiceData[i]
+      parent = el.id
+      if (el.items) {
+        result = el.items.find(x => x.id === value)
+        if (result) {
+          return result.items
+          
+        }
+      } 
+      if (el.id === value) {
+        return el.items
+      }
+    }
   }
 
   radialSelectiItem = (value) => {
     if (value.items) {
       this.setState({ choice: value.id })
+      this.setState({ currentData: this.state.choiceData.find(x => x.id === value.id).items })
       /*this.setState((state) => (
         {history: state.history.push(value)}
       ))*/
+    }
+    console.log('you clicked: ' + value.id)
+  }
+
+  radialSelectiItemNew = (value) => {
+    if (value.items) {
+      this.setState({
+        choice: value.id
+      })
+      const current = this.getItemsById(value.id)
+      this.setState({
+        currentData: current
+      })
     }
     console.log('you clicked: ' + value.id)
   }
@@ -459,30 +502,16 @@ export default class extends React.Component {
               </React.Fragment>
             ) : (
               <React.Fragment>
-                {this.state.choiceData.find(x => x.id === this.state.choice) ? (
-                  this.state.choiceData.find(x => x.id === this.state.choice).items.map((item, index) => (
-                    <Slice onSelect={() => this.radialSelectiItem(item)}>
-                      <div key={`radialmenu__slice-${item.id}`}>
-                        {item.icon && <img src={IconClose} width="32px" />}
-                        <p className="radialmenu__slice__title">
-                          {item.title}
-                        </p>
-                      </div>
-                    </Slice>
-                  ))
-                  ) : (
-                    this.state.choiceData.find(x => x.id === this.findParent(this.state.choice)).items.find(x => x.id === this.state.choice).items.map((item, index) => (
-                      <Slice onSelect={() => this.radialSelectiItem(item)}>
-                        <div key={`radialmenu__slice-${item.id}`}>
-                          {item.icon && <img src={IconClose} width="32px" />}
-                          <p className="radialmenu__slice__title">
-                            {item.title}
-                          </p>
-                        </div>
-                      </Slice>
-                    ))
-                  )
-                }
+                {this.state.currentData.map((item, index) => (
+                  <Slice onSelect={() => this.radialSelectiItemNew(item)}>
+                    <div key={`radialmenu__slice-${item.id}`}>
+                      {item.icon && <img src={IconClose} width="32px" />}
+                      <p className="radialmenu__slice__title">
+                        {item.title}
+                      </p>
+                    </div>
+                  </Slice>
+                ))}
               </React.Fragment>
             )}
           </PieMenu>
