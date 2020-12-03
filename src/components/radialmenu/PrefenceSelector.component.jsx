@@ -25,10 +25,11 @@ export default class extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: true,
+            show: false,
             choice: 'init',
             currentData: {},
             hoverBackground: '#2962FFD0',
+            centerBackground: '#2962FF',
             history: ['init'],
             choiceData: [
                 {
@@ -342,8 +343,10 @@ export default class extends React.Component {
             } else if (value.type === 'hide') {
                 this.setState({show: false})
             } else if (value.type === 'updateData') {
-                this.setState({choiceData: value.choiceData})
-                this.setState({currentData: value.choiceData})
+                this.setState({
+                    choiceData: value.choiceData,
+                    currentData: value.choiceData
+                })
             } else return;
         })
     }
@@ -356,41 +359,41 @@ export default class extends React.Component {
         this.setState({
             currentData: this.state.choiceData
         })
-    };
+    }
 
     showPayments = () => {
         this.setState({ choice: PAYMENT });
-    };
+    }
 
     selectPayment = paymentOption => () => {
         this.setState({ paymentOption });
-    };
+    }
 
     showGenders = () => {
         this.setState({ choice: GENDERS });
-    };
+    }
 
     selectGender = gender => () => {
         this.setState({ gender });
-    };
+    }
 
     showLocations = () => {
         this.setState({ choice: LOCATIONS });
-    };
+    }
 
     selectLocation = location => () => {
         this.setState({ location });
-    };
+    }
 
     goBack = () => {
         console.log('1')
-        this.setState({ choice: this.findParent(this.state.choice) || 'init' });
-        const current = this.getItemsById('anim');
-        console.log(current);
+        this.setState({ choice: this.findParent(this.state.choice) || 'init' })
+        const current = this.getItemsById('anim')
+        console.log(current)
         this.setState({
             currentData: current
         })
-    };
+    }
 
     getItemsById = (value) => {
         /*if (this.state.choice !== 'init') {
@@ -424,7 +427,7 @@ export default class extends React.Component {
                 return el.items
             }
         }
-    };
+    }
 
     radialSelectiItem = (value) => {
         if (value.items) {
@@ -435,7 +438,7 @@ export default class extends React.Component {
             ))*/
         }
         console.log('you clicked: ' + value.id)
-    };
+    }
 
     radialSelectiItemNew = (value) => {
         if (value.items) {
@@ -471,7 +474,7 @@ export default class extends React.Component {
                 }
             }
         }
-    };
+    }
 
     
 
@@ -488,10 +491,22 @@ export default class extends React.Component {
       }
     `;
 
+    const center = css`
+      background: #2962FF;
+      &:not(:empty):hover {
+        cursor: pointer;
+      }
+      > svg {
+        position: relative;
+        top: calc(50% - 15px);
+        left: calc(50% - 15px);
+      }
+    `;
+
     const theme = {
         pieMenu: {
             container: styles.container,
-            center: styles.center,
+            center: center,
         },
         slice: {
             container: slice,
