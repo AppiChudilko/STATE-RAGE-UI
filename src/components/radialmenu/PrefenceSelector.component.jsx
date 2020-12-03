@@ -29,6 +29,7 @@ export default class extends React.Component {
             choice: 'init',
             currentData: {},
             hoverBackground: '#2962FFD0',
+            centerBackground: '#2962FF',
             history: ['init'],
             choiceData: [
                 {
@@ -488,10 +489,22 @@ export default class extends React.Component {
       }
     `;
 
+    const center = css`
+      background: #2962FF;
+      &:not(:empty):hover {
+        cursor: pointer;
+      }
+      > svg {
+        position: relative;
+        top: calc(50% - 15px);
+        left: calc(50% - 15px);
+      }
+    `;
+
     const theme = {
         pieMenu: {
             container: styles.container,
-            center: styles.center,
+            center: center,
         },
         slice: {
             container: slice,
