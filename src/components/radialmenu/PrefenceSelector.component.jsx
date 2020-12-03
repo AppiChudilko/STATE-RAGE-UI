@@ -2,6 +2,7 @@
 import React from 'react';
 import PieMenu, { PieCenter, Slice } from 'react-pie-menu';
 import { ThemeProvider } from 'styled-components';
+import { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faMoneyBillAlt,
@@ -12,18 +13,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import * as styles from './PreferenceSelector.style';
+import IconClose from './icons/close.svg'
 import EventManager from "../../EventManager";
-
-
-const theme = {
-    pieMenu: {
-        container: styles.container,
-        center: styles.center,
-    },
-    slice: {
-        container: styles.slice,
-    },
-};
 
 const INITIAL = 0;
 const PAYMENT = 1;
@@ -34,9 +25,10 @@ export default class extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: false,
+            show: true,
             choice: 'init',
             currentData: {},
+            hoverBackground: '#2962FFD0',
             history: ['init'],
             choiceData: [
                 {
@@ -350,10 +342,8 @@ export default class extends React.Component {
             } else if (value.type === 'hide') {
                 this.setState({show: false})
             } else if (value.type === 'updateData') {
-                this.setState({
-                    choiceData: value.choiceData,
-                    currentData: value.choiceData
-                })
+                this.setState({choiceData: value.choiceData})
+                this.setState({currentData: value.choiceData})
             } else return;
         })
     }
@@ -366,41 +356,41 @@ export default class extends React.Component {
         this.setState({
             currentData: this.state.choiceData
         })
-    }
+    };
 
     showPayments = () => {
         this.setState({ choice: PAYMENT });
-    }
+    };
 
     selectPayment = paymentOption => () => {
         this.setState({ paymentOption });
-    }
+    };
 
     showGenders = () => {
         this.setState({ choice: GENDERS });
-    }
+    };
 
     selectGender = gender => () => {
         this.setState({ gender });
-    }
+    };
 
     showLocations = () => {
         this.setState({ choice: LOCATIONS });
-    }
+    };
 
     selectLocation = location => () => {
         this.setState({ location });
-    }
+    };
 
     goBack = () => {
         console.log('1')
-        this.setState({ choice: this.findParent(this.state.choice) || 'init' })
-        const current = this.getItemsById('anim')
-        console.log(current)
+        this.setState({ choice: this.findParent(this.state.choice) || 'init' });
+        const current = this.getItemsById('anim');
+        console.log(current);
         this.setState({
             currentData: current
         })
-    }
+    };
 
     getItemsById = (value) => {
         /*if (this.state.choice !== 'init') {
@@ -434,7 +424,7 @@ export default class extends React.Component {
                 return el.items
             }
         }
-    }
+    };
 
     radialSelectiItem = (value) => {
         if (value.items) {
@@ -445,7 +435,7 @@ export default class extends React.Component {
             ))*/
         }
         console.log('you clicked: ' + value.id)
-    }
+    };
 
     radialSelectiItemNew = (value) => {
         if (value.items) {
@@ -458,14 +448,13 @@ export default class extends React.Component {
             })
         }
         console.log('you clicked: ' + value.id)
-    }
+    };
 
     closeMenu = () => {
-        this.setState({
-            show: false
-        })
+      this.setState({
+        show: false
+      })
     }
-
 
     findParent = (value) => {
         let parent = ''
@@ -482,65 +471,89 @@ export default class extends React.Component {
                 }
             }
         }
-    }
+    };
 
-    render() {
-        const Center = props => (
-            <React.Fragment>
-                {this.state.choice !== 'init' && (
-                    <PieCenter {...props} onClick={this.goBack}>
-                        <FontAwesomeIcon icon={faArrowLeft} size="2x" />
-                    </PieCenter>
-                )}
-                {this.state.choice === 'init' && (
-                    <PieCenter {...props} onClick={() => this.closeMenu()}>
-                        <div className="radialmenu__center__container">
-                            <FontAwesomeIcon icon={faTimes} size="2x" />
-                        </div>
-                    </PieCenter>
-                )}
-            </React.Fragment>
-        );
+    
+
+  render() {
+
+    const slice = css`
+      cursor: pointer;
+      color: grey;
+      background: rgba(0, 0, 0, 0.5);
+      &:hover {
+        color: white;
+        background: ${this.state.hoverBackground};
+        transition: 0.1s;
+      }
+    `;
+
+    const theme = {
+        pieMenu: {
+            container: styles.container,
+            center: styles.center,
+        },
+        slice: {
+            container: slice,
+        },
+    };
+
+    const Center = props => (
+      <React.Fragment>
+        {this.state.choice !== 'init' && (
+          <PieCenter {...props} onClick={this.goBack}>
+            <FontAwesomeIcon icon={faArrowLeft} size="2x" />
+          </PieCenter>
+        )}
+        {this.state.choice === 'init' && (
+          <PieCenter {...props} onClick={() => this.closeMenu()}>
+            <div className="radialmenu__center__container">
+              <FontAwesomeIcon icon={faTimes} size="2x" />
+            </div>
+          </PieCenter>
+        )}
+      </React.Fragment>
+    );
 
         if (!this.state.show) {
             return null
         }
 
 
-        return (
-            <div className="radialmenu__container">
-                <ThemeProvider theme={theme}>
-                    <PieMenu radius="340px" centerRadius="60px" Center={Center}>
-                        {this.state.choice === 'init' ? (
-                            <React.Fragment>
-                                {this.state.choiceData.map((item, index) => (
-                                    <Slice onSelect={() => this.radialSelectiItem(item)}>
-                                        <div key={`radialmenu__slice-${index}`}>
-                                            {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
-                                            <p className="radialmenu__slice__title">
-                                                {item.title}
-                                            </p>
-                                        </div>
-                                    </Slice>
-                                ))}
-                            </React.Fragment>
-                        ) : (
-                            <React.Fragment>
-                                {this.state.currentData.map((item, index) => (
-                                    <Slice onSelect={() => this.radialSelectiItemNew(item)}>
-                                        <div key={`radialmenu__slice-${item.id}`}>
-                                            {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
-                                            <p className="radialmenu__slice__title">
-                                                {item.title}
-                                            </p>
-                                        </div>
-                                    </Slice>
-                                ))}
-                            </React.Fragment>
-                        )}
-                    </PieMenu>
-                </ThemeProvider>
-            </div>
-        );
-    }
+    return (
+      <div className="radialmenu__container">
+        <ThemeProvider theme={theme}>
+          <PieMenu radius="340px" centerRadius="60px" Center={Center}>
+            {this.state.choice === 'init' ? (
+              <React.Fragment>
+                {this.state.choiceData.map((item, index) => (
+                  <Slice onSelect={() => this.radialSelectiItem(item)}>
+                    <div key={`radialmenu__slice-${index}`}>
+                      {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
+                      <p className="radialmenu__slice__title">
+                        {item.title}
+                      </p>
+                    </div>
+                  </Slice>
+                ))}
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                {this.state.currentData.map((item, index) => (
+                  <Slice onSelect={() => this.radialSelectiItemNew(item)}>
+                    <div key={`radialmenu__slice-${item.id}`}>
+                      {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
+                      <p className="radialmenu__slice__title">
+                        {item.title}
+                      </p>
+                    </div>
+                  </Slice>
+                ))}
+              </React.Fragment>
+            )}
+          </PieMenu>
+        </ThemeProvider>
+      </div>
+    );
+  }
 }
