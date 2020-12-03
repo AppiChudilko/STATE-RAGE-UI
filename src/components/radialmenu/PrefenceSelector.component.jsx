@@ -452,9 +452,9 @@ export default class extends React.Component {
     };
 
     closeMenu = () => {
-      this.setState({
-        show: false
-      })
+        this.setState({
+            show: false
+        })
     }
 
     findParent = (value) => {
@@ -474,11 +474,11 @@ export default class extends React.Component {
         }
     };
 
-    
 
-  render() {
 
-    const slice = css`
+    render() {
+
+        const slice = css`
       cursor: pointer;
       color: grey;
       background: rgba(0, 0, 0, 0.5);
@@ -489,7 +489,7 @@ export default class extends React.Component {
       }
     `;
 
-    const center = css`
+        const center = css`
       background: #2962FF;
       &:not(:empty):hover {
         cursor: pointer;
@@ -501,72 +501,72 @@ export default class extends React.Component {
       }
     `;
 
-    const theme = {
-        pieMenu: {
-            container: styles.container,
-            center: center,
-        },
-        slice: {
-            container: slice,
-        },
-    };
+        const theme = {
+            pieMenu: {
+                container: styles.container,
+                center: center,
+            },
+            slice: {
+                container: slice,
+            },
+        };
 
-    const Center = props => (
-      <React.Fragment>
-        {this.state.choice !== 'init' && (
-          <PieCenter {...props} onClick={this.goBack}>
-            <FontAwesomeIcon icon={faArrowLeft} size="2x" />
-          </PieCenter>
-        )}
-        {this.state.choice === 'init' && (
-          <PieCenter {...props} onClick={() => this.closeMenu()}>
-            <div className="radialmenu__center__container">
-              <FontAwesomeIcon icon={faTimes} size="2x" />
-            </div>
-          </PieCenter>
-        )}
-      </React.Fragment>
-    );
+        const Center = props => (
+            <React.Fragment>
+                {this.state.choice !== 'init' && (
+                    <PieCenter {...props} onClick={this.goBack}>
+                        <FontAwesomeIcon icon={faArrowLeft} size="2x" />
+                    </PieCenter>
+                )}
+                {this.state.choice === 'init' && (
+                    <PieCenter {...props} onClick={() => this.closeMenu()}>
+                        <div className="radialmenu__center__container">
+                            <FontAwesomeIcon icon={faTimes} size="2x" />
+                        </div>
+                    </PieCenter>
+                )}
+            </React.Fragment>
+        );
 
         if (!this.state.show) {
             return null
         }
 
 
-    return (
-      <div className="radialmenu__container">
-        <ThemeProvider theme={theme}>
-          <PieMenu radius="340px" centerRadius="60px" Center={Center}>
-            {this.state.choice === 'init' ? (
-              <React.Fragment>
-                {this.state.choiceData.map((item, index) => (
-                  <Slice onSelect={() => this.radialSelectiItem(item)}>
-                    <div key={`radialmenu__slice-${index}`}>
-                      {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
-                      <p className="radialmenu__slice__title">
-                        {item.title}
-                      </p>
-                    </div>
-                  </Slice>
-                ))}
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
-                {this.state.currentData.map((item, index) => (
-                  <Slice onSelect={() => this.radialSelectiItemNew(item)}>
-                    <div key={`radialmenu__slice-${item.id}`}>
-                      {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
-                      <p className="radialmenu__slice__title">
-                        {item.title}
-                      </p>
-                    </div>
-                  </Slice>
-                ))}
-              </React.Fragment>
-            )}
-          </PieMenu>
-        </ThemeProvider>
-      </div>
-    );
-  }
+        return (
+            <div className="radialmenu__container">
+                <ThemeProvider theme={theme}>
+                    <PieMenu radius="340px" centerRadius="60px" Center={Center}>
+                        {this.state.choice === 'init' ? (
+                            <React.Fragment>
+                                {this.state.choiceData.map((item, index) => (
+                                    <Slice onSelect={() => this.radialSelectiItem(item)}>
+                                        <div key={`radialmenu__slice-${index}`}>
+                                            {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
+                                            <p className="radialmenu__slice__title">
+                                                {item.title}
+                                            </p>
+                                        </div>
+                                    </Slice>
+                                ))}
+                            </React.Fragment>
+                        ) : (
+                            <React.Fragment>
+                                {this.state.currentData.map((item, index) => (
+                                    <Slice onSelect={() => this.radialSelectiItemNew(item)}>
+                                        <div key={`radialmenu__slice-${item.id}`}>
+                                            {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
+                                            <p className="radialmenu__slice__title">
+                                                {item.title}
+                                            </p>
+                                        </div>
+                                    </Slice>
+                                ))}
+                            </React.Fragment>
+                        )}
+                    </PieMenu>
+                </ThemeProvider>
+            </div>
+        );
+    }
 }
