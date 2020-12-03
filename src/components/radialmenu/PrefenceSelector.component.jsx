@@ -12,7 +12,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import * as styles from './PreferenceSelector.style';
-import IconClose from './icons/close.svg'
 
 
 const theme = {
@@ -34,7 +33,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: true,
+      show: false,
       choice: 'init',
       currentData: {},
       history: ['init'],
@@ -441,6 +440,11 @@ export default class extends React.Component {
     console.log('you clicked: ' + value.id)
   }
 
+  closeMenu = () => {
+    this.setState({
+      show: false
+    })
+  }
   
 
   findParent = (value) => {
@@ -469,7 +473,7 @@ export default class extends React.Component {
           </PieCenter>
         )}
         {this.state.choice === 'init' && (
-          <PieCenter {...props} onClick={() => this.setState({ show: false })}>
+          <PieCenter {...props} onClick={() => this.closeMenu()}>
             <div className="radialmenu__center__container">
               <FontAwesomeIcon icon={faTimes} size="2x" />
             </div>
@@ -492,7 +496,7 @@ export default class extends React.Component {
                 {this.state.choiceData.map((item, index) => (
                   <Slice onSelect={() => this.radialSelectiItem(item)}>
                     <div key={`radialmenu__slice-${index}`}>
-                      {item.icon && <img src={IconClose} width="32px" />}
+                      {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
                       <p className="radialmenu__slice__title">
                         {item.title}
                       </p>
@@ -505,7 +509,7 @@ export default class extends React.Component {
                 {this.state.currentData.map((item, index) => (
                   <Slice onSelect={() => this.radialSelectiItemNew(item)}>
                     <div key={`radialmenu__slice-${item.id}`}>
-                      {item.icon && <img src={IconClose} width="32px" />}
+                      {item.icon && <img src={`https://state-99.com/client/images/icons/radial/${item.icon}.png`} width="32px" />}
                       <p className="radialmenu__slice__title">
                         {item.title}
                       </p>
