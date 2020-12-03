@@ -345,6 +345,9 @@ export default class extends React.Component {
             } else if (value.type === 'updateData') {
                 this.setState({choiceData: value.choiceData})
                 this.setState({currentData: value.choiceData})
+            }else if (value.type === 'updateColorData') {
+                this.setState({hoverBackground: value.hoverBackground})
+                this.setState({centerBackground: value.centerBackground})
             } else return;
         })
     }
