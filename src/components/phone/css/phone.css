@@ -361,6 +361,18 @@
     /*filter: invert(100%);*/
 }
 
+.icons-family {
+    background: url(../img/android/icons/families.png) no-repeat center;
+    background-size: cover;
+    /*filter: invert(100%);*/
+}
+
+.icons-browser {
+    background: url(../img/android/icons/safari.png) no-repeat center;
+    background-size: cover;
+    /*filter: invert(100%);*/
+}
+
 .icons-gov {
     background: url(../img/android/icons/gov.png) no-repeat center;
     background-size: cover;
