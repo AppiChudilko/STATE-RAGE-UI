@@ -7,7 +7,7 @@ import Icon from '../../hud/components/MainMenu/uikit/Icon'
 const AboutDonate = ( props ) => {
     return (
         <div className="accountmenu__donation__about">
-            <div className="govmenu__propertygov__imgheader" style={{backgroundImage: `url('https://dednet.ru/client/images/mmenu/yacht.jpg')`}} />
+            <div className="govmenu__propertygov__imgheader" style={{backgroundImage: `url('https://state-99.com/client/images/mmenu/yacht.jpg')`}} />
             <div className="govmenu__worker__info about__donation">
                 <span className="accountmenu__content__cards__questinfo__header__name">
                     {`Пополнить валюту`}

@@ -9,7 +9,7 @@ import MdCash from 'react-ionicons/lib/MdCash'
 import Alert from '../../alert/Alert'
 
 const PropertyCar = (props) => {
-    // <img className="govmenu__licensegov__propertycar__img" src={`https://dednet.ru/client/images/cars/${props.name}_1.jpg`} />
+    // <img className="govmenu__licensegov__propertycar__img" src={`https://state-99.com/client/images/cars/${props.name}_1.jpg`} />
 
     const { id, setAlert, type, name, vin, def, fuel, carclass, mark, number, price, tax, balance, maxbalance } = props
     
@@ -30,7 +30,7 @@ const PropertyCar = (props) => {
                         </span>
                         <div className="accountmenu__content__cards__house__hprice__sell" style={{marginTop: 0, paddingTop: '1%', paddingBottom: '2%'}}>
                                 <div className="accountmenu__content__cards__house__hprice__sell__linebtn">
-                                    <img src={'https://dednet.ru/client/images/mmenu/all/icons/money-bag.svg'} className="accountmenu__content__cards__house__hprice__sell__icon" />
+                                    <img src={'https://state-99.com/client/images/mmenu/all/icons/money-bag.svg'} className="accountmenu__content__cards__house__hprice__sell__icon" />
                                     <span className="accountmenu__content__cards__house__hprice__sell__text">{`$ ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`}</span>
                                 </div>
                         </div>
@@ -48,7 +48,7 @@ const PropertyCar = (props) => {
                             </span>
                         </span>
                     </div>
-                    <img src={`https://dednet.ru/client/images/cars/${id}_1.jpg`} className="govmenu__propertygov__info__img" />
+                    <img src={`https://state-99.com/client/images/cars/${id}_1.jpg`} className="govmenu__propertygov__info__img" />
                     <span data-hidden={isHidden} className="chevron left" style={{marginRight: 0}}></span>
                 </div>
                 {!isHidden && (

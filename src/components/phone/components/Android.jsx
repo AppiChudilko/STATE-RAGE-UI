@@ -28,7 +28,7 @@ class Android extends React.Component {
             path: '/phone/android/defaultpage',
             history: ['/phone/android/defaultpage'],
             rotate: false,
-            bg_img_url: 'https://i.imgur.com/v4aju8F.jpg',
+            bg_img_url: 'https://i.imgur.com/8lOLNXr.jpg',
             bg_color: '',
             top_bar: {
                 time: '00:00', // Сервер должен регулировать время на телефоне/обновлять раз в минуту (скорее всего)
@@ -74,7 +74,7 @@ class Android extends React.Component {
                                 title: "С картинкой",
                                 text: "И описанием",
                                 type: 0,
-                                value: 'https://dednet.ru/client/images/cars/Elegy_1.png',
+                                value: 'https://state-99.com/client/images/cars/Elegy_1.png',
                                 clickable: false,
                                 params: { name: "null" }
                             },

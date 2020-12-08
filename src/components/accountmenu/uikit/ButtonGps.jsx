@@ -13,7 +13,7 @@ const ButtonGps = ({ filled, position, x, y }) => {
                 catch (e) {}
             }}
         >
-            <img src={'https://dednet.ru/client/images/mmenu/all/icons/location.svg'} className="accountmenu__cards__btngps__icon" alt="" />
+            <img src={'https://state-99.com/client/images/mmenu/all/icons/location.svg'} className="accountmenu__cards__btngps__icon" alt="" />
             <span className="accountmenu__cards__btngps__text">
                 Найти по GPS
             </span>

@@ -198,7 +198,7 @@ const Information = ({  }) => {
                     {
                         info[active].img ?
                             null :
-                            <img src={'https://dednet.ru/client/images/mmenu/all/quest-bg.png'} className="accountmenu__content__cards__questinfo__img__container" alt="" />
+                            <img src={'https://state-99.com/client/images/mmenu/all/quest-bg.png'} className="accountmenu__content__cards__questinfo__img__container" alt="" />
                     }
                     {info[active].id === 'info' ? (
                         <React.Fragment>

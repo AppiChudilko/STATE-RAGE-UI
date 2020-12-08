@@ -8,7 +8,7 @@ const Question = ({ active, index, text, setActive }) => {
             className={active === index ? "accountmenu__cards__question__active" : "accountmenu__cards__question"}
         >
             <div className="accountmenu__cards__question__icon__container">
-                <img src={'https://dednet.ru/client/images/mmenu/all/icons/help.svg'} className="accountmenu__cards__question__icon" />
+                <img src={'https://state-99.com/client/images/mmenu/all/icons/help.svg'} className="accountmenu__cards__question__icon" />
             </div>
             <span className="accountmenu__cards__question__text">
                 {text}

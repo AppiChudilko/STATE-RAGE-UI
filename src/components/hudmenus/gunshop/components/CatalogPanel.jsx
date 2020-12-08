@@ -25,7 +25,7 @@ const CatalogPanel = ({ catalog, selected, selectedCatalog, setActiveCatalog }) 
                         )}
                     </div>
                     <div className="hmenu__gunshop__catalog__item__img__container">
-                        <img src={`https://dednet.ru/client/images/items-cl/${item.img}`} className="hmenu__gunshop__catalog__item__img" />
+                        <img src={`https://state-99.com/client/images/items-cl/${item.img}`} className="hmenu__gunshop__catalog__item__img" />
                     </div>
                     <div className="hmenu__gunshop__catalog__item__info">
                        <span className="hmenu__gunshop__catalog__item__price">

@@ -51,7 +51,7 @@ const General = ({ listElements, accountData, setActivePage }) => {
         <React.Fragment>
             <div className="accountmenu__content__cards__item accountmenu__scrollable">
                 <div className="accountmenu__cards__nickname">
-                    <img className="accountmenu__cards__avatar" src="https://dednet.ru/client/images/mmenu/all/person.png" alt="" />
+                    <img className="accountmenu__cards__avatar" src="https://state-99.com/client/images/mmenu/all/person.png" alt="" />
                     <div className="wrapper__progress">
                         <span className="accountmenu__cards__nickname__text" style={{fontSize: `2.6rem`}}>
                             {accountData.nickname}

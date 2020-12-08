@@ -95,7 +95,7 @@ const LicenseGov = ({ licIndex }) => {
             </div>
             <div className="accountmenu__content__cards__blitem accountmenu__scrollable">
                 <div className="accountmenu__content__cards__questinfo__container">
-                    <img src={'https://dednet.ru/client/images/mmenu/all/quest-bg.png'} className="accountmenu__content__cards__questinfo__img__container" alt="" />
+                    <img src={'https://state-99.com/client/images/mmenu/all/quest-bg.png'} className="accountmenu__content__cards__questinfo__img__container" alt="" />
                     <div className="accountmenu__content__cards__questinfo__header">
                         <span className="accountmenu__content__cards__questinfo__header__name">
                             {licenses[active].title}

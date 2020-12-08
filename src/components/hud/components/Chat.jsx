@@ -334,8 +334,8 @@ class Chat extends React.Component {
             chat.container = $("#chat ul#chat_messages");
 
             $(".ui_element").show();
-            chatAPI.push("Добро пожаловать на DEDNET 💀");
-            chatAPI.push("Желаем приятной игры ;]");
+            chatAPI.push("Добро пожаловать на STATE-99 🌎");
+            chatAPI.push("Желаем приятной игры 🧡");
 
             $("body").keydown(function (event) {
                 if (event.which == 84 && chat.input == null

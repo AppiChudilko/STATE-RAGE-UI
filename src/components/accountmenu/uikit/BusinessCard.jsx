@@ -8,7 +8,7 @@ const BusinessCard = ({ type, name, price, address, doors, title, x, y, img }) =
             <div className="accountmenu__content__cards__business__img__container" style={{backgroundImage: `url(${img})`}}>
                 <div className={type === 0 ? "accountmenu__content__cards__business__img__bg" : "accountmenu__content__cards__business__img__bg_btype"}>
                     <img 
-                        src={type === 0 ? "https://dednet.ru/client/images/mmenu/all/icons/company.svg" : "https://dednet.ru/client/images/mmenu/all/icons/briefcase.svg"}
+                        src={type === 0 ? "https://state-99.com/client/images/mmenu/all/icons/company.svg" : "https://state-99.com/client/images/mmenu/all/icons/briefcase.svg"}
                         className="accountmenu__content__cards__business__img"
                     />
                 </div>

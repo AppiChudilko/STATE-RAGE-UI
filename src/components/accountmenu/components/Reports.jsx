@@ -78,7 +78,7 @@ const Reports = ({ data, initValue }) => {
                     <div className="accountmenu__content__reports__dialog__header">
                         <div className="accountmenu__content__reports__dialog__header__data">
                             <img
-                                src={reportData.type === 0 ? 'https://dednet.ru/client/images/mmenu/all/icons/question_cloud.svg' : 'https://dednet.ru/client/images/mmenu/all/icons/report_icon.png'}
+                                src={reportData.type === 0 ? 'https://state-99.com/client/images/mmenu/all/icons/question_cloud.svg' : 'https://state-99.com/client/images/mmenu/all/icons/report_icon.png'}
                                 alt=""
                                 className={reportData.type === 0 ? "accountmenu__content__reports__list__header__icon_ask" : "accountmenu__content__reports__list__header__icon_report"}    
                             />
@@ -88,11 +88,11 @@ const Reports = ({ data, initValue }) => {
                         </div>
                         <div className="accountmenu__content__reports__dialog__header__buttons">
                             <div className="accountmenu__content__reports__dialog__header__btn">
-                                <img src={'https://dednet.ru/client/images/mmenu/all/icons/lock.svg'} className="accountmenu__content__reports__dialog__header__icon" />
+                                <img src={'https://state-99.com/client/images/mmenu/all/icons/lock.svg'} className="accountmenu__content__reports__dialog__header__icon" />
                                 <span className="accountmenu__content__reports__dialog__header__btn__text">закрыть тему</span>
                             </div>
                             <div className="accountmenu__content__reports__dialog__header__btn">
-                                <img src={'https://dednet.ru/client/images/mmenu/all/icons/delete.svg'} className="accountmenu__content__reports__dialog__header__icon" />
+                                <img src={'https://state-99.com/client/images/mmenu/all/icons/delete.svg'} className="accountmenu__content__reports__dialog__header__icon" />
                                 <span className="accountmenu__content__reports__dialog__header__btn__text">удалить</span>
                             </div>
                         </div>

@@ -47,7 +47,7 @@ const Property = ({ house, business, cars }) => {
                             </span>
                             <div className="accountmenu__content__cards__house__hprice__sell">
                                 <div className="accountmenu__content__cards__house__hprice__sell__linebtn">
-                                    <img src={'https://dednet.ru/client/images/mmenu/all/icons/money-bag.svg'} className="accountmenu__content__cards__house__hprice__sell__icon" />
+                                    <img src={'https://state-99.com/client/images/mmenu/all/icons/money-bag.svg'} className="accountmenu__content__cards__house__hprice__sell__icon" />
                                     <span className="accountmenu__content__cards__house__hprice__sell__text">{`$ ${house.gprice.replace(/\B(?=(\d{3})+(?!\d))/g, " ")}`}</span>
                                 </div>
                             </div>

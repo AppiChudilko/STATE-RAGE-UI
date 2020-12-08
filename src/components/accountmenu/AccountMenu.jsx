@@ -66,7 +66,7 @@ class AccountMenu extends React.Component {
                     price: '1250000',
                     address: 'Саут-Рокфорд-драйв,  д. 0112, кв.13',
                     doors: 'Закрыты',
-                    img: 'https://dednet.ru/client/images/mmenu/stock.jpg'
+                    img: 'https://state-99.com/client/images/mmenu/stock.jpg'
                 },
                 {
                     type: 0,
@@ -74,7 +74,7 @@ class AccountMenu extends React.Component {
                     price: '1777000',
                     address: 'Саут-Рокфорд-драйв,  д. 0112, кв.14',
                     doors: 'Открыты',
-                    img: 'https://dednet.ru/client/images/mmenu/office.jpg'
+                    img: 'https://state-99.com/client/images/mmenu/office.jpg'
                 },
                 {
                     type: 0,
@@ -82,7 +82,7 @@ class AccountMenu extends React.Component {
                     price: '1777000',
                     address: 'Саут-Рокфорд-драйв,  д. 0112, кв.14',
                     doors: 'Открыты',
-                    img: 'https://dednet.ru/client/images/mmenu/condo.jpg'
+                    img: 'https://state-99.com/client/images/mmenu/condo.jpg'
                 },
                 {
                     type: 0,
@@ -90,7 +90,7 @@ class AccountMenu extends React.Component {
                     price: '1777000',
                     address: 'Саут-Рокфорд-драйв,  д. 0112, кв.14',
                     doors: 'Открыты',
-                    img: 'https://dednet.ru/client/images/mmenu/office.jpg'
+                    img: 'https://state-99.com/client/images/mmenu/office.jpg'
                 },
                 {
                     type: 0,
@@ -98,7 +98,7 @@ class AccountMenu extends React.Component {
                     price: '1777000',
                     address: 'Саут-Рокфорд-драйв,  д. 0112, кв.14',
                     doors: 'Открыты',
-                    img: 'https://dednet.ru/client/images/mmenu/yacht.jpg'
+                    img: 'https://state-99.com/client/images/mmenu/yacht.jpg'
                 }*/
             ],
             propertyCars: [
