@@ -19,7 +19,7 @@ const Header = ({ nick, accountId, donateBalance, setHide }) => {
             <div className="accountmenu__topdata__donate">
                 {accountId && (
                     <span className="accountmenu__topdata__donate__btn">
-                        {`Баланс:        ${donateBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} $`}
+                        {`Баланс: $${donateBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
                     </span>
                 )}
                 <span onClick={setHide} className="accountmenu__topdata__donate__btn">

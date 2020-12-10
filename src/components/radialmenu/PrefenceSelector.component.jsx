@@ -25,11 +25,11 @@ export default class extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: true,
+            show: false,
             choice: 'init',
             currentData: {},
-            hoverBackground: '#2962FFD0',
-            centerBackground: '#2962FF',
+            hoverBackground: '#FFC107D0',
+            centerBackground: '#FFC107',
             history: ['init'],
             choiceData: [
                 {

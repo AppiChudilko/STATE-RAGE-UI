@@ -10,7 +10,7 @@ const StatContainer = ({  title, value, maxvalue }) => {
                 value={value}
                 maxvalue={maxvalue}
             />
-            <span className="accountmenu__cards__stats__value">{value}</span>
+            <span className="accountmenu__cards__stats__value">{value}%</span>
         </div>
     )
 }
