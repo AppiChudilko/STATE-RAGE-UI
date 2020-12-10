@@ -2,8 +2,10 @@
     display: flex;
     height: 100%;
     width: 66%;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 0.4rem;
+    background: rgba(0, 0, 0, 0.35);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 15px;
     flex-direction: column;
 }
 
@@ -15,22 +17,23 @@
     margin-top: 5%;
 }
 
+.accountmenu__cards__question__container {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
 .accountmenu__content__cards__settings__header__type {
-    font-family: 'RobotoBold';
-    color: #43b2ea;
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;
-    font-size: 1.3rem;
-    margin-bottom: 3%;
+    font-family: 'Gotham Pro Medium';
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 2%;
 }
 
 .accountmenu__content__cards__settings__header__name {
-    font-family: 'RobotoBold';
+    font-family: 'Gotham Pro Regular';
     color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 1.3rem;
-    margin-bottom: 3%;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
 }
 
 .accountmenu__content__cards__settings__list {
@@ -39,49 +42,48 @@
 }
 
 .accountmenu__content__cards__settings__list__item {
-    font-family: 'RobotoLight';
-    color: #d2d2d2;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.7rem;
+    font-family: 'Gotham Pro Regular';
+    color: #fff;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-top: 1rem;
     font-size: 1.2rem;
-    padding-bottom: 0.7rem;
-    background-color: rgba(136, 136, 136, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 1rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+    border-radius: 7px;
     cursor: pointer;
 }
 
 .accountmenu__content__cards__settings__list__item_selected {
-    font-family: 'RobotoLight';
-    color: #d2d2d2;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.7rem;
+    font-family: 'Gotham Pro Regular';
+    color: #fff;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-top: 1rem;
     font-size: 1.2rem;
-    padding-bottom: 0.7rem;
-    background-color: rgba(136, 136, 136, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+    border-radius: 7px;
     cursor: pointer;
 }
 
 .accountmenu__content__cards__settings__bcontainer__name {
-    font-family: 'RobotoBold';
-    font-size: 2rem;
-    letter-spacing: 0.12rem;
-    text-transform: uppercase;
+    font-family: 'Gotham Pro Medium';
+    font-size: 1.6rem;
 }
 
 .accountmenu__content__cards__settings__bcontainer__desc {
-    font-family: 'Roboto';
-    font-size: 1.0rem;
-    color: #c2c2c2;
-    letter-spacing: 0.12rem;
+    font-family: 'Gotham Pro Regular';
+    font-size: 1.1rem;
+    color: #fff;
     margin-top: 10px;
-    text-transform: uppercase;
 }
 
 .accountmenu__content__cards__setting__item {
@@ -92,48 +94,64 @@
     margin-bottom: 2%;
 }
 
+.accountmenu__content__cards__setting__checkbox__btn:first-child {
+    margin-right: 1rem;
+}
+
+.accountmenu__content__cards__setting__checkbox__btn_off:first-child {
+    margin-right: 1rem;
+}
+
+.accountmenu__content__cards__setting__checkbox__btn_on:first-child {
+    margin-right: 1rem;
+}
+
 .accountmenu__content__cards__setting__checkbox__btn {
-    background: rgba(255, 255, 255, 0.16);
+    background: linear-gradient(95.53deg, rgba(255, 255, 255, 0.53) -207.08%, rgba(255, 255, 255, 0) 122.75%);
+    border: 0.5px solid rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+    border-radius: 7px;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    font-family: 'Roboto';
+    font-family: 'Gotham Pro Regular';
     font-size: 1.2rem;
-    text-transform: uppercase;
     cursor: pointer;
 }
 
 .accountmenu__content__cards__setting__checkbox__btn_on {
-    background: #50bc90;
+    background: linear-gradient(95.53deg, #00D277 -207.08%, rgba(1, 214, 122, 0) 122.75%);
+    border: 0.5px solid #00D879;
+    box-sizing: border-box;
+    border-radius: 7px;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin-right: 8%;
-    font-family: 'Roboto';
+    font-family: 'Gotham Pro Regular';
     font-size: 1.2rem;
-    text-transform: uppercase;
     cursor: pointer;
 }
 
 .accountmenu__content__cards__setting__checkbox__btn_off {
-    background: #bc505d;
-    margin-left: 8%;
+    background: linear-gradient(95.53deg, #FF6969 -207.08%, #FF6969 -207.05%, rgba(255, 112, 112, 0) 122.75%);
+    border: 0.5px solid #FF9191;
+    box-sizing: border-box;
+    border-radius: 7px;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    font-family: 'Roboto';
+    font-family: 'Gotham Pro Regular';
     font-size: 1.2rem;
-    text-transform: uppercase;
     cursor: pointer;
 }
 
 .accountmenu__content__cards__setting__name {
-    font-family: 'Roboto';
-    font-size: 1.4rem;
-    letter-spacing: 0.12rem;
+    font-family: 'Gotham Pro Regular';
+    font-size: 1.2rem;
 }
 .accountmenu__content__cards__setting__desc {
     font-family: 'Roboto';
@@ -142,8 +160,9 @@
 }
 
 .accountmenu__content__cards__setting__listmenu__name {
-    font-family: 'Roboto';
+    font-family: 'Gotham Pro Regular';
     font-size: 1.2rem;
+    padding: 0 0.4rem 0 0.4rem;
 }
 
 .accountmenu__content__cards__setting__listmenu {

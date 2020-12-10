@@ -1,32 +1,27 @@
 .accountmenu__content__reports__container {
-    padding-left: 3.5rem;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
 .accountmenu__content__cards__reports__header {
-    font-family: 'RobotoBold';
-    font-size: 2.5rem;
-    text-transform: uppercase;
+    font-family: 'Gotham Pro Medium';
+    font-size: 1.6rem;
 }
 
 .accountmenu__content__cards__item__list__reports {
-    margin-top: 10%;
+    margin-top: 8%;
+    padding-left: 3.5rem;
 }
 
 .accountmenu__content__cards__item__list__reports__name {
-    color: #43b2ea;
-    font-family: 'RobotoBold';
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Gotham Pro Medium';
     font-size: 1.2rem;
 }
 
 .accountmenu__content__cards__item__list__reports__name_red {
-    color: #bc505d;
-    font-family: 'RobotoBold';
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Gotham Pro Medium';
     font-size: 1.2rem;
 }
 
@@ -46,7 +41,7 @@
 .accountmenu__content__reports__list {
     margin-top: 5%;
     overflow-y: auto;
-    height: 20vh;
+    height: 20%;
     padding-right: 3.5rem;
 }
 
@@ -63,10 +58,9 @@
  }
 
  .accountmenu__content__reports__list__header__num {
-     font-family: 'RobotoLight';
-     color: #9c9c9c;
-     letter-spacing: 0.1rem;
-     text-transform: uppercase;
+     font-family: 'Gotham Pro Regular';
+     color: rgba(255, 255, 255, 0.5);
+     font-size: 0.9rem;
  }
  
  .accountmenu__content__reports__item__list__header {
@@ -75,33 +69,45 @@
      align-items: center;
  }
  .accountmenu__content__reports__list__header__status_new {
-    background-color: #50bc90;
+    color: #50bc90;
     margin-left: auto;
-    font-family: 'RobotoBold';
+    font-family: 'Gotham Pro Medium';
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
+    font-size: 0.9rem;
  }
 
  .accountmenu__content__reports__list__header__status_clsd {
-     background-color: #bc505d;
-     margin-left: auto;
-     font-family: 'RobotoBold';
-     padding-left: 0.8rem;
-     padding-right: 0.8rem;
-     padding-top: 0.2rem;
-     padding-bottom: 0.2rem;
+    color: #EE8585;
+    margin-left: auto;
+    font-family: 'Gotham Pro Medium';
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: 0.9rem;
  }
 
  .accountmenu__content__reports__item__list__content__text {
-     font-family: 'RobotoLight';
+     font-family: 'Gotham Pro Regular';
      font-size: 1.1rem;
  }
 
  .accountmenu__content__reports__item__list__content {
      margin-top: 5%;
      margin-bottom: 5%;
+     display: flex;
+     flex-direction: row;
+ }
+
+ .accountmenu__content__cards__container__help {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 4rem;
  }
 
  .accountmenu__content__reports__item__list__footer {
@@ -119,18 +125,24 @@
  }
 
  .accountmenu__content__reports__item__list__open {
-     font-family: 'RobotoLight';
-     letter-spacing: 0.15rem;
-     text-transform: uppercase;
-     cursor: pointer;
-     color: #d2d2d2;
+     font-family: 'Gotham Pro Regular';
+     color: #fff;
+     background: linear-gradient(95.53deg, rgba(255, 255, 255, 0.5) -207.08%, rgba(255, 255, 255, 0) 122.75%);
+    border: 0.5px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 7px;
+    padding: 1.2rem 2rem 1.2rem 2rem;
+ }
+
+ .accountmenu__content__reports__item__list__open:hover {
+    background: linear-gradient(95.53deg, #0086D2 -207.08%, rgba(1, 150, 214, 0) 122.75%);
+    border: 0.5px solid #00B1D8;
  }
 
  .accountmenu__content__reports__list__header__icon_ask {
      width: 3vh;
      height: auto;
      margin-right: 4%;
-     filter: invert(61%) sepia(98%) saturate(1093%) hue-rotate(170deg) brightness(94%) contrast(94%);
  }
 
  .accountmenu__content__reports__list__header__icon_report {
@@ -181,13 +193,11 @@
 }
 
 .accountmenu__content__reports__dialog__header__num {
-    color: #9c9c9c;
-    font-family: 'RobotoLight';
-    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Gotham Pro Regular';
     white-space: nowrap;
     margin-left: 15%;
     margin-right: 15%;
-    letter-spacing: 0.1rem;
 }
 
 .accountmenu__content__reports__dialog__header__time {
@@ -315,15 +325,16 @@
  }
 
  .accountmenu__content__reports__dialog__input {
-     height: 10vh;
+     height: 14vh;
      margin-top: 2%;
      margin-bottom: 2%;
      padding-left: 1rem;
      padding-right: 1rem;
      padding-top: 0.7rem;
      padding-bottom: 0.7rem;
-     background-color: rgba(136, 136, 136, 0.05);
-     border: 1px solid rgba(255, 255, 255, 0.05);
+     border: 0.5px solid rgba(255, 255, 255, 0.25);
+     box-sizing: border-box;
+     border-radius: 7px;
      display: flex;
      flex-direction: row;
      align-items: center;
@@ -331,7 +342,12 @@
  }
 
  .accountmenu__report__input {
-     color: #ededed;
+     color: #fff;
+     font-family: 'Gotham Pro Regular';
      font-size: 1.2rem;
      width: 100%;
+ }
+
+ .accountmenu__report__input::placeholder {
+     color: #fff;
  }

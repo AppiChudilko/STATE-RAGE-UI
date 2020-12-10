@@ -47,7 +47,6 @@ const Settings = ({ data, activeData }) => {
                 <div className="accountmenu__content__cards__settings__container">
                     <span className="accountmenu__content__cards__settings__header__type">Общие</span>
                     <span className="accountmenu__content__cards__settings__header__name">Игра</span>
-                    <div className="accountmenu__hr" style={{marginTop: '4%', marginBottom: '4%'}} />
                     <div className="accountmenu__content__cards__settings__list">
                         {settings.map((item, index) => (
                             <span

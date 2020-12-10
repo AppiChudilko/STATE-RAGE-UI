@@ -177,6 +177,11 @@
     src: url('GothamPro-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'Gotham Pro Bold';
+    src: url('GothamPro-Bold.ttf');
+}
+
 
 @font-face {
     font-family: 'SF Pro Light';
