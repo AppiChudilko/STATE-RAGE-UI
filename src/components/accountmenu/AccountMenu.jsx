@@ -8,7 +8,7 @@ class AccountMenu extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: false,
+            show: true,
             panels: [
                 {name: 'Общее', id: 'accmenu-main'},
                 {name: 'Имущество', id: 'accmenu-property'},
@@ -19,9 +19,9 @@ class AccountMenu extends React.Component {
                 //{name: 'Донат', id: 'accmenu-donat'}
             ],
             activePage: 0,
-            accountId: 0,
-            nick: 'Test',
-            balance: 0,
+            accountId: 1,
+            nick: 'James Lantana',
+            balance: 10000000,
             initValueReports: null,
             generalData: {
                 nickname: "Andrey Knyazev",
@@ -60,7 +60,7 @@ class AccountMenu extends React.Component {
                 gprice: 'Загрузка'
             },
             propertyBusiness: [
-                /*{
+                {
                     type: 1,
                     title: 'Склад',
                     price: '1250000',
@@ -69,7 +69,7 @@ class AccountMenu extends React.Component {
                     img: 'https://dednet.ru/client/images/mmenu/stock.jpg'
                 },
                 {
-                    type: 0,
+                    type: 2,
                     title: 'Бизнес',
                     price: '1777000',
                     address: 'Саут-Рокфорд-драйв,  д. 0112, кв.14',
@@ -99,10 +99,10 @@ class AccountMenu extends React.Component {
                     address: 'Саут-Рокфорд-драйв,  д. 0112, кв.14',
                     doors: 'Открыты',
                     img: 'https://dednet.ru/client/images/mmenu/yacht.jpg'
-                }*/
+                }
             ],
             propertyCars: [
-                /*{
+                {
                     type: 'Автомобиль',
                     name: 'Neon',
                     vin: 1337,
@@ -157,7 +157,7 @@ class AccountMenu extends React.Component {
                     carclass: 'A',
                     def: 'Есть',
                     number: 'NUMBER'
-                }*/
+                }
             ],
 
             reportData: [

@@ -18,14 +18,9 @@ const Header = ({ nick, accountId, donateBalance, setHide }) => {
             </div>
             <div className="accountmenu__topdata__donate">
                 {accountId && (
-                    <React.Fragment>
-                        <span className="accountmenu__topdata__donate__text">
-                            Баланс
-                        </span>
-                        <span className="accountmenu__topdata__donate__balance">
-                            {donateBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
-                        </span>
-                    </React.Fragment>
+                    <span className="accountmenu__topdata__donate__btn">
+                        {`Баланс:        ${donateBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} $`}
+                    </span>
                 )}
                 <span onClick={setHide} className="accountmenu__topdata__donate__btn">
                     Закрыть

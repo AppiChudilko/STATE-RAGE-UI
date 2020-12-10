@@ -28,6 +28,12 @@ const BigButton = ({ text, onPress, disabled, type, children, nowrap }) => {
         case 2:
             btnClass = 'accountmenu__content__cards__bigbutton_green'
             break;
+        case 3:
+            btnClass = 'accountmenu__content__cards__bigbutton_border_red'
+            break;
+        case 4:
+            btnClass = 'accountmenu__content__cards__bigbutton_border_blue'
+            break;
         default:
             btnClass = 'accountmenu__content__cards__bigbutton_blue'
             break;

@@ -3,6 +3,7 @@ import '../css/faq.css'
 import BigButton from '../uikit/BigButton'
 import Question from '../uikit/Question'
 import { useState } from 'react'
+import IconQuestion from '../img/questio_icon.svg'
 
 const Faq = ({ onChangePage }) => {
 
@@ -191,12 +192,12 @@ const Faq = ({ onChangePage }) => {
         <React.Fragment>
             <div className="accountmenu__content__cards__item question accountmenu__scrollable">
                 <div className="accountmenu__content__cards__container">
-                    <span className="accountmenu__content__cards__header__name">
-                        FAQ
-                    </span>
-                    <div className="accountmenu__hr" style={{marginTop: '4%', marginBottom: '4%'}} />
-                    <span className="accountmenu__content__cards__title">
-                        ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+                    <div className="accountmenu__content__cards__container__info" style={{paddingLeft: '3.5rem'}}>
+                        <span className="accountmenu__content__cards__reports__header">Все обращения</span>
+                        <span className="accountmenu__content__cards__title">Задай вопрос или подай жалобу</span>
+                    </div>
+                    <span className="accountmenu__content__cards__title_single">
+                        Часто задаваемые вопросы
                     </span>
                     <div className="accountmenu__cards__question__container">
                         {questions.map((item, index) => (
@@ -217,9 +218,7 @@ const Faq = ({ onChangePage }) => {
                         className="accountmenu__content__cards__answer__img"
                     />
                     <div className="accountmenu__cards__question__icon__container__active">
-                        <img src={`https://dednet.ru/client/images/mmenu/all/icons/help.svg`} className="accountmenu__cards__question__icon__active" />
-                    </div>
-                    <div className="accountmenu__content__cards__answer__title__container">
+                        <img src={IconQuestion} className="accountmenu__cards__question__icon" />
                         <span className="accountmenu__content__cards__answer__title">
                             {questions[active].text}
                         </span>
@@ -231,8 +230,8 @@ const Faq = ({ onChangePage }) => {
                 </div>
             </div>
             <div className="accountmenu__content__cards__sitem accountmenu__scrollable">
-                <div className="accountmenu__content__cards__container" style={{marginTop: '35%'}}>
-                    <span className="accountmenu__content__cards__title">
+                <div className="accountmenu__content__cards__container__help">
+                    <span className="accountmenu__content__cards__title_heavy">
                         Не нашли ответ на свой вопрос?
                     </span>
                     <div className="accountmenu__content__cards__ptext__container">
@@ -242,7 +241,7 @@ const Faq = ({ onChangePage }) => {
                     </div>
                     <BigButton
                         onPress={() => onChangePage(3)}
-                        text="задать вопрос"
+                        text="Задать вопрос"
                     />
                 </div>
                 

@@ -13,6 +13,7 @@ import CarCard from '../uikit/CarCard'
 import ReportItemList from '../uikit/ReportItemList'
 import { useState } from 'react'
 import { useRef } from 'react'
+import IconQuestion from '../img/questio_icon.svg'
 import { useEffect } from 'react'
 
 const Reports = ({ data, initValue }) => {
@@ -37,7 +38,10 @@ const Reports = ({ data, initValue }) => {
         <React.Fragment>
             <div className="accountmenu__content__cards__item">
                 <div className="accountmenu__content__reports__container">
-                    <span className="accountmenu__content__cards__reports__header">Все обращения</span>
+                    <div className="accountmenu__content__cards__container__info" style={{paddingLeft: '3.5rem'}}>
+                        <span className="accountmenu__content__cards__reports__header">Все обращения</span>
+                        <span className="accountmenu__content__cards__title">Задай вопрос или подай жалобу</span>
+                    </div>
                     <div className="accountmenu__content__cards__item__list__reports">
                         <span className="accountmenu__content__cards__item__list__reports__name">Вопросы</span>
                         <div className="accountmenu__content__reports__list">
@@ -77,12 +81,7 @@ const Reports = ({ data, initValue }) => {
                <div className="accountmenu__content__reports__dialog__container">
                     <div className="accountmenu__content__reports__dialog__header">
                         <div className="accountmenu__content__reports__dialog__header__data">
-                            <img
-                                src={reportData.type === 0 ? 'https://dednet.ru/client/images/mmenu/all/icons/question_cloud.svg' : 'https://dednet.ru/client/images/mmenu/all/icons/report_icon.png'}
-                                alt=""
-                                className={reportData.type === 0 ? "accountmenu__content__reports__list__header__icon_ask" : "accountmenu__content__reports__list__header__icon_report"}    
-                            />
-                            <span className="accountmenu__content__reports__dialog__header__type">{reportData.type === 0 ? "Вопрос" : "Жалоба"}</span>
+                            <img src={IconQuestion} className="accountmenu__cards__question__icon" />
                             <span className="accountmenu__content__reports__dialog__header__num">{`запрос №${reportData.number}`}</span>
                             <span className="accountmenu__content__reports__dialog__header__time">{reportData.time}</span>
                         </div>
@@ -129,7 +128,7 @@ const Reports = ({ data, initValue }) => {
                         )) : null} 
                     </div>
                     <div className="accountmenu__content__reports__dialog__input">
-                        <label style={{width: '70%'}}>
+                        <label style={{width: '70%', fontFamily: 'Gotham Pro Regular'}}>
                             <input onBlur={(e) => {
                                 try {
                                     mp.trigger('client:mainMenu:sendReportOrAsk:focus', false); // eslint-disable-line
