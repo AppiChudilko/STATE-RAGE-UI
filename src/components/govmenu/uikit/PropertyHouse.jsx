@@ -9,7 +9,7 @@ import MdCash from 'react-ionicons/lib/MdCash'
 import Alert from '../../alert/Alert'
 
 const PropertyHouse = (props) => {
-    // <img className="govmenu__licensegov__propertycar__img" src={`https://dednet.ru/client/images/cars/${props.name}_1.jpg`} />
+    // <img className="govmenu__licensegov__propertycar__img" src={`https://state-99.com/client/images/cars/${props.name}_1.jpg`} />
 
     const { address, setAlert, gprice, tax, balance, maxbalance, garageTypes, roommatefree, garageCount, roommatemax, roommates } = props
     
@@ -28,7 +28,7 @@ const PropertyHouse = (props) => {
                         </span>
                         <div className="accountmenu__content__cards__house__hprice__sell" style={{marginTop: 0, paddingTop: '1%', paddingBottom: '2%'}}>
                                 <div className="accountmenu__content__cards__house__hprice__sell__linebtn">
-                                    <img src={'https://dednet.ru/client/images/mmenu/all/icons/money-bag.svg'} className="accountmenu__content__cards__house__hprice__sell__icon" />
+                                    <img src={'https://state-99.com/client/images/mmenu/all/icons/money-bag.svg'} className="accountmenu__content__cards__house__hprice__sell__icon" />
                                     <span className="accountmenu__content__cards__house__hprice__sell__text">{`$ ${gprice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`}</span>
                                 </div>
                         </div>

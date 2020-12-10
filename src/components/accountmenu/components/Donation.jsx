@@ -33,10 +33,10 @@ const Donation = ({ onChangePage }) => {
                         'Случайная редкая маска'
                     ],
                     carchoice: [
-                        {name: 'Ubermacht Oracle', img: 'https://dednet.ru/client/images/cars/Oracle_1.jpg'},
-                        {name: 'Declasse Rancher XL', img: 'https://dednet.ru/client/images/cars/RancherXL_1.jpg'},
-                        {name: 'Maxwell Asbo', img: 'https://dednet.ru/client/images/cars/Asbo_1.jpg'},
-                        {name: 'Karin Futo', img: 'https://dednet.ru/client/images/cars/Futo_1.jpg'}
+                        {name: 'Ubermacht Oracle', img: 'https://state-99.com/client/images/cars/Oracle_1.jpg'},
+                        {name: 'Declasse Rancher XL', img: 'https://state-99.com/client/images/cars/RancherXL_1.jpg'},
+                        {name: 'Maxwell Asbo', img: 'https://state-99.com/client/images/cars/Asbo_1.jpg'},
+                        {name: 'Karin Futo', img: 'https://state-99.com/client/images/cars/Futo_1.jpg'}
                     ],
                     price: 299,
                     buyed: 1
@@ -53,10 +53,10 @@ const Donation = ({ onChangePage }) => {
                         'Случайная редкая маска'
                     ],
                     carchoice: [
-                        {name: 'Ubermacht Oracle', img: 'https://dednet.ru/client/images/cars/Oracle_1.jpg'},
-                        {name: 'Declasse Rancher XL', img: 'https://dednet.ru/client/images/cars/RancherXL_1.jpg'},
-                        {name: 'Maxwell Asbo', img: 'https://dednet.ru/client/images/cars/Asbo_1.jpg'},
-                        {name: 'Karin Futo', img: 'https://dednet.ru/client/images/cars/Futo_1.jpg'}
+                        {name: 'Ubermacht Oracle', img: 'https://state-99.com/client/images/cars/Oracle_1.jpg'},
+                        {name: 'Declasse Rancher XL', img: 'https://state-99.com/client/images/cars/RancherXL_1.jpg'},
+                        {name: 'Maxwell Asbo', img: 'https://state-99.com/client/images/cars/Asbo_1.jpg'},
+                        {name: 'Karin Futo', img: 'https://state-99.com/client/images/cars/Futo_1.jpg'}
                     ],
                     price: 299,
                     buyed: 0
@@ -73,10 +73,10 @@ const Donation = ({ onChangePage }) => {
                         'Случайная редкая маска'
                     ],
                     carchoice: [
-                        {name: 'Ubermacht Oracle', img: 'https://dednet.ru/client/images/cars/Oracle_1.jpg'},
-                        {name: 'Declasse Rancher XL', img: 'https://dednet.ru/client/images/cars/RancherXL_1.jpg'},
-                        {name: 'Maxwell Asbo', img: 'https://dednet.ru/client/images/cars/Asbo_1.jpg'},
-                        {name: 'Karin Futo', img: 'https://dednet.ru/client/images/cars/Futo_1.jpg'}
+                        {name: 'Ubermacht Oracle', img: 'https://state-99.com/client/images/cars/Oracle_1.jpg'},
+                        {name: 'Declasse Rancher XL', img: 'https://state-99.com/client/images/cars/RancherXL_1.jpg'},
+                        {name: 'Maxwell Asbo', img: 'https://state-99.com/client/images/cars/Asbo_1.jpg'},
+                        {name: 'Karin Futo', img: 'https://state-99.com/client/images/cars/Futo_1.jpg'}
                     ],
                     price: 299,
                     buyed: 0
@@ -530,7 +530,7 @@ const Donation = ({ onChangePage }) => {
                         'Случайная редкая маска'
                     ],
                     carchoice: [
-                        {name: 'Ubermacht Oracle', img: 'https://dednet.ru/client/images/cars/Oracle_1.jpg'}
+                        {name: 'Ubermacht Oracle', img: 'https://state-99.com/client/images/cars/Oracle_1.jpg'}
                     ],
                     price: 299,
                     buyed: 1
@@ -547,7 +547,7 @@ const Donation = ({ onChangePage }) => {
                         'Случайная редкая маска'
                     ],
                     carchoice: [
-                        {name: 'Ubermacht Oracle', img: 'https://dednet.ru/client/images/cars/Oracle_1.jpg'}
+                        {name: 'Ubermacht Oracle', img: 'https://state-99.com/client/images/cars/Oracle_1.jpg'}
                     ],
                     price: 299,
                     buyed: 0
@@ -564,7 +564,7 @@ const Donation = ({ onChangePage }) => {
                         'Случайная редкая маска'
                     ],
                     carchoice: [
-                        {name: 'Ubermacht Oracle', img: 'https://dednet.ru/client/images/cars/Oracle_1.jpg'}
+                        {name: 'Ubermacht Oracle', img: 'https://state-99.com/client/images/cars/Oracle_1.jpg'}
                     ],
                     price: 299,
                     buyed: 0

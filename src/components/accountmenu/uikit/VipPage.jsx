@@ -29,7 +29,7 @@ const VipPage = ( props ) => {
 
     return (
         <div className="accountmenu__donation__vip">
-            <div className="govmenu__propertygov__imgheader" style={{backgroundImage: `url('https://dednet.ru/client/images/mmenu/yacht.jpg')`}} />
+            <div className="govmenu__propertygov__imgheader" style={{backgroundImage: `url('https://state-99.com/client/images/mmenu/yacht.jpg')`}} />
             <div className="accountmenu__donation__vip__row">
             {props[0].map((element, index) => (
                 <VipCard key={`accountmenu__donation__vip__row__item-${index}`} {...element} />

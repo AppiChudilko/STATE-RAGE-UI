@@ -16,9 +16,8 @@ const Faq = ({ onChangePage }) => {
                     Нет, если серьезно, открой вкладку "Квесты" и пройди квествовую линию "Первые шаги"<br><br>
                 </p>
                 <ol>
-                <li class="accountmenu__content__cards__answer__li">Наш сайт: dednet.ru</li>
-                <li class="accountmenu__content__cards__answer__li">Наш дискорд: dscrd.in/dn</li>
-                <li class="accountmenu__content__cards__answer__li">Наш VK: vk.com/dednet</li>
+                <li class="accountmenu__content__cards__answer__li">Наш сайт: state-99.com</li>
+                <li class="accountmenu__content__cards__answer__li">Наш VK: vk.com/gtav.state</li>
                 </ol>
             `
         },
@@ -62,7 +61,7 @@ const Faq = ({ onChangePage }) => {
             text: "Как получить донат-услуги?",
             answer: `
                 <p class="accountmenu__content__cards__answer__text">
-                    Донат-услугами можно воспользоваться в разделе "Донат" на сайте dednet.ru
+                    Донат-услугами можно воспользоваться в разделе "Донат" на сайте state-99.com
                 </p>
             `
         },
@@ -70,7 +69,7 @@ const Faq = ({ onChangePage }) => {
             text: "Как оставить жалобу на игрока или администратора?",
             answer: `
                 <p class="accountmenu__content__cards__answer__text">
-                    Жалобу на игрока или администратора Вы можете оставить на сайте <a>dednet.ru</a> в разделе "Жалоба".
+                    Жалобу на игрока или администратора Вы можете оставить на сайте <a>state-99.com</a> в разделе "Жалоба".
                 </p>
             `
         },
@@ -78,7 +77,7 @@ const Faq = ({ onChangePage }) => {
             text: "Всё про транспорт",
             answer: `
                 <p class="accountmenu__content__cards__answer__text">
-                   Всего существует 10 слотов под транспортные средства. Вы можете иметь до 5 машин без дома, остальные 5 слотов приобретаются на сайте <a>dednet.ru</a> в разделе "Донат".
+                   Всего существует 10 слотов под транспортные средства. Вы можете иметь до 5 машин без дома, остальные 5 слотов приобретаются на сайте <a>state-99.com</a> в разделе "Донат".
                 </p>
                 <br><br>
                 <h1>Где купить транспорт?</h1><br>
@@ -129,7 +128,7 @@ const Faq = ({ onChangePage }) => {
             text: "Как ускорить прокачку навыков?",
             answer: `
                 <p class="accountmenu__content__cards__answer__text">
-                    Почаще бегайте, деритесь, стреляйтесь или плавайте. Если хотите прокачать навыки сразу, то можете приобрести соответствую услугу в разделе "Донат" на сайте dednet.ru.
+                    Почаще бегайте, деритесь, стреляйтесь или плавайте. Если хотите прокачать навыки сразу, то можете приобрести соответствую услугу в разделе "Донат" на сайте state-99.com.
                 </p>
             `
         },

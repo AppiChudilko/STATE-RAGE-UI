@@ -6,7 +6,7 @@ const Car = ({ name, price, btnbg, sale, params, type }) => {
     return (
         <div className="carrent__content__list__item">
             <div className="carrent__content__list__img__container">
-                <img alt="" src={`https://dednet.ru/client/images/carssm/${name}_1.jpg`} className="carrent__content__list__img__item" />
+                <img alt="" src={`https://state-99.com/client/images/carssm/${name}_1.jpg`} className="carrent__content__list__img__item" />
                 {sale > 0 && (
                     <div className="carrent__content__list__item__sale__container">
                         <span className="carrent__content__list__item__sale">{`-${sale}%`}</span>

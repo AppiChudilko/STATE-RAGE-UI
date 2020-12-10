@@ -87,11 +87,11 @@ const Reports = ({ data, initValue }) => {
                         </div>
                         <div className="accountmenu__content__reports__dialog__header__buttons">
                             <div className="accountmenu__content__reports__dialog__header__btn">
-                                <img src={'https://dednet.ru/client/images/mmenu/all/icons/lock.svg'} className="accountmenu__content__reports__dialog__header__icon" />
+                                <img src={'https://state-99.com/client/images/mmenu/all/icons/lock.svg'} className="accountmenu__content__reports__dialog__header__icon" />
                                 <span className="accountmenu__content__reports__dialog__header__btn__text">закрыть тему</span>
                             </div>
                             <div className="accountmenu__content__reports__dialog__header__btn">
-                                <img src={'https://dednet.ru/client/images/mmenu/all/icons/delete.svg'} className="accountmenu__content__reports__dialog__header__icon" />
+                                <img src={'https://state-99.com/client/images/mmenu/all/icons/delete.svg'} className="accountmenu__content__reports__dialog__header__icon" />
                                 <span className="accountmenu__content__reports__dialog__header__btn__text">удалить</span>
                             </div>
                         </div>

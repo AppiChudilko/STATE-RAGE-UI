@@ -255,7 +255,7 @@ class Authorization extends React.Component {
                         <div className="iframe_rules">
                             <div id="rules">
                                 <div className="close-rules"><div className="close-img-rules" onClick={this.closeRules.bind(this)}></div></div>
-                                <iframe src="https://dednet.ru/rules#container" sandbox></iframe>
+                                <iframe src="https://state-99.com/rules#container" sandbox></iframe>
 
                             </div>
                         </div> : ''}
