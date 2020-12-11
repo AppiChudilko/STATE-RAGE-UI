@@ -28,8 +28,8 @@ export default class extends React.Component {
             show: false,
             choice: 'init',
             currentData: {},
-            hoverBackground: '#FFC107D0',
-            centerBackground: '#FFC107',
+            hoverBackground: '#ba0633D0',
+            centerBackground: '#ba0633',
             history: ['init'],
             choiceData: [
                 {
@@ -438,6 +438,10 @@ export default class extends React.Component {
               {history: state.history.push(value)}
             ))*/
         }
+        try {
+            mp.trigger('client:radialMenu:item', value.id); // eslint-disable-line
+        }
+        catch (e) {}
         console.log('you clicked: ' + value.id)
     };
 
@@ -451,13 +455,22 @@ export default class extends React.Component {
                 currentData: current
             })
         }
+        try {
+            mp.trigger('client:radialMenu:newItem', value.id); // eslint-disable-line
+        }
+        catch (e) {}
         console.log('you clicked: ' + value.id)
     };
 
     closeMenu = () => {
         this.setState({
             show: false
-        })
+        });
+
+        try {
+            mp.trigger('client:radialMenu:close'); // eslint-disable-line
+        }
+        catch (e) {}
     }
 
     findParent = (value) => {
@@ -487,13 +500,13 @@ export default class extends React.Component {
       background: rgba(0, 0, 0, 0.5);
       &:hover {
         color: white;
-        background: ${this.state.hoverBackground};
+        background: rgba(0,0,0,0.6);
         transition: 0.1s;
       }
     `;
 
         const center = css`
-      background: #2962FF;
+      background: #616161;
       &:not(:empty):hover {
         cursor: pointer;
       }
