@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PieMenu, { PieCenter, Slice } from 'react-pie-menu';
 import { ThemeProvider } from 'styled-components';
@@ -35,11 +34,9 @@ export default class extends React.Component {
                 {
                     id   : 'do',
                     title: 'Действия',
-                    icon: 'close',
                     items: [
                         {
                             id   : 'giveMoney',
-                            icon: 'close',
                             title: 'Передать'
                         },
                         {
@@ -74,7 +71,7 @@ export default class extends React.Component {
                             items: [
                                 {
                                     id   : 'takeGun',
-                                    icon: 'close',
+                                    
                                     title: 'Изъять оружие',
                                 },
                                 {
@@ -98,7 +95,6 @@ export default class extends React.Component {
                 },
                 {
                     id   : 'run',
-                    icon   : 'close',
                     title: 'Документы',
                     items: [
                         {
@@ -118,7 +114,6 @@ export default class extends React.Component {
                 {
                     id   : 'home',
                     title: 'Главная',
-                    icon: 'close',
                     items: [
                         {
                             id   : 'report',
@@ -145,7 +140,6 @@ export default class extends React.Component {
                 {
                     id   : 'carMenu',
                     title: 'Транспорт',
-                    icon: 'close',
                     items: [
                         {
                             id   : 'leftIndicator',
@@ -170,167 +164,16 @@ export default class extends React.Component {
                     ]
                 },
                 {
-                    id   : 'anim',
+                    id: 'anim',
                     title: 'Анимации',
-                    icon: 'close',
-                    items: [
-                        {
-                            id   : 'animDo',
-                            title: 'Действия',
-                            items: [
-                                {
-                                    id   : 'animDo1',
-                                    title: 'Поднять руки'
-                                },
-                                {
-                                    id   : 'animDo2',
-                                    title: 'Воен. приветсвие'
-                                },
-                                {
-                                    id   : 'animDo3',
-                                    title: 'Согласиться'
-                                },
-                                {
-                                    id   : 'animDo4',
-                                    title: 'Отказать'
-                                },
-                                {
-                                    id   : 'animDo5',
-                                    title: 'Рука на кобуре'
-                                },
-                            ]
-                        },
-                        {
-                            id   : 'animPose',
-                            title: 'Позирующие',
-                            items: [
-                                {
-                                    id   : 'animPose1',
-                                    title: 'Распальцовка'
-                                },
-                                {
-                                    id   : 'animPose2',
-                                    title: 'Руки в боки'
-                                },
-                                {
-                                    id   : 'animPose3',
-                                    title: 'Охранник'
-                                },
-                                {
-                                    id   : 'animPose4',
-                                    title: 'Размяться'
-                                },
-                                {
-                                    id   : 'animPose5',
-                                    title: 'Лечь'
-                                },
-                            ]
-                        },
-                        {
-                            id   : 'animEmoji',
-                            title: 'Эмоции',
-                            items: [
-                                {
-                                    id   : 'animEmoji1',
-                                    title: 'Радоваться'
-                                },
-                                {
-                                    id   : 'animEmoji2',
-                                    title: 'Поддержать'
-                                },
-                                {
-                                    id   : 'animEmoji3',
-                                    title: 'Уважение'
-                                },
-                                {
-                                    id   : 'animEmoji4',
-                                    title: 'Разочароваться'
-                                },
-                                {
-                                    id   : 'animEmoji5',
-                                    title: 'Дурак'
-                                },
-                            ]
-                        },
-                        {
-                            id   : 'animDance',
-                            title: 'Танцы',
-                            items: [
-                                {
-                                    id   : 'animDance1',
-                                    title: 'Танец-1'
-                                },
-                                {
-                                    id   : 'animDance2',
-                                    title: 'Танец-2'
-                                },
-                                {
-                                    id   : 'animDance3',
-                                    title: 'Танец-3'
-                                },
-                                {
-                                    id   : 'animDance4',
-                                    title: 'Танец-4'
-                                },
-                                {
-                                    id   : 'animDance5',
-                                    title: 'Танец-5'
-                                },
-                                {
-                                    id   : 'animDance6',
-                                    title: 'Танец-6'
-                                },
-                                {
-                                    id   : 'animDance7',
-                                    title: 'Танец-7'
-                                },
-                                {
-                                    id   : 'animDance8',
-                                    title: 'Танец-8'
-                                }
-                            ]
-                        },
-                        {
-                            id   : 'animDoPlayer',
-                            title: 'С игроком',
-                            items: [
-                                {
-                                    id   : 'animDoPlayer4',
-                                    title: 'Поцелуй'
-                                },
-                                {
-                                    id   : 'animDoPlayer1',
-                                    title: 'Подзороваться 1'
-                                },
-                                {
-                                    id   : 'animDoPlayer3',
-                                    title: 'Дать пять'
-                                },
-                                {
-                                    id   : 'animDoPlayer2',
-                                    title: 'Подзороваться 2'
-                                },
-                            ]
-                        },
-                        {
-                            id   : 'animAll',
-                            title: 'Все анимации'
-                        },
-                        {
-                            id   : 'animStop',
-                            title: 'Остановить'
-                        }
-                    ]
                 },
                 {
                     id: 'donate',
                     title: 'Донат',
-                    icon: 'close'
                 },
                 {
                     id: 'gps',
-                    title: 'GPS',
-                    icon: 'close'
+                    title: 'GPS'
                 }
             ]
         };
@@ -439,9 +282,14 @@ export default class extends React.Component {
             ))*/
         }
         try {
-            mp.trigger('client:radialMenu:item', value.id); // eslint-disable-line
+            mp.trigger('client:radialMenu:item', value.id, JSON.stringify(value.params)); // eslint-disable-line
         }
-        catch (e) {}
+        catch (e) {
+            try {
+                mp.trigger('client:radialMenu:item', value.id, JSON.stringify({})); // eslint-disable-line
+            }
+            catch (e) {}
+        }
         console.log('you clicked: ' + value.id)
     };
 
@@ -456,9 +304,14 @@ export default class extends React.Component {
             })
         }
         try {
-            mp.trigger('client:radialMenu:newItem', value.id); // eslint-disable-line
+            mp.trigger('client:radialMenu:newItem', value.id, JSON.stringify(value.params)); // eslint-disable-line
         }
-        catch (e) {}
+        catch (e) {
+            try {
+                mp.trigger('client:radialMenu:newItem', value.id, JSON.stringify({})); // eslint-disable-line
+            }
+            catch (e) {}
+        }
         console.log('you clicked: ' + value.id)
     };
 
@@ -497,16 +350,15 @@ export default class extends React.Component {
         const slice = css`
       cursor: pointer;
       color: grey;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.6);
       &:hover {
         color: white;
-        background: rgba(0,0,0,0.6);
+        background: rgba(0,0,0,0.7);
         transition: 0.1s;
       }
     `;
-
         const center = css`
-      background: #616161;
+      background: rgba(0,0,0,1);
       &:not(:empty):hover {
         cursor: pointer;
       }

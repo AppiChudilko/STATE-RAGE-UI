@@ -124,7 +124,25 @@ class TopBar extends React.Component {
                             </div>
                             : null}
                         <div className="elements-bar">
-                            <img src={IconConnection} width="12" className="elements-bar__icon" />
+                            <svg style={{marginTop: '-2px'}}  width="11" height="8" viewBox="0 0 11 11" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0)">
+                                    <path opacity="0.302" fillRule="evenodd" clipRule="evenodd"
+                                          d="M11 0L0 11.0003L11 11V0Z" fill="white"/>
+                                    <g clipPath="url(#clip1)">
+                                        <path fillRule="evenodd" clipRule="evenodd" d={this.state.path_network}
+                                              fill="white"/>
+                                    </g>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect width="11" height="11" fill="white"/>
+                                    </clipPath>
+                                    <clipPath id="clip1">
+                                        <rect width="11" height="11" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
                         </div>
                         <div className="elements-bar">
                             <img src={IconBattery} width="17.5" className="elements-bar__icon" />

@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from './Icon'
+import Img from './Img'
 import RightLabel from './RightLabel'
 import parseText from '../functions/parseText'
 
@@ -44,7 +45,7 @@ export default class Caption extends React.Component {
 
         return (
             <div onClick={this.handleOnClick.bind(this)} style={styles.container}>
-                {this.props.data.data.icon ? <Icon name={this.props.data.data.icon} /> : <></>}
+                {this.props.data.data.icon ? <Img name={this.props.data.data.icon} /> : <></>}
                 <input style={{opacity: 0, height: "0px", width: "0px", position: 'absolute'}} autoFocus={true} />
                 <label style={styles.listitem} dangerouslySetInnerHTML={{__html: parseText(this.props.data.data.title)}} />
                 {this.props.data.data.rl ? <RightLabel font={this.props.font} text={this.props.data.data.rl} /> : <></>}

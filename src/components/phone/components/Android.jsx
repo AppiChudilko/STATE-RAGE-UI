@@ -35,7 +35,7 @@ class Android extends React.Component {
                 dateFull: '01.01.1990',
                 battery: 11, // max 11
                 wifi: false,
-                network: 4, // max 5
+                network: 5, // max 5
                 temperature: '+21°C',
                 date: '15 декабря',
                 color_bar: ''
