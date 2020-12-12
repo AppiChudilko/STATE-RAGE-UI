@@ -12,11 +12,23 @@
 }
 
 .main-input-modal {
-    width: 579px;
+    width: 880px;
     min-height: 66px;
-    background: rgba(14, 14, 14, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 15px;
     position: relative;
     display: flex;
+    padding: 1.5rem;
+    flex-direction: column;
+}
+
+.modal-box-m {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1rem;
 }
 
 .linear-input-modal-top1 {
@@ -38,29 +50,21 @@
 }
 
 .modal-b-title {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
+    font-family: "Gotham Pro Regular";
+    font-size: 1rem;
     color: #FFFFFF;
-    margin-top: 9px;
-    margin-left: 20px;
 }
 
 .modal-b-input {
-    max-width: 540px;
+    width: -webkit-fill-available;
     max-height: 795px;
-    min-height: 25.9782px;
-    height: 25.9782px;
+    min-height: 40px;
+    padding: 1rem;
+    height: 40px;
     min-width: 540px;
-    background: #151515 !important;
-    border: 1px solid #3e3e3e !important;
+    background: transparent !important;
     box-sizing: border-box;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
-    margin-left: 20px;
-    margin-top: 10px;
-    padding: 5px;
-    font-family: 'Roboto';
+    font-family: 'Gotham Pro Regular';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -68,6 +72,9 @@
     outline: none;
     margin-bottom: 0px !important;
     resize: none;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+    border-radius: 7px;
 }
 
 .modal-box-input {
@@ -78,18 +85,23 @@
 }
 
 .modal-btn {
-    width: 109.02px;
-    height: 24.37px;
-    background: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'HACKED';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    color: #000000;
-    margin-left: 2px;
+    font-family: 'Gotham Pro Regular';
+    font-size: 1rem;
+    color: #fff;
+    margin-left: 1rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+    border-radius: 7px;
+    height: 100%;
+    padding: 0 2rem 0 2rem;
+}
+
+.modal-btn:hover {
+    background: #fff;
+    color: #000;
 }
 
 .input-meta-text {

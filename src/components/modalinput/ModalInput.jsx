@@ -95,24 +95,19 @@ class ModalInput extends React.Component {
             <React.Fragment>
                 <div className="position-modal">
                     <div className="main-input-modal">
-                        <div className="linear-input-modal-top1"></div>
-                        <div className="linear-input-modal-top2"></div>
+                        <div className="modal-b-title">{this.state.title}</div>
                         <div className="modal-box-m">
-                            <div className="modal-b-title">{this.state.title}</div>
                             <textarea ref={c => (this.textarea = c)} maxLength={this.state.maxLength}
                                       defaultValue={this.state.defaultText} onKeyPress={this.handleKeyPress}
                                       className="modal-b-input" onChange={(e => this.textChange(e))}/>
-                            <div className="input-meta-text">{this.state.text.length}/{this.state.maxLength}</div>
+                            {this.state.value.map((e, i) => {
+                                let index = `modalbtn${i}`
+                                return (
+                                    <div className="modal-btn" key={index}
+                                        onClick={() => this.selecetButton(e, this.state.text)}>{e}</div>
+                                )
+                            })}
                         </div>
-                    </div>
-                    <div className="modal-box-input">
-                        {this.state.value.map((e, i) => {
-                            let index = `modalbtn${i}`
-                            return (
-                                <div className="modal-btn" key={index}
-                                     onClick={() => this.selecetButton(e, this.state.text)}>{e}</div>
-                            )
-                        })}
                     </div>
                 </div>
             </React.Fragment>
