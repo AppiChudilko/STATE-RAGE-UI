@@ -25,6 +25,30 @@
     left: 4%;
 }
 
+.workid-box .pl-clm-inf-docs {
+    color: #001F3C;
+}
+
+.workid-box .pl-clm-inf-docs-num {
+    color: #001F3C;
+}
+
+.workid-box .pl-grow {
+    color: #001F3C;
+}
+
+.workid-box .pl-black {
+    color: #001F3C;
+}
+
+.workid-box .pl-idcard-subscribe-text {
+    color: #001F3C;
+}
+
+.workid-box .pl-idcard-subscribe-value {
+    color: #001F3C;
+}
+
 .pl-workid-sex {
     margin-left: 1rem;
 }
@@ -36,6 +60,8 @@
 .workid-box .pl-row {
     border: none;
 }
+
+
 
 .pl_work_birthday {
     display: flex;
