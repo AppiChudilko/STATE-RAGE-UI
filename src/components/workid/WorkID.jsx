@@ -9,7 +9,7 @@ class WorkID extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: false,
+            show: true,
             player_info: {
                 firstname: 'Olejka',
                 lastname: 'Pelmeshka',
@@ -21,6 +21,7 @@ class WorkID extends React.Component {
                 experience: '2',
                 data: '05.02.2020',
                 idwork: 'WID10-79292724055',
+                subscribe: 'Testerov',
                 img: '',//https://a.rsg.sc//n/lendstoun
             },
             photo: '',
@@ -73,43 +74,36 @@ class WorkID extends React.Component {
         return (
             <React.Fragment>
                 <div className="idcard-main">
-                    <div className="idcard_box">
+                    <div className="workid-box">
                         <div className="osn-idcard">
-                            <div className="clm-1-idcard">WORK CARD</div>
                             <div className="clm-2-idcard">
-                                <div className="plash_left">
+                                <div className="plash_right">
                                     <div className="photo_player">
                                         <img src={this.state.photo} className="img-size-card" alt=""/>
                                     </div>
-                                </div>
-                                <div className="plash_right">
-                                    <div className="pl-clm-inf-n name-styl-id name-pff">
-                                        <span className="pl-grow tsp-topname">Имя</span>
-                                        <span className="pl-black">{this.state.player_info.firstname}</span>
-                                    </div>
-                                    <div className="pl-clm-inf-n name-styl-id name-pff btm-last">
-                                        <span className="pl-grow tsp-topname">Фамилия</span>
-                                        <span className="pl-black">{this.state.player_info.lastname}</span>
-                                    </div>
                                     <div className="pl_inf">
                                         <div className="pl-row">
-                                            <div className="pl_sex_2">
+                                            <div className="pl-clm-inf-n name-styl-id name-pff">
+                                                <span className="pl-grow tsp-topname">Имя</span>
+                                                <span className="pl-black">{this.state.player_info.firstname}</span>
+                                            </div>
+                                            <div className="pl-age pl-clm-inf-n name-styl-id name-pff">
                                                 <span className="pl-grow row-tsp otsp_work">Пол</span>
-                                                <span className="pl-black">{this.state.player_info.sex}</span>
+                                                <span className="pl-black pl-workid-sex">{this.state.player_info.sex}</span>
                                             </div>
-                                            <div className="pl-age">
-                                                <span className="pl-grow row-tsp otsp_work">Возраст</span>
-                                                <span className="pl-black">{this.state.player_info.age}</span>
-                                            </div>
+                                        </div>
+                                        <div className="pl-clm-inf-n name-styl-id name-pff btm-last">
+                                            <span className="pl-grow tsp-topname">Фамилия</span>
+                                            <span className="pl-black">{this.state.player_info.lastname}</span>
                                         </div>
                                         <div className="pl-row">
                                             <div className="pl-workcard">
                                                 <span className="pl-grow row-tsp otsp_work">Основная работа</span>
                                                 <span className="pl-black">{this.state.player_info.first_work}</span>
                                             </div>
-                                            <div className="pl-work2">
-                                                <span className="pl-grow row-tsp otsp_work">Вторая работа</span>
-                                                <span className="pl-black">{this.state.player_info.second_work}</span>
+                                            <div className="pl_work_birthday">
+                                                <span className="pl-grow row-tsp otsp_work">Дата рождения</span>
+                                                <span className="pl-black">{this.state.player_info.age}</span>
                                             </div>
                                         </div>
                                         <div className="pl-row">
@@ -122,30 +116,18 @@ class WorkID extends React.Component {
                                                 <span className="pl-black">{this.state.player_info.experience}</span>
                                             </div>
                                         </div>
-                                        <div className="pl-row">
-                                            <div className="pl-workcard">
-                                                <span className="pl-grow row-tsp otsp_work">Дата получения</span>
-                                                <span className="pl-black">{this.state.player_info.data}</span>
-                                            </div>
-                                            <div className="pl-work2">
-                                                <span className="pl-grow row-tsp otsp_work">№ Документа</span>
-                                                <span className="pl-black">{this.state.player_info.idwork}</span>
-                                            </div>
-                                        </div>
-                                        {/* <div className="pl-clm">
-                    <div className="pl-clm-inf">
-                      <span className="pl-grow pl-clm-f">Национальность</span>
-                      <span className="pl-black">{this.state.player_info.nation}</span>
-                    </div>
-                    <div className="pl-clm-inf">
-                      <span className="pl-grow pl-clm-f">Регистрация</span>
-                      <span className="pl-black">{this.state.player_info.regist === '' ? '--------------' : this.state.player_info.regist}</span>
-                    </div>
-                    <div className="pl-clm-inf">
-                      <span className="pl-grow pl-clm-f">№ Документа</span>
-                      <span className="pl-black">{this.state.player_info.idcard}</span>
-                    </div>
-                  </div> */}
+                                    </div>
+                                    <div className="pl-age pl-clm-inf-n name-styl-id name-pff pl-work-id-date-block">
+                                        <span className="pl-grow row-tsp otsp_work">Дата получения</span>
+                                        <span className="pl-black pl-work-id-date">{this.state.player_info.data}</span>
+                                    </div>
+                                    <div className="pl-clm-docs-work">
+                                        <span className="pl-clm-inf-docs">Номер документа</span>
+                                        <span className="pl-clm-inf-docs-num">{this.state.player_info.idwork}</span>
+                                    </div>
+                                    <div className="pl-idcard-subscribe">
+                                        <span className="pl-idcard-subscribe-text">Личная подпись: </span>
+                                        <span className="pl-idcard-subscribe-value">{this.state.player_info.subscribe}</span>
                                     </div>
                                 </div>
                             </div>
