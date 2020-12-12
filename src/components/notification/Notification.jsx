@@ -6,14 +6,14 @@ class Notification extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: false,
+            show: true,
             type: 2,
             position: 'center', //leftTop,left,leftBottom,centerTop,center,centerBottom,rightTop,right,rightBottom
             icon: 'unicorm', //unicorm
-            title: 'заголовок подсказки', //Для type 2 title: '!'
+            title: 'Заголовок подсказки', //Для type 2 title: '!'
             text: `Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке дальнейших направлений развития. Разнообразный и богатый опыт реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации новых предложений.
             `,
-            isShowClose: false,
+            isShowClose: true,
             value: ['Далее']
         }
     }
@@ -136,9 +136,6 @@ class Notification extends React.Component {
                     {this.state.type === 2 ?
                         <div className="notifi-first-box">
                             <div className="notifi-f-main">
-                                <div className="notifi-linear-left-two"></div>
-                                <div className="notifi-linear-bottom"></div>
-                                <div className="notifi-linear-bottom-littel"></div>
                                 <div className="notifi-head">
                                     {this.state.title !== "" ?
                                         <div className="notifi-title-text">{this.state.title}</div>

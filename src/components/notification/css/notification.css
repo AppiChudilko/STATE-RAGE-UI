@@ -52,7 +52,7 @@
 }
 
 .notifi-first-box {
-    width: 35%;
+    width: 45%;
     max-height: 800px;
     display: flex;
     flex-direction: column;
@@ -60,24 +60,26 @@
 }
 
 .notifi-f-main {
-    background-color: rgba(20, 20, 20, 0.7);
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 20px;
     height: auto;
-    padding: 5%;
+    padding: 4%;
     max-height: 700px;
     display: flex;
     flex-direction: column;
     position: relative;
-    border-radius: 0.4rem;
 }
 
 .notifi-close {
-    background: url(../img/close.png) no-repeat;
+    background: url(../img/close.svg) no-repeat;
     width: 17px;
     height: 17px;
-    margin-left: auto;
-    margin-right: 8px;
-    margin-top: 9px;
     cursor: pointer;
+    position: absolute;
+    left: 94%;
+    top: 10%;
 }
 
 .notifi-text-box {
@@ -124,7 +126,8 @@
 }
 
 .n-btn-box {
-    background: linear-gradient(to bottom right, #70cfff, #43b2ea);
+    background: #FFFFFF;
+    border-radius: 8px;
     width: 16%;
     height: auto;
     cursor: pointer;
@@ -135,22 +138,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1px;
-    border-radius: 0.2rem;
-    font-family: 'RobotoMedium';
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
+    font-family: 'Gotham Pro Regular';
+    color: #000;
+    margin-right: 5%;
 }
 
 .n-btn-box:last-child {
     margin-left: 0px;
 }
 
-.n-btn-box:hover {
-    background: #000;
-    color: #fff;
-}
 
 .notifi-head {
     display: flex;
@@ -242,11 +238,10 @@
     overflow: scroll;
     display: flex;
     margin-top: 3%;
-    font-family: 'RobotoLight';
-    line-height: 1.5;
-    font-size: 1.2rem;
+    font-family: 'Gotham Pro Regular';
+    line-height: 25px;
     letter-spacing: 0.05rem;
-    font-size: 16px;
+    font-size: 1.2rem;
     color: #fff;
 }
 
