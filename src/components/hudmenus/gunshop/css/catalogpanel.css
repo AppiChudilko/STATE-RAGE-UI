@@ -10,6 +10,11 @@
     overflow-y: auto;
 }
 
+.hmenu__gunshop__catalog.cols-3 {
+    grid-template-rows: 45% 45%;
+    grid-template-columns: 32% 32% 32%;
+}
+
 .hmenu__gunshop__catalog__container {
     overflow-y: auto;
     padding-right: 1%;

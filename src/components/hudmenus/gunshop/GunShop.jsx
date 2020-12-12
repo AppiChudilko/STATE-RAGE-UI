@@ -12,7 +12,7 @@ export default class GunShop extends React.Component {
             show: false,
             selected: 0,
             selectedCatalog: -1,
-            banner: 'bs_hair',
+            banner: 'ammu',
             bgColor: '#2f2f2f',
             catalog: [
                 {
@@ -395,6 +395,7 @@ export default class GunShop extends React.Component {
                         catalog={this.state.catalog}
                         selectedCatalog={this.state.selectedCatalog}
                         setActiveCatalog={this.setActiveCatalog}
+                        banner={this.state.banner}
                     />
                     <StatsPanel
                         selected={this.state.selected}
