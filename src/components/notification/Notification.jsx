@@ -6,7 +6,7 @@ class Notification extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: true,
+            show: false,
             type: 2,
             position: 'center', //leftTop,left,leftBottom,centerTop,center,centerBottom,rightTop,right,rightBottom
             icon: 'unicorm', //unicorm
