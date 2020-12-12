@@ -18,6 +18,7 @@ class IDCard extends React.Component {
                 nation: 'Американец',
                 regist: '',
                 idcard: '00252',
+                subscribe: 'Pojarou',
                 img: '',//https://a.rsg.sc//n/lendstoun
             },
             photo: '',
@@ -72,26 +73,22 @@ class IDCard extends React.Component {
                 <div className="idcard-main">
                     <div className="idcard_box">
                         <div className="osn-idcard">
-                            <div className="clm-1-idcard">IDENTIFICATION CARD</div>
                             <div className="clm-2-idcard">
-                                <div className="plash_left">
+                                <div className="plash_right">
                                     <div className="photo_player">
                                         <img src={this.state.photo} className="img-size-card" alt=""/>
                                     </div>
-                                    {/* <div className="box-for-liner">
-                <div className="liner-shadow-card"></div>
-              </div> */}
-                                </div>
-                                <div className="plash_right">
-                                    <div className="pl-clm-inf-n name-styl-id name-pff">
-                                        <span className="pl-grow tsp-topname">Имя</span>
-                                        <span className="pl-black">{this.state.player_info.firstname}</span>
-                                    </div>
-                                    <div className="pl-clm-inf-n name-styl-id name-pff btm-last">
-                                        <span className="pl-grow tsp-topname">Фамилия</span>
-                                        <span className="pl-black">{this.state.player_info.lastname}</span>
-                                    </div>
                                     <div className="pl_inf">
+                                        <div className="pl-row">
+                                            <div className="pl-clm-inf-n name-styl-id name-pff">
+                                                <span className="pl-grow tsp-topname">Имя</span>
+                                                <span className="pl-black">{this.state.player_info.firstname}</span>
+                                            </div>
+                                            <div className="pl-clm-inf-n name-styl-id name-pff btm-last">
+                                                <span className="pl-grow tsp-topname">Фамилия</span>
+                                                <span className="pl-black">{this.state.player_info.lastname}</span>
+                                        </div>
+                                    </div>
                                         <div className="pl-row">
                                             <div className="pl-sex">
                                                 <span className="pl-grow row-tsp">Пол</span>
@@ -112,11 +109,15 @@ class IDCard extends React.Component {
                                                 <span
                                                     className="pl-black">{this.state.player_info.regist === '' ? '--------------' : this.state.player_info.regist}</span>
                                             </div>
-                                            <div className="pl-clm-inf">
-                                                <span className="pl-grow pl-clm-f">№ Документа</span>
-                                                <span className="pl-black">{this.state.player_info.idcard}</span>
-                                            </div>
                                         </div>
+                                    </div>
+                                    <div className="pl-clm-docs">
+                                            <span className="pl-clm-inf-docs">Номер документа</span>
+                                            <span className="pl-clm-inf-docs-num">{this.state.player_info.idcard}</span>
+                                    </div>
+                                    <div className="pl-idcard-subscribe">
+                                        <span className="pl-idcard-subscribe-text">Личная подпись: </span>
+                                        <span className="pl-idcard-subscribe-value">{this.state.player_info.subscribe}</span>
                                     </div>
                                 </div>
                             </div>
