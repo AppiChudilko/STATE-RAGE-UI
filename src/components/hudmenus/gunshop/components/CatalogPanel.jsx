@@ -1,13 +1,13 @@
 import React from 'react'
 import '../css/catalogpanel.css'
 
-const CatalogPanel = ({ catalog, selected, selectedCatalog, setActiveCatalog }) => {
+const CatalogPanel = ({ catalog, selected, selectedCatalog, setActiveCatalog, banner }) => {
 
     
 
     return (
         <div className="hmenu__gunshop__catalog__container">
-            <div className="hmenu__gunshop__catalog">
+            <div className={banner === 'ammu' ? 'hmenu__gunshop__catalog' : 'hmenu__gunshop__catalog cols-3'}>
                 {catalog[selected].items.map((item, index) => (
                 <div
                     onClick={() => setActiveCatalog(index)}
