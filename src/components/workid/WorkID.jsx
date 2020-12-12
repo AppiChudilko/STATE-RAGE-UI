@@ -9,7 +9,7 @@ class WorkID extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: true,
+            show: false,
             player_info: {
                 firstname: 'Olejka',
                 lastname: 'Pelmeshka',
