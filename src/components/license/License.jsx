@@ -11,13 +11,17 @@ class License extends React.Component {
         this.state = {
             show: false,
             player_info: {
-                name: 'Olejka Pelmeshka',
+                name: 'Olejka',
+                surname: 'Pelmeshka',
                 sex: 'Мужской',
                 license: 'Лицензия на оружие',
                 date_start: '01.01.2019',
                 date_stop: '01.01.2020',
+                birthday: '21.01.01',
                 prefix: 'G',
                 img: '',//https://a.rsg.sc//n/lendstoun
+                sign: 'testerov',
+                number: 'WN273716783'
             },
             photo: '',
         }
@@ -70,25 +74,50 @@ class License extends React.Component {
                 <div className="license-main">
                     <div className="lic-box">
                         <div className="lic-in-box">
-                            <div className="lic-left">
+                            <div className="lic-right">
                                 <div className="lic-photo_player">
                                     <img src={this.state.photo} className="lic-img" alt=""/>
                                 </div>
-                            </div>
-                            <div className="lic-right">
-                                <div className="lic-name">{this.state.player_info.name}</div>
                                 <div className="lic-info">
+                                    <div className="lic-row">
+                                        <div className="pl-clm-inf-n name-styl-id name-pff">
+                                            <span className="pl-lic-grow tsp-topname">Имя</span>
+                                            <span className="pl-lic-black">{this.state.player_info.name}</span>
+                                        </div>
+                                        <div className="pl-clm-inf-n name-styl-id name-pff">
+                                            <span className="pl-lic-grow tsp-topname">Фамилия</span>
+                                            <span className="pl-lic-black">{this.state.player_info.surname}</span>
+                                        </div>
+                                    </div>
+                                    <div className="lic-clmn-center">
+                                        <div className="pl-clm-inf-n name-styl-id name-pff">
+                                            <span className="pl-lic-grow tsp-topname">Пол</span>
+                                            <span className="pl-lic-black">{this.state.player_info.sex}</span>
+                                        </div>
+                                        <div className="pl-clm-inf-n name-styl-id name-pff">
+                                            <span className="pl-lic-grow tsp-topname">Дата рождения</span>
+                                            <span className="pl-lic-black">{this.state.player_info.birthday}</span>
+                                        </div>
+                                    </div>
                                     <div className="lic-grow tsp-lic tsp-fff">Тип лицензии</div>
-                                    <div className="lic-white tsp-lic">{this.state.player_info.license}</div>
+                                    <div className="tsp-lic tsp-lic-name">{this.state.player_info.license}</div>
                                     <div className="lic-first-inf">
-                                        <div className="tpc-right-ff">
-                                            <div className="lic-grow">Дата выдачи</div>
-                                            <div className="lic-white">{this.state.player_info.date_start}</div>
+                                        <div className="tpc-right-ff tpc-right-ff-date">
+                                            <div className="lic-grow lic-grow-date">Дата выдачи</div>
+                                            <div className="lic-grow-date-value">{this.state.player_info.date_start}</div>
                                         </div>
-                                        <div>
-                                            <div className="lic-grow">Дата окончания</div>
-                                            <div className="lic-white">{this.state.player_info.date_stop}</div>
+                                        <div className="tpc-right-ff-date">
+                                            <div className="lic-grow lic-grow-date">Дата окончания</div>
+                                            <div className="lic-grow-date-value">{this.state.player_info.date_stop}</div>
                                         </div>
+                                    </div>
+                                    <div className="license__sign">
+                                        <span className="license__sign__text">Личная подпись</span>
+                                        <span className="license__sign__value">{this.state.player_info.sign}</span>
+                                    </div>
+                                    <div className="license__docs">
+                                        <span className="license__docs__text">Номер документа</span>
+                                        <span className="license__docs__value">{this.state.player_info.number}</span>
                                     </div>
                                 </div>
                                 <div className="big-letter">{this.state.player_info.prefix}</div>

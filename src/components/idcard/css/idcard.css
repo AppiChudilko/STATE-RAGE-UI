@@ -108,7 +108,7 @@
     display: block;
     width: 132px;
     height: 132px;
-    border-bottom: 14px solid rgba(12, 95, 35, 0.42);
+    border-bottom: 10px solid rgba(12, 95, 35, 0.42);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
