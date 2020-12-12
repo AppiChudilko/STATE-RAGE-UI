@@ -1,8 +1,13 @@
 .inter-menu {
-    background: #fff;
-    width: 200px;
+    background: linear-gradient(143.81deg, rgba(0, 0, 0, 0) -3.63%, rgba(255, 255, 255, 0.332) 47.35%, rgba(0, 0, 0, 0) 102.77%);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 240px;
     position: absolute;
     z-index: 1;
+    padding: 1rem;
+    backdrop-filter: blur(2px);
 }
 
 .inter-box {
@@ -10,12 +15,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "RobotoBold";
-    font-size: 16px;
-    color: #000;
+    font-family: "Gotham Pro Regular";
+    font-size: 14px;
+    color: #fff;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 0.7rem;
+    padding: 0 0.25rem 0 0.25rem;
 }
 
 .inter-box:hover {
-    background: rgb(72, 185, 242);
+    background: rgba(0, 0, 0, 0.43);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+    border-radius: 6px;
     color: #fff !important;
 }
