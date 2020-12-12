@@ -171,6 +171,17 @@
     src: url('GothamPro.ttf');
 }
 
+@font-face {
+    font-family: 'Sacramento';
+    src: url('Sacramento.ttf');
+}
+
+
+@font-face {
+    font-family: 'Goblin One';
+    src: url('GoblinOne.ttf');
+}
+
 
 @font-face {
     font-family: 'Gotham Pro Medium';
