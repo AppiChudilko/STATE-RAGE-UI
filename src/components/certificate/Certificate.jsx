@@ -26,6 +26,7 @@ class Certificate extends React.Component {
                 position: 'Специальный агент',
                 id: '25',
                 img: '',//https://a.rsg.sc//n/lendstoun
+                subscribe: 'testerov'
             }
         }
     }
@@ -104,7 +105,7 @@ class Certificate extends React.Component {
             default:
                 return (
                     <React.Fragment>
-                        <div className={this.state.type}></div>
+                        <div className={`${this.state.type} fib-btn-img`} />
                     </React.Fragment>
                 )
                 break;
@@ -134,16 +135,18 @@ class Certificate extends React.Component {
                 <div className="fibcertificate-main">
                     <div className="fib-box">
                         <div className='fib-cert' style={{
-                            background: `url(${this.state.img_frac}) no-repeat top 30px right, 
-                #fff  url(${flag}) no-repeat -11% bottom`
+                            background: `url(${this.state.img_frac}) no-repeat top 30px right, no-repeat -11% bottom`
                         }}>
-                            <div className="fib-title-lic">{this.state.work}</div>
+                            <span className="fib-title-lic">{this.state.work}</span>
                             <div className="fib-pl-inf">
                                 <div className="fib-img">
                                     <img src={this.state.photo} className="style-img-fib" alt=""/>
                                 </div>
                                 <div className="fib-second-inf">
-                                    <div className="fib-name">{this.state.player_info.name}</div>
+                                    <div className="fib-second-inf-row">
+                                        <span className="fib-name">{this.state.player_info.name}</span>
+                                        <div className="fib-second-inf-line" />
+                                    </div>
                                     <div className="box-fib-inf-tt">
                                         <span className="fib-grow ff-rr-kk">№</span>
                                         <span className="fib-black">{this.state.player_info.id}</span>
@@ -159,6 +162,10 @@ class Certificate extends React.Component {
                                     <div className="box-fib-inf-tt">
                                         <span className="fib-grow ff-rr-kk">Пол</span>
                                         <span className="fib-black">{this.state.player_info.sex}</span>
+                                    </div>
+                                    <div className="pl-cert-subscribe">
+                                        <span className="pl-cert-subscribe-text">Личная подпись: </span>
+                                        <span className="pl-cert-subscribe-value">{this.state.player_info.subscribe}</span>
                                     </div>
                                 </div>
                             </div>
