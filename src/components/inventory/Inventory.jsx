@@ -2191,7 +2191,7 @@ class Inventory extends React.Component {
                                                         <Draggable that={this} id={index} type="take_off drop" item={item} key={index}>
                                                             <Droppable className="droppable" id="put_on" that={this}>
                                                                 <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
-                                                                    <img src={require(`./img/outfit/${item.icon}.svg`)} />
+                                                                    <img src={require(`./img/outfit/${item.icon}.png`)} />
                                                                 </div>
                                                             </Droppable>
                                                         </Draggable>
@@ -2201,7 +2201,7 @@ class Inventory extends React.Component {
                                                 return (
                                                     <Droppable className="droppable" key={index} id="put_on" that={this}>
                                                         <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
-                                                            <img src={require(`./img/outfit/${item.icon}.svg`)} style={{opacity: 0.5}} />
+                                                            <img src={require(`./img/outfit/${item.icon}.png`)} style={{opacity: 0.5}} />
                                                         </div>
                                                     </Droppable>
                                                 )
@@ -2214,7 +2214,7 @@ class Inventory extends React.Component {
                                                             <Draggable that={this} id={index} type="take_off drop" item={item} key={index}>
                                                                 <Droppable className="droppable" id="put_on" that={this}>
                                                                     <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
-                                                                        <img src={require(`./img/outfit/${item.icon}.svg`)} />
+                                                                        <img src={require(`./img/outfit/${item.icon}.png`)} />
                                                                     </div>
                                                                 </Droppable>
                                                             </Draggable>
@@ -2224,7 +2224,7 @@ class Inventory extends React.Component {
                                                     return (
                                                         <Droppable className="droppable" key={index} id="put_on" that={this}>
                                                             <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
-                                                                <img src={require(`./img/outfit/${item.icon}.svg`)} style={{opacity: 0.5}} />
+                                                                <img src={require(`./img/outfit/${item.icon}.png`)} style={{opacity: 0.5}} />
                                                             </div>
                                                         </Droppable>
                                                     )

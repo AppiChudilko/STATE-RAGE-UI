@@ -333,6 +333,11 @@ body {
     align-items: center;
 }
 
+.item__background img {
+    width: 50px;
+    height: 50px;
+}
+
 .outfit-pos-outfit-hat {
     position: absolute;
     margin-left: 152px;
@@ -997,5 +1002,10 @@ input[type="radio"]:checked + label .bg-color-craft-block {
     overflow: hidden;
 }
 .select-craft {
-    filter: brightness(0) saturate(100%) invert(59%) sepia(82%) saturate(454%) hue-rotate(169deg) brightness(97%) contrast(96%) !important;
+    /*filter: brightness(0) saturate(100%) invert(59%) sepia(82%) saturate(454%) hue-rotate(169deg) brightness(97%) contrast(96%) !important;*/
+    opacity: 1;
+}
+
+.null {
+    opacity: 0.4;
 }
