@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/stats.css'
 import FlatButton from '../uikit/FlatButton.jsx'
+import parseText from "../../../hud/components/MainMenu/functions/parseText";
 
 const StatsPanel = ({ catalog, selected, selectedCatalog, btncolor, img }) => {
 
@@ -10,9 +11,7 @@ const StatsPanel = ({ catalog, selected, selectedCatalog, btncolor, img }) => {
                 <React.Fragment>
                 <span className="hmenu__gunshop__stats__name">{catalog[selected].items[selectedCatalog].title}</span>
                 <div className="hmenu__gunshop__stats__params">
-                    <span className="hmenu__gunshop__stats__about">
-                        {`${catalog[selected].items[selectedCatalog].desc}`}
-                    </span>
+                    <span className="hmenu__gunshop__stats__about" dangerouslySetInnerHTML={{__html: catalog[selected].items[selectedCatalog].desc.replaceAll('~br~', '<br />')}}></span>
                 </div>
                 <div className="hmenu__gunshop__stats__price">
                     <div className="hmenu__gunshop__catalog__item__img__container">

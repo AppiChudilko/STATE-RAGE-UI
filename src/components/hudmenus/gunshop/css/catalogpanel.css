@@ -11,8 +11,7 @@
 }
 
 .hmenu__gunshop__catalog.cols-3 {
-    grid-template-rows: 45% 45%;
-    grid-template-columns: 32% 32% 32%;
+    grid-template-columns: 33% 33% 33%;
 }
 
 .hmenu__gunshop__catalog__container {
@@ -34,6 +33,7 @@
     flex-direction: column;
     cursor: pointer;
     border: 0.5px solid rgba(255, 255, 255, 0.5);
+    height: fit-content;
 }
 
 .hmenu__gunshop__catalog__item_active {
@@ -45,6 +45,7 @@
     padding: 1.5rem;
     flex-direction: column;
     cursor: pointer;
+    height: fit-content;
 }
 
 .hmenu__gunshop__catalog__item__img {
@@ -115,10 +116,16 @@
 }
 
 .hmenu__gunshop__catalog__item__sale {
-    padding-top: 3%;
+
+    position: relative;
+    padding: 6px;
+    right: 50%;
+    bottom: 34px;
+
+    /*padding-top: 3%;
     padding-bottom: 3%;
     padding-left: 1.3rem;
-    padding-right: 1.3rem;
+    padding-right: 1.3rem;*/
     border-radius: 0.4rem;
     font-family: 'Gotham Pro Regular';
     background: linear-gradient(105.63deg, rgba(255, 64, 57, 0) -80.94%, rgba(255, 64, 57, 0.45) 275.52%);
