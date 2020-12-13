@@ -16,7 +16,7 @@ class CarRent extends React.Component {
                 {
                     price: 200,
                     name: 'Elegy',
-                    sale: 0,
+                    sale: -1,
                     type: 'Автомобиль'
                 },
                 {

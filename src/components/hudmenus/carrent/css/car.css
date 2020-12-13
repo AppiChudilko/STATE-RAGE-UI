@@ -32,6 +32,10 @@
     font-size: 2rem;
 }
 
+.carrent__hide {
+    display: none;
+}
+
 .carrent__content__list__item__info__type {
     font-family: 'Gotham Pro Regular';
     font-size: 1rem;

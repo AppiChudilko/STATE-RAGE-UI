@@ -9,8 +9,6 @@ import MdCash from 'react-ionicons/lib/MdCash'
 import Alert from '../../alert/Alert'
 
 const PropertyCar = (props) => {
-    // <img className="govmenu__licensegov__propertycar__img" src={`https://state-99.com/client/images/cars/${props.name}_1.jpg`} />
-
     const { id, setAlert, type, name, vin, def, fuel, carclass, mark, number, price, tax, balance, maxbalance } = props
     
     const [ isHidden, setHidden ] = useState(true)
@@ -48,7 +46,7 @@ const PropertyCar = (props) => {
                             </span>
                         </span>
                     </div>
-                    <img src={`https://state-99.com/client/images/cars/${id}_1.jpg`} className="govmenu__propertygov__info__img" />
+                    <img src={`https://state-99.com/client/images/carsv/640/${id}.jpg`} className="govmenu__propertygov__info__img" />
                     <span data-hidden={isHidden} className="chevron left" style={{marginRight: 0}}></span>
                 </div>
                 {!isHidden && (
