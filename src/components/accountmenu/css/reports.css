@@ -115,6 +115,7 @@
      flex-direction: row;
      align-items: center;
      justify-content: space-between;
+     margin-left: auto;
  }
 
  .accountmenu__content__reports__item__list__time {

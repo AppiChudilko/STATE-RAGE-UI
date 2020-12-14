@@ -1,6 +1,6 @@
 .accountmenu__content__cards__blitem {
     display: flex;
-    height: 100%;
+    height: 90%;
     width: 66%;
     background: rgba(0, 0, 0, 0.35);
     border: 0.5px solid rgba(255, 255, 255, 0.5);

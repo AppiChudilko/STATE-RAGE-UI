@@ -1,7 +1,7 @@
 .accountmenu__content__cards__item {
     display: flex;
-    height: 100%;
-    width: 33%;
+    height: 90%;
+    width: 32%;
     background: rgba(0, 0, 0, 0.35);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
@@ -125,7 +125,7 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    margin-top: 25%;
+    margin-top: 18%;
 }
 
 .accountmenu__cards__logindata__item {
@@ -253,6 +253,7 @@
     padding-top: 3%;
     min-width: 30%;
     border-radius: 0.4rem;
+    width: 45%;
 }
 
 .accountmenu__card__icon {
@@ -322,7 +323,8 @@
 .accountmenu__content__cards__medicine__status__container__date__text {
     color: #fff;
     font-family: 'Gotham Pro Regular';
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .accountmenu__content__cards__medicine__info {
@@ -365,17 +367,21 @@
     background-position: right top;
 }
 
+
+
 .accountmenu__list::-webkit-scrollbar {
-  width: 0.8rem;
-}
-  
-.accountmenu__list::-webkit-scrollbar-track {
-  background: #303030;
-}
-  
-.accountmenu__list::-webkit-scrollbar-thumb {
-  background: #fff;
-}
+    width: 0.4rem;
+  }
+    
+  .accountmenu__list::-webkit-scrollbar-track {
+     background: rgba(0, 0, 0, 0.35);
+     border-radius: 15px;
+  }
+    
+  .accountmenu__list::-webkit-scrollbar-thumb {
+     background: #FFFFFF;
+     border-radius: 15px;
+ }
 
 .accountmenu__scrollable {
     overflow-y: auto;

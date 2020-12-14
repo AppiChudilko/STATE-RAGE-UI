@@ -12,3 +12,7 @@
 .accountmenu__content__cards__answer__text__container {
     margin-top: 10%;
 }
+
+.accountmenu__content__cards__answer__text__container h1 {
+    font-family: 'Gotham Pro Regular';
+}

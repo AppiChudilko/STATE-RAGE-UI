@@ -1,13 +1,4 @@
-.accountmenu__content__cards__item {
-    display: flex;
-    height: 100%;
-    width: 33%;
-    background: rgba(0, 0, 0, 0.35);
-    border: 0.5px solid rgba(255, 255, 255, 0.5);
-    box-sizing: border-box;
-    border-radius: 15px;
-    flex-direction: column;
-}
+
 
 .accountmenu__scrollable {
     overflow-y: auto;
@@ -27,7 +18,7 @@
 
 .accountmenu__content__cards__bitem {
     display: flex;
-    height: 100%;
+    height: 90%;
     width: 44%;
     background: rgba(0, 0, 0, 0.35);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
@@ -38,7 +29,7 @@
 
 .accountmenu__content__cards__sitem {
     display: flex;
-    height: 100%;
+    height: 90%;
     width: 22%;
     background: rgba(0, 0, 0, 0.35);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
