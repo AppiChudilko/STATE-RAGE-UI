@@ -103,8 +103,13 @@ class ModalInput extends React.Component {
                             {this.state.value.map((e, i) => {
                                 let index = `modalbtn${i}`
                                 return (
-                                    <div className="modal-btn" key={index}
-                                        onClick={() => this.selecetButton(e, this.state.text)}>{e}</div>
+                                    <span
+                                        className="modal-btn"
+                                        key={index}
+                                        onClick={() => this.selecetButton(e, this.state.text)}
+                                    >
+                                        {e}
+                                    </span>
                                 )
                             })}
                         </div>
