@@ -3,13 +3,12 @@
     height: -webkit-fill-available;
     display: flex;
     position: absolute;
-    align-items: center;    
+    align-items: center;
 }
 .car-leftmenu {
     margin-right:auto;
-    width: 405px;
+    width: 505px;
     height: 100%;
-    background: rgb(28, 28, 28, 0.3);
     overflow: hidden;
 }
 .left-title-car {
@@ -26,27 +25,36 @@
     margin-left: 18px;
 }
 .left-list-menu-car {
-    width: 100%;
+    padding: 2rem;
     height: calc(100% - 65px);
     overflow: scroll;    
 }
-.left-list-menu-car::-webkit-scrollbar { width: 7px; height: 0px;}
+.left-list-menu-car::-webkit-scrollbar { 
+    width: 5px; height: 0px;
+}
 .left-list-menu-car::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    background: rgba(0, 0, 0, 0.35);
+border-radius: 15px;
 }
 .left-list-menu-car::-webkit-scrollbar-thumb {
-    background: #00b7f4;; 
+    
+    background: #FFFFFF;
+    border-radius: 15px;
 }
 .left-list-menu-car::-webkit-scrollbar-thumb:window-inactive {
-    background: #00b7f4;
+    
+    background: #FFFFFF;
+    border-radius: 15px;
 }
 
 .left-li-car {
     width: 100%;
-    height: 88px;
     display: flex;
     flex-direction: row;
-    margin-bottom: 11px;
+    margin-bottom: 1.2rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 .l-c-info-car {
     display: flex;
@@ -58,10 +66,12 @@
 }
 .l-c-img-car {
     margin-left: auto;
-    width: 143px;
-    height: 80px;
+    width: 153px;
+    height: 90px;
+    border-radius: 8px;
 }
 .car-img-settings {
+    border-radius: 8px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -76,22 +86,34 @@
     flex-direction: row;
     width: 100%;
     align-items: center;
+    padding:  1rem;
 }
 .t-c-txt{
+    font-family: 'Gotham Pro Medium';
+    font-size: 1.2rem;
     margin-top: -7px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
+
+.carshop__item__price {
+    font-family: 'Gotham Pro Medium';
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.carshop__item__count {
+    font-family: 'Gotham Pro Regular';
+    font-size: 1rem;
+}
+
 input[type="radio"]:checked + .label-carradio {
-    background-color: rgb(28, 28, 28, 0.7);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.21) -29.55%, rgba(255, 255, 255, 0) 100%);
 }
-input[type="radio"]:checked + label .l-c-img-car  {
-    border-left: 5px solid #00b7f4;
-}  
 input[type="radio"]:checked + label .car-img-settings  {
     filter: none;
 } 
 .info-menu-right-position {
-    width: 285px;
+    width: 385px;
     height: auto;
     margin-left: auto;
     margin-right: 61px;
@@ -116,12 +138,12 @@ input[type="radio"]:checked + label .car-img-settings  {
 }
 .inf-t-menu-r {
     width: 100%;
-    font-family: 'HACKED';
-    font-size: 48px;
+    font-family: 'Gotham Pro Medium';
+    font-size: 2.2rem;
     color:#fff;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     margin-bottom: 30px;
 }
 .ml-li-list {
@@ -129,10 +151,15 @@ input[type="radio"]:checked + label .car-img-settings  {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto';
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     margin-top: 25px;
 }
+
+.ml-box-l-title {
+    font-family: 'Gotham Pro Regular';
+}
+
 .ml-box-l {
     width: 100%;
     display: flex;
@@ -151,6 +178,11 @@ input[type="radio"]:checked + label .car-img-settings  {
     margin-top: auto;
     margin-bottom: 78px;
 }
+
+.ml-box-l-info {
+    font-family: 'Gotham Pro Medium';
+}
+
 .clr-m-btn-box {
     width: 100%;
     display: flex;
@@ -158,19 +190,27 @@ input[type="radio"]:checked + label .car-img-settings  {
     justify-content: center;
 }
 .ccslider-box {
-    background: rgb(28, 28, 28, 0.3);
-    width: 201px;
-    height: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 1.2rem 3.4rem 1.2rem 3.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'RobotoLight';
-    font-size: 16px;
-    color: #fff;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
 }
+
+.ccslider-box:first-of-type {
+    margin-right: 1.5rem;
+}
+
 input[type="radio"]:checked + .ccslider-box {
-    background: #fff;
-    color: #000;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border: none;
+    color: #fff;
 }
 .color-box-slider {
     width: 100%;
@@ -216,33 +256,70 @@ input[type="radio"]:checked + .ccslider-box {
     
 }
 .clr-list-box {
-    width: 51px !important;
-    height: 9px;
+    height: 10px;
+    width: 10px;
+    margin: 0 1rem 0 1rem;
+    border-radius: 50%;
 }
 .slick-current .clr-list-box {
-    height: 15px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
 }
 .b-l-btn-title {
-    font-family: 'HACKED';
-    font-size: 60px;
+    font-family: 'Gotham Pro Medium';
+    font-size: 2.4rem;
     color: #fff;
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
+
+.carshop__action__row__btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.carshop__action__title {
+    font-size: 1.7rem;
+    font-family: 'Gotham Pro Medium';
+}
+
 .b-l-btn-box {
-    width: 164px;
-    height: 45px;
-    background: #48b9f2;
+    padding: 1.2rem 3rem 1.2rem 3rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto';
-    font-size: 22px;
+    font-family: 'Gotham Pro Regular';
+    font-size: 1rem;
     color: #fff;
-    text-transform: uppercase;
 }
+
+.b-l-btn-box:first-child {
+    margin-right: 1.5rem;
+}
+
+.b-l-btn-box__exit {
+    background: linear-gradient(85.18deg, rgba(255, 51, 51, 0.2) -15.62%, rgba(231, 70, 70, 0) 108.79%);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gotham Pro Regular';
+    font-size: 1rem;
+    color: #fff;
+    width: 80%;
+    padding: 1.6rem 4rem 1.6rem 4rem;
+
+}
+
 .b-l-btn-box:hover {
-    background: #000;
+    background: #fff;
+    color: #000;
 }
 .buy-list-c-btn {
     display: flex;

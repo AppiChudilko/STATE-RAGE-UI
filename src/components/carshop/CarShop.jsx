@@ -22,7 +22,7 @@ export default class CarShop extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: false,
+            show: true,
             car_colors: [
                 {id: '0', color: 'rgb(13, 17, 22)'},
                 {id: '1', color: 'rgb(28, 29, 33)'},
@@ -209,6 +209,534 @@ export default class CarShop extends React.Component {
                     current_secondary_color: '0',
 
                 },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
+                {
+                    make: 'Annis',
+                    model: 'Elegy',
+                    name: 'elegy',
+                    count: 0,
+                    price: '$1,500,000',
+                    rent: '$1,500',
+                    img: 'https://i.yapx.ru/GakPT.png',
+                    character_car: [
+                        {title: 'Класс', info: 'SUVs'},
+                        {title: 'Тип топлива', info: '100l'},
+                        {title: 'Вместимость бака', info: '20l'},
+                        {title: 'Расход топлива', info: '10l'},
+                        {title: 'Объем багажника', info: '100 м'},
+                        {title: 'Допустимый вес', info: '100 м'},
+                    ],
+                    color_car_main: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    color_car_secondary: ['0', '4', '28', '38', '42', '70', '81', '135', '107', '111'],
+                    current_main_color: '0',
+                    current_secondary_color: '0',
+
+                },
             ],
             change_car: "",
             slider_settings: {}
@@ -302,7 +830,6 @@ export default class CarShop extends React.Component {
             <React.Fragment>
                 <div className="carshop-position">
                     <div className="car-leftmenu">
-                        <div className="left-title-car"><span className="title-car-tt">Покупка ТС</span></div>
                         <div className="left-list-menu-car">
                             {this.state.car_list.map((e, i) => {
                                 let index = `carlist${i}`
@@ -317,7 +844,8 @@ export default class CarShop extends React.Component {
                                         <label htmlFor={listindex} className="label-carradio">
                                             <div className="l-c-info-car">
                                                 <div className="t-c-txt">{e.make}</div>
-                                                <div>{e.price} ({e.count} шт.)</div>
+                                                <span className="carshop__item__price">{e.price}</span>
+                                                <span className="carshop__item__count">{`(${e.count} шт.)`}</span>
                                             </div>
                                             <div className="l-c-img-car">
                                                 <img src={e.img} alt="" className="car-img-settings"/>
@@ -416,10 +944,7 @@ export default class CarShop extends React.Component {
                         {this.state.change_car !== "" ?
                             <React.Fragment>
                                 <div
-                                    className="inf-t-menu-r">{this.state.change_car.make}</div>
-                                <div className="m-linear-r">
-                                    <div className="ml-one"></div>
-                                    <div className="ml-two"></div>
+                                    className="inf-t-menu-r">{this.state.change_car.make}
                                 </div>
                                 <div className="ml-li-list">
                                     {this.state.change_car.character_car.map((e, i) => {
@@ -433,15 +958,23 @@ export default class CarShop extends React.Component {
                                     })}
                                 </div>
                                 <div className="buy-list-c-btn">
+                                    <span className="carshop__action__title">Покупка</span>
                                     <div className="b-l-btn-title">{this.state.change_car.price}</div>
-                                    <div className="b-l-btn-box" onClick={() => this.buyCar()}>Купить</div>
+                                    <div className="carshop__action__row__btns">
+                                        <div className="b-l-btn-box" onClick={() => this.buyCar()}>Купить</div>
+                                        <div className="b-l-btn-box" onClick={() => this.buyCar()}>Купить</div>
+                                    </div>
                                 </div>
                                 <div className="rent-list-c-btn">
-                                    <div className="b-l-btn-title" style={{fontSize: '35px', color: '#c1c1c1'}}>{this.state.change_car.rent}</div>
-                                    <div className="b-l-btn-box" onClick={() => this.rentCar()}>Аренда</div>
+                                    <span className="carshop__action__title">Аренда</span>
+                                    <div className="b-l-btn-title" style={{fontSize: '35px', color: 'rgba(255, 255, 255, 0.4)'}}>{this.state.change_car.rent}</div>
+                                    <div className="carshop__action__row__btns">
+                                        <div className="b-l-btn-box" onClick={() => this.rentCar()}>Аренда</div>
+                                        <div className="b-l-btn-box" onClick={() => this.rentCar()}>Аренда</div>
+                                    </div>
                                 </div>
                                 <div className="rent-list-c-btn">
-                                    <div className="b-l-btn-box" onClick={() => this.exitCar()}>Выйти</div>
+                                    <div className="b-l-btn-box__exit" onClick={() => this.exitCar()}>Покинуть автосалон</div>
                                 </div>
                             </React.Fragment>
                             : null}
