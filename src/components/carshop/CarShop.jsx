@@ -22,7 +22,7 @@ export default class CarShop extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: true,
+            show: false,
             car_colors: [
                 {id: '0', color: 'rgb(13, 17, 22)'},
                 {id: '1', color: 'rgb(28, 29, 33)'},
