@@ -4,9 +4,9 @@
     height: 100%;
     display: flex;
     position: absolute;
-    background-image: url('https://sun9-56.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70986b74dd06036643841aff64b&type=album');
+    /*background-image: url('https://sun9-56.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70986b74dd06036643841aff64b&type=album');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
 }
 .hud-position-leftop {
     margin-right: auto;
@@ -347,7 +347,7 @@
 }
 
 .speedbox-small {
-    font-family: "Roboto";
+    font-family: "Gotham Pro Regular";
     margin-bottom: 2px;
     width: 384px;
     display: flex;
@@ -357,7 +357,7 @@
 }
 
 .speedbox-small .speed-txt {
-    font-family: "Roboto";
+    font-family: "Gotham Pro Regular";
     font-size: 34px;
     font-weight: bold;
     margin-right: 8px;
@@ -571,7 +571,7 @@
 }
 
 .gang-war-info {
-    font-family: "Roboto";
+    font-family: "Gotham Pro Regular";
     width: 260px;
     height: 114px;
     background: rgb(0, 0, 0, 0.502);
@@ -583,6 +583,7 @@
     position: absolute;
     bottom: 30px;
     left: 12px;
+    border-radius: 10px;
 }
 
 .gps-main {
@@ -756,7 +757,7 @@
     font-size: 13px;
     margin-top: -3px;
     color: #fff;
-    font-family: 'Roboto';
+    font-family: 'Gotham Pro Regular';
 }
 
 .logo-main .logo-ammo {
@@ -766,7 +767,7 @@
     right: 50px;
     font-size: 16px;
     border-radius: 10px;
-    font-family: 'Roboto';
+    font-family: 'Gotham Pro Regular';
     padding: 8px;
     background: rgb(0, 0, 0, 0.5);
 }
@@ -799,6 +800,37 @@
     width: 23px;
     background: url("../img/ammo.png") no-repeat;
     background-size: contain;
+}
+
+.logo-main .logo-quest {
+    border-radius: 10px;
+    position: absolute;
+    max-width: 250px;
+    top: 144px;
+    right: 50px;
+    font-size: 16px;
+    font-family: 'Gotham Pro Regular';
+    padding: 16px;
+    background: rgb(0, 0, 0, 0.502);
+}
+
+.logo-main .logo-quest .quest-title {
+    font-family: 'Gotham Pro Medium';
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+    color: #FFC107;
+}
+
+.logo-main .logo-quest .quest-text {
+    font-family: 'Gotham Pro Regular';
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+.logo-main .logo-quest .quest-win {
+    font-family: 'Gotham Pro Regular';
+    font-weight: 300;
+    color: #64DD17;
 }
 
 .span-bold {

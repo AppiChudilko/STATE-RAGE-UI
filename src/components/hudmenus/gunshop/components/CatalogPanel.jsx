@@ -28,7 +28,7 @@ const CatalogPanel = ({ catalog, selected, selectedCatalog, setActiveCatalog, ba
                        </span>
                         {item.sale > 0 && (
                             <span className="hmenu__gunshop__catalog__item__sale">
-                                {`-${item.sale}%`}
+                                {`${item.sale}%`}
                         </span>
                         )}
                        <div className="hmenu__gunshop__catalog__item__calibr">

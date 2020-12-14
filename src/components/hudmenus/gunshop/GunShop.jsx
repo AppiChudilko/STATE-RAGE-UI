@@ -19,7 +19,7 @@ export default class GunShop extends React.Component {
                     title: 'Оружие',
                     items: [
                         { //Если кликаем сюда, то открывается меню справа (Там где покупка)
-                            title: 'Пастила P`s & Q`s',
+                            title: 'Пастила P`s & Q`s 123123 123123 12312 312 312',
                             desc: 'Полное описание~br~Полное описание',
                             desc2t: 'Калибр',
                             desc2: '9x19mm',

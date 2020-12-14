@@ -1,5 +1,6 @@
 import React from 'react';
 import EventManager from "../../../EventManager";
+import { Animated } from 'react-animated-css';
 
 class Logo extends React.Component {
     constructor(props) {
@@ -7,8 +8,13 @@ class Logo extends React.Component {
         this.state = {
             show: true,
             showAmmo: false,
+            showQuest: false,
             ammoCount: 0,
             ammoMode: 'auto',
+            questTitle: 'Квестовое задание',
+            questText: 'Получите два ящика травы, три ящика кокаина, отвезите труп Минори на свалку',
+            questDesc: 'Мертвый минори',
+            questAnim: '',
             date: '01.01',
             time: '12:00',
             online: '0',
@@ -39,6 +45,12 @@ class Logo extends React.Component {
                 this.setState({ammoCount: value.ammoCount});
                 this.setState({ammoMode: value.ammoMode});
                 this.setState({background: value.background});
+            } else if (value.type === 'updateQuest') {
+                this.setState({showQuest: value.showQuest});
+                this.setState({questTitle: value.questTitle});
+                this.setState({questText: value.questText});
+            } else if (value.type === 'updateQuestAnim') {
+                this.setState({questAnim: value.questAnim});
             } else return;
         })
     }
@@ -64,6 +76,11 @@ class Logo extends React.Component {
                          className={this.state.showAmmo ? 'logo-ammo' : 'hide'}>
                         <div className={'logo-ammo-img ammo-' + this.state.ammoMode}></div>
                         {this.state.ammoCount}
+                    </div>
+                    <div style={{backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')'}}
+                         className={this.state.showQuest ? 'logo-quest animated ' + this.state.questAnim : 'hide'}>
+                        <h2 className="quest-title">{this.state.questTitle}</h2>
+                        <div className="quest-text">{this.state.questText}</div>
                     </div>
                 </div>
             </React.Fragment>

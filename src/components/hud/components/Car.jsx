@@ -13,13 +13,14 @@ class Car extends React.Component {
             light: true,
             door: false,
             engine: false,
-            turnLeft: true,
+            turnLeft: false,
+            turnRight: false,
             fuel: 80,
             fuelType: 'L',
             max_fuel: 100,// Максимальная вместимость топливного бака
             speed: 0,
             speedLabel: 'km/h',
-            carname: '',
+            carname: 'Insurgent',
             deg: -45,
             color: '#48B9F2',
             background: 0.5,
@@ -58,6 +59,8 @@ class Car extends React.Component {
                 this.setState({speedLabel: value.speedLabel});
                 this.setState({background: value.background});
                 this.setState({carname: value.carname});
+                this.setState({turnLeft: value.turnLeft});
+                this.setState({turnRight: value.turnRight});
             }  else if (value.type === 'updateRadarValues') {
                 this.setState({showRadar: value.showRadar});
                 this.setState({radarRearSpeed: value.radarRearSpeed});
@@ -185,7 +188,7 @@ class Car extends React.Component {
                         className="hud__speedometr__arrow-left"
                     />
                     <img
-                        src={this.state.turnLeft ? `https://state-99.com/client/images/icons/hud/arrow_right_off.svg` : `https://state-99.com/client/images/icons/hud/arrow_right_on.svg`}
+                        src={this.state.turnRight ? `https://state-99.com/client/images/icons/hud/arrow_right_on.svg` : `https://state-99.com/client/images/icons/hud/arrow_right_off.svg`}
                         className="hud__speedometr__arrow-right"
                     />
                     <div className="hud__speedometr__info">
@@ -193,9 +196,10 @@ class Car extends React.Component {
                             <img src={this.state.fuelType === '%' ? `https://state-99.com/client/images/icons/hud/power.svg` : `https://state-99.com/client/images/icons/hud/fuel.svg`} className="hud__speedometr__info__fuel" width="14" />
                             <span className="hud__speedometr__info__fuel__text">{`${this.state.fuel}/${this.state.max_fuel}`}</span>
                         </div>
-                        <span className="hud__speedometr__info__carname">
+                        {!this.state.isShowSmall && (
+                            <span className="hud__speedometr__info__carname">
                             {this.state.carname}
-                        </span>
+                        </span>)}
                     </div>
                 </div>
                 

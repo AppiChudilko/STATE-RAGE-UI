@@ -7,7 +7,7 @@
 }
 .car-leftmenu {
     margin-right:auto;
-    width: 505px;
+    width: 450px;
     height: 100%;
     overflow: hidden;
 }
@@ -104,6 +104,7 @@ border-radius: 15px;
 .carshop__item__count {
     font-family: 'Gotham Pro Regular';
     font-size: 1rem;
+    color: rgba(255,255,255,0.6);
 }
 
 input[type="radio"]:checked + .label-carradio {
@@ -312,7 +313,7 @@ input[type="radio"]:checked + .ccslider-box {
     font-family: 'Gotham Pro Regular';
     font-size: 1rem;
     color: #fff;
-    width: 80%;
+    width: 85%;
     padding: 1.6rem 4rem 1.6rem 4rem;
 
 }

@@ -10,6 +10,7 @@ import fib from "./img/fib.png"
 import lspd from "./img/lspd.png"
 import sheriff from "./img/sheff.png"
 import ems from "./img/ems.png"
+import usmc from "./img/usmc.png"
 import EventManager from "../../EventManager";
 
 class Certificate extends React.Component {
@@ -81,7 +82,7 @@ class Certificate extends React.Component {
                 this.setState({work: 'emergency medical services', img_frac: ` ${ems}`})
                 break;
             case 'usmc':
-                this.setState({work: 'united states marine corps', img_frac: ``})
+                this.setState({work: 'united states marine corps', img_frac: ` ${usmc}`})
                 break;
             case 'inv':
                 this.setState({work: 'Life Invader News', img_frac: ``})
