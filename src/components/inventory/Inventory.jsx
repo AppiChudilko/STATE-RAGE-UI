@@ -247,7 +247,7 @@ class Inventory extends React.Component {
             selected_recipe: {},
             learned_recipes: [
                 {
-                    id: 80, name: "Большая аптечка", desc: `Данная аптечка восстанавливает до 100% здоровья.`, requirements: `бинт стерильный~br~спирт~br~ледокоин`,
+                    id: 80, name: "Большая аптечка", desc: `Данная аптечка восстанавливает до 100% здоровья.~br~Ресурсы для создания: бинт 2шт, маленькая аптечка`,
                     craft: ['199', '3', '3'], craft_time: 200000,
                 },
             ],
@@ -686,7 +686,7 @@ class Inventory extends React.Component {
                 }
             }
         }
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 16; i++) {
             if (!foundOutfit.includes(i)) {
                 if (i < 12) {
                     this.setState(prevState => ({ ...prevState.outfit[0][i].equipped = false }))
@@ -2278,8 +2278,6 @@ class Inventory extends React.Component {
                                                         <div className='style-recipes-txt-craft'>
                                                             <span className="style-recipes-txt-craft__name">{this.state.selected_recipe.name}</span>
                                                             <span className="style-serial-recipes">{this.replaceAll(this.state.selected_recipe.desc, '~br~', '\n')}</span>
-                                                            <span className="style-recipes-txt-craft__name">{`Ресурсы для изготовления`}</span>
-                                                            <span className="style-serial-recipes">{this.replaceAll(this.state.selected_recipe.requirements, '~br~', '\n')}</span>
                                                         </div>
                                                     </div>
                                                     <div className="crafting-object-main">
