@@ -786,11 +786,11 @@ export default class CarShop extends React.Component {
         }
     }
 
-    buyCar() {
+    buyCar(payType) {
         console.log(this.state.change_car)
 
         try {
-            mp.trigger('client:carshop:buyCar', this.state.change_car.name, this.state.change_car.count); // eslint-disable-line
+            mp.trigger('client:carshop:buyCar', this.state.change_car.name, this.state.change_car.count, payType); // eslint-disable-line
         }
         catch (e) {
             console.log(e);
@@ -802,6 +802,17 @@ export default class CarShop extends React.Component {
 
         try {
             mp.trigger('client:carshop:rentCar', this.state.change_car.name); // eslint-disable-line
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    testCar() {
+        console.log(this.state.change_car)
+
+        try {
+            mp.trigger('client:carshop:testCar', this.state.change_car.name); // eslint-disable-line
         }
         catch (e) {
             console.log(e);
@@ -845,7 +856,7 @@ export default class CarShop extends React.Component {
                                             <div className="l-c-info-car">
                                                 <div className="t-c-txt">{e.make}</div>
                                                 <span className="carshop__item__price">{e.price}</span>
-                                                <span className="carshop__item__count">{`(${e.count} шт.)`}</span>
+                                                <span className="carshop__item__count">{`В наличии: ${e.count} шт.`}</span>
                                             </div>
                                             <div className="l-c-img-car">
                                                 <img src={e.img} alt="" className="car-img-settings"/>
@@ -961,8 +972,8 @@ export default class CarShop extends React.Component {
                                     <span className="carshop__action__title">Покупка</span>
                                     <div className="b-l-btn-title">{this.state.change_car.price}</div>
                                     <div className="carshop__action__row__btns">
-                                        <div className="b-l-btn-box" onClick={() => this.buyCar()}>Купить</div>
-                                        <div className="b-l-btn-box" onClick={() => this.buyCar()}>Купить</div>
+                                        <div className="b-l-btn-box" onClick={() => this.buyCar(1)}>По карте</div>
+                                        <div className="b-l-btn-box" onClick={() => this.buyCar(0)}>Наличкой</div>
                                     </div>
                                 </div>
                                 <div className="rent-list-c-btn">
@@ -970,7 +981,7 @@ export default class CarShop extends React.Component {
                                     <div className="b-l-btn-title" style={{fontSize: '35px', color: 'rgba(255, 255, 255, 0.4)'}}>{this.state.change_car.rent}</div>
                                     <div className="carshop__action__row__btns">
                                         <div className="b-l-btn-box" onClick={() => this.rentCar()}>Аренда</div>
-                                        <div className="b-l-btn-box" onClick={() => this.rentCar()}>Аренда</div>
+                                        <div className="b-l-btn-box" onClick={() => this.testCar()}>Тест-драйв</div>
                                     </div>
                                 </div>
                                 <div className="rent-list-c-btn">

@@ -9,7 +9,7 @@ class Player extends React.Component {
         this.state = {
             show: true,
             microphone: false,
-            drink: 20,
+            drink: 5,
             eat: 60,
             wallet: "12.400.000$",
             card: "12.400$",

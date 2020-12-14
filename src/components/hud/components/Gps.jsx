@@ -16,7 +16,7 @@ class Gps extends React.Component {
             def: 0,
             tre: 0,
             timer: 0,
-            color: '#48B9F2',
+            color: '#FFC107',
             background: 0.5,
         }
     }
