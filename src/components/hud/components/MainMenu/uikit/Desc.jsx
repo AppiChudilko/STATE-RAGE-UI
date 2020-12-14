@@ -7,6 +7,9 @@ const styles = {
         color: '#fff',
         fontSize: '1.1rem',
     },
+    container: {
+        width: '420px'
+    }
 };
 
 export default function Desc(props) {

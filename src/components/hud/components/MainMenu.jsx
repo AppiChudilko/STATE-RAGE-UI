@@ -40,7 +40,7 @@ class MainMenu extends React.Component {
                 {
                     type: 2,
                     title: 'Бизнес',
-                    subtitle: 'default text',
+                    subtitle: 'default textdefault textdefault textdefault textdefault textdefault textdefault textdefault textdefault textdefault textdefault text',
                     iconr: 'test__icon__inverted',
                     items: [],
                     divider: false
