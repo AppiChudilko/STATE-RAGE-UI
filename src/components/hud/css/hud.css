@@ -4,6 +4,9 @@
     height: 100%;
     display: flex;
     position: absolute;
+    background-image: url('https://sun9-56.userapi.com/impg/0JfXCbRsmDKjQDg1aM8C50x4I0uocy60xDLSrA/L2uXeWyOZ4s.jpg?size=1280x720&quality=96&sign=8c45c70986b74dd06036643841aff64b&type=album');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .hud-position-leftop {
     margin-right: auto;
@@ -603,9 +606,9 @@
 }
 
 .gps-txt {
-    font-family: "GTA Font";
+    font-family: "Gotham Pro Regular";
     color: rgb(255, 255, 255);
-    font-size: 1.8rem;
+    font-size: 1rem;
     text-align: left;
 }
 
@@ -655,10 +658,9 @@
     display: flex;
     align-items: center;
     font-size: 1rem;
-    margin-top: -96px;
-    font-family: "Gotham Pro Medium";
+    margin-left: 1rem;
+    font-family: "Gotham Pro Regular";
     color: rgb(255, 255, 255);
-    font-weight: medium;
     margin-bottom: auto;
 }
 
@@ -695,10 +697,19 @@
 }
 
 .time-img-greenzone {
-    width: 60px;
-    height: 60px;
-    background: url(../img/GreenZone.png) no-repeat;
-    background-size: cover;
+    background: linear-gradient(131.14deg, rgba(0, 255, 102, 0.3) -21.5%, rgba(0, 255, 102, 0) 92.21%);
+    border: 0.5px solid #00FF66;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    margin-bottom: 20px;
+    max-height: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .time-img-yellowzone {
@@ -714,6 +725,8 @@
     font-size: 1rem;
     font-family: "Gotham Pro Medium";
     color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
 }
 
 .hud-position-righttop {

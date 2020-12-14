@@ -1,6 +1,6 @@
 import React from 'react';
 import EventManager from "../../../EventManager";
-
+import IconShield from '../img/Union.svg'
 import Draggable from '../Draggable'
 
 class Watch extends React.Component {
@@ -8,7 +8,7 @@ class Watch extends React.Component {
         super(props)
         this.state = {
             show: true,
-            showGreen: false,
+            showGreen: true,
             showYellow: false,
             time: '00:00',
             date: '01.01.1990',
@@ -51,14 +51,18 @@ class Watch extends React.Component {
         return (
             <React.Fragment>
                     <Draggable id="zone" className="zone-box">
-                        <div className={this.state.showGreen ? 'time-img-greenzone' : 'hide'}></div>
+                        <div className={this.state.showGreen ? 'time-img-greenzone' : 'hide'}>
+                            <img src={IconShield} />
+                        </div>
                         <div className={this.state.showYellow ? 'time-img-yellowzone' : 'hide'}></div>
                     </Draggable>
                     <Draggable id="watch" className="watch-main">
                         <div className="time-box">
-                            <div className="degrees">{this.state.temp}</div>
                             <div className="time">{this.state.time}</div>
-                            <div className="date">{this.state.date}</div>
+                            <div className="date">
+                                {this.state.date}
+                                <span className="degrees">{this.state.temp}</span>
+                            </div>
                         </div>
                     </Draggable>
             </React.Fragment>
