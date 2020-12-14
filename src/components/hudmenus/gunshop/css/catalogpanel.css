@@ -113,13 +113,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: visible;
+    height: 24px;
 }
 
 .hmenu__gunshop__catalog__item__sale {
 
     position: relative;
     padding: 6px;
-    right: 50%;
+    /*right: 50%;*/
     bottom: 34px;
 
     /*padding-top: 3%;
