@@ -34,7 +34,7 @@
 }
 
 .range-text {
-    font-family: 'Century Gothic';
+    font-family: 'Gotham Pro Regular';
 }
 
 .range-editor-block .range-text {
@@ -112,7 +112,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1rem;
 }
 
@@ -121,8 +121,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Century Gothic";
-    font-weight: bold;
+    font-family: "Gotham Pro Medium";
     margin-bottom: 3rem;
     font-size: 1.2rem;
 }
@@ -141,7 +140,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1rem;
     color: #fff;
     background: rgba(196, 196, 196, 0.08);
@@ -210,7 +209,7 @@
 
 .box-change .box-title {
     margin-bottom: 12px;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1.1rem;
     color: #fff;
 }
@@ -218,14 +217,14 @@
 .box-change .box-editor-title {
     text-align: center;
     width: 40%;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     color: #fff;
     font-size: 1rem;
 }
 
 .box-editor-title__namechar {
     text-align: center;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     color: #fff;
     font-size: 1rem;
     margin-top: 1rem;
@@ -237,7 +236,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1rem;
     color: #fff;
     border: 0.5px solid rgba(255, 255, 255, 0.25);
@@ -291,7 +290,7 @@
 .characteristic-editor .box-character {
     display: flex;
     align-items: center;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1rem;
     color: #fff;
     justify-content: space-between;
@@ -328,7 +327,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1rem;
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
@@ -427,7 +426,7 @@ input.range-slider-ch:checked + label .slider-change-radio {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     color: #fff;
     margin-top: -1.5rem;
     font-size: 1rem;
@@ -634,7 +633,7 @@ input.range-slider-ch:checked + label .slider-change-radio {
     width: 100%;
     border: 0.5px solid rgba(255, 255, 255, 0.25);
     border-radius: 7px;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     font-size: 1rem;
     margin-bottom: 1.2rem;
     padding: 1rem;
@@ -656,7 +655,7 @@ input.range-slider-ch:checked + label .slider-change-radio {
 
 .menu-editor-default .create-info-input input::placeholder {
     font-size: 1rem;
-    font-family: "Century Gothic";
+    font-family: "Gotham Pro Regular";
     color: #fff;
     /* text-transform: uppercase; */
 }
