@@ -6,9 +6,6 @@ const styles = {
         fontFamily: 'Century Gothic',
         color: '#fff',
         fontSize: '1.1rem',
-    },
-    container: {
-        width: '420px'
     }
 };
 
@@ -22,7 +19,7 @@ export default function Desc(props) {
         
     }*/
     return (
-        <div className="menu-box-footer" style={styles.container}>
+        <div className="menu-box-footer" style={{width: props.width}}>
             <p className="header" style={styles.header} dangerouslySetInnerHTML={{__html: parseText(props.desc)}}></p>
         </div>
     )

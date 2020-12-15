@@ -584,6 +584,7 @@ class MainMenu extends React.Component {
                             border={this.state.mStyle.borderRadius}
                             color={this.state.mStyle.bgColor}
                             desc={this.state.menuList[this.state.selected].subtitle}
+                            width={this.state.mStyle.width}
                         /> : <></>}
             </div>
             </Draggable>
