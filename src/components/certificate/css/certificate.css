@@ -66,13 +66,13 @@
 }
 
 .gov-lic {
-    width: inherit;
+    /*width: inherit;
     height: inherit;
     background: url(../img/gov.png) no-repeat top right,
     #fff url(../img/logo-2.png) no-repeat -11% bottom;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
 }
 
 .lic-gov-log {
@@ -139,7 +139,7 @@
 .pl-cert-subscribe-text {
     font-family: 'Gotham Pro Regular';
     font-size: 1.1rem;
-    margin-right: 6%;
+    margin-right: 116px;
     margin-top: 0.5%;
     color: #570000;
     position: absolute;
@@ -246,4 +246,16 @@
     background: url(../img/logo-ems.png) no-repeat;
     width: 147px;
     height: 224px;
+}
+
+.fib-btn .usmc {
+    background: url(../img/logo-usmc.png) no-repeat;
+    width: 240px;
+    height: 240px;
+}
+
+.fib-btn .gov {
+    background: url(../img/logo-gov.png) no-repeat;
+    width: 240px;
+    height: 240px;
 }

@@ -18,7 +18,7 @@ class Certificate extends React.Component {
         super(props)
         this.state = {
             show: false,
-            type: 'ems',
+            type: 'gov',
             work: '',
             player_info: {
                 name: 'Olejka Pelmeshka',
@@ -93,24 +93,11 @@ class Certificate extends React.Component {
     }
 
     labelBottom() {
-        switch (this.state.type) {
-            case 'gov':
-                return (
-                    <React.Fragment>
-                        <div className="gov-lic">
-                            <div className="lic-gov-log"></div>
-                        </div>
-                    </React.Fragment>
-                )
-                break;
-            default:
-                return (
-                    <React.Fragment>
-                        <div className={`${this.state.type} fib-btn-img`} />
-                    </React.Fragment>
-                )
-                break;
-        }
+        return (
+            <React.Fragment>
+                <div className={`${this.state.type} fib-btn-img`} />
+            </React.Fragment>
+        )
     }
 
     checkSexandImg() {
