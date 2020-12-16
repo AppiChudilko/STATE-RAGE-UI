@@ -1007,5 +1007,6 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 }
 
 .null {
-    opacity: 0.4;
+    filter: grayscale(100%);
+    opacity: 0.8;
 }
