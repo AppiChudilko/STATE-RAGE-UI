@@ -344,6 +344,7 @@ input:focus.reg-input-style {
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-image: url('https://i.imgur.com/EahoqpI.png');
 }
 
 .create-bg-bottom {
