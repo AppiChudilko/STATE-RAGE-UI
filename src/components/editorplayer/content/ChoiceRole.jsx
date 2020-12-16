@@ -39,7 +39,7 @@ class ChoiceRole extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="reg-main adaptive-reg">
+                <div className="reg-main adaptive-reg ch-role">
                     <div className="create-content">
                         <div className="main-box-change">
                             <Role
