@@ -4,7 +4,6 @@ import LineData from '../uikit/LineData'
 import ButtonGps from '../uikit/ButtonGps'
 import BusinessCard from '../uikit/BusinessCard'
 import CarCard from '../uikit/CarCard'
-import HouseImage from '../img/house_img_bg.svg'
 
 const Property = ({ house, business, cars }) => {
 
@@ -13,7 +12,7 @@ const Property = ({ house, business, cars }) => {
             <div className="accountmenu__content__cards__item accountmenu__scrollable">
                 <div className="accountmenu__content__cards__item__container">
                     <div className="accountmenu__content__cards__item__house__img__container">
-                        <img src={HouseImage} className="accountmenu__content__cards__item__container__house__img" />
+                        <img src={`https://state-99.com/client/images/icons/components/accountmenu/img/house_img_bg.svg`} className="accountmenu__content__cards__item__container__house__img" />
                     </div>
                     <div className="accountmenu__content__cards__house">
                         <span className="accountmenu__content__cards__house__type">

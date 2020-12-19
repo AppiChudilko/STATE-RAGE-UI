@@ -3,7 +3,6 @@ import '../css/faq.css'
 import BigButton from '../uikit/BigButton'
 import Question from '../uikit/Question'
 import { useState } from 'react'
-import IconQuestion from '../img/questio_icon.svg'
 
 const Faq = ({ onChangePage }) => {
 
@@ -217,7 +216,7 @@ const Faq = ({ onChangePage }) => {
                         className="accountmenu__content__cards__answer__img"
                     />
                     <div className="accountmenu__cards__question__icon__container__active">
-                        <img src={IconQuestion} className="accountmenu__cards__question__icon" />
+                        <img src={`https://state-99.com/client/images/icons/components/accountmenu/img/questio_icon.svg`} className="accountmenu__cards__question__icon" />
                         <span className="accountmenu__content__cards__answer__title">
                             {questions[active].text}
                         </span>

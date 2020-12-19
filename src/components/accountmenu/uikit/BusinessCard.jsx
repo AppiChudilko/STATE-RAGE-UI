@@ -1,9 +1,6 @@
 import React from 'react'
 import '../css/property.css'
 import ButtonGps from './ButtonGps'
-import StockIcon from '../img/property__case__icon.svg'
-import HouseIcon from '../img/property__house__icon.svg'
-import ApartIcon from '../img/property__apart__icon.svg'
 
 const BusinessCard = ({ type, name, price, address, doors, title, x, y, img }) => {
     return (
@@ -15,8 +12,8 @@ const BusinessCard = ({ type, name, price, address, doors, title, x, y, img }) =
                 }>
                     <img 
                         src={
-                            type === 0 ? HouseIcon :
-                            (type === 1 ? StockIcon : ApartIcon)
+                            type === 0 ? `https://state-99.com/client/images/icons/components/accountmenu/img/property__house__icon.svg` :
+                            (type === 1 ? `https://state-99.com/client/images/icons/components/accountmenu/img/property__case__icon.svg` : `https://state-99.com/client/images/icons/components/accountmenu/img/property__apart__icon.svg`)
                         }
                         className="accountmenu__content__cards__business__img"
                     />

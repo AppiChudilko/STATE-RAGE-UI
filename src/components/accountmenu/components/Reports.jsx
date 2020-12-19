@@ -13,7 +13,6 @@ import CarCard from '../uikit/CarCard'
 import ReportItemList from '../uikit/ReportItemList'
 import { useState } from 'react'
 import { useRef } from 'react'
-import IconQuestion from '../img/questio_icon.svg'
 import { useEffect } from 'react'
 
 const Reports = ({ data, initValue }) => {
@@ -81,7 +80,7 @@ const Reports = ({ data, initValue }) => {
                <div className="accountmenu__content__reports__dialog__container">
                     <div className="accountmenu__content__reports__dialog__header">
                         <div className="accountmenu__content__reports__dialog__header__data">
-                            <img src={IconQuestion} className="accountmenu__cards__question__icon" />
+                            <img src={`https://state-99.com/client/images/icons/components/accountmenu/img/questio_icon.svg`} className="accountmenu__cards__question__icon" />
                             <span className="accountmenu__content__reports__dialog__header__num">{`запрос №${reportData.number}`}</span>
                             <span className="accountmenu__content__reports__dialog__header__time">{reportData.time}</span>
                         </div>

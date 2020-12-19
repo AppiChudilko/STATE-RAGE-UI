@@ -1,6 +1,5 @@
 import React from 'react';
 import EventManager from "../../../EventManager";
-import IconShield from '../img/Union.svg'
 import Draggable from '../Draggable'
 
 class Watch extends React.Component {
@@ -52,7 +51,7 @@ class Watch extends React.Component {
             <React.Fragment>
                     <Draggable id="zone" className="zone-box">
                         <div className={this.state.showGreen ? 'time-img-greenzone' : 'hide'}>
-                            <img src={IconShield} />
+                            <img src={`https://state-99.com/client/images/icons/components/hud/img/Union.svg`} />
                         </div>
                         <div className={this.state.showYellow ? 'time-img-yellowzone' : 'hide'}></div>
                     </Draggable>
