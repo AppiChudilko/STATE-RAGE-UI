@@ -65,13 +65,13 @@ class Inventory extends React.Component {
                 { name: "Выпить", action: "drink", show: false, color: '#4CAF50' },
                 { name: "Экипировать", action: "equip", show: false, color: '#4CAF50' },
                 { name: "Зарядить", action: "loadw", show: false, color: '#4CAF50' },
+                { name: "Открыть", action: "weightGr", show: false, color: '#4CAF50' },
 
                 { name: "Информация о билете", action: "infoLoto", show: false },
 
                 { name: "Взять 1гр.", action: "take1gr", show: false },
                 { name: "Взять 10гр.", action: "take10gr", show: false },
                 { name: "Взять 50гр.", action: "take50gr", show: false },
-                { name: "Взвесить", action: "weightGr", show: false },
 
                 { name: "Взять 1шт.", action: "take1", show: false },
 
@@ -186,9 +186,9 @@ class Inventory extends React.Component {
             itemsById: { // В массивах должны быть айди всех предметов разного типа
                 countItems: [26], // Посчитать
                 weightGr: [142, 143, 144, 145, 154, 155, 156, 157, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180], // Взвесить
-                take1gr: [142, 143, 144, 145, 154, 155, 156, 157, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180], // Взять 1гр
-                take10gr: [142, 143, 144, 145, 156, 157, 163, 164, 165, 166, 167, 168, 169, 170, 176, 177, 178, 179, 180], // Взять 10гр
-                take50gr: [142, 143, 144, 145, 163, 164, 165, 166, 167, 168, 169, 170], // Взять 50гр
+                take1gr: [/*142, 143, 144, 145, 154, 155, 156, 157, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180*/], // Взять 1гр
+                take10gr: [/*142, 143, 144, 145, 156, 157, 163, 164, 165, 166, 167, 168, 169, 170, 176, 177, 178, 179, 180*/], // Взять 10гр
+                take50gr: [/*142, 143, 144, 145, 163, 164, 165, 166, 167, 168, 169, 170*/], // Взять 50гр
                 food: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 232, 233, 234, 235, 236, 237, 238, 239, 240], // Можно "съесть"
                 drinks: [241, 242, 243, 244, 245, 246, 247, 248, 249, 250], // Можно "выпить"
                 usable: [4, 5, 6, 8, 9, 10, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 47, 49, 216, 0, 277, 278, 215, 221, 262, 474, 477], // Можно "использовать"
@@ -1044,6 +1044,7 @@ class Inventory extends React.Component {
             case "smoke": // Курить
             case "eat": // Съесть
             case "drink": // Выпить
+            case "weightGr": // Взвесить
                 this.itemUse(this.state.inter_menu_selected.item, this.state.inter_menu_selected.source)
                 break;
             case "usePlayer": // Выпить
@@ -1051,9 +1052,6 @@ class Inventory extends React.Component {
                 break;
             case "countItems": // Посчитать
                 this.itemCountItems(this.state.inter_menu_selected.item, this.state.inter_menu_selected.source)
-                break;
-            case "weightGr": // Взвесить
-                this.itemWeightGr(this.state.inter_menu_selected.item, this.state.inter_menu_selected.source)
                 break;
             case "take1gr": // Взвесить
                 this.itemTake1gr(this.state.inter_menu_selected.item, this.state.inter_menu_selected.source)
@@ -1397,7 +1395,7 @@ class Inventory extends React.Component {
         }
     }
 
-    itemWeightGr(item, source) {
+    /*itemWeightGr(item, source) {
         switch (source) {
             case 'inventory':
                 if (this.checkItem(item, 'inventory') !== null) {
@@ -1414,7 +1412,7 @@ class Inventory extends React.Component {
             default:
                 break;
         }
-    }
+    }*/
 
     itemTake1gr(item, source) {
         switch (source) {
