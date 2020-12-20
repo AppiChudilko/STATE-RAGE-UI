@@ -211,24 +211,24 @@ class Inventory extends React.Component {
             // !!! Элементы массива outfit нельзя менять местами !!!
             outfit: [
                 [
-                    { slot: "outf-cap", equipped: false, type: 'cap', icon: 'outfit-hat.svg' },
-                    { slot: "outf-glasses", equipped: false, type: 'glasses', icon: 'outfit-glasses.svg' },
-                    { slot: "outf-mask", equipped: false, type: 'mask', icon: 'outfit-mask.svg' },
-                    { slot: "outf-shirt", equipped: false, type: 'shirt', icon: 'outfit-tshirt.svg' },
-                    { slot: "outf-jewerly", equipped: false, type: 'jewerly', icon: 'outfit-jewerly.svg' },
-                    { slot: "outf-earrings", equipped: false, type: 'earrings', icon: 'outfit-earrings.svg' },
-                    { slot: "outf-jeans", equipped: false, type: 'jeans', icon: 'outfit-pants.svg' },
-                    { slot: "outf-watch", equipped: false, type: 'watch', icon: 'outfit-watch.svg' },
-                    { slot: "outf-bracelet", equipped: false, type: 'bracelet', icon: 'outfit-bracelet.svg' },
-                    { slot: "outf-boot", equipped: false, type: 'boot', icon: 'outfit-shoes.svg' },
-                    { slot: "outf-bag", equipped: false, type: 'bag', icon: 'outfit-case.svg' },
-                    { slot: "outf-gloves", equipped: false, type: 'gloves', icon: 'outfit-gloves.svg'},
+                    { slot: "outf-cap", equipped: false, type: 'cap', icon: 'outfit-hat' },
+                    { slot: "outf-glasses", equipped: false, type: 'glasses', icon: 'outfit-glasses' },
+                    { slot: "outf-mask", equipped: false, type: 'mask', icon: 'outfit-mask' },
+                    { slot: "outf-shirt", equipped: false, type: 'shirt', icon: 'outfit-tshirt' },
+                    { slot: "outf-jewerly", equipped: false, type: 'jewerly', icon: 'outfit-jewerly' },
+                    { slot: "outf-earrings", equipped: false, type: 'earrings', icon: 'outfit-earrings' },
+                    { slot: "outf-jeans", equipped: false, type: 'jeans', icon: 'outfit-pants' },
+                    { slot: "outf-watch", equipped: false, type: 'watch', icon: 'outfit-watch' },
+                    { slot: "outf-bracelet", equipped: false, type: 'bracelet', icon: 'outfit-bracelet' },
+                    { slot: "outf-boot", equipped: false, type: 'boot', icon: 'outfit-shoes' },
+                    { slot: "outf-bag", equipped: false, type: 'bag', icon: 'outfit-case' },
+                    { slot: "outf-gloves", equipped: false, type: 'gloves', icon: 'outfit-gloves'},
                 ],
                 [
-                    { slot: "outf-armour", equipped: false, type: 'armour', icon: 'outfit-armour.svg' },
-                    { slot: "outf-phone", equipped: false, type: 'phone', icon: 'outfit-phone.svg' },
-                    { slot: "outf-money", equipped: false, type: 'money', icon: 'outfit-notes.svg' },
-                    { slot: "outf-card", equipped: false, type: 'card', icon: 'outfit-card.svg' },
+                    { slot: "outf-armour", equipped: false, type: 'armour', icon: 'outfit-armour' },
+                    { slot: "outf-phone", equipped: false, type: 'phone', icon: 'outfit-phone' },
+                    { slot: "outf-money", equipped: false, type: 'money', icon: 'outfit-notes' },
+                    { slot: "outf-card", equipped: false, type: 'card', icon: 'outfit-card' },
                 ],
             ],
 
@@ -2189,8 +2189,8 @@ class Inventory extends React.Component {
                                                     return (
                                                         <Draggable that={this} id={index} type="take_off drop" item={item} key={index}>
                                                             <Droppable className="droppable" id="put_on" that={this}>
-                                                                <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon.split('.')[0]}`} key={index}>
-                                                                    <img src={require(`./img/outfit/${item.icon}`)} />
+                                                                <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
+                                                                    <img src={require(`./img/outfit/${item.icon}.png`)} />
                                                                 </div>
                                                             </Droppable>
                                                         </Draggable>
@@ -2199,8 +2199,8 @@ class Inventory extends React.Component {
 
                                                 return (
                                                     <Droppable className="droppable" key={index} id="put_on" that={this}>
-                                                        <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon.split('.')[0]}`} key={index}>
-                                                            <img src={require(`./img/outfit/${item.icon}`)} style={{filter: 'grayscale(100%)', opacity: '0.7'}} />
+                                                        <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
+                                                            <img src={require(`./img/outfit/${item.icon}.svg`)} style={{filter: 'grayscale(100%)', opacity: '0.7'}} />
                                                         </div>
                                                     </Droppable>
                                                 )
@@ -2212,8 +2212,8 @@ class Inventory extends React.Component {
                                                         return (
                                                             <Draggable that={this} id={index} type="take_off drop" item={item} key={index}>
                                                                 <Droppable className="droppable" id="put_on" that={this}>
-                                                                    <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon.split('.')[0]}`} key={index}>
-                                                                        <img src={require(`./img/outfit/${item.icon}`)} />
+                                                                    <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
+                                                                        <img src={require(`./img/outfit/${item.icon}.png`)} />
                                                                     </div>
                                                                 </Droppable>
                                                             </Draggable>
@@ -2222,8 +2222,8 @@ class Inventory extends React.Component {
     
                                                     return (
                                                         <Droppable className="droppable" key={index} id="put_on" that={this}>
-                                                            <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon.split('.')[0]}`} key={index}>
-                                                                <img src={require(`./img/outfit/${item.icon}`)} style={{filter: 'grayscale(100%)', opacity: '0.7'}} />
+                                                            <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.icon}`} key={index}>
+                                                                <img src={require(`./img/outfit/${item.icon}.svg`)} style={{filter: 'grayscale(100%)', opacity: '0.7'}} />
                                                             </div>
                                                         </Droppable>
                                                     )
