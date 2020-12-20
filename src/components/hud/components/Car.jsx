@@ -193,7 +193,12 @@ class Car extends React.Component {
                     />
                     <div className="hud__speedometr__info">
                         <div className="hud__speedometr__info__row">
-                            <img src={this.state.fuelType === '%' ? `https://state-99.com/client/images/icons/hud/power.svg` : `https://state-99.com/client/images/icons/hud/fuel.svg`} className="hud__speedometr__info__fuel" width="14" />
+                            <img
+                                src={this.state.fuelType === '%' ? `https://state-99.com/client/images/icons/hud/power.svg` : `https://state-99.com/client/images/icons/hud/fuel.svg`}
+                                className="hud__speedometr__info__fuel"
+                                width="14"
+                                style={{filter: ((this.state.max_fuel / 10 >= this.state.fuel) && this.state.fuelType !== '%') ? 'invert(57%) sepia(78%) saturate(6251%) hue-rotate(337deg) brightness(133%) contrast(113%)' : 'none'}}
+                            />
                             <span className="hud__speedometr__info__fuel__text">{`${this.state.fuel}/${this.state.max_fuel}`}</span>
                         </div>
                         {!this.state.isShowSmall && (
