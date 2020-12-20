@@ -8,7 +8,7 @@ class AccountMenu extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: true,
+            show: false,
             panels: [
                 {name: 'Общее', id: 'accmenu-main'},
                 {name: 'Имущество', id: 'accmenu-property'},
