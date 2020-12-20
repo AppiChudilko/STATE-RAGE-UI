@@ -120,7 +120,7 @@ class TopBar extends React.Component {
                     <div className="left-topbar">
                         {this.props.data.wifi ?
                             <div className="elements-bar">
-                                <img src={IconWifi} width="12" className="elements-bar__icon" />
+                                <img src={`https://state-99.com/client/images/icons/components/phone/img/Wi-Fi.svg`} width="12" className="elements-bar__icon" />
                             </div>
                             : null}
                         <div className="elements-bar">
@@ -145,7 +145,7 @@ class TopBar extends React.Component {
                             </svg>
                         </div>
                         <div className="elements-bar">
-                            <img src={IconBattery} width="17.5" className="elements-bar__icon" />
+                            <img src={`https://state-99.com/client/images/icons/components/phone/img/battery.svg`} width="17.5" className="elements-bar__icon" />
 
                         </div>
                     </div>

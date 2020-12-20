@@ -250,6 +250,10 @@
     border-radius: 0.8rem;
 }
 
+.app-box:hover {
+    opacity: 0.7;
+}
+
 .rotate-components .app-box {
     margin-right: 30px !important;
     margin-bottom: 0px !important;

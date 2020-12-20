@@ -2203,7 +2203,7 @@ class Inventory extends React.Component {
                                                         <Draggable that={this} id={index} type="take_off drop" item={item} key={index}>
                                                             <Droppable className="droppable" id="put_on" that={this}>
                                                                 <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.iconName}`} key={index}>
-                                                                    <img src={item.icon} />
+                                                                    <img src={`https://state-99.com/client/images/icons/components/inventory/img/outfit/${item.iconName}.png`} />
                                                                 </div>
                                                             </Droppable>
                                                         </Draggable>
@@ -2213,7 +2213,7 @@ class Inventory extends React.Component {
                                                 return (
                                                     <Droppable className="droppable" key={index} id="put_on" that={this}>
                                                         <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.iconName}`} key={index}>
-                                                            <img src={item.icon} style={{filter: 'grayscale(100%)', opacity: '0.7'}} />
+                                                            <img src={`https://state-99.com/client/images/icons/components/inventory/img/outfit/${item.iconName}.png`} style={{filter: 'grayscale(100%)', opacity: '0.7'}} />
                                                         </div>
                                                     </Droppable>
                                                 )
@@ -2226,7 +2226,7 @@ class Inventory extends React.Component {
                                                             <Draggable that={this} id={index} type="take_off drop" item={item} key={index}>
                                                                 <Droppable className="droppable" id="put_on" that={this}>
                                                                     <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.iconName}`} key={index}>
-                                                                        <img src={item.icon} />
+                                                                        <img src={`https://state-99.com/client/images/icons/components/inventory/img/outfit/${item.iconName}.png`} />
                                                                     </div>
                                                                 </Droppable>
                                                             </Draggable>
@@ -2236,7 +2236,7 @@ class Inventory extends React.Component {
                                                     return (
                                                         <Droppable className="droppable" key={index} id="put_on" that={this}>
                                                             <div onContextMenu={(e) => this.handlePos(e, item, 'outfit')} className={`item__background outfit-pos-${item.iconName}`} key={index}>
-                                                                <img src={item.icon} style={{filter: 'grayscale(100%)', opacity: '0.7'}} />
+                                                                <img src={`https://state-99.com/client/images/icons/components/inventory/img/outfit/${item.iconName}.png`} style={{filter: 'grayscale(100%)', opacity: '0.7'}} />
                                                             </div>
                                                         </Droppable>
                                                     )

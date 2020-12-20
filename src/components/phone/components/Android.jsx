@@ -880,7 +880,7 @@ class Android extends React.Component {
         return (
             <React.Fragment>
                 <div onContextMenu={() => this.rotateAndroid()} className={this.state.rotate ? "android-phone rotate-androind" : "android-phone"}>
-                    <img className="phone__box" src={iphoneBox} />
+                    <img className="phone__box" src={`https://state-99.com/client/images/icons/components/phone/img/iphone_frame.png`} />
                     <div className="phone-bg" style={bg}>
                         <div className={this.state.rotate ? "rotate-components" : 'main-phone-box-flex'}>
                             <TopBar data={this.state.top_bar} />

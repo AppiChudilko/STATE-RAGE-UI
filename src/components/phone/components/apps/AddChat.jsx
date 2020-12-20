@@ -2,7 +2,6 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Loader from '../Android/Loader';
-import IconBackIOS from '../../img/back.svg'
 
 class AddChat extends React.Component {
     constructor(props) {
@@ -104,7 +103,7 @@ class AddChat extends React.Component {
                     <div className="u-title">
                         <div className="dedbit-u-texttittle">
                             <div className="u__back__container">
-                                <img src={IconBackIOS} className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
+                                <img src={`https://state-99.com/client/images/icons/components/phone/img/back.svg`} className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
                             </div>
                             <span className="u-texttittle">Onion Messenger</span>
                         </div>

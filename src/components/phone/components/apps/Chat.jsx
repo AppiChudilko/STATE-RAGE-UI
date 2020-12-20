@@ -1,6 +1,5 @@
 import React from 'react';
 import MaterialIcon from 'material-icons-react';
-import IconBackIOS from '../../img/back.svg'
 
 import Avatar from '@material-ui/core/Avatar';
 
@@ -135,7 +134,7 @@ class Chat extends React.Component {
                 <div className="dedbit-menu">
                     <div className="u-title" style={{ height: 50 + 'px' }}>
                         <div className="dedbit-u-texttittle">
-                            <img src={IconBackIOS} className="u__back-nabs" height="16" onClick={() => this.props.setLink("/phone/android/messenger")} />
+                            <img src={`https://state-99.com/client/images/icons/components/phone/img/back.svg`} className="u__back-nabs" height="16" onClick={() => this.props.setLink("/phone/android/messenger")} />
                             {this.state.contact === null ?
                                 null
                                 :

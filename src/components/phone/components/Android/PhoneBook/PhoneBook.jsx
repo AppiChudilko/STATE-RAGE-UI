@@ -20,10 +20,10 @@ class PhoneBook extends React.Component {
             page: this.props.defaultValue || 'favorit',
             search: '',
             pagesList: [
-                {icon: IconIOSFavourites, name: 'Избранное', page: 'favorit'},
-                {icon: IconIOSRecents, name: 'Журнал', page: 'history'},
-                {icon: IconIOSContacts, name: 'Контакты', page: 'contact'},
-                {icon: IconIOSKeyboard, name: 'Клавиши', page: 'calls'}
+                {icon: `https://state-99.com/client/images/icons/components/phone/img/keyboard.svg`, name: 'Избранное', page: 'favorit'},
+                {icon: `https://state-99.com/client/images/icons/components/phone/img/Contacts.svg`, name: 'Журнал', page: 'history'},
+                {icon: `https://state-99.com/client/images/icons/components/phone/img/Favorites.svg`, name: 'Контакты', page: 'contact'},
+                {icon: `https://state-99.com/client/images/icons/components/phone/img/Recents.svg`, name: 'Клавиши', page: 'calls'}
             ]
         }
     }

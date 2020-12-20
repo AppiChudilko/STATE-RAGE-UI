@@ -5,7 +5,6 @@ import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import SaveIcon from '@material-ui/icons/Save'
 import AddCircleIcon from '@material-ui/icons/AddCircle';
-import IconBackIOS from '../../../../img/back.svg'
 
 class EditContact extends React.Component {
     constructor(props) {
@@ -90,7 +89,7 @@ class EditContact extends React.Component {
                     <div className="u-title">
                         <div className="dedbit-u-texttittle">
                             <div className="u__back__container">
-                                <img src={IconBackIOS} className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
+                                <img src={`https://state-99.com/client/images/icons/components/phone/img/back.svg`} className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
                             </div>
                             <span className="u-texttittle">Редактирование</span>
                             {/*<div className="edit-btn-save-position">
