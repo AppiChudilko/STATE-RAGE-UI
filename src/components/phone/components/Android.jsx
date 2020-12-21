@@ -47,6 +47,7 @@ class Android extends React.Component {
                 { link: "/phone/android/messenger", action: 'sms', img: 'sms', name: 'SMS' },
                 { link: "/phone/android/console", action: 'console', img: 'console', name: 'Console' },
                 { link: "/phone/android/calls", action: 'calls', img: 'uveh', name: 'Звонки' },
+                { link: "/phone/android/callScreen", action: 'callScreen', img: 'uveh', name: 'Вызов' },
                 { link: "/phone/android/achiev", action: 'achiev', img: 'achiev', name: 'Достижения' },
                 { link: "/phone/android/umenu", action: 'invader', img: 'uveh' },
                 /*{ link: "/phone/android/umenu", action: 'maze', img: 'maze' },
@@ -318,7 +319,7 @@ class Android extends React.Component {
             },
             phonecall: {
                 number: '333345',
-                name: 'name',
+                name: 'Неизвестный',
                 avatar: '',
                 going: true
             }
@@ -329,11 +330,33 @@ class Android extends React.Component {
         // Сами вызываем, получаем информацию о номере и передаем
 
         this.setState(prevState => ({ ...prevState.phonecall.number = phone, ...prevState.phonecall.going = false }))
-        this.setLink(`/phone/android/callScreen`)
+        this.setLink(`/phone/android/callScreen`);
+
+        try {
+            mp.trigger('client:phone:call:setCall', phone); // eslint-disable-line
+        } catch (e) {
+        }
+        console.log('setCallNumber', phone);
     }
 
     acceptCall() {
         this.setState(prevState => ({ ...prevState.phonecall.going = false }))
+        this.setState(prevState => ({ ...prevState.phonecall.name = 'Неизвестный' }))
+        this.setState(prevState => ({ ...prevState.phonecall.avatar = '' }))
+        console.log('acceptCall');
+        try {
+            mp.trigger('client:phone:call:accept'); // eslint-disable-line
+        } catch (e) {
+        }
+    }
+
+    cancelCall() {
+        this.setState(prevState => ({ ...prevState.phonecall.going = false }))
+        try {
+            mp.trigger('client:phone:call:cancel'); // eslint-disable-line
+        } catch (e) {
+        }
+        console.log('cancelCall');
     }
 
     componentDidCatch(error, errorInfo) {
@@ -409,6 +432,9 @@ class Android extends React.Component {
             }
             if (value.type === 'toPage') {
                 this.setState({ path: value.page })
+            }
+            if (value.type === 'updatePhone') {
+                this.setState({ phonecall: value.phonecall })
             }
         })
     }
@@ -915,7 +941,7 @@ class Android extends React.Component {
                                         defaultValue={'calls'}
                                         going={this.state.phonecall.going}
                                         onAccept={this.acceptCall.bind(this)}
-                                        onDecline={() => console.log(`Ты отменил вызов от ${this.state.phonecall.number}`)}
+                                        onDecline={this.cancelCall.bind(this)}
                                     />
                                 </Route>
                                 <Route exact path="/phone/android/callScreen">
@@ -927,7 +953,7 @@ class Android extends React.Component {
                                         setLink={this.setLink.bind(this)}
                                         going={this.state.phonecall.going}
                                         onAccept={this.acceptCall.bind(this)}
-                                        onDecline={() => console.log(`Ты отменил вызов от ${this.state.phonecall.number}`)}
+                                        onDecline={this.cancelCall.bind(this)}
                                     />
                                 </Route>
                                 <Route exact path="/phone/android/achiev">
