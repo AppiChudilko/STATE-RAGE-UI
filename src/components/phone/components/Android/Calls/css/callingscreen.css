@@ -25,7 +25,7 @@
 .calls__screen__buttons__item__text {
     margin-top: 10%;
     font-size: 14px;
-    font-family: 'RobotoMedium';
+    font-family: 'Gotham Pro Medium';
     color: #fff;
 }
 
@@ -46,14 +46,14 @@
 .calls__screen__data__name {
     margin-top: 10%;
     margin-bottom: 5%;
-    font-size: 14px;
-    font-family: 'RobotoBold';
+    font-size: 1.2rem;
+    font-family: 'Gotham Pro Medium';
     color: #fff;
 }
 
 .calls__screen__data__number {
     font-size: 14px;
-    font-family: 'RobotoLight';
+    font-family: 'Gotham Pro Regular';
     color: #fff;
 }
 

@@ -934,11 +934,17 @@ class Android extends React.Component {
                                     <Achiev data={this.state.achiev} openInfoShow={this.openInfoShow.bind(this)} />
                                 </Route>
                                 <Route exact path="/phone/android/phonebook">
-                                    <PhoneBook historyPush={this.historyPush.bind(this)} data={this.state.phonebook}
+                                    <PhoneBook
+                                        onCall={this.setCallNumber.bind(this)}
+                                        historyPush={this.historyPush.bind(this)} data={this.state.phonebook}
                                         clickContact={this.clickContact.bind(this)}
                                         getContactByNumber={this.getContactByNumber.bind(this)}
-                                        historyGoBack={this.historyGoBack.bind(this)}
-                                        setLink={this.setLink.bind(this)} />
+                                        setLink={this.setLink.bind(this)}
+                                        defaultValue={'calls'}
+                                        going={this.state.phonecall.going}
+                                        onAccept={this.acceptCall.bind(this)}
+                                        onDecline={() => console.log(`Ты отменил вызов от ${this.state.phonecall.number}`)}
+                                    />
                                 </Route>
                                 <Route exact path="/phone/android/phonebook/profilecontact">
                                     <ProfileContact historyPush={this.historyPush.bind(this)}

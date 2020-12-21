@@ -20,10 +20,10 @@ class PhoneBook extends React.Component {
             page: this.props.defaultValue || 'favorit',
             search: '',
             pagesList: [
-                {icon: `https://state-99.com/client/images/icons/components/phone/img/keyboard.svg`, name: 'Избранное', page: 'favorit'},
-                {icon: `https://state-99.com/client/images/icons/components/phone/img/Contacts.svg`, name: 'Журнал', page: 'history'},
-                {icon: `https://state-99.com/client/images/icons/components/phone/img/Favorites.svg`, name: 'Контакты', page: 'contact'},
-                {icon: `https://state-99.com/client/images/icons/components/phone/img/Recents.svg`, name: 'Клавиши', page: 'calls'}
+                {icon: `https://state-99.com/client/images/icons/components/phone/img/Favorites.svg`, name: 'Избранное', page: 'favorit'},
+                {icon: `https://state-99.com/client/images/icons/components/phone/img/Recents.svg`, name: 'Журнал', page: 'history'},
+                {icon: `https://state-99.com/client/images/icons/components/phone/img/Contacts.svg`, name: 'Контакты', page: 'contact'},
+                {icon: `https://state-99.com/client/images/icons/components/phone/img/keyboard.svg`, name: 'Клавиши', page: 'calls'}
             ]
         }
     }
@@ -47,6 +47,7 @@ class PhoneBook extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         return (
             <React.Fragment>
                     <div className="phonebook-content">
@@ -87,7 +88,9 @@ class PhoneBook extends React.Component {
                                     :
                                     null}
                                 {this.state.page === 'calls' && (
-                                     <Calls />
+                                     <Calls
+                                        onCall={this.props.onCall}
+                                     />
                                 )}
                                 <div className="calls__navbar">
                                     {this.state.pagesList.map((item, index) => (
