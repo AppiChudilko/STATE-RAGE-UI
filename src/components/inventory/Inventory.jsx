@@ -2455,7 +2455,7 @@ class Inventory extends React.Component {
                                                     className="close-window-craft"
                                                     onClick={() => this.closeSecondaryInventory()}
                                                 >
-                                                    <img src={closeIcon} width="40%" className="close-window-craft__img" />
+                                                    <img src={`https://state-99.com/client/images/icons/components/inventory/img/close.svg`} width="40%" className="close-window-craft__img" />
                                                 </div>
                                             </div>
                                             <div className="inventory__trunk__list">
