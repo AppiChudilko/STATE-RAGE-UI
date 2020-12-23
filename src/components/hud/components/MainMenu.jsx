@@ -13,7 +13,7 @@ class MainMenu extends React.Component {
             show: false,
             selected: 0,
             header: true,
-            opacity: 0.8,
+            opacity: 1,
             mStyle: {
                 font: 'RobotoLight',
                 fontOffset: 2,
@@ -270,7 +270,7 @@ class MainMenu extends React.Component {
 
                 this.setState({show: true});
                 this.setState({header: value.header});
-                this.setState({opacity: value.opacity});
+                //this.setState({opacity: value.opacity});
                 this.setState({selected: select});
                 this.setState({headerText: value.headerText});
                 this.setState({headerDesc: value.headerDesc});

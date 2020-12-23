@@ -2013,7 +2013,10 @@ class Inventory extends React.Component {
 
     closeSecondaryInventory() {
         this.setState({ secondary_inv_open: false });
-        mp.trigger('client:inventory:statusSecondary', false);
+        try {
+            mp.trigger('client:inventory:statusSecondary', false);
+        }
+        catch (e) {}
     }
 
     closeInventory() {
@@ -2026,25 +2029,6 @@ class Inventory extends React.Component {
         this.setState({ secondary_items_owner_type: 0 });
     }
 
-    openTrunk() {
-        this.setState({ secondary_inv_open: true }) // <----- это нужно будет убрать и открывать эвентом с клиента
-        // // // // mp.call ... найти тачку и открыть багажник
-    }
-
-    openStock() {
-        this.setState({ secondary_inv_open: true }) // <----- это нужно будет убрать и открывать эвентом с клиента
-        // // // mp.call ... найти и открыть склад
-    }
-
-    openFridger() {
-        this.setState({ secondary_inv_open: true }) // <----- это нужно будет убрать и открывать эвентом с клиента
-        // // // mp.call ... найти и открыть холодильник
-    }
-
-    openWorld() {
-        this.setState({ secondary_inv_open: true }) // <----- это нужно будет убрать и открывать эвентом с клиента
-        // // // mp.call ... загрузить предметы рядом с игроком
-    }
     closeRecipesCraft() {
         this.setState({ recipes_craft: false, selected_recipe: {} })
     }
@@ -2185,14 +2169,13 @@ class Inventory extends React.Component {
                                 <div className="player-info">
                                     <div className="title-inv">
                                         <span className="title-inv__name">
-                                            Информация
+                                            Экипировка
                                         </span>
                                     </div>
                                     <div className="player-title-info">
-                                        <div className="player-inv-name"><span>Имя: {this.state.player_name}</span>
-                                        </div>
                                         <div className="player-inv-old">
-                                            <span>ID Аккаунта: {this.state.player_id}</span></div>
+                                            <span>{this.state.player_name}</span>
+                                        </div>
                                     </div>
                                     <Droppable className="outfit-player-box droppable" id="put_on" that={this}>
                                             {this.state.outfit[0].map((item, i) => {

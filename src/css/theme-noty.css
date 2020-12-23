@@ -113,24 +113,36 @@
 }
 
 .message__notify__container {
-    display: flex;
-    flex-direction: row;
+    display: block;
     justify-content: space-between;
     align-items: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 30px;
+}
+
+.message__notify__color__0 {
+    background-color: rgba(33,150,243,0.7);
+}
+.message__notify__color__1 {
+    background-color: rgba(244,67,54,0.7);
+}
+.message__notify__color__2 {
+    background-color: rgba(76,175,80,0.7);
+}
+.message__notify__color__2 {
+    background-color: rgba(255,255,0 ,0.7);
 }
 
 .message__notify__type {
-    font-family: 'Century Gothic';
+    display: block;
+    color: rgba(255,255,255,0.6);
+    font-family: 'Gotham Pro Regular';
     font-size: 1rem;
 }
 
 .noty_body .message__notify {
     display: flex;
-    font-family: 'Century Gothic';
+    font-family: 'Gotham Pro Regular';
     font-size: 1rem;
-    margin-left: 3rem;
 }
 
 .noty_theme__dednet.noty_bar .noty_body {

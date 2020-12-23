@@ -9,7 +9,7 @@ const CardCard = ({ type, name, vin, carclass, def, number }) => {
         >
             <div
                 className="accountmenu__content__cards__car__img"
-                style={{backgroundImage: `url('https://state-99.com/client/images/carsv/640/${name}.jpg')`}}
+                style={{backgroundImage: `url('https://state-99.com/client/images/carsv/640/${name.toLowerCase()}.jpg')`}}
             />
             <div className="accountmenu__content__cards__car__gpscont">
                 <ButtonGps filled={true} position="right" />

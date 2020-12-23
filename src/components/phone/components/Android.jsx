@@ -28,8 +28,8 @@ class Android extends React.Component {
             path: '/phone/android/defaultpage',
             history: ['/phone/android/defaultpage'],
             rotate: false,
-            bg_img_url: 'https://i.imgur.com/8lOLNXr.jpg',
-            bg_color: '',
+            bg_img_url: 'https://i.imgur.com/8lOLNXr',
+            bg_color: `url('https://i.imgur.com/2sCY5Vo.png') center no-repeat`,
             top_bar: {
                 time: '00:00', // Сервер должен регулировать время на телефоне/обновлять раз в минуту (скорее всего)
                 dateFull: '01.01.1990',
@@ -899,133 +899,135 @@ class Android extends React.Component {
 
     render() {
         const bg = {
-            background: this.state.bg_color,
+            backgroundImage: this.state.bg_color,
         };
         if (this.state.path === '/phone/android/defaultpage')
-            bg.background = `url(${this.state.bg_img_url}) no-repeat center`;
+            bg.backgroundImage = `url(${this.state.bg_img_url})`;
         return (
             <React.Fragment>
                 <div onContextMenu={() => this.rotateAndroid()} className={this.state.rotate ? "android-phone rotate-androind" : "android-phone"}>
                     <img className="phone__box" src={`https://state-99.com/client/images/icons/components/phone/img/iphone_frame.png`} />
-                    <div className="phone-bg" style={bg}>
-                        <div className={this.state.rotate ? "rotate-components" : 'main-phone-box-flex'}>
-                            <TopBar data={this.state.top_bar} />
-                            <Router>
-                                <Route exact path="/phone/android/defaultpage">
-                                    <DefaultPage historyPush={this.historyPush.bind(this)} data={this.state.apps}
-                                        clickApps={this.clickApps.bind(this)} top_bar={this.state.top_bar} />
-                                </Route>
-                                <Scrollbar data={this.state.scrollbar} closeScrollbar={this.closeScrollbar.bind(this)} />
-                                <Modal data={this.state.modal} closeModal={this.closeModal.bind(this)} />
-                                <InputModal data={this.state.inputmodal}
-                                    closeInputModal={this.closeInputModal.bind(this)} />
-                                <Route exact path="/phone/android/umenu">
-                                    <UMenu historyPush={this.historyPush.bind(this)} data={this.state.menu}
-                                        openModal={this.openModal.bind(this)} path={this.state.path}
-                                        openInputModal={this.openInputModal.bind(this)}
-                                        openScrollbar={this.openScrollbar.bind(this)} rotate={this.state.rotate} />
-                                </Route>
-                                <Route exact path="/phone/android/utable">
-                                    <UTable historyPush={this.historyPush.bind(this)} />
-                                </Route>
-                                <Route exact path="/phone/android/console">
-                                    <Console console_message={this.state.console_message} consoleCommand={this.consoleCommand.bind(this)} />
-                                </Route>
-                                <Route exact path="/phone/android/calls">
-                                    <PhoneBook
-                                        onCall={this.setCallNumber.bind(this)}
-                                        historyPush={this.historyPush.bind(this)} data={this.state.phonebook}
-                                        clickContact={this.clickContact.bind(this)}
-                                        getContactByNumber={this.getContactByNumber.bind(this)}
-                                        setLink={this.setLink.bind(this)}
-                                        defaultValue={'calls'}
-                                        going={this.state.phonecall.going}
-                                        onAccept={this.acceptCall.bind(this)}
-                                        onDecline={this.cancelCall.bind(this)}
-                                    />
-                                </Route>
-                                <Route exact path="/phone/android/callScreen">
-                                    <CallingScreen
-                                        onCall={this.setCallNumber.bind(this)}
-                                        number={this.state.phonecall.number}
-                                        name={this.state.phonecall.name}
-                                        avatar={this.state.phonecall.avatar}
-                                        setLink={this.setLink.bind(this)}
-                                        going={this.state.phonecall.going}
-                                        onAccept={this.acceptCall.bind(this)}
-                                        onDecline={this.cancelCall.bind(this)}
-                                    />
-                                </Route>
-                                <Route exact path="/phone/android/achiev">
-                                    <Achiev data={this.state.achiev} openInfoShow={this.openInfoShow.bind(this)} />
-                                </Route>
-                                <Route exact path="/phone/android/phonebook">
-                                    <PhoneBook
-                                        onCall={this.setCallNumber.bind(this)}
-                                        historyPush={this.historyPush.bind(this)} data={this.state.phonebook}
-                                        clickContact={this.clickContact.bind(this)}
-                                        getContactByNumber={this.getContactByNumber.bind(this)}
-                                        setLink={this.setLink.bind(this)}
-                                        defaultValue={'calls'}
-                                        going={this.state.phonecall.going}
-                                        onAccept={this.acceptCall.bind(this)}
-                                        onDecline={() => console.log(`Ты отменил вызов от ${this.state.phonecall.number}`)}
-                                    />
-                                </Route>
-                                <Route exact path="/phone/android/phonebook/profilecontact">
-                                    <ProfileContact historyPush={this.historyPush.bind(this)}
-                                        data={this.state.phonebook}
-                                        deleteContact={this.deleteContact.bind(this)}
-                                        historyGoBack={this.historyGoBack.bind(this)}
-                                        favoriteContact={this.favoriteContact.bind(this)}
-                                        selectChat={this.selectChat.bind(this)}
-                                        editContact={this.editContact.bind(this)}
-                                        openModal={this.openModal.bind(this)}
-                                        profile_contact_btn={this.state.profile_contact_btn} />
-                                </Route>
-                                <Route exact path="/phone/android/phonebook/profilecontact/editcontact">
-                                    <EditContact historyGoBack={this.historyGoBack.bind(this)}
-                                        setLink={this.setLink.bind(this)}
-                                        addContact={this.addContact.bind(this)}
-                                        saveContact={this.saveContact.bind(this)}
-                                        selected_contact={this.state.phonebook.selected_contact}
-                                        editing_contact={this.state.phonebook.editing_contact}
-                                        clickContact={this.clickContact.bind(this)} />
-                                </Route>
-                                <Route exact path="/phone/android/messenger">
-                                    <Messenger data={this.state.chats}
-                                        getContactByNumber={this.getContactByNumber.bind(this)}
-                                        selectChat={this.selectChat.bind(this)}
-                                        setLink={this.setLink.bind(this)}/>
-                                </Route>
-                                <Route exact path="/phone/android/messenger/addchat">
-                                    <AddChat data={this.state.chats}
-                                    sendMessage={this.sendMessage.bind(this)} time={this.state.top_bar.time} date={this.state.top_bar.dateFull}
-                                    getContactByNumber={this.getContactByNumber.bind(this)}
-                                    setLink={this.setLink.bind(this)}
-                                    historyGoBack={this.historyGoBack.bind(this)}/>
-                                </Route>
-                                <Route exact path="/phone/android/messenger/chat">
-                                    <Chat data={this.state.chats} messenger={this.state.messenger}
+                    <div className="phone-gradient">
+                        <div className="phone-bg" style={bg}>
+                            <div className={this.state.rotate ? "rotate-components" : 'main-phone-box-flex'}>
+                                <TopBar data={this.state.top_bar} />
+                                <Router>
+                                    <Route exact path="/phone/android/defaultpage">
+                                        <DefaultPage historyPush={this.historyPush.bind(this)} data={this.state.apps}
+                                            clickApps={this.clickApps.bind(this)} top_bar={this.state.top_bar} />
+                                    </Route>
+                                    <Scrollbar data={this.state.scrollbar} closeScrollbar={this.closeScrollbar.bind(this)} />
+                                    <Modal data={this.state.modal} closeModal={this.closeModal.bind(this)} />
+                                    <InputModal data={this.state.inputmodal}
+                                        closeInputModal={this.closeInputModal.bind(this)} />
+                                    <Route exact path="/phone/android/umenu">
+                                        <UMenu historyPush={this.historyPush.bind(this)} data={this.state.menu}
+                                            openModal={this.openModal.bind(this)} path={this.state.path}
+                                            openInputModal={this.openInputModal.bind(this)}
+                                            openScrollbar={this.openScrollbar.bind(this)} rotate={this.state.rotate} />
+                                    </Route>
+                                    <Route exact path="/phone/android/utable">
+                                        <UTable historyPush={this.historyPush.bind(this)} />
+                                    </Route>
+                                    <Route exact path="/phone/android/console">
+                                        <Console console_message={this.state.console_message} consoleCommand={this.consoleCommand.bind(this)} />
+                                    </Route>
+                                    <Route exact path="/phone/android/calls">
+                                        <PhoneBook
+                                            onCall={this.setCallNumber.bind(this)}
+                                            historyPush={this.historyPush.bind(this)} data={this.state.phonebook}
+                                            clickContact={this.clickContact.bind(this)}
+                                            getContactByNumber={this.getContactByNumber.bind(this)}
+                                            setLink={this.setLink.bind(this)}
+                                            defaultValue={'calls'}
+                                            going={this.state.phonecall.going}
+                                            onAccept={this.acceptCall.bind(this)}
+                                            onDecline={this.cancelCall.bind(this)}
+                                        />
+                                    </Route>
+                                    <Route exact path="/phone/android/callScreen">
+                                        <CallingScreen
+                                            onCall={this.setCallNumber.bind(this)}
+                                            number={this.state.phonecall.number}
+                                            name={this.state.phonecall.name}
+                                            avatar={this.state.phonecall.avatar}
+                                            setLink={this.setLink.bind(this)}
+                                            going={this.state.phonecall.going}
+                                            onAccept={this.acceptCall.bind(this)}
+                                            onDecline={this.cancelCall.bind(this)}
+                                        />
+                                    </Route>
+                                    <Route exact path="/phone/android/achiev">
+                                        <Achiev data={this.state.achiev} openInfoShow={this.openInfoShow.bind(this)} />
+                                    </Route>
+                                    <Route exact path="/phone/android/phonebook">
+                                        <PhoneBook
+                                            onCall={this.setCallNumber.bind(this)}
+                                            historyPush={this.historyPush.bind(this)} data={this.state.phonebook}
+                                            clickContact={this.clickContact.bind(this)}
+                                            getContactByNumber={this.getContactByNumber.bind(this)}
+                                            setLink={this.setLink.bind(this)}
+                                            defaultValue={'calls'}
+                                            going={this.state.phonecall.going}
+                                            onAccept={this.acceptCall.bind(this)}
+                                            onDecline={() => console.log(`Ты отменил вызов от ${this.state.phonecall.number}`)}
+                                        />
+                                    </Route>
+                                    <Route exact path="/phone/android/phonebook/profilecontact">
+                                        <ProfileContact historyPush={this.historyPush.bind(this)}
+                                            data={this.state.phonebook}
+                                            deleteContact={this.deleteContact.bind(this)}
+                                            historyGoBack={this.historyGoBack.bind(this)}
+                                            favoriteContact={this.favoriteContact.bind(this)}
+                                            selectChat={this.selectChat.bind(this)}
+                                            editContact={this.editContact.bind(this)}
+                                            openModal={this.openModal.bind(this)}
+                                            profile_contact_btn={this.state.profile_contact_btn} />
+                                    </Route>
+                                    <Route exact path="/phone/android/phonebook/profilecontact/editcontact">
+                                        <EditContact historyGoBack={this.historyGoBack.bind(this)}
+                                            setLink={this.setLink.bind(this)}
+                                            addContact={this.addContact.bind(this)}
+                                            saveContact={this.saveContact.bind(this)}
+                                            selected_contact={this.state.phonebook.selected_contact}
+                                            editing_contact={this.state.phonebook.editing_contact}
+                                            clickContact={this.clickContact.bind(this)} />
+                                    </Route>
+                                    <Route exact path="/phone/android/messenger">
+                                        <Messenger data={this.state.chats}
+                                            getContactByNumber={this.getContactByNumber.bind(this)}
+                                            selectChat={this.selectChat.bind(this)}
+                                            setLink={this.setLink.bind(this)}/>
+                                    </Route>
+                                    <Route exact path="/phone/android/messenger/addchat">
+                                        <AddChat data={this.state.chats}
                                         sendMessage={this.sendMessage.bind(this)} time={this.state.top_bar.time} date={this.state.top_bar.dateFull}
                                         getContactByNumber={this.getContactByNumber.bind(this)}
-                                        setLink={this.setLink.bind(this)} 
-                                        openModal={this.openModal.bind(this)}
-                                        deleteChat={this.deleteChat.bind(this)}
-                                        />
-                                </Route>
-                                <Redirect to={this.state.path} push />
-                            </Router>
-                            <Router>
-                                <BottomBar
-                                    clickBack={this.clickBack.bind(this)}
-                                    clickHome={this.clickHome.bind(this)}
-                                    rotateAndroid={this.rotateAndroid.bind(this)}
-                                    data={this.state.apps}
-                                    clickApps={this.clickApps.bind(this)}
-                                    isMainScreen={this.state.path === '/phone/android/defaultpage'}
-                                />
-                            </Router>
+                                        setLink={this.setLink.bind(this)}
+                                        historyGoBack={this.historyGoBack.bind(this)}/>
+                                    </Route>
+                                    <Route exact path="/phone/android/messenger/chat">
+                                        <Chat data={this.state.chats} messenger={this.state.messenger}
+                                            sendMessage={this.sendMessage.bind(this)} time={this.state.top_bar.time} date={this.state.top_bar.dateFull}
+                                            getContactByNumber={this.getContactByNumber.bind(this)}
+                                            setLink={this.setLink.bind(this)}
+                                            openModal={this.openModal.bind(this)}
+                                            deleteChat={this.deleteChat.bind(this)}
+                                            />
+                                    </Route>
+                                    <Redirect to={this.state.path} push />
+                                </Router>
+                                <Router>
+                                    <BottomBar
+                                        clickBack={this.clickBack.bind(this)}
+                                        clickHome={this.clickHome.bind(this)}
+                                        rotateAndroid={this.rotateAndroid.bind(this)}
+                                        data={this.state.apps}
+                                        clickApps={this.clickApps.bind(this)}
+                                        isMainScreen={this.state.path === '/phone/android/defaultpage'}
+                                    />
+                                </Router>
+                            </div>
                         </div>
                     </div>
                 </div>

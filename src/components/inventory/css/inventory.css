@@ -42,7 +42,7 @@ body {
 .player-inv {
     width: 395px;
     height: 694px;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.5);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     margin-right: 10px;
@@ -51,7 +51,7 @@ body {
 .player-info {
     width: 364px;
     height: 694px;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.5);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     margin-right: 10px;
@@ -60,7 +60,7 @@ body {
 .player-craft {
     width: 350px;
     height: 694px;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.5);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
 }
@@ -171,7 +171,7 @@ body {
     height: 60px;
     font-family: "Gotham Pro Regular";
     font-size: 1rem;
-    color: #fff;
+    color: rgba(255,255,255,0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -433,7 +433,7 @@ body {
 .squar-inv-box {
     width: 68px;
     height: 68px;
-    background: rgb(0, 0, 0, 0.6);
+    background: rgb(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -647,7 +647,8 @@ input[type="radio"]:checked + label .bg-color-craft-block {
     height: 62px;
     background-size: 54px !important;
     background-position: center !important;
-    filter: brightness(400%) contrast(20%);
+    /*filter: brightness(400%) contrast(20%);*/
+    transition: 1s;
 }
 
 .weapon-mod {
@@ -664,7 +665,8 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 }
 
 .weapon-mod-active:hover {
-    filter: brightness(0) saturate(100%) invert(59%) sepia(82%) saturate(454%) hue-rotate(169deg) brightness(97%) contrast(96%);
+    /*filter: brightness(0) saturate(100%) invert(59%) sepia(82%) saturate(454%) hue-rotate(169deg) brightness(97%) contrast(96%);*/
+    transform: scale(1.1);
 }
 
 .weapon-supressor {
@@ -844,7 +846,7 @@ input[type="radio"]:checked + label .bg-color-craft-block {
 }
 
 .invetory-trunk {
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.5);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
 }

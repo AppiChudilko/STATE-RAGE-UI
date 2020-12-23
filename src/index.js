@@ -23,8 +23,15 @@ Noty.setMaxVisible(3);
 *
 */
 
+/*
+* 0 = Info
+* 1 = Warn
+* 2 = Success
+* 3 = White
+* */
+
 function notify(type, layout, message, time, theme) {
-    let types = ['information', 'error', 'success'];
+    let types = ['information', 'error', 'success', 'warn'];
     let layouts = ['top', 'topLeft', 'topCenter', 'topRight', 'center', 'centerLeft', 'centerRight', 'bottom', 'bottomLeft', 'bottomCenter', 'bottomRight'];
     let notifyText = 'Информация!';
     switch (theme) {
@@ -43,8 +50,24 @@ function notify(type, layout, message, time, theme) {
         default:
             break;
     }
+    switch (type) {
+        case 1:
+            notifyText = 'Ошибка!';
+            break;
+        case 3:
+            notifyText = 'Предупреждение!';
+            break;
+        case 0:
+            notifyText = 'Информация!';
+            break;
+        case 2:
+            notifyText = 'Успешно!';
+            break;
+        default:
+            break;
+    }
     message = `
-    <div class="message__notify__container">
+    <div class="message__notify__container message__notify__color__${type}">
         <span class="message__notify__type">${notifyText}</span>
         <span class="message__notify">${message}</span>
     </div>`;
@@ -74,9 +97,9 @@ setInterval(function () {
     }
 }, 1000);
 
-// notify(0, 1, 'Видимо произошла какая-то непредвиденная ошибка ', 5000)
-// notify(1, 1, 'Видимо произошла какая-то непредвиденная ошибка', 3000)
-// notify(2, 1, 'Видимо произошла какая-то непредвиденная ошибка', 20000)
+ /*notify(0, 1, 'Видимо произошла какая-то непредвиденная ошибка ', 5000000)
+ notify(1, 1, 'Видимо произошла какая-то непредвиденная ошибка', 300000)
+ notify(2, 1, 'Видимо произошла какая-то непредвиденная ошибка', 2000000)*/
 
 ReactDOM.render(<App/>, document.getElementById('root'));
 

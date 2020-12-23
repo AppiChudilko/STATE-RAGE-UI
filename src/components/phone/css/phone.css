@@ -62,10 +62,19 @@
 .phone-bg {
     width: 280px;
     height: 620px;
-    background-image: url('https://i.imgur.com/8lOLNXr.jpg');
     border-radius: 20px;
     overflow: hidden;
     background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.phone-gradient {
+    background: linear-gradient(21deg, rgba(241, 236, 105, 1) 0%, rgba(216, 1, 50, 1) 100%);
+    width: 280px;
+    height: 620px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .phone__box {

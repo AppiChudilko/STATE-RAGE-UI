@@ -50,7 +50,7 @@ class EditorMain extends React.Component {
                     <img src={serverLogo} style={{zIndex: 2, position: 'absolute', marginTop: '2rem', marginLeft: '3.4rem', width: '6rem'}} />
                     <div className="editor__hint">
                         <span className="editor__hint__title">{this.state.path === '/choicerole' ? 'Выбери свою роль' : 'Кастомизация персонажа'}</span>
-                        <span className="editor__hint__subtitle">{this.state.path === '/choicerole' ? 'Это повлияет в корне на весь ваш стартовый гейм-плей' : 'Настройте своего персанажа под себя'}</span>
+                        <span className="editor__hint__subtitle">{this.state.path === '/choicerole' ? 'Это повлияет в корне на весь ваш стартовый гейм-плей' : 'Используйте ЛКМ чтобы вращять камеру, а колёсико мыши для приближения'}</span>
                     </div>
                     <Router>
                         <Route path="/editor">

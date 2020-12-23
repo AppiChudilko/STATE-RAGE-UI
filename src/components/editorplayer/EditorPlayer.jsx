@@ -123,6 +123,7 @@ class EditorPlayer extends React.Component {
             slider_national: [
                 {
                     title: 'Выберите национальность',
+                    desc: 'Ваша национальность никак не влияет на внешность. Внешность выбирается следующим шагом.',
                     nationality: [
                         "Абхаз",
                         "Австралиец",
@@ -542,6 +543,7 @@ class EditorPlayer extends React.Component {
                                 promocode={this.state.promocode}
                                 referer={this.state.referer}
                                 title={this.state.slider_national[0].title}
+                                desc={this.state.slider_national[0].desc}
                                 index_help={this.state.slider_national[0].index_help}
                                 nationality={this.state.slider_national[0].nationality}
                                 valueFirstName={this.valueFirstName.bind(this)}

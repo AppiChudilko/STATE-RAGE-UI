@@ -1,13 +1,13 @@
 .inter-menu {
-    background: linear-gradient(143.81deg, rgba(0, 0, 0, 0) -3.63%, rgba(255, 255, 255, 0.332) 47.35%, rgba(0, 0, 0, 0) 102.77%);
+    background: linear-gradient(143.81deg, rgba(0, 0, 0, 0) -3.63%, rgba(0, 0, 0, 0.8) 47.35%, rgba(0, 0, 0, 0) 102.77%);
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
     border-radius: 15px;
-    width: 240px;
+    width: 260px;
     position: absolute;
     z-index: 1;
     padding: 1rem;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
 }
 
 .inter-box {
@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     font-family: "Gotham Pro Regular";
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     border: 0.5px solid rgba(255, 255, 255, 0.25);
     box-sizing: border-box;

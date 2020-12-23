@@ -24,6 +24,7 @@ class Authorization extends React.Component {
             passwordRegCheck: '',
             pagePlayer: '',
             audioUrl: '',
+            defaultLogin: 'Test',
             modalrules: false,
         }
     };
@@ -94,7 +95,7 @@ class Authorization extends React.Component {
             if (!this.state.login)
             {
                 mp.trigger('client:user:auth:login', // eslint-disable-line
-                    this.state.login, this.state.password);
+                    this.state.defaultLogin, this.state.password);
             }
             else {
                 mp.trigger('client:user:auth:login', // eslint-disable-line
@@ -197,7 +198,8 @@ class Authorization extends React.Component {
                                         <input type="text" pattern="[a-zA-Z0-9]*" placeholder="Введите логин"
                                             name="login-auth" className="auth-input-style"
                                             onChange={this.valueLogin.bind(this)}
-                                            value={this.state.login}
+                                            //value={this.state.login}
+                                            defaultValue={this.state.defaultLogin}
                                         />
                                         <input type="password" pattern="[a-zA-Z0-9]*" placeholder="Введите пароль"
                                             name="password-auth" className="auth-input-style"
