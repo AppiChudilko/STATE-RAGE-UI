@@ -24,7 +24,7 @@ class Authorization extends React.Component {
             passwordRegCheck: '',
             pagePlayer: '',
             audioUrl: '',
-            defaultLogin: 'Test',
+            defaultLogin: '',
             modalrules: false,
         }
     };

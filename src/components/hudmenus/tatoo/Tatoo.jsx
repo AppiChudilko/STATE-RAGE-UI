@@ -15,11 +15,11 @@ class Tatoo extends React.Component {
             banner: 'bs_hair',
             title: 'Добро пожаловать',
             subTitle: '',
-            type: 1,
+            type: 0,
             selected: -1,
             items: [
                 {name: 'Прическа для топ типов ахуеть да', desc: 'Термостойкость: 20*', price: 111, sale: 11},
-                {name: 'Борода', desc: '', price: 1123, sale: 0},
+                /*{name: 'Борода', desc: '', price: 1123, sale: 0},
                 {name: 'Прическа', desc: '', price: 111, sale: 11},
                 {name: 'Борода', desc: '', price: 1123, sale: 0},
                 {name: 'Прическа', desc: '', price: 111, sale: 11},
@@ -51,7 +51,7 @@ class Tatoo extends React.Component {
                 {name: 'Прическа', desc: '', price: 111, sale: 11},
                 {name: 'Борода', desc: '', price: 1123, sale: 0},
                 {name: 'Прическа', desc: '', price: 111, sale: 11},
-                {name: 'Борода', desc: '', price: 1123, sale: 0},
+                {name: 'Борода', desc: '', price: 1123, sale: 0},*/
             ],
             itemsBack: [
                 {name: 'Прическа', desc: '', price: 111, sale: 0},
@@ -61,6 +61,19 @@ class Tatoo extends React.Component {
     }
 
     componentDidMount() {
+
+        setTimeout(function () {
+
+            this.setState({selected: 0})
+            this.setState({items:  [
+                    {name: 'Прическа для топ типов ахуеть да', desc: 'Термостойкость: 20*', price: 111, sale: 11},
+                    {name: 'Борода', desc: '', price: 1123, sale: 0},
+                    {name: 'Прическа', desc: '', price: 111, sale: 11},
+                    {name: 'Борода', desc: '', price: 1123, sale: 0},
+                    {name: 'Прическа', desc: '', price: 111, sale: 11},
+                ]})
+        }.bind(this), 3000)
+
         EventManager.addHandler('tattooshop', value => {
             if (value.type === 'show') {
                 this.setState({show: true})
@@ -98,11 +111,14 @@ class Tatoo extends React.Component {
     }
 
     setSelected = (value) => {
-        this.setState({
-            selected: value
-        })
+        try {
+            this.setState({
+                selected: value
+            })
 
-        this.sendEvent(value);
+            this.sendEvent(value);
+        }
+        catch (e) {}
     }
 
     sendEvent = (value) => {
@@ -140,87 +156,115 @@ class Tatoo extends React.Component {
     }
 
     handleKeyDown = (e) => {
-        if([13, 38, 40].indexOf(e.keyCode) > -1) {
-            e.preventDefault();
-        }
+        try {
+            if([13, 38, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
 
-        if (e.keyCode === 13) {
-            this.setSelected(this.state.selected);
-        }
-        else if (e.keyCode === 38) {
-            if (this.state.selected != 0 || this.state.selected === -1) {
-                this.setState((state) => (
-                    {selected: state.selected - 1}
-                ))
-                this.scrollMenu('up')
-                this.sendEvent(this.state.selected - 1);
-            } else {
-                this.setState((state) => (
-                    {selected: state.items.length - 1}
-                ))
-                this.itemRefs[this.state.items.length - 1].focus()
-                this.sendEvent(this.state.items.length - 1);
+            if (e.keyCode === 13) {
+                this.setSelected(this.state.selected);
+            }
+            else if (e.keyCode === 38) {
+                if (this.state.selected != 0 || this.state.selected === -1) {
+                    this.setState((state) => (
+                        {selected: state.selected - 1}
+                    ))
+                    this.scrollMenu('up')
+                    this.sendEvent(this.state.selected - 1);
+                } else {
+                    this.setState((state) => (
+                        {selected: state.items.length - 1}
+                    ))
+                    this.itemRefs[this.state.items.length - 1].focus()
+                    this.sendEvent(this.state.items.length - 1);
+                }
+            }
+            else if (e.keyCode === 40) {
+                if (this.state.selected != this.state.items.length - 1 || this.state.selected === -1) {
+                    this.setState((state) => (
+                        {selected: state.selected + 1}
+                    ))
+                    this.scrollMenu('down')
+                    this.sendEvent(this.state.selected + 1);
+                } else {
+                    this.setState((state) => (
+                        {selected: 0}
+                    ))
+                    this.itemRefs[0].focus()
+                    this.sendEvent(0);
+                }
             }
         }
-        else if (e.keyCode === 40) {
-            if (this.state.selected != this.state.items.length - 1 || this.state.selected === -1) {
-                this.setState((state) => (
-                    {selected: state.selected + 1}
-                ))
-                this.scrollMenu('down')
-                this.sendEvent(this.state.selected + 1);
-            } else {
-                this.setState((state) => (
-                    {selected: 0}
-                ))
-                this.itemRefs[0].focus()
-                this.sendEvent(0);
-            }
-        }
+        catch (e) {}
     }
 
     scrollMenu(type) {
-        if ((this.state.selected === this.state.items.length) && (type === 'up')) {
-            setTimeout(
-                function() {
-                    this.itemRefs[this.state.items.length - 2].focus()
-                }
-                    .bind(this),
-                120
-            )
-            return null
-        }
+        try {
+            if ((this.state.selected === this.state.items.length) && (type === 'up')) {
+                setTimeout(
+                    function() {
+                        try {
+                            this.itemRefs[this.state.items.length - 2].focus()
+                        }
+                        catch (e) {
 
-        if ((this.state.selected === 0) && (type === 'down')) {
-            setTimeout(
-                function() {
-                    this.itemRefs[1].focus()
-                }
-                    .bind(this),
-                120
-            )
-            return null
-        }
+                        }
+                    }
+                        .bind(this),
+                    120
+                )
+                return null
+            }
 
-        if (type === 'up') {
-            const selected = this.state.selected - 1
-            setTimeout(
-                function() {
-                    this.itemRefs[selected].focus()
-                }
-                    .bind(this),
-                120
-            )
+            if ((this.state.selected === 0) && (type === 'down')) {
+                setTimeout(
+                    function() {
+                        try {
+                            this.itemRefs[1].focus()
+                        }
+                        catch (e) {
+
+                        }
+                    }
+                        .bind(this),
+                    120
+                )
+                return null
+            }
+
+            if (type === 'up') {
+                const selected = this.state.selected - 1
+                setTimeout(
+                    function() {
+                        try {
+                            this.itemRefs[selected].focus()
+                        }
+                        catch (e) {
+
+                        }
+                    }
+                        .bind(this),
+                    120
+                )
+            }
+            if (type === 'down') {
+                const selected = this.state.selected + 1
+                setTimeout(
+                    function() {
+                        try {
+                            this.itemRefs[selected].focus()
+                        }
+                        catch (e) {
+
+                        }
+                    }
+                        .bind(this),
+                    120
+                )
+            }
         }
-        if (type === 'down') {
-            const selected = this.state.selected + 1
-            setTimeout(
-                function() {
-                    this.itemRefs[selected].focus()
-                }
-                    .bind(this),
-                120
-            )
+        catch (e) {
+            
         }
     }
 
