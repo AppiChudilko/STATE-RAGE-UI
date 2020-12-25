@@ -152,7 +152,7 @@ class Certificate extends React.Component {
                                         <span className="fib-black">{this.state.player_info.sex}</span>
                                     </div>
                                     <div className="pl-cert-subscribe">
-                                        <span className="pl-cert-subscribe-text">Личная подпись: </span>
+                                        <span className="pl-cert-subscribe-text"></span>
                                         <span className="pl-cert-subscribe-value">{this.state.player_info.subscribe}</span>
                                     </div>
                                 </div>
