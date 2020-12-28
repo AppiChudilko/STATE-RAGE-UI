@@ -5,7 +5,7 @@ class Hints extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: false,
+            show: true,
             hints: [
                 {key: 'M', text: 'Главное меню'},
                 {key: 'F2', text: 'Курсор'},

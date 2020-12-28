@@ -615,8 +615,8 @@
 
 .hud__hints {
     position: absolute;
-    left: 4%;
-    bottom: 34%;
+    left: 18px;
+    bottom: 40%;
     display: flex;
     flex-direction: column;
 }
@@ -624,20 +624,20 @@
 .hud__hints__element {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     align-items: center;
 }
 
 .hud__hints__element__key {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     font-family: 'Century Gothic';
     font-size: 1rem;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     display: flex;
     align-items: center;
-    margin-right: 2rem;
+    margin-right: 8px;
     justify-content: center;
 }
 
