@@ -980,8 +980,8 @@ export default class CarShop extends React.Component {
                                     <span className="carshop__action__title">Аренда</span>
                                     <div className="b-l-btn-title" style={{fontSize: '35px', color: 'rgba(255, 255, 255, 0.4)'}}>{this.state.change_car.rent}</div>
                                     <div className="carshop__action__row__btns">
-                                        <div className="b-l-btn-box" onClick={() => this.rentCar()}>Аренда</div>
-                                        <div className="b-l-btn-box" onClick={() => this.testCar()}>Тест-драйв</div>
+                                        <div className="b-l-btn-box" style={{margin: 0, width: '330px'}} onClick={() => this.rentCar()}>Аренда</div>
+                                        {/*<div className="b-l-btn-box" onClick={() => this.testCar()}>Тест-драйв</div>*/}
                                     </div>
                                 </div>
                                 <div className="rent-list-c-btn">
