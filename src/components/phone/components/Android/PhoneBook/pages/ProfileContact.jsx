@@ -12,12 +12,16 @@ class ProfileContact extends React.Component {
     }
 
     componentDidCatch(error, errorInfo) {
-        mp.trigger('client:ui:debug', 'ProfileContact.jsx', error, errorInfo); // eslint-disable-line
+        try {
+            mp.trigger('client:ui:debug', 'ProfileContact.jsx', error, errorInfo); // eslint-disable-line
+        }
+        catch (e) {}
     }
 
     deleteContact(contact) {
         // Вы точно хотите навсегда удплить выбранный контакт?
         //this.props.openModal("Вы уверены, что хотите удалить?", "",['Нет', 'Да'], "");
+        console.log(contact.numbers[0]);
         try {
             mp.trigger('client:phone:deleteContact', JSON.stringify(contact)); // eslint-disable-line
         } catch (e) {
@@ -49,9 +53,9 @@ class ProfileContact extends React.Component {
                     </div>
                     <div className="p-topbar">
                         <div className="posit-icon-topbar">
-                            <div className="posit-icon-topbar__element" onClick={() => this.props.favoriteContact(this.props.data.selected_contact)}>
-                                <MaterialIcon icon={this.props.data.selected_contact.isFavorite  ? "star" : "star_border"} size={19} color="#fff" />
-                                <span className="posit-icon-topbar__element__text">В избранное</span>
+                            <div className="posit-icon-topbar__element" onClick={() => this.props.setCallNumber(this.props.data.selected_contact.numbers[0])}>
+                                <MaterialIcon icon="call" size={19} color="#fff" />
+                                <span className="posit-icon-topbar__element__text">Позвонить</span>
                             </div>
                             <div className="posit-icon-topbar__element" onClick={() => this.deleteContact(this.props.data.selected_contact)}>
                                 <MaterialIcon icon="delete_forever" size={19} color="#fff" />

@@ -71,7 +71,7 @@ class Android extends React.Component {
                         title: 'Загрузка...',
                         hidden: false,
                         umenu: [
-                            {
+                            /*{
                                 title: "С картинкой",
                                 text: "И описанием",
                                 type: 0,
@@ -94,14 +94,6 @@ class Android extends React.Component {
                                 clickable: false,
                                 params: { name: "null"}
                             },
-                            /*{
-                                title: "Button",
-                                text: "",
-
-                                type: 3,
-                                clickable: false,
-                                params: { name: "null", skip: true }
-                            },*/
                             {
                                 title: "User Name",
                                 text: "",
@@ -163,7 +155,7 @@ class Android extends React.Component {
                                 type: 10,
                                 params: { },
                                 clickable: true,
-                            },
+                            },*/
                         ],
                     },
                 ],
@@ -328,6 +320,9 @@ class Android extends React.Component {
 
     setCallNumber(phone) {
         // Сами вызываем, получаем информацию о номере и передаем
+
+        if (phone === undefined)
+            return;
 
         this.setState(prevState => ({ ...prevState.phonecall.number = phone, ...prevState.phonecall.going = false }))
         this.setLink(`/phone/android/callScreen`);
@@ -978,7 +973,7 @@ class Android extends React.Component {
                                             data={this.state.phonebook}
                                             deleteContact={this.deleteContact.bind(this)}
                                             historyGoBack={this.historyGoBack.bind(this)}
-                                            favoriteContact={this.favoriteContact.bind(this)}
+                                            setCallNumber={this.setCallNumber.bind(this)}
                                             selectChat={this.selectChat.bind(this)}
                                             editContact={this.editContact.bind(this)}
                                             openModal={this.openModal.bind(this)}

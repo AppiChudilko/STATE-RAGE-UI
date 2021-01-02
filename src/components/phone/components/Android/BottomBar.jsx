@@ -45,7 +45,6 @@ class BottomBar extends React.Component {
                 {!this.props.isMainScreen && (
                     <div className="iphone__bar__container">
                         <div className="iphone__bar" onClick={() => this.props.clickHome()} />
-
                     </div>
                 )}
             </React.Fragment>
