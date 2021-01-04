@@ -36,7 +36,7 @@ class ProfileContact extends React.Component {
                     <div className="u-title">
                         <div className="dedbit-u-texttittle">
                             <div className="u__back__container">
-                                <img src={IconBackIOS} className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
+                                <img src={`https://state-99.com/client/images/icons/components/phone/img/back.svg`} className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
                             </div>
                             <span className="u-texttittle">Просмотр контакта</span>
                             {/*<div className="edit-btn-save-position">
