@@ -13,7 +13,7 @@ class Logo extends React.Component {
             ammoMode: 'auto',
             questTitle: 'Квестовое задание',
             questText: 'Получите два ящика травы, три ящика кокаина, отвезите труп Минори на свалку',
-            questDesc: 'Мертвый минори',
+            questDesc: '',
             questAnim: '',
             date: '01.01',
             time: '12:00',
@@ -49,6 +49,7 @@ class Logo extends React.Component {
                 this.setState({showQuest: value.showQuest});
                 this.setState({questTitle: value.questTitle});
                 this.setState({questText: value.questText});
+                this.setState({questDesc: value.questDesc});
             } else if (value.type === 'updateQuestAnim') {
                 this.setState({questAnim: value.questAnim});
             } else return;
@@ -81,6 +82,7 @@ class Logo extends React.Component {
                          className={this.state.showQuest ? 'logo-quest animated ' + this.state.questAnim : 'hide'}>
                         <h2 className="quest-title">{this.state.questTitle}</h2>
                         <div className="quest-text">{this.state.questText}</div>
+                        <div className="quest-desc">{this.state.questDesc}</div>
                     </div>
                 </div>
             </React.Fragment>
