@@ -25,6 +25,7 @@ import CarRent from './components/hudmenus/carrent/CarRent';
 import Dialog from './components/hudmenus/dialog/Dialog';
 import Tatoo from './components/hudmenus/tatoo/Tatoo';
 import GovMenu from './components/govmenu/GovMenu';
+import Bank from './components/bank/Bank'
 import CircularMenu from './components/radialmenu/PrefenceSelector.component';
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
         <ModalInput />
         <Notification />
         <CarShop />
+        <Bank />
         <Monopoly />
         <Quickmenu />
         </div>
