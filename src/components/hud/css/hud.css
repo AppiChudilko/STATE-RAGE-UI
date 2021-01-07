@@ -827,6 +827,12 @@
     color: rgba(255, 255, 255, 1);
 }
 
+.logo-main .logo-quest .quest-desc {
+    font-family: 'Gotham Pro Regular';
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.4);
+}
+
 .logo-main .logo-quest .quest-win {
     font-family: 'Gotham Pro Regular';
     font-weight: 300;
