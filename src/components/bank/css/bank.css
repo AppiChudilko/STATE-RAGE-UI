@@ -22,6 +22,31 @@
 .bank__code__bg {
     border-radius: 10px;
     width: 100%;
+    height: 146px;
+}
+
+.Flecca__code__bg {
+    background: url('../img/bank_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Pacific__code__bg {
+    background: url('../img/bank_bg_pacific.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Maze__code__bg {
+    background: url('../img/bank_bg_maze.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Blaine__code__bg {
+    background: url('../img/bank_bg_blaine.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bank__code__title {
@@ -109,6 +134,8 @@
     display: flex;
     flex-direction: row;
 }
+
+
 
 .bank__menu__title {
     display: flex;
@@ -402,6 +429,36 @@
 
 .bank__menu__logo {
     position: absolute;
+    width: 20%;
+    height: 150px;
+}
+
+.Flecca__logo {
+    background: url('../img/logo_flecca.png');
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.Blaine__logo {
+    background: url('../img/blaine__logo.png');
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.Maze__logo {
+    background: url('../img/maze__logo.png');
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.Pacific__logo {
+    background: url('../img/pacific__logo.png');
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: left;
 }
 
 .bank__menu__cards__list__circle:hover {

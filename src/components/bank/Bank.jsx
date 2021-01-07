@@ -19,12 +19,12 @@ class Bank extends React.Component {
             isShowModal: false,
             selectedCard: 0,
             bankInfo: {
-                name: 'Fleeca'
+                name: 'Pacific'
             },
             selectedAction: -1,
             pageInfo: {
                 'main': {
-                    text: 'Добро пожаловать в банк FLEECA',
+                    text: 'Добро пожаловать в банк ',
                     subtitle: 'Совершайте перводы и оплачивайте услуги!'
                 },
                 'create-card': {
@@ -215,7 +215,7 @@ class Bank extends React.Component {
                 )}
                 {this.state.code && (
                     <div className="bank__code">
-                        <img src={BackgroundBank} className="bank__code__bg" />
+                        <div className={`bank__code__bg ${this.state.bankInfo.name.split(' ')[0]}__code__bg`} />
                         <span className="bank__code__title">
                             Введите 4-х значный пин-код
                         </span>
@@ -239,9 +239,9 @@ class Bank extends React.Component {
                 )}
                 {!this.state.code && (
                     <div className="bank__menu">
-                        <img src={LogoBank} className="bank__menu__logo" />
+                        <div className={`bank__menu__logo ${this.state.bankInfo.name.split(' ')[0]}__logo`} />
                         <div className="bank__menu__title">
-                            <span className="bank__menu__title__text">{this.state.pageInfo[this.state.page].text}</span>
+                            <span className="bank__menu__title__text">{`${this.state.pageInfo[this.state.page].text} ${this.state.bankInfo.name}`}</span>
                             <span className="bank__menu__title__subtext">{this.state.pageInfo[this.state.page].subtitle}</span>
                         </div>
                         {this.state.page === 'main' && (
