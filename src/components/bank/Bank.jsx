@@ -16,15 +16,15 @@ class Bank extends React.Component {
             isShowModalBlocked: false,
             page: 'main',
             totalBalance: 100010000,
-            isShowModal: true,
+            isShowModal: false,
             selectedCard: 0,
             bankInfo: {
-                name: 'Fleeca'
+                name: 'Pacific'
             },
             selectedAction: -1,
             pageInfo: {
                 'main': {
-                    text: 'Добро пожаловать в банк FLEECA',
+                    text: 'Добро пожаловать в банк ',
                     subtitle: 'Совершайте перводы и оплачивайте услуги!'
                 },
                 'create-card': {
@@ -116,19 +116,19 @@ class Bank extends React.Component {
             ],
             cards: [
                 {
-                    name: 'Emerald Card',
+                    /*name: 'Emerald Card',
                     number: '9941 5719 3289 7189',
-                    money: '100000'
+                    money: '100000'*/
                 },
                 {
-                    name: 'Platinum Card',
+                    /*name: 'Platinum Card',
                     number: '2389 1919 3278 1679',
-                    money: '111222333'
+                    money: '111222333'*/
                 },
                 {
-                    name: 'Gold Card',
+                    /*name: 'Gold Card',
                     number: '1237 1890 1167 9302',
-                    money: '1234'
+                    money: '1234'*/
                 }
             ]
         }
@@ -215,7 +215,7 @@ class Bank extends React.Component {
                 )}
                 {this.state.code && (
                     <div className="bank__code">
-                        <img src={BackgroundBank} className="bank__code__bg" />
+                        <div className={`bank__code__bg ${this.state.bankInfo.name.split(' ')[0]}__code__bg`} />
                         <span className="bank__code__title">
                             Введите 4-х значный пин-код
                         </span>
@@ -239,9 +239,9 @@ class Bank extends React.Component {
                 )}
                 {!this.state.code && (
                     <div className="bank__menu">
-                        <img src={LogoBank} className="bank__menu__logo" />
+                        <div className={`bank__menu__logo ${this.state.bankInfo.name.split(' ')[0]}__logo`} />
                         <div className="bank__menu__title">
-                            <span className="bank__menu__title__text">{this.state.pageInfo[this.state.page].text}</span>
+                            <span className="bank__menu__title__text">{`${this.state.pageInfo[this.state.page].text} ${this.state.bankInfo.name}`}</span>
                             <span className="bank__menu__title__subtext">{this.state.pageInfo[this.state.page].subtitle}</span>
                         </div>
                         {this.state.page === 'main' && (
@@ -263,7 +263,7 @@ class Bank extends React.Component {
                                 </div>
                                 <div className="bank__menu__center">
                                 {(() => {
-                                    if (this.state.selectedAction === -1 && this.state.cards) {
+                                    if (this.state.selectedAction === -1 && this.state.cards[0].name) {
                                         return (
                                             <div className="bank__menu__history">
                                                 <span className="bank__menu__history__text">История операций</span>
@@ -363,7 +363,7 @@ class Bank extends React.Component {
                                                 break;
                                             case 4:
                                                 return (
-                                                    <span className="bank__menu__getcard" onClick={() => this.setState({ isShowModalBlocked: true })}>
+                                                    <span className="bank__menu__blockcard" onClick={() => this.setState({ isShowModalBlocked: true })}>
                                                         {`Заблокировать карту`}
                                                     </span>
                                                 )
@@ -447,7 +447,7 @@ class Bank extends React.Component {
                                                 <span className="bank__cards__list__content__text">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis sem dui ultricies posuere pellentesque at odio. Quis aliquet nunc dui, mollis
                                                 </span>
-                                                <span className="bank__cards__list__content__btn">
+                                                <span className="bank__cards__list__content__btn" onClick={() => this.setState({ isShowModal: true })}>
                                                     Получить
                                                 </span>
                                             </div>
@@ -467,7 +467,7 @@ class Bank extends React.Component {
                                                 <span className="bank__cards__list__content__text">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis sem dui ultricies posuere pellentesque at odio. Quis aliquet nunc dui, mollis
                                                 </span>
-                                                <span className="bank__cards__list__content__btn">
+                                                <span className="bank__cards__list__content__btn" onClick={() => this.setState({ isShowModal: true })}>
                                                     Получить
                                                 </span>
                                             </div>
@@ -487,7 +487,7 @@ class Bank extends React.Component {
                                                 <span className="bank__cards__list__content__text">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis sem dui ultricies posuere pellentesque at odio. Quis aliquet nunc dui, mollis
                                                 </span>
-                                                <span className="bank__cards__list__content__btn">
+                                                <span className="bank__cards__list__content__btn" onClick={() => this.setState({ isShowModal: true })}>
                                                     Получить
                                                 </span>
                                             </div>
