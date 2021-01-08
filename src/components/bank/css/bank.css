@@ -11,7 +11,7 @@
 .bank__code {
     width: 24%;
     height: 65%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.125) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.325) 100%);
     border-radius: 20px;
     padding: 1%;
     display: flex;
@@ -102,7 +102,7 @@
 
 .bank__menu {
     padding: 0 3% 2% 2.6%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.125) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.325) 100%);
     border-radius: 20px;
     width: 76.5%;
     height: 70%;
