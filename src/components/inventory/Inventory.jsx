@@ -282,8 +282,8 @@ class Inventory extends React.Component {
           else return false;
     }
 
-    setCooldown(item_id) {
-        this.setState({itemCooldown: this.state.itemCooldown.concat({item_id: item_id, cooldown: 5})})
+    setCooldown(item_id, time = 5) {
+        this.setState({itemCooldown: this.state.itemCooldown.concat({item_id: item_id, cooldown: time})})
     }
 
     cooldownTick(){
@@ -360,6 +360,9 @@ class Inventory extends React.Component {
             }
             if (value.type === 'updateEquip') {
                 this.setState({ outfit: value.outfit })
+            }
+            if (value.type === 'updateCooldown') {
+                this.setCooldown(value.itemid, value.time);
             }
             if (value.type === 'updateItems') {
                 console.log(value.items);
