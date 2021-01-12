@@ -16,11 +16,9 @@ class Tatoo extends React.Component {
             title: 'Добро пожаловать',
             subTitle: '',
             type: 0,
-            selected: -1,
+            selected: 0,
             items: [
                 {name: 'Прическа для топ типов ахуеть да', desc: 'Термостойкость: 20*', price: 111, sale: 11},
-                /*{name: 'Борода', desc: '', price: 1123, sale: 0},
-                {name: 'Прическа', desc: '', price: 111, sale: 11},
                 {name: 'Борода', desc: '', price: 1123, sale: 0},
                 {name: 'Прическа', desc: '', price: 111, sale: 11},
                 {name: 'Борода', desc: '', price: 1123, sale: 0},
@@ -51,7 +49,9 @@ class Tatoo extends React.Component {
                 {name: 'Прическа', desc: '', price: 111, sale: 11},
                 {name: 'Борода', desc: '', price: 1123, sale: 0},
                 {name: 'Прическа', desc: '', price: 111, sale: 11},
-                {name: 'Борода', desc: '', price: 1123, sale: 0},*/
+                {name: 'Борода', desc: '', price: 1123, sale: 0},
+                {name: 'Прическа', desc: '', price: 111, sale: 11},
+                {name: 'Борода', desc: '', price: 1123, sale: 0},
             ],
             itemsBack: [
                 {name: 'Прическа', desc: '', price: 111, sale: 0},
@@ -61,19 +61,6 @@ class Tatoo extends React.Component {
     }
 
     componentDidMount() {
-
-        setTimeout(function () {
-
-            this.setState({selected: 0})
-            this.setState({items:  [
-                    {name: 'Прическа для топ типов ахуеть да', desc: 'Термостойкость: 20*', price: 111, sale: 11},
-                    {name: 'Борода', desc: '', price: 1123, sale: 0},
-                    {name: 'Прическа', desc: '', price: 111, sale: 11},
-                    {name: 'Борода', desc: '', price: 1123, sale: 0},
-                    {name: 'Прическа', desc: '', price: 111, sale: 11},
-                ]})
-        }.bind(this), 3000)
-
         EventManager.addHandler('tattooshop', value => {
             if (value.type === 'show') {
                 this.setState({show: true})
@@ -94,9 +81,6 @@ class Tatoo extends React.Component {
                     this.setState({title: value.title})
                     this.setState({subTitle: value.subTitle})
                     this.setState({type: value.t})
-
-                    if (value.type === 0)
-                        this.setState({itemsBack: value.items})
                     this.itemRefs[0].focus()
                 }
                 catch (e) {
@@ -201,7 +185,7 @@ class Tatoo extends React.Component {
     scrollMenu(type) {
         try {
             if ((this.state.selected === this.state.items.length) && (type === 'up')) {
-                setTimeout(
+                /*setTimeout(
                     function() {
                         try {
                             this.itemRefs[this.state.items.length - 2].focus()
@@ -212,12 +196,18 @@ class Tatoo extends React.Component {
                     }
                         .bind(this),
                     120
-                )
+                )*/
+                try {
+                    this.itemRefs[this.state.items.length - 2].focus()
+                }
+                catch (e) {
+
+                }
                 return null
             }
 
             if ((this.state.selected === 0) && (type === 'down')) {
-                setTimeout(
+                /*setTimeout(
                     function() {
                         try {
                             this.itemRefs[1].focus()
@@ -228,13 +218,19 @@ class Tatoo extends React.Component {
                     }
                         .bind(this),
                     120
-                )
+                )*/
+                try {
+                    this.itemRefs[1].focus()
+                }
+                catch (e) {
+
+                }
                 return null
             }
 
             if (type === 'up') {
                 const selected = this.state.selected - 1
-                setTimeout(
+                /*setTimeout(
                     function() {
                         try {
                             this.itemRefs[selected].focus()
@@ -245,11 +241,17 @@ class Tatoo extends React.Component {
                     }
                         .bind(this),
                     120
-                )
+                )*/
+                try {
+                    this.itemRefs[selected].focus()
+                }
+                catch (e) {
+
+                }
             }
             if (type === 'down') {
                 const selected = this.state.selected + 1
-                setTimeout(
+                /*setTimeout(
                     function() {
                         try {
                             this.itemRefs[selected].focus()
@@ -260,7 +262,13 @@ class Tatoo extends React.Component {
                     }
                         .bind(this),
                     120
-                )
+                )*/
+                try {
+                    this.itemRefs[selected].focus()
+                }
+                catch (e) {
+
+                }
             }
         }
         catch (e) {
