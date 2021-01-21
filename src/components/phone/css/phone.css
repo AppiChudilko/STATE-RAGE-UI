@@ -398,6 +398,12 @@
     /*filter: invert(100%);*/
 }
 
+.icons-achiev, .icons-trophy {
+    background: url(../img/android/icons/trophy.png) no-repeat center;
+    background-size: cover;
+    /*filter: invert(100%);*/
+}
+
 .icons-community {
     background: url(../img/android/icons/community.png) no-repeat center;
     background-size: cover;

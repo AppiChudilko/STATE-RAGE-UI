@@ -99,7 +99,7 @@ class Inventory extends React.Component {
             ],
 
             items: [ // Инвентарь
-                { id: 1, item_id: 14, name: "Бургер", volume: 15, desc: "Редкость: мистическая", counti: 0, params: {} }, // айди предмета из базы
+                /*{ id: 1, item_id: 14, name: "Бургер", volume: 15, desc: "Редкость: мистическая", counti: 0, params: {} }, // айди предмета из базы
                 { id: 2, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
                 { id: 3, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
                 { id: 4, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
@@ -163,14 +163,14 @@ class Inventory extends React.Component {
                 { id: 39, item_id: 265, name: "Футболка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
                 { id: 40, item_id: 269, name: "Кепка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
                 { id: 41, item_id: 48, name: "Деньги", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 41, item_id: 275, name: "Перчатки", volume: 15, desc: "SM-0001244", counti: 0, params: {} }
+                { id: 41, item_id: 275, name: "Перчатки", volume: 15, desc: "SM-0001244", counti: 0, params: {} }*/
 
             ],
             itemsCounted: [ // Сюда переписываются все предметы которые стакаются при обновлении инвентаря для правильного отображения
             ],
 
             secondary_items: [ // Багажник
-                { id: 15, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // secondary_items.id Уникальный id предмета из базы (не должны повторяться)
+                //{ id: 15, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // secondary_items.id Уникальный id предмета из базы (не должны повторяться)
             ],
             secondary_itemsCounted: [ // Сюда переписываются все предметы которые стакаются при обновлении инвентаря для правильного отображения
             ],
@@ -181,7 +181,7 @@ class Inventory extends React.Component {
 
             // Надетые на персонажа предметы
             equipment_outfit: [ // equipment_outfit.id Уникальный id предмета из базы (не должны повторяться)
-                { id: 15, item_id: 254, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }
+                //{ id: 15, item_id: 254, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }
             ],
 
             itemsById: { // В массивах должны быть айди всех предметов разного типа
@@ -222,7 +222,7 @@ class Inventory extends React.Component {
                 gloves: [275], // Перчатки
                 armour: [252], // Броня
                 phone: [27, 28, 29, 30], // Телефоны
-                money: [48], // Деньги?
+                money: [254, 255, 256, 257, 258, 259, 260], // Деньги?
                 card: [50], // Карточки
             },
 
