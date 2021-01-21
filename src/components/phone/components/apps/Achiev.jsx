@@ -47,7 +47,7 @@ class Achiev extends React.Component {
                             let linear = (e.value[0] * 100) / e.value[1];                            
                             return (
                                 <div className="main-achiev-box" key={index} onClick={() => this.props.openInfoShow(this.state.achievIndex, i)}>
-                                    <div className="achiev-box">
+                                    <div className="achiev-box" onClick={() => { this.clickEvent() }}>
                                         <div className="achiev-linear" style={{ width: linear + "%" }}></div>
                                         <img src={e.img} className="img-achiev" alt="" />
                                         <div className="info-box-achiev">
@@ -56,9 +56,9 @@ class Achiev extends React.Component {
                                             <div className="i-achiev-result">{e.result}</div>
                                         </div>
                                     </div>                                   
-                                        <div className="i-achiev-title-three">
-                                            {e.desc}
-                                        </div>
+                                    <div className={e.info_show ? 'i-achiev-title-three' : 'i-achiev-title-three-hide'}>
+                                        {e.desc}
+                                    </div>
                                 </div>
                             )
                         })}

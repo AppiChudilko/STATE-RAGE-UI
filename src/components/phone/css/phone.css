@@ -2926,9 +2926,15 @@ BankCard
     color: #fff;
     margin-bottom: 5px;
     padding: 10px;
+
+    transition: 0.3s all;
+
+    display: block;
+    opacity: 1;
+}
+.i-achiev-title-three-hide {
     display: none;
     opacity: 0;
-    transition: 0.3s all;
 }
 .main-achiev-box:hover {
     background: #0000006e;
