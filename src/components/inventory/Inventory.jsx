@@ -65,6 +65,7 @@ class Inventory extends React.Component {
                 { name: "Выпить", action: "drink", show: false, color: '#4CAF50' },
                 { name: "Экипировать", action: "equip", show: false, color: '#4CAF50' },
                 { name: "Зарядить", action: "loadw", show: false, color: '#4CAF50' },
+                { name: "Разделить", action: "split", show: false, color: '#4CAF50' },
                 { name: "Открыть", action: "weightGr", show: false, color: '#4CAF50' },
 
                 { name: "Информация о билете", action: "infoLoto", show: false },
@@ -98,7 +99,7 @@ class Inventory extends React.Component {
             ],
 
             items: [ // Инвентарь
-                { id: 1, item_id: 14, name: "Бургер", volume: 15, desc: "Редкость: мистическая", counti: 0, params: {} }, // айди предмета из базы
+                /*{ id: 1, item_id: 14, name: "Бургер", volume: 15, desc: "Редкость: мистическая", counti: 0, params: {} }, // айди предмета из базы
                 { id: 2, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
                 { id: 3, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
                 { id: 4, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // айди предмета из базы
@@ -162,14 +163,14 @@ class Inventory extends React.Component {
                 { id: 39, item_id: 265, name: "Футболка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
                 { id: 40, item_id: 269, name: "Кепка", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
                 { id: 41, item_id: 48, name: "Деньги", volume: 15, desc: "SM-0001244", counti: 0, params: {} },
-                { id: 41, item_id: 275, name: "Перчатки", volume: 15, desc: "SM-0001244", counti: 0, params: {} }
+                { id: 41, item_id: 275, name: "Перчатки", volume: 15, desc: "SM-0001244", counti: 0, params: {} }*/
 
             ],
             itemsCounted: [ // Сюда переписываются все предметы которые стакаются при обновлении инвентаря для правильного отображения
             ],
 
             secondary_items: [ // Багажник
-                { id: 15, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // secondary_items.id Уникальный id предмета из базы (не должны повторяться)
+                //{ id: 15, item_id: 14, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }, // secondary_items.id Уникальный id предмета из базы (не должны повторяться)
             ],
             secondary_itemsCounted: [ // Сюда переписываются все предметы которые стакаются при обновлении инвентаря для правильного отображения
             ],
@@ -180,7 +181,7 @@ class Inventory extends React.Component {
 
             // Надетые на персонажа предметы
             equipment_outfit: [ // equipment_outfit.id Уникальный id предмета из базы (не должны повторяться)
-                { id: 15, item_id: 254, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }
+                //{ id: 15, item_id: 254, name: "Бургер", volume: 15, desc: "", counti: 0, params: {} }
             ],
 
             itemsById: { // В массивах должны быть айди всех предметов разного типа
@@ -221,7 +222,7 @@ class Inventory extends React.Component {
                 gloves: [275], // Перчатки
                 armour: [252], // Броня
                 phone: [27, 28, 29, 30], // Телефоны
-                money: [48], // Деньги?
+                money: [254, 255, 256, 257, 258, 259, 260], // Деньги?
                 card: [50], // Карточки
             },
 
@@ -281,8 +282,8 @@ class Inventory extends React.Component {
           else return false;
     }
 
-    setCooldown(item_id) {
-        this.setState({itemCooldown: this.state.itemCooldown.concat({item_id: item_id, cooldown: 5})})
+    setCooldown(item_id, time = 5) {
+        this.setState({itemCooldown: this.state.itemCooldown.concat({item_id: item_id, cooldown: time})})
     }
 
     cooldownTick(){
@@ -359,6 +360,9 @@ class Inventory extends React.Component {
             }
             if (value.type === 'updateEquip') {
                 this.setState({ outfit: value.outfit })
+            }
+            if (value.type === 'updateCooldown') {
+                this.setCooldown(value.itemid, value.time);
             }
             if (value.type === 'updateItems') {
                 console.log(value.items);
@@ -722,8 +726,8 @@ class Inventory extends React.Component {
         if (this.isCooldownActive(item.item_id)) return;
 
         let actions = [];
-        if(source === 'weapon' || source === 'outfit') actions = ["drop", "infoItem", "close"];
-        else actions = ["give", "drop", "infoItem", "close"]; // Стандартные действия для всех предметов (передать, выбросить, закрыть)
+        if(source === 'weapon' || source === 'outfit') actions = ["drop", "close"];
+        else actions = ["give", "drop", "close"]; // Стандартные действия для всех предметов (передать, выбросить, закрыть)
         if (source === 'weapon') { // По айди предмета (item_id) определяет какие действия можно совершить с предметом
             actions.push('select') // Выбрать оружие
             actions.push('unloadW') // Выбрать оружие
@@ -787,10 +791,11 @@ class Inventory extends React.Component {
         }
         if (this.state.itemsById.ammo.includes(item.item_id) && source !== 'secondary_inv') { // По айди предмета (item_id) определяет какие действия можно совершить с предметом
             actions.push('loadw') // Зарядить оружие
+            actions.push('split') // Зарядить оружие
         }
-        if (this.state.itemsById.countPt.includes(item.item_id) && source !== 'secondary_inv') { // По айди предмета (item_id) определяет какие действия можно совершить с предметом
+        /*if (this.state.itemsById.countPt.includes(item.item_id) && source !== 'secondary_inv') { // По айди предмета (item_id) определяет какие действия можно совершить с предметом
             actions.push('countPt') // Зарядить оружие
-        }
+        }*/
         for (let i = 0; i < Object.keys(this.state.outfitById).length; i++) {
             if (Object.values(this.state.outfitById)[i].includes(item.item_id) && source !== 'secondary_inv') {
                 if (source !== 'outfit') {
@@ -848,8 +853,8 @@ class Inventory extends React.Component {
         }
         let menu = this.state.inter_menu
         let actions = [];
-        if(source === 'weapon' || source === 'outfit') actions = ["drop", "infoItem", "close"];
-        else actions = ["give", "drop", "infoItem", "close"]; // Стандартные действия для всех предметов (передать, выбросить, закрыть)
+        if(source === 'weapon' || source === 'outfit') actions = ["drop", "close"];
+        else actions = ["give", "drop", "close"]; // Стандартные действия для всех предметов (передать, выбросить, закрыть)
         if (source === 'weapon') { // По айди предмета (item_id) определяет какие действия можно совершить с предметом
             actions.push('select') // Выбрать оружие
             actions.push('unloadW') // Выбрать оружие
@@ -913,10 +918,11 @@ class Inventory extends React.Component {
         }
         if (this.state.itemsById.ammo.includes(item.item_id) && source !== 'secondary_inv') { // По айди предмета (item_id) определяет какие действия можно совершить с предметом
             actions.push('loadw') // Зарядить оружие
+            actions.push('split') // Зарядить оружие
         }
-        if (this.state.itemsById.countPt.includes(item.item_id) && source !== 'secondary_inv') { // По айди предмета (item_id) определяет какие действия можно совершить с предметом
+        /*if (this.state.itemsById.countPt.includes(item.item_id) && source !== 'secondary_inv') { // По айди предмета (item_id) определяет какие действия можно совершить с предметом
             actions.push('countPt') // Зарядить оружие
-        }
+        }*/
         for (let i = 0; i < Object.keys(this.state.outfitById).length; i++) {
             if (Object.values(this.state.outfitById)[i].includes(item.item_id) && source !== 'secondary_inv') {
                 if (source !== 'outfit') {
@@ -1018,6 +1024,28 @@ class Inventory extends React.Component {
         mp.trigger('client:inventory:unloadW', item.item_id); // eslint-disable-line
     }
 
+    splitMenu(item, source) { // Тут нужно получать ID ближайших игроков для передачи предмета
+
+        switch (source) {
+            case 'inventory':
+                if (this.checkItem(item, 'inventory') !== null) {
+                    item = this.checkItem(item, 'inventory')
+                    //this.setState({items: this.arrayRemove(this.state.items, item)})
+                    mp.trigger('client:inventory:split', item.id, item.item_id, item.counti); // eslint-disable-line
+                }
+                break;
+            case 'secondary_inv':
+                if (this.checkItem(item, 'secondary_inv') !== null) {
+                    item = this.checkItem(item, 'secondary_inv')
+                    //this.setState({secondary_items: this.arrayRemove(this.state.secondary_items, item)})
+                    mp.trigger('client:inventory:split', item.id, item.item_id, item.counti); // eslint-disable-line
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
     closeInterMenu(e, button) {
         switch (button.action) {
             case "close":
@@ -1076,6 +1104,9 @@ class Inventory extends React.Component {
                 return;
             case "loadw": // Зарядить
                 this.loadwItemMenu();
+                return;
+            case "split": // Зарядить
+                this.splitMenu(this.state.inter_menu_selected.item, this.state.inter_menu_selected.source);
                 return;
             case "put_on_gun": // Экипировать
                 this.upgradewItemMenu()

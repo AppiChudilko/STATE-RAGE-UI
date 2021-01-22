@@ -398,6 +398,12 @@
     /*filter: invert(100%);*/
 }
 
+.icons-achiev, .icons-trophy {
+    background: url(../img/android/icons/trophy.png) no-repeat center;
+    background-size: cover;
+    /*filter: invert(100%);*/
+}
+
 .icons-community {
     background: url(../img/android/icons/community.png) no-repeat center;
     background-size: cover;
@@ -1735,7 +1741,7 @@ figure img {
 .player-fraction-online {
     width: 12px;
     height: 12px;
-    border: 3px solid #fff;
+    border: 3px solid #2e2e2e;
     border-radius: 50%;
     position: absolute;
     margin-top: -22px;
@@ -2921,9 +2927,15 @@ BankCard
     color: #fff;
     margin-bottom: 5px;
     padding: 10px;
+
+    transition: 0.3s all;
+
+    display: block;
+    opacity: 1;
+}
+.i-achiev-title-three-hide {
     display: none;
     opacity: 0;
-    transition: 0.3s all;
 }
 .main-achiev-box:hover {
     background: #0000006e;
@@ -2943,7 +2955,7 @@ BankCard
 .i-achiev-result {
     font-family: 'RobotoLight';
     font-size: 14px;
-    color: rgb(46, 252, 5);
+    color: #4CAF50;
     position: absolute;
     right: 0;
     bottom: 0;

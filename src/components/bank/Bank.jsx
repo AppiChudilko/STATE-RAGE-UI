@@ -194,7 +194,7 @@ class Bank extends React.Component {
                             <span className="bank__modal__exit" onClick={() => this.setState({ isShowModal: false })}>Закрыть</span>
                             <div className="bank__modal__content">
                                 <span className="bank__modal__content__title">Поздравляем!</span>
-                                <span className="bank__modal__content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non interdum neque ut tristique et ac. Consectetur semper aliquet diam faucibus nec mi. Sagittis, egestas in sit sodales vitae condimentum fermentum egestas.</span>
+                                <span className="bank__modal__content__text">Вы оформили карту нашего банка, желаем приятных покупок и долгосрочного сотрудничества!</span>
                                 <div className="bank__modal__content__cimg" />
                             </div>
                         </div>
@@ -437,7 +437,7 @@ class Bank extends React.Component {
                                                 <span className="bank__cards__list__header__text">
                                                     {this.state.bankInfo.name}
                                                     <br></br>
-                                                    Emerald Case
+                                                    Classic
                                                 </span>
                                             </div>
                                             <div className="bank__cards__list__content">
@@ -445,47 +445,7 @@ class Bank extends React.Component {
                                                     Описание
                                                 </span>
                                                 <span className="bank__cards__list__content__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis sem dui ultricies posuere pellentesque at odio. Quis aliquet nunc dui, mollis
-                                                </span>
-                                                <span className="bank__cards__list__content__btn" onClick={() => this.setState({ isShowModal: true })}>
-                                                    Получить
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div className="bank__cards__list__item">
-                                            <div className="bank__cards__list__header">
-                                                <span className="bank__cards__list__header__text">
-                                                    {this.state.bankInfo.name}
-                                                    <br></br>
-                                                    Emerald Case
-                                                </span>
-                                            </div>
-                                            <div className="bank__cards__list__content">
-                                                <span className="bank__cards__list__content__title">
-                                                    Описание
-                                                </span>
-                                                <span className="bank__cards__list__content__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis sem dui ultricies posuere pellentesque at odio. Quis aliquet nunc dui, mollis
-                                                </span>
-                                                <span className="bank__cards__list__content__btn" onClick={() => this.setState({ isShowModal: true })}>
-                                                    Получить
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div className="bank__cards__list__item">
-                                            <div className="bank__cards__list__header">
-                                                <span className="bank__cards__list__header__text">
-                                                    {this.state.bankInfo.name}
-                                                    <br></br>
-                                                    Emerald Case
-                                                </span>
-                                            </div>
-                                            <div className="bank__cards__list__content">
-                                                <span className="bank__cards__list__content__title">
-                                                    Описание
-                                                </span>
-                                                <span className="bank__cards__list__content__text">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis sem dui ultricies posuere pellentesque at odio. Quis aliquet nunc dui, mollis
+                                                    Классическая карта, которая позволит вам оплачивать различные покупки, получать зарплату и распоряжаться финансами
                                                 </span>
                                                 <span className="bank__cards__list__content__btn" onClick={() => this.setState({ isShowModal: true })}>
                                                     Получить
