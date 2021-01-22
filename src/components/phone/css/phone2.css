@@ -2544,6 +2544,7 @@ BankCard
     margin-top: -1px;
     width: 101%;
     margin-left: -1px;
+    background: #000;
 }
 .rotate-components .u-title-achiev {
     height: 48px;
@@ -2690,10 +2691,12 @@ BankCard
     font-family: 'RobotoLight';
     font-size: 14px;
     color: #4CAF50;
+    background-color: #2d72c199;
     position: absolute;
     right: 0;
     bottom: 0;
     margin-right: 10px;
+    z-index: 10;
 }
 .testbokk {
     width: 92%;

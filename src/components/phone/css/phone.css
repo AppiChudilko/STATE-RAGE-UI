@@ -1097,6 +1097,7 @@ h4 {
     padding-left: 40%;
     position: absolute;
     bottom: 0px;
+    z-index: 10;
 }
 
 .m-sqr-bar {
@@ -2800,6 +2801,7 @@ BankCard
     height: 100%;
     display: flex;
     flex-direction: column;
+    background: #2b2b2b;
     width: 100%;
 }
 .rotate-components .u-title-achiev {
@@ -2811,8 +2813,7 @@ BankCard
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #212121;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     padding-top: 34px;
 }
 .u-texttittle-achiev {
@@ -2851,8 +2852,7 @@ BankCard
     display: flex;
     align-items: center;   
     flex-direction: column;
-    
-    background: #1D2733;
+
     overflow: scroll;
     padding-top: 8px;    
     overflow: scroll;
@@ -2862,17 +2862,18 @@ BankCard
 }
 .main-achiev-box{
     width: 100%;
+    height: 63px;
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
     transition: 0.3s all;
     min-height: 55px;
     
 }
 .achiev-box {
     width: 100%;
-    min-height: 55px;
+    height: 63px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2916,17 +2917,18 @@ BankCard
 }
 .i-achiev-title-two {
     font-family: 'SF Pro Light';
-    font-size: 12px;
-    color: #fff;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
 }
 .i-achiev-title-three {
     width: 92%;
-    min-height: 20px;
+    height: 40px;
     font-family: 'SF Pro Light';
     font-size: 12px;
     color: #fff;
     margin-bottom: 5px;
     padding: 10px;
+    overflow-x: auto;
 
     transition: 0.3s all;
 
@@ -2948,17 +2950,20 @@ BankCard
 .achiev-linear {
     width: 50%;
     height: 100%;
-    background: #2d72c199;
+    background: #5fc12d59;
     position: absolute;
     z-index: 0;
 }
 .i-achiev-result {
     font-family: 'RobotoLight';
-    font-size: 14px;
-    color: #4CAF50;
+    font-size: 13px;
+    color: #fff;
+    padding: 2px 8px;
+    background-color: #3d5f2c;
+    border-radius: 8px;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -4px;
     margin-right: 10px;
 }
 .testbokk {

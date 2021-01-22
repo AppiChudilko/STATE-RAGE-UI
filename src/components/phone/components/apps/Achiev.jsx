@@ -36,7 +36,7 @@ class Achiev extends React.Component {
         return (
             <React.Fragment>
                 <div className="achiev-menu">
-                    <div className="u-title-achiev" style={{ background: "#212D3B" }}>
+                    <div className="u-title-achiev">
                         <div className="u-l-arrow-achiev ar-left-tr" onClick={() => this.clickLeft()}></div>
                         <span className="u-texttittle-achiev">{this.props.data[this.state.achievIndex].title}</span>
                         <div className="u-l-arrow-achiev ar-right-tr" onClick={() => this.clickRight()}></div>
@@ -46,18 +46,15 @@ class Achiev extends React.Component {
                             let index = `achievmap${i}`;
                             let linear = (e.value[0] * 100) / e.value[1];                            
                             return (
-                                <div className="main-achiev-box" key={index} onClick={() => this.props.openInfoShow(this.state.achievIndex, i)}>
-                                    <div className="achiev-box" onClick={() => { this.clickEvent() }}>
+                                <div className="main-achiev-box" key={index}>
+                                    <div className="achiev-box">
                                         <div className="achiev-linear" style={{ width: linear + "%" }}></div>
                                         <img src={e.img} className="img-achiev" alt="" />
                                         <div className="info-box-achiev">
                                             <div className="i-achiev-title">{e.name}</div>
-                                            <div className="i-achiev-title-two">{e.value[0]}/{e.value[1]}</div>
+                                            <div className="i-achiev-title-two">{e.desc}</div>
                                             <div className="i-achiev-result">{e.result}</div>
                                         </div>
-                                    </div>                                   
-                                    <div className={e.info_show ? 'i-achiev-title-three' : 'i-achiev-title-three-hide'}>
-                                        {e.desc}
                                     </div>
                                 </div>
                             )
