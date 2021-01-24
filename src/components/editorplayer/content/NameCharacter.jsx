@@ -41,9 +41,11 @@ class NameCharacter extends React.Component {
                         <input type="text" placeholder="Имя (Англ)" name="firstname-create" pattern="[a-zA-Z]*"
                                className="auth-input-style" value={this.props.first_name}
                                onChange={this.props.valueFirstName.bind(this)}/>
+
                         <input type="text" placeholder="Фамилия (Англ)" name="lastname-create" pattern="[a-zA-Z]*"
                                className="auth-input-style" value={this.props.last_name}
                                onChange={this.props.valueLastName.bind(this)}/>
+
                         <input type="text" placeholder="Возраст (От 18 до 60)" min="18" max="60" pattern="[0-9]*"
                                onInput={this.props.onCheckNumber.bind(this)}
                                onChange={this.changeAge(this.props.old_input)} value={this.props.old_input}
@@ -52,6 +54,10 @@ class NameCharacter extends React.Component {
                         <input type="text" placeholder="Промокод (Если есть)" name="lastname-create" pattern="[a-zA-Z]*"
                                className="auth-input-style" value={this.props.promocode}
                                onChange={this.props.valuePromocode.bind(this)}/>
+
+                        <input type="text" placeholder="Ник пригласившего (Если есть)" name="lastname-create" pattern="[a-zA-Z]*"
+                               className="auth-input-style" value={this.props.referer}
+                               onChange={this.props.valueReferer.bind(this)}/>
                     </div>
                     <div
                         className="box-change box-change__row otstup-box"

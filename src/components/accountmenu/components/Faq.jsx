@@ -21,6 +21,19 @@ const Faq = ({ onChangePage }) => {
             `
         },
         {
+            text: "Как работает реферальная программа?",
+            answer: `
+                <p class="accountmenu__content__cards__answer__text">
+                    После того, как ваш знакомый введет ваш ник в поле при регистрации персонажа (Через пробел по примеру: Alexey Navalniy) вы получите бонус в виде Bonus Point на ваш личный кабинет. Благодаря этим Bonus поинтам вы можете пользоваться донат-услугами или обменивать их на игровую валюту. После того, как ваш знакомый отыграет 24 часа на сервере, он получит бонус в виде $20.000 и 100bp, а вы на кабинет вашего персонажа 500bp<br><br>
+                    Список всех ваших рефералов можно посмотреть на сайте, в статистике персонажа<br><br>
+                </p>
+                <ol>
+                <li class="accountmenu__content__cards__answer__li">Наш сайт: state-99.com</li>
+                <li class="accountmenu__content__cards__answer__li">Наш VK: vk.com/gtav.state</li>
+                </ol>
+            `
+        },
+        {
             text: "Как устроиться на работу?",
             answer: `
                 <p class="accountmenu__content__cards__answer__text">
